@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"classes":["info-table"],"data":["replicated_stream_kernels_single"],"name":"Project Name"},
+{"data":["Stratix 10, 1SG280LU3F50E1VGS1, bitt_s10_pcie:p520_hpc_sg280l"],"name":"Target Family, Device, Board"},
+{"data":["19.2.0 Build 57"],"name":"AOC Version"},
+{"data":["19.2.0 Build 57 Pro"],"name":"Quartus Version"},
+{"data":["aoc /scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl -I/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/../common -fpc -fp-relaxed -no-interleaving=default -board=p520_hpc_sg280l -o /scratch/mariusme/stream_16k/stream_fpga/cmake-build/bin/stream_kernels_single.aocx"],"name":"Command"},
+{"data":["Mon Apr 20 17:47:57 2020"],"name":"Reports Generated At"}
+]}

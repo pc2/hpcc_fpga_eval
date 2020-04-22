@@ -1,0 +1,686 @@
+<ENTRY>
+{
+ "session": {
+  "name": "v++_link_random_access_kernels_single",
+  "pid": "0",
+  "uuid": "5f3d5a68-0fb6-4acc-88bf-cb687f85417f",
+  "description": "",
+  "timestamp": "0",
+  "outputFiles": [
+   {
+    "type": "JSON",
+    "mode": "CLIENT_ONLY",
+    "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/.tlog/v++_link_random_access_kernels_single.xtl",
+    "continuous": true
+   },
+   {
+    "type": "JSON",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin.link_summary",
+    "continuous": true
+   },
+   {
+    "type": "BINARY_PROTOBUF",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin.link_summary.pb",
+    "continuous": true
+   }
+  ]
+ },
+ "thisFile": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/.tlog/v++_link_random_access_kernels_single.xtl",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr  1 19:12:16 2020",
+ "timestampMillis": "1585761136751",
+ "buildStep": {
+  "cmdId": "faf27282-63d6-4567-b306-2b1aaf8ce224",
+  "name": "v++",
+  "logFile": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo ",
+  "args": [
+   "--config",
+   "/home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini",
+   "-t",
+   "hw",
+   "-I/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/../common",
+   "--platform",
+   "xilinx_u280_xdma_201920_3",
+   "-R2",
+   "-l",
+   "--config",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini",
+   "-j",
+   "40",
+   "-o",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini",
+    "content": "kernel_frequency=450\n\n#[hls]\n#max_memory_ports=all\n"
+   },
+   {
+    "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini",
+    "content": "[connectivity]\nnk=accessMemory_0:32\nslr=accessMemory_0_1:SLR0\nslr=accessMemory_0_2:SLR1\nslr=accessMemory_0_3:SLR2\nslr=accessMemory_0_4:SLR0\nslr=accessMemory_0_5:SLR1\nslr=accessMemory_0_6:SLR2\nslr=accessMemory_0_7:SLR0\nslr=accessMemory_0_8:SLR1\nslr=accessMemory_0_9:SLR2\nslr=accessMemory_0_10:SLR0\nslr=accessMemory_0_11:SLR1\nslr=accessMemory_0_12:SLR2\nslr=accessMemory_0_13:SLR0\nslr=accessMemory_0_14:SLR1\nslr=accessMemory_0_15:SLR2\nslr=accessMemory_0_16:SLR0\nslr=accessMemory_0_17:SLR1\nslr=accessMemory_0_18:SLR2\nslr=accessMemory_0_19:SLR0\nslr=accessMemory_0_20:SLR1\nslr=accessMemory_0_21:SLR2\nslr=accessMemory_0_22:SLR0\nslr=accessMemory_0_23:SLR1\nslr=accessMemory_0_24:SLR2\nslr=accessMemory_0_25:SLR0\nslr=accessMemory_0_26:SLR1\nslr=accessMemory_0_27:SLR2\nslr=accessMemory_0_28:SLR0\nslr=accessMemory_0_29:SLR1\nslr=accessMemory_0_30:SLR2\nslr=accessMemory_0_31:SLR0\nslr=accessMemory_0_32:SLR1\n\nsp=accessMemory_0_1.m_axi_gmem:HBM[0]\nsp=accessMemory_0_2.m_axi_gmem:HBM[1]\nsp=accessMemory_0_3.m_axi_gmem:HBM[2]\nsp=accessMemory_0_4.m_axi_gmem:HBM[3]\nsp=accessMemory_0_5.m_axi_gmem:HBM[4]\nsp=accessMemory_0_6.m_axi_gmem:HBM[5]\nsp=accessMemory_0_7.m_axi_gmem:HBM[6]\nsp=accessMemory_0_8.m_axi_gmem:HBM[7]\nsp=accessMemory_0_9.m_axi_gmem:HBM[8]\nsp=accessMemory_0_10.m_axi_gmem:HBM[9]\nsp=accessMemory_0_11.m_axi_gmem:HBM[10]\nsp=accessMemory_0_12.m_axi_gmem:HBM[11]\nsp=accessMemory_0_13.m_axi_gmem:HBM[12]\nsp=accessMemory_0_14.m_axi_gmem:HBM[13]\nsp=accessMemory_0_15.m_axi_gmem:HBM[14]\nsp=accessMemory_0_16.m_axi_gmem:HBM[15]\nsp=accessMemory_0_17.m_axi_gmem:HBM[16]\nsp=accessMemory_0_18.m_axi_gmem:HBM[17]\nsp=accessMemory_0_19.m_axi_gmem:HBM[18]\nsp=accessMemory_0_20.m_axi_gmem:HBM[19]\nsp=accessMemory_0_21.m_axi_gmem:HBM[20]\nsp=accessMemory_0_22.m_axi_gmem:HBM[21]\nsp=accessMemory_0_23.m_axi_gmem:HBM[22]\nsp=accessMemory_0_24.m_axi_gmem:HBM[23]\nsp=accessMemory_0_25.m_axi_gmem:HBM[24]\nsp=accessMemory_0_26.m_axi_gmem:HBM[25]\nsp=accessMemory_0_27.m_axi_gmem:HBM[26]\nsp=accessMemory_0_28.m_axi_gmem:HBM[27]\nsp=accessMemory_0_29.m_axi_gmem:HBM[28]\nsp=accessMemory_0_30.m_axi_gmem:HBM[29]\nsp=accessMemory_0_31.m_axi_gmem:HBM[30]\nsp=accessMemory_0_32.m_axi_gmem:HBM[31]\n\n"
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:12:16 2020",
+ "timestampMillis": "1585761136752",
+ "status": {
+  "cmdId": "faf27282-63d6-4567-b306-2b1aaf8ce224",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Apr  1 19:12:25 2020",
+ "timestampMillis": "1585761145278",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_xdma_201920_3.xpfm",
+  "hardwareDsa": "xilinx_u280_xdma_201920_3.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "random_access_kernels_single",
+    "file": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "accessMemory_0",
+     "file": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xo/accessMemory_0/accessMemory_0/cpu_sources/replicated_random_access_kernels_single_xilinx.cl"
+    ],
+    "cuNames": [
+     "accessMemory_0_1",
+     "accessMemory_0_2",
+     "accessMemory_0_3",
+     "accessMemory_0_4",
+     "accessMemory_0_5",
+     "accessMemory_0_6",
+     "accessMemory_0_7",
+     "accessMemory_0_8",
+     "accessMemory_0_9",
+     "accessMemory_0_10",
+     "accessMemory_0_11",
+     "accessMemory_0_12",
+     "accessMemory_0_13",
+     "accessMemory_0_14",
+     "accessMemory_0_15",
+     "accessMemory_0_16",
+     "accessMemory_0_17",
+     "accessMemory_0_18",
+     "accessMemory_0_19",
+     "accessMemory_0_20",
+     "accessMemory_0_21",
+     "accessMemory_0_22",
+     "accessMemory_0_23",
+     "accessMemory_0_24",
+     "accessMemory_0_25",
+     "accessMemory_0_26",
+     "accessMemory_0_27",
+     "accessMemory_0_28",
+     "accessMemory_0_29",
+     "accessMemory_0_30",
+     "accessMemory_0_31",
+     "accessMemory_0_32"
+    ]
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 19:12:25 2020",
+ "timestampMillis": "1585761145496",
+ "buildStep": {
+  "cmdId": "dc2879c2-c422-42be-a2d1-a109d9daa8de",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int --temp_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo",
+   "--config",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int",
+   "--temp_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:12:25 2020",
+ "timestampMillis": "1585761145497",
+ "status": {
+  "cmdId": "dc2879c2-c422-42be-a2d1-a109d9daa8de",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:12:57 2020",
+ "timestampMillis": "1585761177516",
+ "status": {
+  "cmdId": "dc2879c2-c422-42be-a2d1-a109d9daa8de",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 19:12:57 2020",
+ "timestampMillis": "1585761177521",
+ "buildStep": {
+  "cmdId": "b89cffdf-4ad8-44c6-be2b-74a2d2b2297c",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/sdsl.dat -rtd /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/cf2sw.rtd -xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.xml -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:12:57 2020",
+ "timestampMillis": "1585761177523",
+ "status": {
+  "cmdId": "b89cffdf-4ad8-44c6-be2b-74a2d2b2297c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:13:09 2020",
+ "timestampMillis": "1585761189109",
+ "status": {
+  "cmdId": "b89cffdf-4ad8-44c6-be2b-74a2d2b2297c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 19:13:09 2020",
+ "timestampMillis": "1585761189115",
+ "buildStep": {
+  "cmdId": "7d188e63-e99a-4967-b2cf-cc7fec019ffa",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/cf2sw.rtd --diagramJsonFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo  --generatedByXclbinName random_access_kernels_single --kernelInfoDataFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/cf2sw.rtd",
+   "--diagramJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModel.json",
+   "--platformFilePath",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm",
+   "--generatedByName",
+   "v++",
+   "--generatedByVersion",
+   "2019.2",
+   "--generatedByChangeList",
+   "2708876",
+   "--generatedByTimeStamp",
+   "Wed Nov  6 21:39:14 MST 2019",
+   "--generatedByOptions",
+   "/opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo ",
+   "--generatedByXclbinName",
+   "random_access_kernels_single",
+   "--kernelInfoDataFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:13:09 2020",
+ "timestampMillis": "1585761189116",
+ "status": {
+  "cmdId": "7d188e63-e99a-4967-b2cf-cc7fec019ffa",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:13:10 2020",
+ "timestampMillis": "1585761190779",
+ "status": {
+  "cmdId": "7d188e63-e99a-4967-b2cf-cc7fec019ffa",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 19:13:10 2020",
+ "timestampMillis": "1585761190785",
+ "buildStep": {
+  "cmdId": "c5d850e9-91b2-4d00-b493-00e86361d0c6",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_xdma_201920_3 -j 40 --kernel_frequency 450 --output_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int --log_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/logs/link --report_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/vplConfig.ini -k /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link --no-info --tlog_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/.tlog/v++_link_random_access_kernels_single --iprepo /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_accessMemory_0_1_0 --messageDb /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link/vpl.pb /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_xdma_201920_3",
+   "-j",
+   "40",
+   "--kernel_frequency",
+   "450",
+   "--output_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int",
+   "--log_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/logs/link",
+   "--report_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link",
+   "--config",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link",
+   "--no-info",
+   "--tlog_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/.tlog/v++_link_random_access_kernels_single",
+   "--iprepo",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_accessMemory_0_1_0",
+   "--messageDb",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link/vpl.pb",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 19:13:10 2020",
+ "timestampMillis": "1585761190787",
+ "status": {
+  "cmdId": "c5d850e9-91b2-4d00-b493-00e86361d0c6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:22:59 2020",
+ "timestampMillis": "1585779779917",
+ "status": {
+  "cmdId": "c5d850e9-91b2-4d00-b493-00e86361d0c6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr  2 00:22:59 2020",
+ "timestampMillis": "1585779779924",
+ "buildStep": {
+  "cmdId": "8cfe3835-6f69-49b3-bbcc-cdf2aaa8dac8",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:22:59 2020",
+ "timestampMillis": "1585779779925",
+ "status": {
+  "cmdId": "8cfe3835-6f69-49b3-bbcc-cdf2aaa8dac8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr  2 00:22:59 2020",
+ "timestampMillis": "1585779779935",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr  2 00:22:59 2020",
+ "timestampMillis": "1585779779943",
+ "buildStep": {
+  "cmdId": "2b38acd4-e633-4a3d-9ce7-b0f653d5af57",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/address_map.xml -sdsl /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/sdsl.dat -xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.xml -rtd /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xml",
+  "args": [
+   "-a",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd",
+   "-o",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:22:59 2020",
+ "timestampMillis": "1585779779944",
+ "status": {
+  "cmdId": "2b38acd4-e633-4a3d-9ce7-b0f653d5af57",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:11 2020",
+ "timestampMillis": "1585779791677",
+ "status": {
+  "cmdId": "2b38acd4-e633-4a3d-9ce7-b0f653d5af57",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr  2 00:23:11 2020",
+ "timestampMillis": "1585779791680",
+ "buildStep": {
+  "cmdId": "0811d6fe-9687-45e6-bf20-61599a822640",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd --diagramJsonFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModel_resource_use.json --diagramWithAddressesAndSlrsJsonFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd",
+   "--diagramJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModel_resource_use.json",
+   "--diagramWithAddressesAndSlrsJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:11 2020",
+ "timestampMillis": "1585779791681",
+ "status": {
+  "cmdId": "0811d6fe-9687-45e6-bf20-61599a822640",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:13 2020",
+ "timestampMillis": "1585779793132",
+ "status": {
+  "cmdId": "0811d6fe-9687-45e6-bf20-61599a822640",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:13 2020",
+ "timestampMillis": "1585779793135",
+ "status": {
+  "cmdId": "8cfe3835-6f69-49b3-bbcc-cdf2aaa8dac8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr  2 00:23:13 2020",
+ "timestampMillis": "1585779793141",
+ "buildStep": {
+  "cmdId": "a67f47fe-88d8-4222-b854-2a88699d55b6",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd --append-section :JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_xml.rtd --add-section BUILD_METADATA:JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xml --add-section SYSTEM_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json --output /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/partial.bit",
+   "--force",
+   "--key-value",
+   "SYS:mode:hw_pr",
+   "--add-section",
+   ":JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd",
+   "--append-section",
+   ":JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:13 2020",
+ "timestampMillis": "1585779793143",
+ "status": {
+  "cmdId": "a67f47fe-88d8-4222-b854-2a88699d55b6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:14 2020",
+ "timestampMillis": "1585779794068",
+ "status": {
+  "cmdId": "a67f47fe-88d8-4222-b854-2a88699d55b6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr  2 00:23:14 2020",
+ "timestampMillis": "1585779794073",
+ "buildStep": {
+  "cmdId": "41c75dc9-cab7-40b7-a184-00f91fc41916",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --info /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin.info --input /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin.info",
+   "--input",
+   "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:14 2020",
+ "timestampMillis": "1585779794074",
+ "status": {
+  "cmdId": "41c75dc9-cab7-40b7-a184-00f91fc41916",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:14 2020",
+ "timestampMillis": "1585779794582",
+ "status": {
+  "cmdId": "41c75dc9-cab7-40b7-a184-00f91fc41916",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr  2 00:23:14 2020",
+ "timestampMillis": "1585779794648",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link/system_estimate_random_access_kernels_single.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr  2 00:23:25 2020",
+ "timestampMillis": "1585779805914",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link/v++_link_random_access_kernels_single_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr  2 00:23:25 2020",
+ "timestampMillis": "1585779805915",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/v++_link_random_access_kernels_single_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr  2 00:23:26 2020",
+ "timestampMillis": "1585779806090",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr  2 00:23:26 2020",
+ "timestampMillis": "1585779806095",
+ "status": {
+  "cmdId": "faf27282-63d6-4567-b306-2b1aaf8ce224",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

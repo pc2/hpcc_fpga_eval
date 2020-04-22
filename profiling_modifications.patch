@@ -1,0 +1,232 @@
+From 223b639b3e55e3b1ef174412e4f106c29266ded5 Mon Sep 17 00:00:00 2001
+From: Marius Meyer <marius.meyer@uni-paderborn.de>
+Date: Wed, 22 Apr 2020 21:22:06 +0200
+Subject: [PATCH] Add OpenCL profiling
+
+---
+ STREAM/CMakeLists.txt                 |  6 +-
+ STREAM/src/common/parameters.h.in     |  3 +-
+ STREAM/src/host/execution_default.cpp | 88 +++++++++++++++++++++++++--
+ 3 files changed, 88 insertions(+), 9 deletions(-)
+
+diff --git a/STREAM/CMakeLists.txt b/STREAM/CMakeLists.txt
+index d093b73..68c4a89 100755
+--- a/STREAM/CMakeLists.txt
++++ b/STREAM/CMakeLists.txt
+@@ -1,6 +1,5 @@
+ cmake_minimum_required(VERSION 3.1)
+-project(STREAM VERSION 2.1.4.1
+-        DESCRIPTION "OpenCL STREAM Benchmark for FPGA")
++project(STREAM VERSION 2.1.4.1)
+ 
+ set (CMAKE_CXX_STANDARD 11)
+ 
+@@ -16,10 +15,11 @@ set(DEFAULT_DEVICE -1 CACHE STRING "Index of the default device to use")
+ set(DEFAULT_PLATFORM -1 CACHE STRING "Index of the default platform to use")
+ set(GLOBAL_MEM_UNROLL 1 CACHE STRING "Unrolling factor that is used for all loops in the kernels")
+ set(FPGA_BOARD_NAME p520_hpc_sg280l CACHE STRING "Name of the target FPGA board")
+-set(NUM_REPLICATIONS 4 CACHE STRING "Number of times the kernels will be replicated")
++set(NUM_REPLICATIONS 32 CACHE STRING "Number of times the kernels will be replicated")
+ set(DEVICE_BUFFER_SIZE 512 CACHE STRING "Buffer size in number of values that is used within the single kernel implementation.")
+ set(INNER_LOOP_BUFFERS ON CACHE BOOL "Put the local memory buffers inside the outer loop in the kernel code")
+ set(USE_SVM No CACHE BOOL "Use SVM pointers instead of creating buffers on the board and transferring the data there before execution.")
++set(REORDER_KERNELS No CACHE BOOL "Reorder buffer usage for testing")
+ set(XILINX_GENERATE_LINK_SETTINGS Yes CACHE BOOL "Generate the link settings depending on the number of replications for the kernels")
+ set(XILINX_LINK_SETTINGS_FILE "${CMAKE_SOURCE_DIR}/settings/settings.link.xilinx.stream_kernels.ddr.ini" CACHE STRING "The link settings file that should be used when generating is disabled")
+ set(XILINX_COMPILE_FLAGS "-j 40" CACHE STRING "Additional compile flags for the v++ compiler")
+diff --git a/STREAM/src/common/parameters.h.in b/STREAM/src/common/parameters.h.in
+index ba5ef0e..14be3c5 100644
+--- a/STREAM/src/common/parameters.h.in
++++ b/STREAM/src/common/parameters.h.in
+@@ -22,6 +22,7 @@
+ #define BUFFER_SIZE @DEVICE_BUFFER_SIZE@
+ #cmakedefine INNER_LOOP_BUFFERS
+ #cmakedefine USE_SVM
++#cmakedefine REORDER_KERNELS
+ 
+ /**
+ Output separator
+@@ -34,4 +35,4 @@ Output separator
+ #define TRIAD_KERNEL_TYPE 3
+ 
+ 
+-#endif // SRC_COMMON_PARAMETERS_H_
+\ No newline at end of file
++#endif // SRC_COMMON_PARAMETERS_H_
+diff --git a/STREAM/src/host/execution_default.cpp b/STREAM/src/host/execution_default.cpp
+index c336bd8..587d76c 100644
+--- a/STREAM/src/host/execution_default.cpp
++++ b/STREAM/src/host/execution_default.cpp
+@@ -155,6 +155,15 @@ namespace bm_execution {
+             ASSERT_CL(command_queues[i].finish());
+         }
+ 
++        std::vector<cl::Event> events(config->replications);
++        std::map<std::string, std::vector<long>> detailedTimingMap;
++        detailedTimingMap.insert({COPY_KEY, std::vector<long>()});
++        detailedTimingMap.insert({SCALE_KEY, std::vector<long>()});
++        detailedTimingMap.insert({ADD_KEY, std::vector<long>()});
++        detailedTimingMap.insert({TRIAD_KEY, std::vector<long>()});
++        detailedTimingMap.insert({"replication", std::vector<long>()});
++        detailedTimingMap.insert({"repetition", std::vector<long>()});
++
+ 
+         //
+         // Do actual benchmark measurements
+@@ -209,7 +218,7 @@ namespace bm_execution {
+                 }
+ #pragma omp for nowait
+                 for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].enqueueTask(copy_kernels[i]);
++                    command_queues[i].enqueueTask(copy_kernels[i], NULL, &events[i]);
+                 }
+ #pragma omp for
+                 for (int i = 0; i < config->replications; i++) {
+@@ -222,11 +231,24 @@ namespace bm_execution {
+                             (endExecution - startExecution);
+                     timingMap[COPY_KEY].push_back(duration.count());
+ 
++
++                    for (int i = 0; i < config->replications; i++) {
++                        detailedTimingMap["repetition"].push_back(r);
++                        detailedTimingMap["replication"].push_back(i);
++                    }
++                    for (int i = 0; i < config->replications; i++) {
++                        cl_ulong start;
++                        cl_ulong end;
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_START, &start);
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_END, &end);
++                        detailedTimingMap[COPY_KEY].push_back(end - start);
++                    }
++
+                     startExecution = std::chrono::high_resolution_clock::now();
+                 }
+ #pragma omp for nowait
+                 for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].enqueueTask(scale_kernels[i]);
++                    command_queues[i].enqueueTask(scale_kernels[i], NULL, &events[i]);
+                 }
+ #pragma omp for
+                 for (int i = 0; i < config->replications; i++) {
+@@ -239,11 +261,20 @@ namespace bm_execution {
+                             (endExecution - startExecution);
+                     timingMap[SCALE_KEY].push_back(duration.count());
+ 
++
++                    for (int i = 0; i < config->replications; i++) {
++                        cl_ulong start;
++                        cl_ulong end;
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_START, &start);
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_END, &end);
++                        detailedTimingMap[SCALE_KEY].push_back(end - start);
++                    }
++
+                     startExecution = std::chrono::high_resolution_clock::now();
+                 }
+ #pragma omp for nowait
+                 for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].enqueueTask(add_kernels[i]);
++                    command_queues[i].enqueueTask(add_kernels[i], NULL, &events[i]);
+                 }
+ #pragma omp for
+                 for (int i = 0; i < config->replications; i++) {
+@@ -256,11 +287,19 @@ namespace bm_execution {
+                             (endExecution - startExecution);
+                     timingMap[ADD_KEY].push_back(duration.count());
+ 
++                    for (int i = 0; i < config->replications; i++) {
++                        cl_ulong start;
++                        cl_ulong end;
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_START, &start);
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_END, &end);
++                        detailedTimingMap[ADD_KEY].push_back(end - start);
++                    }
++
+                     startExecution = std::chrono::high_resolution_clock::now();
+                 }
+ #pragma omp for nowait
+                 for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].enqueueTask(triad_kernels[i]);
++                    command_queues[i].enqueueTask(triad_kernels[i], NULL, &events[i]);
+                 }
+ #pragma omp for
+                 for (int i = 0; i < config->replications; i++) {
+@@ -273,6 +312,15 @@ namespace bm_execution {
+                             (endExecution - startExecution);
+                     timingMap[TRIAD_KEY].push_back(duration.count());
+ 
++                    for (int i = 0; i < config->replications; i++) {
++                        cl_ulong start;
++                        cl_ulong end;
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_START, &start);
++                        events[i].getProfilingInfo<cl_ulong>(CL_PROFILING_COMMAND_END, &end);
++                        detailedTimingMap[TRIAD_KEY].push_back(end - start);
++                    }
++
++
+                     startExecution = std::chrono::high_resolution_clock::now();
+                 }
+ #pragma omp for nowait
+@@ -313,6 +361,22 @@ namespace bm_execution {
+             }
+         }
+ 
++
++        // Write detailed OpenCL event timings to CSV file
++        std::ofstream outfile;
++        outfile.open("detailed_stream_timings.csv", std::ios::out | std::ios::trunc );
++        outfile << COPY_KEY << ","<< SCALE_KEY << "," << ADD_KEY << "," << TRIAD_KEY << ",replication,repetition" << std::endl;
++        for (int i = 0; i < config->replications * config->repetitions; i++) {
++            outfile << detailedTimingMap[COPY_KEY][i] << ","
++                    << detailedTimingMap[SCALE_KEY][i] << ","
++                    << detailedTimingMap[ADD_KEY][i] << ","
++                    << detailedTimingMap[TRIAD_KEY][i] << ","
++                    << detailedTimingMap["replication"][i] << ","
++                    << detailedTimingMap["repetition"][i] << std::endl;
++        }
++
++        outfile.close();
++
+         std::shared_ptr<ExecutionTimings> result(new ExecutionTimings{
+                 timingMap,
+                 config->arraySize
+@@ -426,6 +490,19 @@ namespace bm_execution {
+             ASSERT_CL(err);
+ #endif
+ #ifdef XILINX_FPGA
++#ifdef REORDER_KERNELS
++            cl::Kernel testkernel(config->program, ("calc_0:{calc_0_" + std::to_string((16*i + i/2) % 32+1) + "}").c_str(), &err);
++            ASSERT_CL(err);
++            cl::Kernel copykernel(config->program, ("calc_0:{calc_0_" + std::to_string((16*i + i/2) %32+1) + "}").c_str(), &err);
++            ASSERT_CL(err);
++            cl::Kernel scalekernel(config->program, ("calc_0:{calc_0_" + std::to_string((16*i + i/2) %32+1) + "}").c_str(), &err);
++            ASSERT_CL(err);
++            cl::Kernel addkernel(config->program, ("calc_0:{calc_0_" + std::to_string((16*i + i/2) % 32+1) + "}").c_str(), &err);
++            ASSERT_CL(err);
++            cl::Kernel triadkernel(config->program, ("calc_0:{calc_0_" + std::to_string((16*i + i/2) % 32+1) + "}").c_str(), &err);
++            ASSERT_CL(err);
++	    std::cout << "Kernel index: " << ((16*i + i/2) % 32 + 1) << std::endl;
++#else
+             // create the kernels
+             cl::Kernel testkernel(config->program, ("calc_0:{calc_0_" + std::to_string(i+1) + "}").c_str(), &err);
+             ASSERT_CL(err);
+@@ -437,6 +514,7 @@ namespace bm_execution {
+             ASSERT_CL(err);
+             cl::Kernel triadkernel(config->program, ("calc_0:{calc_0_" + std::to_string(i+1) + "}").c_str(), &err);
+             ASSERT_CL(err);
++#endif
+ #endif
+             HOST_DATA_TYPE scalar = 3.0;
+             HOST_DATA_TYPE test_scalar = 2.0E0;
+@@ -567,7 +645,7 @@ namespace bm_execution {
+             err = triadkernel.setArg(5, TRIAD_KERNEL_TYPE);
+             ASSERT_CL(err);
+ 
+-            command_queues.push_back(cl::CommandQueue(config->context));
++            command_queues.push_back(cl::CommandQueue(config->context, CL_QUEUE_PROFILING_ENABLE));
+             test_kernels.push_back(testkernel);
+             copy_kernels.push_back(copykernel);
+             scale_kernels.push_back(scalekernel);
+-- 
+2.21.0 (Apple Git-122)
+

@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"classes":["info-table"],"data":["gemm_cannon"],"name":"Project Name"},
+{"data":["Stratix 10, 1SG280LU3F50E1VGS1, bitt_s10_pcie:p520_hpc_sg280l"],"name":"Target Family, Device, Board"},
+{"data":["19.4.0 Build 64"],"name":"AOC Version"},
+{"data":["19.2.0 Build 57 Pro"],"name":"Quartus Version"},
+{"data":["aoc /scratch/pc2-mitarbeiter/mariusme/synth/fgemm/src/device/gemm_cannon.cl -I/scratch/pc2-mitarbeiter/mariusme/synth/fgemm/build-19.4-cannon-256-8/src/device/../common -fpc -fp-relaxed -no-interleaving=default -board=p520_hpc_sg280l -o /scratch/pc2-mitarbeiter/mariusme/synth/fgemm/build-19.4-cannon-256-8/bin/gemm_cannon.aocx"],"name":"Command"},
+{"data":["Tue Feb  4 17:17:22 2020"],"name":"Reports Generated At"}
+]}

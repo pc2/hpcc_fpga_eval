@@ -1,0 +1,2448 @@
+{
+  "basicblocks":
+  {
+    "gefa.B0":
+    {
+      "name":"gefa.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":6
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B1":
+    {
+      "name":"gefa.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B2":
+    {
+      "name":"gefa.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":10
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"468"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B3":
+    {
+      "name":"gefa.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":8
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"41"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B4":
+    {
+      "name":"gefa.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B5":
+    {
+      "name":"gefa.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":343
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"43"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B6":
+    {
+      "name":"gefa.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B7":
+    {
+      "name":"gefa.B7"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":6
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B8":
+    {
+      "name":"gefa.B8"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":18
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"199"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B9":
+    {
+      "name":"gefa.B9"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B10":
+    {
+      "name":"gefa.B10"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":34
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"213"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B11":
+    {
+      "name":"gefa.B11"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":14
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"159"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B12":
+    {
+      "name":"gefa.B12"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B13":
+    {
+      "name":"gefa.B13"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":29
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"235"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B14":
+    {
+      "name":"gefa.B14"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"240"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B15":
+    {
+      "name":"gefa.B15"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B16":
+    {
+      "name":"gefa.B16"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":32
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"245"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B17":
+    {
+      "name":"gefa.B17"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":19
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"256"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B18":
+    {
+      "name":"gefa.B18"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B19":
+    {
+      "name":"gefa.B19"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":18
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"263"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B20":
+    {
+      "name":"gefa.B20"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B21":
+    {
+      "name":"gefa.B21"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B22":
+    {
+      "name":"gefa.B22"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"65"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B23":
+    {
+      "name":"gefa.B23"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B24":
+    {
+      "name":"gefa.B24"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":178
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"67"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B25":
+    {
+      "name":"gefa.B25"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":6
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B26":
+    {
+      "name":"gefa.B26"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":19
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"483"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B27":
+    {
+      "name":"gefa.B27"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B28":
+    {
+      "name":"gefa.B28"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":9
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"492"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B29":
+    {
+      "name":"gefa.B29"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"41"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B30":
+    {
+      "name":"gefa.B30"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B31":
+    {
+      "name":"gefa.B31"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":343
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"43"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B32":
+    {
+      "name":"gefa.B32"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B33":
+    {
+      "name":"gefa.B33"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"41"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B34":
+    {
+      "name":"gefa.B34"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B35":
+    {
+      "name":"gefa.B35"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":343
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"43"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B36":
+    {
+      "name":"gefa.B36"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B37":
+    {
+      "name":"gefa.B37"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B38":
+    {
+      "name":"gefa.B38"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":21
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"296"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B39":
+    {
+      "name":"gefa.B39"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B40":
+    {
+      "name":"gefa.B40"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B41":
+    {
+      "name":"gefa.B41"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":34
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"304"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B42":
+    {
+      "name":"gefa.B42"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B43":
+    {
+      "name":"gefa.B43"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":24
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"313"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B44":
+    {
+      "name":"gefa.B44"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":20
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"321"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B45":
+    {
+      "name":"gefa.B45"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":20
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"328"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B46":
+    {
+      "name":"gefa.B46"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B47":
+    {
+      "name":"gefa.B47"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B48":
+    {
+      "name":"gefa.B48"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":20
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"357"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B49":
+    {
+      "name":"gefa.B49"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B50":
+    {
+      "name":"gefa.B50"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":47
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"366"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B51":
+    {
+      "name":"gefa.B51"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":33
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"375"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B52":
+    {
+      "name":"gefa.B52"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B53":
+    {
+      "name":"gefa.B53"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":20
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"387"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B54":
+    {
+      "name":"gefa.B54"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B55":
+    {
+      "name":"gefa.B55"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":20
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"394"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B56":
+    {
+      "name":"gefa.B56"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B57":
+    {
+      "name":"gefa.B57"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"65"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B58":
+    {
+      "name":"gefa.B58"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B59":
+    {
+      "name":"gefa.B59"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":180
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"67"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B60":
+    {
+      "name":"gefa.B60"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B61":
+    {
+      "name":"gefa.B61"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"65"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B62":
+    {
+      "name":"gefa.B62"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B63":
+    {
+      "name":"gefa.B63"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":178
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"67"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B64":
+    {
+      "name":"gefa.B64"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B65":
+    {
+      "name":"gefa.B65"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":5
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B66":
+    {
+      "name":"gefa.B66"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":9
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"513"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B67":
+    {
+      "name":"gefa.B67"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B68":
+    {
+      "name":"gefa.B68"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":347
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"520"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B69":
+    {
+      "name":"gefa.B69"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B70":
+    {
+      "name":"gefa.B70"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":9
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"538"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B71":
+    {
+      "name":"gefa.B71"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B72":
+    {
+      "name":"gefa.B72"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"41"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B73":
+    {
+      "name":"gefa.B73"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":4
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B74":
+    {
+      "name":"gefa.B74"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":342
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":5
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"43"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B75":
+    {
+      "name":"gefa.B75"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":1
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B76":
+    {
+      "name":"gefa.B76"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":10
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"423"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B77":
+    {
+      "name":"gefa.B77"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":19
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":4
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B78":
+    {
+      "name":"gefa.B78"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"432.0"
+      , "achieved_ii":1
+      , "latency":35
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"Yes"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":5
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Variable on loop carried feedback path"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"From: Load Operation (%L > %L)"
+              , "links":
+              [
+                {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"567"
+                }
+                , {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"44"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"To: Store Operation (%L > %L)"
+              , "links":
+              [
+                {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"573"
+                }
+                , {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"69"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"From: Store Operation (%L > %L)"
+              , "links":
+              [
+                {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"567"
+                }
+                , {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"44"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"From: Load Operation (%L > %L > %L)"
+              , "links":
+              [
+                {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"570"
+                }
+                , {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"437"
+                }
+                , {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"97"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"From: Load Operation (%L)"
+              , "links":
+              [
+                {
+                  "filename":"src/device/lu_blocked_pvt.cl"
+                  , "line":"525"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"436"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B79":
+    {
+      "name":"gefa.B79"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B80":
+    {
+      "name":"gefa.B80"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":17
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"65"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B81":
+    {
+      "name":"gefa.B81"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":4
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B82":
+    {
+      "name":"gefa.B82"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":180
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":5
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"67"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B83":
+    {
+      "name":"gefa.B83"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":3
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B84":
+    {
+      "name":"gefa.B84"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":347
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":4
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"src/device/lu_blocked_pvt.cl"
+                , "line":"546"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "gefa.B85":
+    {
+      "name":"gefa.B85"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":53
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+    , "gefa.B86":
+    {
+      "name":"gefa.B86"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":13
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":2
+      , "loop_location":
+      {
+      }
+    }
+  }
+  , "functions":
+  {
+    "gefa":
+    {
+      "debug":
+      [
+        {
+          "filename":"src/device/lu_blocked_pvt.cl"
+          , "line":465
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "gefa__no_loop":
+        [
+          "gefa.B0"
+          , "gefa.B1"
+        ]
+        , "gefa.B2":
+        [
+          "gefa.B2"
+          , "gefa.B3"
+          , "gefa.B6"
+          , "gefa.B7"
+          , "gefa.B8"
+          , "gefa.B9"
+          , "gefa.B10"
+          , "gefa.B19"
+          , "gefa.B20"
+          , "gefa.B21"
+          , "gefa.B22"
+          , "gefa.B25"
+          , "gefa.B26"
+          , "gefa.B27"
+          , "gefa.B28"
+          , "gefa.B66"
+          , "gefa.B65"
+        ]
+        , "gefa.B3":
+        [
+          "gefa.B3"
+          , "gefa.B5"
+          , "gefa.B4"
+        ]
+        , "gefa.B5":
+        [
+          "gefa.B5"
+        ]
+        , "gefa.B8":
+        [
+          "gefa.B8"
+        ]
+        , "gefa.B10":
+        [
+          "gefa.B10"
+          , "gefa.B11"
+          , "gefa.B12"
+          , "gefa.B13"
+          , "gefa.B14"
+          , "gefa.B15"
+          , "gefa.B16"
+          , "gefa.B17"
+          , "gefa.B85"
+          , "gefa.B86"
+          , "gefa.B18"
+        ]
+        , "gefa.B11":
+        [
+          "gefa.B11"
+        ]
+        , "gefa.B13":
+        [
+          "gefa.B13"
+        ]
+        , "gefa.B14":
+        [
+          "gefa.B14"
+        ]
+        , "gefa.B16":
+        [
+          "gefa.B16"
+        ]
+        , "gefa.B17":
+        [
+          "gefa.B17"
+        ]
+        , "gefa.B19":
+        [
+          "gefa.B19"
+        ]
+        , "gefa.B22":
+        [
+          "gefa.B22"
+          , "gefa.B24"
+          , "gefa.B23"
+        ]
+        , "gefa.B24":
+        [
+          "gefa.B24"
+        ]
+        , "gefa.B26":
+        [
+          "gefa.B26"
+        ]
+        , "gefa.B28":
+        [
+          "gefa.B28"
+          , "gefa.B29"
+          , "gefa.B32"
+          , "gefa.B33"
+          , "gefa.B36"
+          , "gefa.B37"
+          , "gefa.B38"
+          , "gefa.B40"
+          , "gefa.B41"
+          , "gefa.B45"
+          , "gefa.B46"
+          , "gefa.B47"
+          , "gefa.B48"
+          , "gefa.B49"
+          , "gefa.B50"
+          , "gefa.B55"
+          , "gefa.B56"
+          , "gefa.B57"
+          , "gefa.B60"
+          , "gefa.B61"
+          , "gefa.B64"
+        ]
+        , "gefa.B29":
+        [
+          "gefa.B29"
+          , "gefa.B31"
+          , "gefa.B30"
+        ]
+        , "gefa.B31":
+        [
+          "gefa.B31"
+        ]
+        , "gefa.B33":
+        [
+          "gefa.B33"
+          , "gefa.B35"
+          , "gefa.B34"
+        ]
+        , "gefa.B35":
+        [
+          "gefa.B35"
+        ]
+        , "gefa.B38":
+        [
+          "gefa.B38"
+        ]
+        , "gefa.B41":
+        [
+          "gefa.B41"
+          , "gefa.B42"
+          , "gefa.B43"
+          , "gefa.B44"
+          , "gefa.B39"
+        ]
+        , "gefa.B43":
+        [
+          "gefa.B43"
+        ]
+        , "gefa.B44":
+        [
+          "gefa.B44"
+        ]
+        , "gefa.B45":
+        [
+          "gefa.B45"
+        ]
+        , "gefa.B48":
+        [
+          "gefa.B48"
+        ]
+        , "gefa.B50":
+        [
+          "gefa.B50"
+          , "gefa.B51"
+          , "gefa.B52"
+          , "gefa.B53"
+          , "gefa.B54"
+        ]
+        , "gefa.B51":
+        [
+          "gefa.B51"
+        ]
+        , "gefa.B53":
+        [
+          "gefa.B53"
+        ]
+        , "gefa.B55":
+        [
+          "gefa.B55"
+        ]
+        , "gefa.B57":
+        [
+          "gefa.B57"
+          , "gefa.B59"
+          , "gefa.B58"
+        ]
+        , "gefa.B59":
+        [
+          "gefa.B59"
+        ]
+        , "gefa.B61":
+        [
+          "gefa.B61"
+          , "gefa.B63"
+          , "gefa.B62"
+        ]
+        , "gefa.B63":
+        [
+          "gefa.B63"
+        ]
+        , "gefa.B66":
+        [
+          "gefa.B66"
+          , "gefa.B67"
+          , "gefa.B68"
+          , "gefa.B70"
+          , "gefa.B69"
+        ]
+        , "gefa.B68":
+        [
+          "gefa.B68"
+        ]
+        , "gefa.B70":
+        [
+          "gefa.B70"
+          , "gefa.B71"
+          , "gefa.B72"
+          , "gefa.B75"
+          , "gefa.B76"
+          , "gefa.B79"
+          , "gefa.B80"
+          , "gefa.B84"
+          , "gefa.B83"
+        ]
+        , "gefa.B72":
+        [
+          "gefa.B72"
+          , "gefa.B74"
+          , "gefa.B73"
+        ]
+        , "gefa.B74":
+        [
+          "gefa.B74"
+        ]
+        , "gefa.B76":
+        [
+          "gefa.B76"
+          , "gefa.B78"
+          , "gefa.B77"
+        ]
+        , "gefa.B78":
+        [
+          "gefa.B78"
+        ]
+        , "gefa.B80":
+        [
+          "gefa.B80"
+          , "gefa.B82"
+          , "gefa.B81"
+        ]
+        , "gefa.B82":
+        [
+          "gefa.B82"
+        ]
+        , "gefa.B84":
+        [
+          "gefa.B84"
+        ]
+      }
+    }
+  }
+}

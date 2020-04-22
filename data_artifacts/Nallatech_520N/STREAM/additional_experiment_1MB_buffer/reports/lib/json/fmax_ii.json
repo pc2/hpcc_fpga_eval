@@ -1,0 +1,1004 @@
+{
+  "basicblocks":
+  {
+    "calc_0.B0":
+    {
+      "name":"calc_0.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_0.B1":
+    {
+      "name":"calc_0.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_0.B2":
+    {
+      "name":"calc_0.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"22"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_0.B3":
+    {
+      "name":"calc_0.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_0.B4":
+    {
+      "name":"calc_0.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"28"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_0.B5":
+    {
+      "name":"calc_0.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"34"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_0.B6":
+    {
+      "name":"calc_0.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_0.B7":
+    {
+      "name":"calc_0.B7"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_0.B8":
+    {
+      "name":"calc_0.B8"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":47
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"40"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_1.B0":
+    {
+      "name":"calc_1.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_1.B1":
+    {
+      "name":"calc_1.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_1.B2":
+    {
+      "name":"calc_1.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"68"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_1.B3":
+    {
+      "name":"calc_1.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_1.B4":
+    {
+      "name":"calc_1.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"74"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_1.B5":
+    {
+      "name":"calc_1.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"80"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_1.B6":
+    {
+      "name":"calc_1.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_1.B7":
+    {
+      "name":"calc_1.B7"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_1.B8":
+    {
+      "name":"calc_1.B8"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":47
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"86"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_2.B0":
+    {
+      "name":"calc_2.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_2.B1":
+    {
+      "name":"calc_2.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_2.B2":
+    {
+      "name":"calc_2.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"114"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_2.B3":
+    {
+      "name":"calc_2.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_2.B4":
+    {
+      "name":"calc_2.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"120"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_2.B5":
+    {
+      "name":"calc_2.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"126"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_2.B6":
+    {
+      "name":"calc_2.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_2.B7":
+    {
+      "name":"calc_2.B7"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_2.B8":
+    {
+      "name":"calc_2.B8"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":47
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"132"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_3.B0":
+    {
+      "name":"calc_3.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_3.B1":
+    {
+      "name":"calc_3.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_3.B2":
+    {
+      "name":"calc_3.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"160"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_3.B3":
+    {
+      "name":"calc_3.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_3.B4":
+    {
+      "name":"calc_3.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"166"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_3.B5":
+    {
+      "name":"calc_3.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":274
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"172"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_3.B6":
+    {
+      "name":"calc_3.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_3.B7":
+    {
+      "name":"calc_3.B7"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_3.B8":
+    {
+      "name":"calc_3.B8"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":47
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":"178"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+  , "functions":
+  {
+    "calc_0":
+    {
+      "debug":
+      [
+        {
+          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+          , "line":12
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "calc_0__no_loop":
+        [
+          "calc_0.B0"
+          , "calc_0.B1"
+        ]
+        , "calc_0.B2":
+        [
+          "calc_0.B2"
+          , "calc_0.B3"
+          , "calc_0.B4"
+          , "calc_0.B5"
+          , "calc_0.B6"
+          , "calc_0.B8"
+          , "calc_0.B7"
+        ]
+        , "calc_0.B4":
+        [
+          "calc_0.B4"
+        ]
+        , "calc_0.B5":
+        [
+          "calc_0.B5"
+        ]
+        , "calc_0.B8":
+        [
+          "calc_0.B8"
+        ]
+      }
+    }
+    , "calc_1":
+    {
+      "debug":
+      [
+        {
+          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+          , "line":58
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "calc_1__no_loop":
+        [
+          "calc_1.B0"
+          , "calc_1.B1"
+        ]
+        , "calc_1.B2":
+        [
+          "calc_1.B2"
+          , "calc_1.B3"
+          , "calc_1.B4"
+          , "calc_1.B5"
+          , "calc_1.B6"
+          , "calc_1.B8"
+          , "calc_1.B7"
+        ]
+        , "calc_1.B4":
+        [
+          "calc_1.B4"
+        ]
+        , "calc_1.B5":
+        [
+          "calc_1.B5"
+        ]
+        , "calc_1.B8":
+        [
+          "calc_1.B8"
+        ]
+      }
+    }
+    , "calc_2":
+    {
+      "debug":
+      [
+        {
+          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+          , "line":104
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "calc_2__no_loop":
+        [
+          "calc_2.B0"
+          , "calc_2.B1"
+        ]
+        , "calc_2.B2":
+        [
+          "calc_2.B2"
+          , "calc_2.B3"
+          , "calc_2.B4"
+          , "calc_2.B5"
+          , "calc_2.B6"
+          , "calc_2.B8"
+          , "calc_2.B7"
+        ]
+        , "calc_2.B4":
+        [
+          "calc_2.B4"
+        ]
+        , "calc_2.B5":
+        [
+          "calc_2.B5"
+        ]
+        , "calc_2.B8":
+        [
+          "calc_2.B8"
+        ]
+      }
+    }
+    , "calc_3":
+    {
+      "debug":
+      [
+        {
+          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+          , "line":150
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "calc_3__no_loop":
+        [
+          "calc_3.B0"
+          , "calc_3.B1"
+        ]
+        , "calc_3.B2":
+        [
+          "calc_3.B2"
+          , "calc_3.B3"
+          , "calc_3.B4"
+          , "calc_3.B5"
+          , "calc_3.B6"
+          , "calc_3.B8"
+          , "calc_3.B7"
+        ]
+        , "calc_3.B4":
+        [
+          "calc_3.B4"
+        ]
+        , "calc_3.B5":
+        [
+          "calc_3.B5"
+        ]
+        , "calc_3.B8":
+        [
+          "calc_3.B8"
+        ]
+      }
+    }
+  }
+}

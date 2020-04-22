@@ -1,0 +1,31 @@
+
+*** Running vivado
+    with args -log pfm_dynamic_accessMemory_0_21_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfm_dynamic_accessMemory_0_21_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source pfm_dynamic_accessMemory_0_21_0.tcl -notrace
+[OPTRACE]|63061|1|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762681900|START|pfm_dynamic_accessMemory_0_21_0_synth_1|ROLLUP_AUTO
+[OPTRACE]|63061|2|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762681901|START|Creating in-memory project|
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_accessMemory_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:Monitor_AXI_Master:1.0'. The one found in IP location '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo/iprepo/monitor_axi_master_v1_0' will take precedence over the same IP in location /opt/Xilinx/Vitis/2019.2/data/ip/xilinx/monitor_axi_master_v1_0
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:interface:sdsoc_trace:2.0'. The one found in location '/opt/Xilinx/Vitis/2019.2/data/ip/xilinx/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2019.2/data/ip/interfaces/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml'
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1692.246 ; gain = 184.773 ; free physical = 83327 ; free virtual = 203406
+[OPTRACE]|63061|3|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762688803|END|Creating in-memory project|
+[OPTRACE]|63061|4|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762688804|START|Adding files|
+[OPTRACE]|63061|5|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762689088|END|Adding files|
+[OPTRACE]|63061|6|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762689089|START|Configure IP Cache|
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP pfm_dynamic_accessMemory_0_21_0, cache-ID = 826ddfdf35b2f009.
+[OPTRACE]|63061|7|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762689758|END|Configure IP Cache|
+[OPTRACE]|63061|8|/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_21_0_synth_1/pfm_dynamic_accessMemory_0_21_0.tcl|vivado_synth|1585762689810|END|pfm_dynamic_accessMemory_0_21_0_synth_1|
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  1 19:38:09 2020...

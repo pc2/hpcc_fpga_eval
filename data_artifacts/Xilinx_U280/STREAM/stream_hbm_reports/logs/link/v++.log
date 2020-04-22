@@ -1,0 +1,459 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/reports/link
+	Log files: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/bin/stream_kernels_single.xclbin.link_summary, at Tue Mar 31 18:39:42 2020
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar 31 18:39:42 2020
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/reports/link/v++_link_stream_kernels_single_guidance.html', at Tue Mar 31 18:39:43 2020
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [18:39:50] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/bin/tmp_compile/stream_kernels_single.xo --config /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int --temp_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link
+INFO: [SYSTEM_LINK 82-76] Reading emulation BD and HPFM information
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Mar 31 18:39:58 2020
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/bin/tmp_compile/stream_kernels_single.xo
+INFO: [KernelCheck 83-118] 'calc_0' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'in1' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'in2' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'out' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'scalar' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'array_size' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'operation_type' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [18:39:58] build_xd_ip_db started: /opt/Xilinx/Vitis/2019.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_calc_0_1_0,calc_0 -o /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [18:40:04] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 295.457 ; gain = 0.000 ; free physical = 125687 ; free virtual = 278954
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [18:40:04] cfgen started: /opt/Xilinx/Vitis/2019.2/bin/cfgen  -nk calc_0:32 -slr calc_0_1:SLR0 -slr calc_0_2:SLR1 -slr calc_0_3:SLR2 -slr calc_0_4:SLR0 -slr calc_0_5:SLR1 -slr calc_0_6:SLR2 -slr calc_0_7:SLR0 -slr calc_0_8:SLR1 -slr calc_0_9:SLR2 -slr calc_0_10:SLR0 -slr calc_0_11:SLR1 -slr calc_0_12:SLR2 -slr calc_0_13:SLR0 -slr calc_0_14:SLR1 -slr calc_0_15:SLR2 -slr calc_0_16:SLR0 -slr calc_0_17:SLR1 -slr calc_0_18:SLR2 -slr calc_0_19:SLR0 -slr calc_0_20:SLR1 -slr calc_0_21:SLR2 -slr calc_0_22:SLR0 -slr calc_0_23:SLR1 -slr calc_0_24:SLR2 -slr calc_0_25:SLR0 -slr calc_0_26:SLR1 -slr calc_0_27:SLR2 -slr calc_0_28:SLR0 -slr calc_0_29:SLR1 -slr calc_0_30:SLR2 -slr calc_0_31:SLR0 -slr calc_0_32:SLR1 -sp calc_0_1.m_axi_gmem:HBM[0] -sp calc_0_2.m_axi_gmem:HBM[1] -sp calc_0_3.m_axi_gmem:HBM[2] -sp calc_0_4.m_axi_gmem:HBM[3] -sp calc_0_5.m_axi_gmem:HBM[4] -sp calc_0_6.m_axi_gmem:HBM[5] -sp calc_0_7.m_axi_gmem:HBM[6] -sp calc_0_8.m_axi_gmem:HBM[7] -sp calc_0_9.m_axi_gmem:HBM[8] -sp calc_0_10.m_axi_gmem:HBM[9] -sp calc_0_11.m_axi_gmem:HBM[10] -sp calc_0_12.m_axi_gmem:HBM[11] -sp calc_0_13.m_axi_gmem:HBM[12] -sp calc_0_14.m_axi_gmem:HBM[13] -sp calc_0_15.m_axi_gmem:HBM[14] -sp calc_0_16.m_axi_gmem:HBM[15] -sp calc_0_17.m_axi_gmem:HBM[16] -sp calc_0_18.m_axi_gmem:HBM[17] -sp calc_0_19.m_axi_gmem:HBM[18] -sp calc_0_20.m_axi_gmem:HBM[19] -sp calc_0_21.m_axi_gmem:HBM[20] -sp calc_0_22.m_axi_gmem:HBM[21] -sp calc_0_23.m_axi_gmem:HBM[22] -sp calc_0_24.m_axi_gmem:HBM[23] -sp calc_0_25.m_axi_gmem:HBM[24] -sp calc_0_26.m_axi_gmem:HBM[25] -sp calc_0_27.m_axi_gmem:HBM[26] -sp calc_0_28.m_axi_gmem:HBM[27] -sp calc_0_29.m_axi_gmem:HBM[28] -sp calc_0_30.m_axi_gmem:HBM[29] -sp calc_0_31.m_axi_gmem:HBM[30] -sp calc_0_32.m_axi_gmem:HBM[31] -dmclkid 0 -r /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: calc_0, num: 32  {calc_0_1 calc_0_2 calc_0_3 calc_0_4 calc_0_5 calc_0_6 calc_0_7 calc_0_8 calc_0_9 calc_0_10 calc_0_11 calc_0_12 calc_0_13 calc_0_14 calc_0_15 calc_0_16 calc_0_17 calc_0_18 calc_0_19 calc_0_20 calc_0_21 calc_0_22 calc_0_23 calc_0_24 calc_0_25 calc_0_26 calc_0_27 calc_0_28 calc_0_29 calc_0_30 calc_0_31 calc_0_32}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: calc_0_1, k_port: m_axi_gmem, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: calc_0_2, k_port: m_axi_gmem, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: calc_0_3, k_port: m_axi_gmem, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: calc_0_4, k_port: m_axi_gmem, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: calc_0_5, k_port: m_axi_gmem, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: calc_0_6, k_port: m_axi_gmem, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: calc_0_7, k_port: m_axi_gmem, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: calc_0_8, k_port: m_axi_gmem, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: calc_0_9, k_port: m_axi_gmem, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: calc_0_10, k_port: m_axi_gmem, sptag: HBM[9]
+INFO: [CFGEN 83-0]   kernel: calc_0_11, k_port: m_axi_gmem, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: calc_0_12, k_port: m_axi_gmem, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: calc_0_13, k_port: m_axi_gmem, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: calc_0_14, k_port: m_axi_gmem, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: calc_0_15, k_port: m_axi_gmem, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: calc_0_16, k_port: m_axi_gmem, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: calc_0_17, k_port: m_axi_gmem, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: calc_0_18, k_port: m_axi_gmem, sptag: HBM[17]
+INFO: [CFGEN 83-0]   kernel: calc_0_19, k_port: m_axi_gmem, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: calc_0_20, k_port: m_axi_gmem, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: calc_0_21, k_port: m_axi_gmem, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: calc_0_22, k_port: m_axi_gmem, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: calc_0_23, k_port: m_axi_gmem, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: calc_0_24, k_port: m_axi_gmem, sptag: HBM[23]
+INFO: [CFGEN 83-0]   kernel: calc_0_25, k_port: m_axi_gmem, sptag: HBM[24]
+INFO: [CFGEN 83-0]   kernel: calc_0_26, k_port: m_axi_gmem, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: calc_0_27, k_port: m_axi_gmem, sptag: HBM[26]
+INFO: [CFGEN 83-0]   kernel: calc_0_28, k_port: m_axi_gmem, sptag: HBM[27]
+INFO: [CFGEN 83-0]   kernel: calc_0_29, k_port: m_axi_gmem, sptag: HBM[28]
+INFO: [CFGEN 83-0]   kernel: calc_0_30, k_port: m_axi_gmem, sptag: HBM[29]
+INFO: [CFGEN 83-0]   kernel: calc_0_31, k_port: m_axi_gmem, sptag: HBM[30]
+INFO: [CFGEN 83-0]   kernel: calc_0_32, k_port: m_axi_gmem, sptag: HBM[31]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: calc_0_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_10, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_11, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_12, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_13, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_14, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_15, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_16, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_17, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_18, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_19, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_2, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_20, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_21, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_22, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_23, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_24, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_25, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_26, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_27, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_28, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_29, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_3, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_30, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_31, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_32, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_4, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_5, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_6, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: calc_0_7, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: calc_0_8, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: calc_0_9, SLR: SLR2
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_1.in1 to HBM[0] for directive calc_0_1.m_axi_gmem:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_1.in2 to HBM[0] for directive calc_0_1.m_axi_gmem:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_1.out to HBM[0] for directive calc_0_1.m_axi_gmem:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_2.in1 to HBM[1] for directive calc_0_2.m_axi_gmem:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_2.in2 to HBM[1] for directive calc_0_2.m_axi_gmem:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_2.out to HBM[1] for directive calc_0_2.m_axi_gmem:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_3.in1 to HBM[2] for directive calc_0_3.m_axi_gmem:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_3.in2 to HBM[2] for directive calc_0_3.m_axi_gmem:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_3.out to HBM[2] for directive calc_0_3.m_axi_gmem:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_4.in1 to HBM[3] for directive calc_0_4.m_axi_gmem:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_4.in2 to HBM[3] for directive calc_0_4.m_axi_gmem:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_4.out to HBM[3] for directive calc_0_4.m_axi_gmem:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_5.in1 to HBM[4] for directive calc_0_5.m_axi_gmem:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_5.in2 to HBM[4] for directive calc_0_5.m_axi_gmem:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_5.out to HBM[4] for directive calc_0_5.m_axi_gmem:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_6.in1 to HBM[5] for directive calc_0_6.m_axi_gmem:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_6.in2 to HBM[5] for directive calc_0_6.m_axi_gmem:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_6.out to HBM[5] for directive calc_0_6.m_axi_gmem:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_7.in1 to HBM[6] for directive calc_0_7.m_axi_gmem:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_7.in2 to HBM[6] for directive calc_0_7.m_axi_gmem:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_7.out to HBM[6] for directive calc_0_7.m_axi_gmem:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_8.in1 to HBM[7] for directive calc_0_8.m_axi_gmem:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_8.in2 to HBM[7] for directive calc_0_8.m_axi_gmem:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_8.out to HBM[7] for directive calc_0_8.m_axi_gmem:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_9.in1 to HBM[8] for directive calc_0_9.m_axi_gmem:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_9.in2 to HBM[8] for directive calc_0_9.m_axi_gmem:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_9.out to HBM[8] for directive calc_0_9.m_axi_gmem:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_10.in1 to HBM[9] for directive calc_0_10.m_axi_gmem:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_10.in2 to HBM[9] for directive calc_0_10.m_axi_gmem:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_10.out to HBM[9] for directive calc_0_10.m_axi_gmem:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_11.in1 to HBM[10] for directive calc_0_11.m_axi_gmem:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_11.in2 to HBM[10] for directive calc_0_11.m_axi_gmem:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_11.out to HBM[10] for directive calc_0_11.m_axi_gmem:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_12.in1 to HBM[11] for directive calc_0_12.m_axi_gmem:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_12.in2 to HBM[11] for directive calc_0_12.m_axi_gmem:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_12.out to HBM[11] for directive calc_0_12.m_axi_gmem:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_13.in1 to HBM[12] for directive calc_0_13.m_axi_gmem:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_13.in2 to HBM[12] for directive calc_0_13.m_axi_gmem:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_13.out to HBM[12] for directive calc_0_13.m_axi_gmem:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_14.in1 to HBM[13] for directive calc_0_14.m_axi_gmem:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_14.in2 to HBM[13] for directive calc_0_14.m_axi_gmem:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_14.out to HBM[13] for directive calc_0_14.m_axi_gmem:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_15.in1 to HBM[14] for directive calc_0_15.m_axi_gmem:HBM[14]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_15.in2 to HBM[14] for directive calc_0_15.m_axi_gmem:HBM[14]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_15.out to HBM[14] for directive calc_0_15.m_axi_gmem:HBM[14]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_16.in1 to HBM[15] for directive calc_0_16.m_axi_gmem:HBM[15]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_16.in2 to HBM[15] for directive calc_0_16.m_axi_gmem:HBM[15]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_16.out to HBM[15] for directive calc_0_16.m_axi_gmem:HBM[15]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_17.in1 to HBM[16] for directive calc_0_17.m_axi_gmem:HBM[16]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_17.in2 to HBM[16] for directive calc_0_17.m_axi_gmem:HBM[16]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_17.out to HBM[16] for directive calc_0_17.m_axi_gmem:HBM[16]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_18.in1 to HBM[17] for directive calc_0_18.m_axi_gmem:HBM[17]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_18.in2 to HBM[17] for directive calc_0_18.m_axi_gmem:HBM[17]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_18.out to HBM[17] for directive calc_0_18.m_axi_gmem:HBM[17]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_19.in1 to HBM[18] for directive calc_0_19.m_axi_gmem:HBM[18]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_19.in2 to HBM[18] for directive calc_0_19.m_axi_gmem:HBM[18]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_19.out to HBM[18] for directive calc_0_19.m_axi_gmem:HBM[18]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_20.in1 to HBM[19] for directive calc_0_20.m_axi_gmem:HBM[19]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_20.in2 to HBM[19] for directive calc_0_20.m_axi_gmem:HBM[19]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_20.out to HBM[19] for directive calc_0_20.m_axi_gmem:HBM[19]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_21.in1 to HBM[20] for directive calc_0_21.m_axi_gmem:HBM[20]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_21.in2 to HBM[20] for directive calc_0_21.m_axi_gmem:HBM[20]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_21.out to HBM[20] for directive calc_0_21.m_axi_gmem:HBM[20]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_22.in1 to HBM[21] for directive calc_0_22.m_axi_gmem:HBM[21]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_22.in2 to HBM[21] for directive calc_0_22.m_axi_gmem:HBM[21]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_22.out to HBM[21] for directive calc_0_22.m_axi_gmem:HBM[21]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_23.in1 to HBM[22] for directive calc_0_23.m_axi_gmem:HBM[22]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_23.in2 to HBM[22] for directive calc_0_23.m_axi_gmem:HBM[22]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_23.out to HBM[22] for directive calc_0_23.m_axi_gmem:HBM[22]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_24.in1 to HBM[23] for directive calc_0_24.m_axi_gmem:HBM[23]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_24.in2 to HBM[23] for directive calc_0_24.m_axi_gmem:HBM[23]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_24.out to HBM[23] for directive calc_0_24.m_axi_gmem:HBM[23]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_25.in1 to HBM[24] for directive calc_0_25.m_axi_gmem:HBM[24]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_25.in2 to HBM[24] for directive calc_0_25.m_axi_gmem:HBM[24]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_25.out to HBM[24] for directive calc_0_25.m_axi_gmem:HBM[24]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_26.in1 to HBM[25] for directive calc_0_26.m_axi_gmem:HBM[25]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_26.in2 to HBM[25] for directive calc_0_26.m_axi_gmem:HBM[25]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_26.out to HBM[25] for directive calc_0_26.m_axi_gmem:HBM[25]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_27.in1 to HBM[26] for directive calc_0_27.m_axi_gmem:HBM[26]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_27.in2 to HBM[26] for directive calc_0_27.m_axi_gmem:HBM[26]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_27.out to HBM[26] for directive calc_0_27.m_axi_gmem:HBM[26]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_28.in1 to HBM[27] for directive calc_0_28.m_axi_gmem:HBM[27]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_28.in2 to HBM[27] for directive calc_0_28.m_axi_gmem:HBM[27]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_28.out to HBM[27] for directive calc_0_28.m_axi_gmem:HBM[27]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_29.in1 to HBM[28] for directive calc_0_29.m_axi_gmem:HBM[28]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_29.in2 to HBM[28] for directive calc_0_29.m_axi_gmem:HBM[28]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_29.out to HBM[28] for directive calc_0_29.m_axi_gmem:HBM[28]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_30.in1 to HBM[29] for directive calc_0_30.m_axi_gmem:HBM[29]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_30.in2 to HBM[29] for directive calc_0_30.m_axi_gmem:HBM[29]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_30.out to HBM[29] for directive calc_0_30.m_axi_gmem:HBM[29]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_31.in1 to HBM[30] for directive calc_0_31.m_axi_gmem:HBM[30]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_31.in2 to HBM[30] for directive calc_0_31.m_axi_gmem:HBM[30]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_31.out to HBM[30] for directive calc_0_31.m_axi_gmem:HBM[30]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_32.in1 to HBM[31] for directive calc_0_32.m_axi_gmem:HBM[31]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_32.in2 to HBM[31] for directive calc_0_32.m_axi_gmem:HBM[31]
+INFO: [CFGEN 83-2228] Creating mapping for argument calc_0_32.out to HBM[31] for directive calc_0_32.m_axi_gmem:HBM[31]
+INFO: [SYSTEM_LINK 82-37] [18:40:10] cfgen finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 295.457 ; gain = 0.000 ; free physical = 125667 ; free virtual = 278934
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [18:40:10] cf2bd started: /opt/Xilinx/Vitis/2019.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/_sysl/.xsd --temp_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link --output_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [18:40:24] cf2bd finished successfully
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 295.457 ; gain = 0.000 ; free physical = 125658 ; free virtual = 278931
+INFO: [v++ 60-1441] [18:40:24] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 125965 ; free virtual = 278921
+INFO: [v++ 60-1443] [18:40:24] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/sdsl.dat -rtd /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/cf2sw.rtd -xclbin /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/xclbin_orig.xml -o /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [18:40:37] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 125903 ; free virtual = 278859
+INFO: [v++ 60-1443] [18:40:37] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram --rtdJsonFileName /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/cf2sw.rtd --diagramJsonFileName /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --config /home/marimeyer/repos/stream_fpga/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/settings/settings.link.xilinx.stream_kernels_single.ini -j 40 -o /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/bin/stream_kernels_single.xclbin /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/bin/tmp_compile/stream_kernels_single.xo  --generatedByXclbinName stream_kernels_single --kernelInfoDataFileName /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/kernel_info.dat
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link
+INFO: [v++ 60-839] Read in kernel information from file '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/kernel_info.dat'.
+INFO: [v++ 60-1441] [18:40:39] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 125968 ; free virtual = 278925
+INFO: [v++ 60-1443] [18:40:39] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u280_xdma_201920_3 -j 40 --kernel_frequency 450 --output_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int --log_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/logs/link --report_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/reports/link --config /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/vplConfig.ini -k /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link --no-info --tlog_dir /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/.tlog/v++_link_stream_kernels_single --iprepo /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_calc_0_1_0 --messageDb /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link/vpl.pb /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link
+
+****** vpl v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/.local/hw_platform
+[18:41:45] Run vpl: Step create_project: Started
+Creating Vivado project.
+[18:41:47] Run vpl: Step create_project: Completed
+[18:41:47] Run vpl: Step create_bd: Started
+[18:43:14] Run vpl: Step create_bd: RUNNING...
+[18:44:41] Run vpl: Step create_bd: RUNNING...
+[18:46:03] Run vpl: Step create_bd: RUNNING...
+[18:47:29] Run vpl: Step create_bd: RUNNING...
+[18:48:51] Run vpl: Step create_bd: RUNNING...
+[18:50:17] Run vpl: Step create_bd: RUNNING...
+[18:50:19] Run vpl: Step create_bd: Completed
+[18:50:19] Run vpl: Step update_bd: Started
+[18:50:58] Run vpl: Step update_bd: Completed
+[18:50:58] Run vpl: Step generate_target: Started
+[18:52:19] Run vpl: Step generate_target: RUNNING...
+[18:53:42] Run vpl: Step generate_target: RUNNING...
+[18:55:02] Run vpl: Step generate_target: RUNNING...
+[18:56:27] Run vpl: Step generate_target: RUNNING...
+[18:57:51] Run vpl: Step generate_target: RUNNING...
+[18:58:47] Run vpl: Step generate_target: Completed
+[18:58:47] Run vpl: Step config_hw_runs: Started
+[18:59:08] Run vpl: Step config_hw_runs: Completed
+[18:59:08] Run vpl: Step synth: Started
+[18:59:48] Block-level synthesis in progress, 0 of 71 jobs complete, 40 jobs running.
+[19:00:30] Block-level synthesis in progress, 0 of 71 jobs complete, 40 jobs running.
+[19:01:13] Block-level synthesis in progress, 0 of 71 jobs complete, 40 jobs running.
+[19:02:08] Block-level synthesis in progress, 0 of 71 jobs complete, 40 jobs running.
+[19:02:53] Block-level synthesis in progress, 4 of 71 jobs complete, 37 jobs running.
+[19:04:31] Block-level synthesis in progress, 36 of 71 jobs complete, 5 jobs running.
+[19:05:17] Block-level synthesis in progress, 39 of 71 jobs complete, 2 jobs running.
+[19:05:57] Block-level synthesis in progress, 60 of 71 jobs complete, 1 job running.
+[19:06:44] Block-level synthesis in progress, 60 of 71 jobs complete, 1 job running.
+[19:07:23] Block-level synthesis in progress, 61 of 71 jobs complete, 1 job running.
+[19:08:06] Block-level synthesis in progress, 70 of 71 jobs complete, 1 job running.
+[19:08:45] Block-level synthesis in progress, 70 of 71 jobs complete, 1 job running.
+[19:09:28] Block-level synthesis in progress, 70 of 71 jobs complete, 1 job running.
+[19:10:10] Block-level synthesis in progress, 71 of 71 jobs complete, 0 jobs running.
+[19:10:49] Top-level synthesis in progress.
+[19:11:33] Top-level synthesis in progress.
+[19:12:12] Top-level synthesis in progress.
+[19:12:55] Top-level synthesis in progress.
+[19:13:34] Top-level synthesis in progress.
+[19:14:16] Top-level synthesis in progress.
+[19:14:55] Top-level synthesis in progress.
+[19:15:38] Top-level synthesis in progress.
+[19:16:17] Top-level synthesis in progress.
+[19:17:00] Top-level synthesis in progress.
+[19:17:39] Top-level synthesis in progress.
+[19:18:21] Top-level synthesis in progress.
+[19:18:59] Top-level synthesis in progress.
+[19:19:41] Top-level synthesis in progress.
+[19:20:29] Run vpl: Step synth: Completed
+[19:20:29] Run vpl: Step impl: Started
+[19:57:03] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 16m 22s 
+
+[19:57:03] Starting logic optimization..
+[19:58:52] Phase 1 Retarget
+[19:59:29] Phase 2 Constant propagation
+[20:00:05] Phase 3 Sweep
+[20:02:38] Phase 4 BUFG optimization
+[20:03:51] Phase 5 Shift Register Optimization
+[20:03:51] Phase 6 Post Processing Netlist
+[20:28:23] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 31m 20s 
+
+[20:28:23] Starting logic placement..
+[20:30:18] Phase 1 Placer Initialization
+[20:30:18] Phase 1.1 Placer Initialization Netlist Sorting
+[20:34:03] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[20:36:36] Phase 1.3 Build Placer Netlist Model
+[20:42:17] Phase 1.4 Constrain Clocks/Macros
+[20:42:57] Phase 2 Global Placement
+[20:42:57] Phase 2.1 Floorplanning
+[20:53:40] Phase 2.2 Global Placement Core
+[21:14:43] Phase 2.2.1 Physical Synthesis In Placer
+[21:27:10] Phase 3 Detail Placement
+[21:27:10] Phase 3.1 Commit Multi Column Macros
+[21:27:47] Phase 3.2 Commit Most Macros & LUTRAMs
+[21:28:25] Phase 3.3 Area Swap Optimization
+[21:29:40] Phase 3.4 Pipeline Register Optimization
+[21:29:40] Phase 3.5 IO Cut Optimizer
+[21:29:40] Phase 3.6 Fast Optimization
+[21:30:57] Phase 3.7 Small Shape DP
+[21:30:57] Phase 3.7.1 Small Shape Clustering
+[21:32:29] Phase 3.7.2 Flow Legalize Slice Clusters
+[21:32:29] Phase 3.7.3 Slice Area Swap
+[21:34:32] Phase 3.7.4 Commit Slice Clusters
+[21:35:46] Phase 3.8 Place Remaining
+[21:35:46] Phase 3.9 Re-assign LUT pins
+[21:37:02] Phase 3.10 Pipeline Register Optimization
+[21:37:02] Phase 3.11 Fast Optimization
+[21:40:10] Phase 4 Post Placement Optimization and Clean-Up
+[21:40:10] Phase 4.1 Post Commit Optimization
+[21:43:19] Phase 4.1.1 Post Placement Optimization
+[21:43:19] Phase 4.1.1.1 BUFG Insertion
+[22:50:32] Phase 4.1.1.2 BUFG Replication
+[22:57:54] Phase 4.1.1.3 Replication
+[22:59:10] Phase 4.2 Post Placement Cleanup
+[23:01:04] Phase 4.3 Placer Reporting
+[23:01:04] Phase 4.4 Final Placement Cleanup
+[23:41:49] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 03h 13m 26s 
+
+[23:41:49] Starting logic routing..
+[23:43:43] Phase 1 Build RT Design
+[23:50:16] Phase 2 Router Initialization
+[23:50:16] Phase 2.1 Fix Topology Constraints
+[23:50:59] Phase 2.2 Pre Route Cleanup
+[23:51:40] Phase 2.3 Global Clock Net Routing
+[23:53:44] Phase 2.4 Update Timing
+[00:01:25] Phase 2.5 Update Timing for Bus Skew
+[00:01:25] Phase 2.5.1 Update Timing
+[00:05:20] Phase 3 Initial Routing
+[00:05:20] Phase 3.1 Global Routing
+[00:08:41] Phase 4 Rip-up And Reroute
+[00:08:41] Phase 4.1 Global Iteration 0
+[00:40:14] Phase 4.2 Global Iteration 1
+[00:47:56] Phase 4.3 Global Iteration 2
+[00:53:01] Phase 4.4 Global Iteration 3
+[00:58:36] Phase 4.5 Global Iteration 4
+[01:06:07] Phase 4.6 Global Iteration 5
+[01:16:44] Phase 4.7 Global Iteration 6
+[01:22:18] Phase 5 Delay and Skew Optimization
+[01:22:18] Phase 5.1 Delay CleanUp
+[01:22:18] Phase 5.1.1 Update Timing
+[01:25:24] Phase 5.1.2 Update Timing
+[01:27:52] Phase 5.2 Clock Skew Optimization
+[01:29:43] Phase 6 Post Hold Fix
+[01:29:43] Phase 6.1 Hold Fix Iter
+[01:29:43] Phase 6.1.1 Update Timing
+[01:32:10] Phase 6.1.2 Lut RouteThru Assignment for hold
+[01:33:24] Phase 6.2 Additional Hold Fix
+[01:43:17] Phase 7 Leaf Clock Prog Delay Opt
+[01:45:46] Phase 8 Route finalize
+[01:46:22] Phase 9 Verifying routed nets
+[01:47:36] Phase 10 Depositing Routes
+[01:50:05] Phase 11 Post Router Timing
+[01:50:05] Phase 11.1 Update Timing
+[01:54:25] Phase 12 Physical Synthesis in Router
+[01:54:25] Phase 12.1 Physical Synthesis Initialization
+[02:01:11] Phase 12.2 SLL Register Hold Fix Optimization
+[02:04:24] Phase 12.3 Critical Path Optimization
+[02:06:58] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 02h 25m 09s 
+
+[02:06:58] Starting bitstream generation..
+[03:05:59] Creating bitmap...
+[03:16:47] Writing bitstream ./pfm_top_i_dynamic_region_my_rm_partial.bit...
+[03:16:47] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 01h 09m 49s 
+[03:17:55] Run vpl: Step impl: Completed
+[03:18:03] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [03:18:13] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:21:18 ; elapsed = 08:37:34 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 244775 ; free virtual = 381380
+INFO: [v++ 60-1443] [03:18:13] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link
+INFO: [v++ 60-991] clock name 'clkwiz_kernel_clk_out1' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clkwiz_kernel2_clk_out1' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' (clock ID '') is being mapped to clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: clk_out1_pfm_top_clkwiz_hbm_aclk_0 = 405, Kernel (DATA) clock: clkwiz_kernel_clk_out1 = 370, Kernel (KERNEL) clock: clkwiz_kernel2_clk_out1 = 500
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/address_map.xml -sdsl /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/sdsl.dat -xclbin /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/xclbin_orig.xml -rtd /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.rtd -o /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.xml
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [03:18:27] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 244161 ; free virtual = 380766
+INFO: [v++ 60-1443] [03:18:27] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.rtd --append-section :JSON:/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single_xml.rtd --add-section BUILD_METADATA:JSON:/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.xml --add-section SYSTEM_METADATA:RAW:/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json --output /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link
+XRT Build Version: 2.3.1301
+       Build Date: 2019-10-24 20:05:16
+          Hash ID: 192e706aea53163a04c574f9b3fe9ed76b6ca471
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 75502003 bytes
+Format : RAW
+File   : '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 4114 bytes
+Format : JSON
+File   : '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 16918 bytes
+Format : RAW
+File   : '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 56133 bytes
+Format : RAW
+File   : '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (75613293 bytes) to the output file: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [03:18:28] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.79 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 243899 ; free virtual = 380577
+INFO: [v++ 60-1443] [03:18:28] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --info /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.xclbin.info --input /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/stream_kernels_single.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [03:18:29] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.58 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 243763 ; free virtual = 380440
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/reports/link/system_estimate_stream_kernels_single.xtxt
+INFO: [v++ 60-586] Created /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/bin/stream_kernels_single.ltx
+INFO: [v++ 60-586] Created /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/bin/stream_kernels_single.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/reports/link/v++_link_stream_kernels_single_guidance.html
+	Timing Report: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/reports/link/imp/xilinx_u280_xdma_201920_3_bb_locked_timing_summary_routed.rpt
+	Utilizations Report: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/reports/link/imp/kernel_util_routed.rpt
+	Vivado Log: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/logs/link/vivado.log
+	Steps Log File: /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-791] Total elapsed time: 8h 38m 59s

@@ -1,0 +1,4 @@
+/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl:11:16: warning: unknown attribute 'uses_global_work_offset' ignored [-Wunknown-attributes]
+__attribute__((uses_global_work_offset(0)))
+               ^
+1 warning generated.

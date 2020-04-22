@@ -1,0 +1,1566 @@
+
+*** Running vivado
+    with args -log bd_5dca_hbm_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_5dca_hbm_inst_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source bd_5dca_hbm_inst_0.tcl -notrace
+[OPTRACE]|10470|1|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673971549|START|bd_5dca_hbm_inst_0_synth_1|ROLLUP_AUTO
+[OPTRACE]|10470|2|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673971550|START|Creating in-memory project|
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_calc_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:Monitor_AXI_Master:1.0'. The one found in IP location '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo/iprepo/monitor_axi_master_v1_0' will take precedence over the same IP in location /opt/Xilinx/Vitis/2019.2/data/ip/xilinx/monitor_axi_master_v1_0
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:interface:sdsoc_trace:2.0'. The one found in location '/opt/Xilinx/Vitis/2019.2/data/ip/xilinx/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2019.2/data/ip/interfaces/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml'
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1692.301 ; gain = 184.773 ; free physical = 155294 ; free virtual = 311180
+[OPTRACE]|10470|3|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673980420|END|Creating in-memory project|
+[OPTRACE]|10470|4|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673980420|START|Adding files|
+[OPTRACE]|10470|5|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673981660|END|Adding files|
+[OPTRACE]|10470|6|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673981662|START|Configure IP Cache|
+[OPTRACE]|10470|7|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673981667|END|Configure IP Cache|
+[OPTRACE]|10470|8|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585673981668|START|synth_design|
+Command: synth_design -top bd_5dca_hbm_inst_0 -part xcu280-fsvh2892-2L-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12236 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2940.027 ; gain = 131.719 ; free physical = 96746 ; free virtual = 252647
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_inst_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
+INFO: [Synth 8-6157] synthesizing module 'hbm_v1_0_5' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_5.sv:66]
+	Parameter HBM_STACK bound to: 2 - type: integer 
+	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
+	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter INIT_SEQ_TIMEOUT bound to: 0 - type: integer 
+	Parameter AXI_RST_ASSERT_WIDTH bound to: 16 - type: integer 
+	Parameter AXI_RST_DEASSERT_WIDTH bound to: 2 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_0 bound to: 100000 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_1 bound to: 100000 - type: integer 
+	Parameter SWITCH_EN_0 bound to: 16'b0000000000000001 
+	Parameter SWITCH_EN_1 bound to: 16'b0000000000000001 
+	Parameter AXI_CLK_FREQ bound to: 16'b0000000111000010 
+	Parameter AXI_CLK1_FREQ bound to: 16'b0000000111000010 
+	Parameter HBM_REF_CLK_FREQ_0 bound to: 16'b0000000001100100 
+	Parameter HBM_REF_CLK_FREQ_1 bound to: 16'b0000000001100100 
+	Parameter HBM_CLK_FREQ_0 bound to: 16'b0000001110000100 
+	Parameter HBM_CLK_FREQ_1 bound to: 16'b0000001110000100 
+	Parameter HBM_STACK_NUM bound to: 16'b0000000000000000 
+	Parameter CLK_SEL_00 bound to: FALSE - type: string 
+	Parameter CLK_SEL_01 bound to: FALSE - type: string 
+	Parameter CLK_SEL_02 bound to: FALSE - type: string 
+	Parameter CLK_SEL_03 bound to: FALSE - type: string 
+	Parameter CLK_SEL_04 bound to: FALSE - type: string 
+	Parameter CLK_SEL_05 bound to: FALSE - type: string 
+	Parameter CLK_SEL_06 bound to: FALSE - type: string 
+	Parameter CLK_SEL_07 bound to: FALSE - type: string 
+	Parameter CLK_SEL_08 bound to: FALSE - type: string 
+	Parameter CLK_SEL_09 bound to: FALSE - type: string 
+	Parameter CLK_SEL_10 bound to: FALSE - type: string 
+	Parameter CLK_SEL_11 bound to: FALSE - type: string 
+	Parameter CLK_SEL_12 bound to: FALSE - type: string 
+	Parameter CLK_SEL_13 bound to: FALSE - type: string 
+	Parameter CLK_SEL_14 bound to: FALSE - type: string 
+	Parameter CLK_SEL_15 bound to: TRUE - type: string 
+	Parameter CLK_SEL_16 bound to: FALSE - type: string 
+	Parameter CLK_SEL_17 bound to: FALSE - type: string 
+	Parameter CLK_SEL_18 bound to: FALSE - type: string 
+	Parameter CLK_SEL_19 bound to: FALSE - type: string 
+	Parameter CLK_SEL_20 bound to: FALSE - type: string 
+	Parameter CLK_SEL_21 bound to: FALSE - type: string 
+	Parameter CLK_SEL_22 bound to: FALSE - type: string 
+	Parameter CLK_SEL_23 bound to: FALSE - type: string 
+	Parameter CLK_SEL_24 bound to: FALSE - type: string 
+	Parameter CLK_SEL_25 bound to: FALSE - type: string 
+	Parameter CLK_SEL_26 bound to: FALSE - type: string 
+	Parameter CLK_SEL_27 bound to: FALSE - type: string 
+	Parameter CLK_SEL_28 bound to: FALSE - type: string 
+	Parameter CLK_SEL_29 bound to: FALSE - type: string 
+	Parameter CLK_SEL_30 bound to: FALSE - type: string 
+	Parameter CLK_SEL_31 bound to: TRUE - type: string 
+	Parameter DATARATE_STACK_0 bound to: 1800 - type: integer 
+	Parameter DATARATE_STACK_1 bound to: 1800 - type: integer 
+	Parameter READ_PERCENT_00 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_01 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_02 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_03 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_04 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_05 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_06 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_07 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_08 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_09 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_10 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_11 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_12 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_13 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_14 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_15 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_16 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_17 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_18 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_19 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_20 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_21 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_22 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_23 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_24 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_25 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_26 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_27 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_28 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_29 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_30 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_31 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_00 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_01 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_02 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_03 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_04 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_05 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_06 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_07 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_08 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_09 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_10 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_11 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_12 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_13 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_14 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_15 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_16 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_17 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_18 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_19 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_20 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_21 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_22 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_23 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_24 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_25 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_26 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_27 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_28 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_29 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_30 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_31 bound to: 40 - type: integer 
+	Parameter PAGEHIT_PERCENT_00 bound to: 75 - type: integer 
+	Parameter PAGEHIT_PERCENT_01 bound to: 75 - type: integer 
+	Parameter MC_ENABLE_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_01 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_02 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_03 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_04 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_05 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_06 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_07 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_08 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_09 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_10 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_11 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_12 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_13 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_14 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_15 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_02 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_03 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_04 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_05 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_06 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_07 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_08 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_09 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_10 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_11 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_12 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_13 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_14 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_15 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_16 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_17 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_18 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_19 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_20 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_21 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_22 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_23 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_24 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_25 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_26 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_27 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_28 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_29 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_30 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_31 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_01 bound to: TRUE - type: string 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_5.sv:1749]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_5.sv:1750]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_5.sv:1751]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_5.sv:1752]
+INFO: [Synth 8-6157] synthesizing module 'hbm_top' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:81]
+	Parameter HBM_STACK bound to: 2 - type: integer 
+	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
+	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter INIT_SEQ_TIMEOUT bound to: 0 - type: integer 
+	Parameter AXI_RST_ASSERT_WIDTH bound to: 16 - type: integer 
+	Parameter AXI_RST_DEASSERT_WIDTH bound to: 2 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_0 bound to: 100000 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_1 bound to: 100000 - type: integer 
+	Parameter SWITCH_EN_0 bound to: 16'b0000000000000001 
+	Parameter SWITCH_EN_1 bound to: 16'b0000000000000001 
+	Parameter AXI_CLK_FREQ bound to: 16'b0000000111000010 
+	Parameter AXI_CLK1_FREQ bound to: 16'b0000000111000010 
+	Parameter HBM_REF_CLK_FREQ_0 bound to: 16'b0000000001100100 
+	Parameter HBM_REF_CLK_FREQ_1 bound to: 16'b0000000001100100 
+	Parameter HBM_CLK_FREQ_0 bound to: 16'b0000001110000100 
+	Parameter HBM_CLK_FREQ_1 bound to: 16'b0000001110000100 
+	Parameter HBM_STACK_NUM bound to: 16'b0000000000000000 
+	Parameter CLK_SEL_00 bound to: FALSE - type: string 
+	Parameter CLK_SEL_01 bound to: FALSE - type: string 
+	Parameter CLK_SEL_02 bound to: FALSE - type: string 
+	Parameter CLK_SEL_03 bound to: FALSE - type: string 
+	Parameter CLK_SEL_04 bound to: FALSE - type: string 
+	Parameter CLK_SEL_05 bound to: FALSE - type: string 
+	Parameter CLK_SEL_06 bound to: FALSE - type: string 
+	Parameter CLK_SEL_07 bound to: FALSE - type: string 
+	Parameter CLK_SEL_08 bound to: FALSE - type: string 
+	Parameter CLK_SEL_09 bound to: FALSE - type: string 
+	Parameter CLK_SEL_10 bound to: FALSE - type: string 
+	Parameter CLK_SEL_11 bound to: FALSE - type: string 
+	Parameter CLK_SEL_12 bound to: FALSE - type: string 
+	Parameter CLK_SEL_13 bound to: FALSE - type: string 
+	Parameter CLK_SEL_14 bound to: FALSE - type: string 
+	Parameter CLK_SEL_15 bound to: TRUE - type: string 
+	Parameter CLK_SEL_16 bound to: FALSE - type: string 
+	Parameter CLK_SEL_17 bound to: FALSE - type: string 
+	Parameter CLK_SEL_18 bound to: FALSE - type: string 
+	Parameter CLK_SEL_19 bound to: FALSE - type: string 
+	Parameter CLK_SEL_20 bound to: FALSE - type: string 
+	Parameter CLK_SEL_21 bound to: FALSE - type: string 
+	Parameter CLK_SEL_22 bound to: FALSE - type: string 
+	Parameter CLK_SEL_23 bound to: FALSE - type: string 
+	Parameter CLK_SEL_24 bound to: FALSE - type: string 
+	Parameter CLK_SEL_25 bound to: FALSE - type: string 
+	Parameter CLK_SEL_26 bound to: FALSE - type: string 
+	Parameter CLK_SEL_27 bound to: FALSE - type: string 
+	Parameter CLK_SEL_28 bound to: FALSE - type: string 
+	Parameter CLK_SEL_29 bound to: FALSE - type: string 
+	Parameter CLK_SEL_30 bound to: FALSE - type: string 
+	Parameter CLK_SEL_31 bound to: TRUE - type: string 
+	Parameter DATARATE_STACK_0 bound to: 1800 - type: integer 
+	Parameter DATARATE_STACK_1 bound to: 1800 - type: integer 
+	Parameter READ_PERCENT_00 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_01 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_02 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_03 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_04 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_05 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_06 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_07 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_08 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_09 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_10 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_11 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_12 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_13 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_14 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_15 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_16 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_17 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_18 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_19 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_20 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_21 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_22 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_23 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_24 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_25 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_26 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_27 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_28 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_29 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_30 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_31 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_00 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_01 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_02 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_03 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_04 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_05 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_06 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_07 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_08 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_09 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_10 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_11 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_12 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_13 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_14 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_15 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_16 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_17 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_18 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_19 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_20 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_21 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_22 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_23 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_24 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_25 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_26 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_27 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_28 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_29 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_30 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_31 bound to: 40 - type: integer 
+	Parameter PAGEHIT_PERCENT_00 bound to: 75 - type: integer 
+	Parameter PAGEHIT_PERCENT_01 bound to: 75 - type: integer 
+	Parameter MC_ENABLE_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_01 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_02 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_03 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_04 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_05 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_06 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_07 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_08 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_09 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_10 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_11 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_12 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_13 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_14 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_15 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_02 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_03 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_04 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_05 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_06 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_07 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_08 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_09 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_10 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_11 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_12 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_13 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_14 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_15 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_16 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_17 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_18 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_19 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_20 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_21 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_22 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_23 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_24 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_25 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_26 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_27 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_28 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_29 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_30 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_31 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter AXI_SW_CLK_SEL_0 bound to: 16'b0000000000001111 
+	Parameter AXI_SW_CLK_SEL_1 bound to: 16'b0000000000011111 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:1829]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:1830]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:1831]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:1832]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram' [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8485]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_0.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: read_first - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 0 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_0.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 32 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 2048 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 32 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 32 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 32 - type: integer 
+	Parameter rstb_loop_iter bound to: 32 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:484]
+INFO: [Synth 8-3876] $readmem data file 'xpm_internal_config_file_0.mem' is read successfully [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1100]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (1#1) [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (2#1) [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8485]
+INFO: [Synth 8-6157] synthesizing module 'hbm_data_fetch' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:8110]
+	Parameter XPM_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter XPM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element stall_rd_r_reg was removed.  [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:8302]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_tran_r_reg was removed.  [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:8316]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_wr_rd_r_reg was removed.  [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:8317]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_addr_r_reg was removed.  [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:8331]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_data_r_reg was removed.  [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:8332]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_data_fetch' (3#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:8110]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_mst' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:6745]
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter INIT_SEQ_TIMEOUT bound to: 0 - type: integer 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IDLE bound to: 3'b001 
+	Parameter C_SETUP bound to: 3'b010 
+	Parameter C_ACCESS bound to: 3'b100 
+WARNING: [Synth 8-6014] Unused sequential element timeout_cnt_r_reg was removed.  [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:6891]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_mst' (4#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:6745]
+INFO: [Synth 8-6157] synthesizing module 'hbm_temp_rd' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:7261]
+	Parameter TEMP_WAIT_PERIOD bound to: 100000 - type: integer 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IDLE bound to: 6'b000001 
+	Parameter C_WAIT_INTRVL bound to: 6'b000010 
+	Parameter C_APB_ACC_REQ bound to: 6'b000100 
+	Parameter C_SEND_TEMP_ACC_CMD bound to: 6'b001000 
+	Parameter C_POLL_TEMP_ACC_CMD_ST bound to: 6'b010000 
+	Parameter C_READ_TEMP bound to: 6'b100000 
+	Parameter C_APB_IDLE bound to: 3'b001 
+	Parameter C_APB_SETUP bound to: 3'b010 
+	Parameter C_APB_ACCESS bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'hbm_temp_rd' (5#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:7261]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_arbiter' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:7754]
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IDLE bound to: 3'b001 
+	Parameter C_SETUP bound to: 3'b010 
+	Parameter C_ACCESS bound to: 3'b100 
+INFO: [Synth 8-226] default block is never used [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:7906]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_arbiter' (6#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:7754]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram__parameterized0' [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8485]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_1.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: read_first - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 0 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_1.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 32 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 2048 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 32 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 32 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 32 - type: integer 
+	Parameter rstb_loop_iter bound to: 32 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:484]
+INFO: [Synth 8-3876] $readmem data file 'xpm_internal_config_file_1.mem' is read successfully [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1100]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (6#1) [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized0' (6#1) [/opt/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8485]
+INFO: [Synth 8-6157] synthesizing module 'HBM_TWO_STACK_INTF' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:29497]
+	Parameter CLK_SEL_00 bound to: FALSE - type: string 
+	Parameter CLK_SEL_01 bound to: FALSE - type: string 
+	Parameter CLK_SEL_02 bound to: FALSE - type: string 
+	Parameter CLK_SEL_03 bound to: FALSE - type: string 
+	Parameter CLK_SEL_04 bound to: FALSE - type: string 
+	Parameter CLK_SEL_05 bound to: FALSE - type: string 
+	Parameter CLK_SEL_06 bound to: FALSE - type: string 
+	Parameter CLK_SEL_07 bound to: FALSE - type: string 
+	Parameter CLK_SEL_08 bound to: FALSE - type: string 
+	Parameter CLK_SEL_09 bound to: FALSE - type: string 
+	Parameter CLK_SEL_10 bound to: FALSE - type: string 
+	Parameter CLK_SEL_11 bound to: FALSE - type: string 
+	Parameter CLK_SEL_12 bound to: FALSE - type: string 
+	Parameter CLK_SEL_13 bound to: FALSE - type: string 
+	Parameter CLK_SEL_14 bound to: FALSE - type: string 
+	Parameter CLK_SEL_15 bound to: TRUE - type: string 
+	Parameter CLK_SEL_16 bound to: FALSE - type: string 
+	Parameter CLK_SEL_17 bound to: FALSE - type: string 
+	Parameter CLK_SEL_18 bound to: FALSE - type: string 
+	Parameter CLK_SEL_19 bound to: FALSE - type: string 
+	Parameter CLK_SEL_20 bound to: FALSE - type: string 
+	Parameter CLK_SEL_21 bound to: FALSE - type: string 
+	Parameter CLK_SEL_22 bound to: FALSE - type: string 
+	Parameter CLK_SEL_23 bound to: FALSE - type: string 
+	Parameter CLK_SEL_24 bound to: FALSE - type: string 
+	Parameter CLK_SEL_25 bound to: FALSE - type: string 
+	Parameter CLK_SEL_26 bound to: FALSE - type: string 
+	Parameter CLK_SEL_27 bound to: FALSE - type: string 
+	Parameter CLK_SEL_28 bound to: FALSE - type: string 
+	Parameter CLK_SEL_29 bound to: FALSE - type: string 
+	Parameter CLK_SEL_30 bound to: FALSE - type: string 
+	Parameter CLK_SEL_31 bound to: TRUE - type: string 
+	Parameter DATARATE_00 bound to: 1800 - type: integer 
+	Parameter DATARATE_01 bound to: 1800 - type: integer 
+	Parameter DATARATE_02 bound to: 1800 - type: integer 
+	Parameter DATARATE_03 bound to: 1800 - type: integer 
+	Parameter DATARATE_04 bound to: 1800 - type: integer 
+	Parameter DATARATE_05 bound to: 1800 - type: integer 
+	Parameter DATARATE_06 bound to: 1800 - type: integer 
+	Parameter DATARATE_07 bound to: 1800 - type: integer 
+	Parameter DATARATE_08 bound to: 1800 - type: integer 
+	Parameter DATARATE_09 bound to: 1800 - type: integer 
+	Parameter DATARATE_10 bound to: 1800 - type: integer 
+	Parameter DATARATE_11 bound to: 1800 - type: integer 
+	Parameter DATARATE_12 bound to: 1800 - type: integer 
+	Parameter DATARATE_13 bound to: 1800 - type: integer 
+	Parameter DATARATE_14 bound to: 1800 - type: integer 
+	Parameter DATARATE_15 bound to: 1800 - type: integer 
+	Parameter DA_LOCKOUT_0 bound to: FALSE - type: string 
+	Parameter DA_LOCKOUT_1 bound to: FALSE - type: string 
+	Parameter IS_APB_0_PCLK_INVERTED bound to: 1'b0 
+	Parameter IS_APB_0_PRESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_APB_1_PCLK_INVERTED bound to: 1'b0 
+	Parameter IS_APB_1_PRESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_00_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_00_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_01_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_01_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_02_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_02_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_03_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_03_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_04_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_04_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_05_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_05_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_06_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_06_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_07_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_07_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_08_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_08_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_09_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_09_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_10_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_10_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_11_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_11_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_12_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_12_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_13_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_13_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_14_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_14_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_15_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_15_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_16_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_16_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_17_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_17_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_18_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_18_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_19_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_19_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_20_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_20_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_21_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_21_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_22_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_22_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_23_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_23_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_24_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_24_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_25_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_25_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_26_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_26_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_27_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_27_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_28_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_28_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_29_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_29_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_30_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_30_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_31_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_31_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter MC_ENABLE_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_01 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_02 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_03 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_04 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_05 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_06 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_07 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_08 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_09 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_10 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_11 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_12 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_13 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_14 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_15 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PAGEHIT_PERCENT_00 bound to: 75 - type: integer 
+	Parameter PAGEHIT_PERCENT_01 bound to: 75 - type: integer 
+	Parameter PHY_ENABLE_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_02 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_03 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_04 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_05 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_06 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_07 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_08 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_09 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_10 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_11 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_12 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_13 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_14 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_15 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_16 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_17 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_18 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_19 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_20 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_21 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_22 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_23 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_24 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_25 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_26 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_27 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_28 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_29 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_30 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_31 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PHY_PCLK_INVERT_01 bound to: FALSE - type: string 
+	Parameter PHY_PCLK_INVERT_02 bound to: FALSE - type: string 
+	Parameter READ_PERCENT_00 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_01 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_02 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_03 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_04 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_05 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_06 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_07 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_08 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_09 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_10 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_11 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_12 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_13 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_14 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_15 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_16 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_17 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_18 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_19 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_20 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_21 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_22 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_23 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_24 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_25 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_26 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_27 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_28 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_29 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_30 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_31 bound to: 40 - type: integer 
+	Parameter SIM_DEVICE bound to: ULTRASCALE_PLUS - type: string 
+	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
+	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
+	Parameter WRITE_PERCENT_00 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_01 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_02 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_03 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_04 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_05 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_06 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_07 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_08 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_09 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_10 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_11 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_12 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_13 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_14 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_15 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_16 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_17 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_18 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_19 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_20 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_21 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_22 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_23 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_24 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_25 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_26 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_27 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_28 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_29 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_30 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_31 bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HBM_TWO_STACK_INTF' (7#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:29497]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'hbm_top' (8#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/701f/hdl/hbm_v1_0_vl_rfs.sv:81]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'hbm_v1_0_5' (9#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_5.sv:66]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_inst_0' (10#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
+WARNING: [Synth 8-3331] design hbm_temp_rd has unconnected port pslverr
+WARNING: [Synth 8-3331] design hbm_apb_mst has unconnected port pslverr
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port sleep
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port regcea
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port clkb
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port rstb
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port enb
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port regceb
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port web[0]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[10]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[9]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[8]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port addrb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[31]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[30]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[29]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[28]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[27]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[26]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[25]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[24]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[23]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[22]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[21]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[20]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[19]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[18]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[17]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[16]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[15]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[14]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[13]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[12]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[11]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[10]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[9]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[8]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port dinb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port injectsbiterrb
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized0 has unconnected port injectdbiterrb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port sleep
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regcea
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port clkb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port rstb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port enb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regceb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port web[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[10]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[9]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[8]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[31]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[30]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[29]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[28]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[27]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[26]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[25]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[24]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[23]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[22]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[21]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[20]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[19]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[18]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[17]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[16]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[15]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[14]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[13]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[12]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[11]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[10]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[9]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[8]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3016.715 ; gain = 208.406 ; free physical = 93596 ; free virtual = 249500
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 3034.559 ; gain = 226.250 ; free physical = 92475 ; free virtual = 248409
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 3034.559 ; gain = 226.250 ; free physical = 92474 ; free virtual = 248408
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3042.496 ; gain = 0.000 ; free physical = 91937 ; free virtual = 248298
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3238.594 ; gain = 23.781 ; free physical = 89514 ; free virtual = 245563
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3238.594 ; gain = 0.000 ; free physical = 89502 ; free virtual = 245551
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:00.62 . Memory (MB): peak = 3241.562 ; gain = 2.969 ; free physical = 89130 ; free virtual = 245179
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 3241.562 ; gain = 433.254 ; free physical = 85560 ; free virtual = 241622
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 3241.562 ; gain = 433.254 ; free physical = 85534 ; free virtual = 241596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc, line 6).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 3241.562 ; gain = 433.254 ; free physical = 85514 ; free virtual = 241576
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'hbm_apb_mst'
+INFO: [Synth 8-802] inferred FSM for state register 'main_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-802] inferred FSM for state register 'apb_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-5779] Default cascade height of 1 will be used for BRAM '"xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"'.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 14 for RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  C_IDLE |                              001 |                              001
+                 C_SETUP |                              010 |                              010
+                C_ACCESS |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'curr_state_reg' in module 'hbm_apb_mst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              C_APB_IDLE |                              001 |                              001
+             C_APB_SETUP |                              010 |                              010
+            C_APB_ACCESS |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'apb_fsm_curr_state_reg' in module 'hbm_temp_rd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  C_IDLE |                           000001 |                           000001
+           C_WAIT_INTRVL |                           000010 |                           000010
+           C_APB_ACC_REQ |                           000100 |                           000100
+     C_SEND_TEMP_ACC_CMD |                           001000 |                           001000
+  C_POLL_TEMP_ACC_CMD_ST |                           010000 |                           010000
+             C_READ_TEMP |                           100000 |                           100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'main_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-5779] Default cascade height of 1 will be used for BRAM '"xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"'.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 14 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 3241.562 ; gain = 433.254 ; free physical = 83573 ; free virtual = 239637
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 20    
+	               22 Bit    Registers := 18    
+	               11 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 76    
++---RAMs : 
+	              64K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 30    
+	   4 Input     32 Bit        Muxes := 2     
+	   5 Input     24 Bit        Muxes := 2     
+	   2 Input     22 Bit        Muxes := 22    
+	   5 Input     22 Bit        Muxes := 2     
+	   4 Input     22 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 8     
+	   7 Input      6 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 18    
+	   2 Input      2 Bit        Muxes := 16    
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 152   
+	   5 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xpm_memory_base 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	              64K Bit         RAMs := 1     
+Module hbm_data_fetch 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               22 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module hbm_apb_mst 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               22 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     22 Bit        Muxes := 7     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 35    
+	   5 Input      1 Bit        Muxes := 1     
+Module hbm_temp_rd 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	               22 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input     24 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 4     
+	   7 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 22    
+Module hbm_apb_arbiter 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input     22 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 6     
+Module xpm_memory_base__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	              64K Bit         RAMs := 1     
+Module hbm_top 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[0]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[0]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[1]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[1]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[2]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[2]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[24]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[24]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[25]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[25]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[26]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[26]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[27]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[27]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[28]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[28]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[29]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[29]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[30]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[30]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[31]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[31]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[0]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[0]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[1]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[1]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[2]' (FDC) to 'hbm_temp_rd:/gen_apb_addr_r_reg[18]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[2]' (FDCE) to 'hbm_temp_rd:/addr_store_r_reg[18]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[4]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[4]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[5]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[5]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[6]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[6]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[7]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[7]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[8]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[8]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[9]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[9]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[10]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[10]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[11]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[11]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[12]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[12]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[13]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[13]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[14]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[14]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[15]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[15]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[16]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[16]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[17]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[17]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[18]' (FDC) to 'hbm_temp_rd:/gen_apb_addr_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[18]' (FDCE) to 'hbm_temp_rd:/addr_store_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[19]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[19]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_addr_r_reg[20]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/addr_store_r_reg[20]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[3]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[15]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[4]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[5]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[6]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[6]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[7]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[8]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[8]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[9]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[9]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[10]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[10]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[11]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[11]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[12]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[12]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[13]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[13]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[14]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[14]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[16]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[15]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[16]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[17]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[17]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[18]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[18]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[19]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[19]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[20]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/gen_apb_data_r_reg[20]' (FDC) to 'hbm_temp_rd:/gen_apb_data_r_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hbm_temp_rd:/\gen_apb_data_r_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hbm_apb_mst:/apb_timeout_r_reg)
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[3]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[15]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/data_store_r_reg[15]' (FDCE) to 'hbm_temp_rd:/data_store_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/apb_pwdata_r_reg[0]' (FDCE) to 'hbm_temp_rd:/apb_pwdata_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/apb_pwdata_r_reg[1]' (FDCE) to 'hbm_temp_rd:/apb_pwdata_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/apb_pwdata_r_reg[2]' (FDCE) to 'hbm_temp_rd:/apb_pwdata_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/apb_paddr_r_reg[2]' (FDCE) to 'hbm_temp_rd:/apb_paddr_r_reg[18]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/apb_paddr_r_reg[18]' (FDCE) to 'hbm_temp_rd:/apb_paddr_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/apb_pwdata_r_reg[3]' (FDCE) to 'hbm_temp_rd:/apb_pwdata_r_reg[15]'
+INFO: [Synth 8-3886] merging instance 'hbm_temp_rd:/apb_pwdata_r_reg[15]' (FDCE) to 'hbm_temp_rd:/apb_pwdata_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_1/gen_apb_addr_r_reg[21]' (FDC) to 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_1/gen_apb_data_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_1/addr_store_r_reg[21]' (FDCE) to 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_1/data_store_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_0/gen_apb_addr_r_reg[21]' (FDC) to 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_0/gen_apb_data_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_0/addr_store_r_reg[21]' (FDCE) to 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_0/data_store_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_1/apb_pwdata_r_reg[21]' (FDCE) to 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_1/apb_paddr_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_0/apb_pwdata_r_reg[21]' (FDCE) to 'inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.u_hbm_temp_rd_0/apb_paddr_r_reg[21]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 3241.562 ; gain = 433.254 ; free physical = 84652 ; free virtual = 240873
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|xpm_memory_base:                 | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
+|xpm_memory_base__parameterized0: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 3547.109 ; gain = 738.801 ; free physical = 83363 ; free virtual = 240520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:57 . Memory (MB): peak = 3597.117 ; gain = 788.809 ; free physical = 83105 ; free virtual = 240263
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|xpm_memory_base:                 | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
+|xpm_memory_base__parameterized0: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7053] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:50 ; elapsed = 00:03:30 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 127747 ; free virtual = 284414
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 159165 ; free virtual = 315874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 159165 ; free virtual = 315874
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 159142 ; free virtual = 315851
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 159147 ; free virtual = 315856
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 159138 ; free virtual = 315847
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 159131 ; free virtual = 315840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |CARRY8             |    16|
+|2     |HBM_TWO_STACK_INTF |     1|
+|3     |LUT1               |    38|
+|4     |LUT2               |   218|
+|5     |LUT3               |   122|
+|6     |LUT4               |   264|
+|7     |LUT5               |   338|
+|8     |LUT6               |   229|
+|9     |RAMB36E2           |     2|
+|10    |RAMB36E2_1         |     2|
+|11    |FDCE               |   818|
+|12    |FDPE               |     6|
++------+-------------------+------+
+
+Report Instance Areas: 
++------+----------------------------------------------+---------------------------------+------+
+|      |Instance                                      |Module                           |Cells |
++------+----------------------------------------------+---------------------------------+------+
+|1     |top                                           |                                 |  2054|
+|2     |  inst                                        |hbm_v1_0_5                       |  2054|
+|3     |    \TWO_STACK.u_hbm_top                      |hbm_top                          |  2054|
+|4     |      \TWO_STACK_HBM.hbm_apb_arbiter_0        |hbm_apb_arbiter                  |   116|
+|5     |      \TWO_STACK_HBM.hbm_apb_arbiter_1        |hbm_apb_arbiter_0                |   116|
+|6     |      \TWO_STACK_HBM.hbm_apb_mst_0            |hbm_apb_mst                      |   434|
+|7     |      \TWO_STACK_HBM.hbm_apb_mst_1            |hbm_apb_mst_1                    |   434|
+|8     |      \TWO_STACK_HBM.hbm_data_fetch_0         |hbm_data_fetch                   |   214|
+|9     |      \TWO_STACK_HBM.hbm_data_fetch_1         |hbm_data_fetch_2                 |   214|
+|10    |      \TWO_STACK_HBM.u_hbm_temp_rd_0          |hbm_temp_rd                      |   175|
+|11    |      \TWO_STACK_HBM.u_hbm_temp_rd_1          |hbm_temp_rd_3                    |   168|
+|12    |      \TWO_STACK_HBM.xpm_memory_spram_inst_0  |xpm_memory_spram                 |    42|
+|13    |        xpm_memory_base_inst                  |xpm_memory_base                  |     3|
+|14    |      \TWO_STACK_HBM.xpm_memory_spram_inst_1  |xpm_memory_spram__parameterized0 |    42|
+|15    |        xpm_memory_base_inst                  |xpm_memory_base__parameterized0  |     3|
++------+----------------------------------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.250 ; gain = 833.941 ; free physical = 159139 ; free virtual = 315848
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 108 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:53 ; elapsed = 00:03:27 . Memory (MB): peak = 3642.250 ; gain = 626.938 ; free physical = 159173 ; free virtual = 315882
+Synthesis Optimization Complete : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 3642.258 ; gain = 833.941 ; free physical = 159175 ; free virtual = 315884
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3642.258 ; gain = 0.000 ; free physical = 159266 ; free virtual = 315975
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3745.320 ; gain = 0.000 ; free physical = 159269 ; free virtual = 315978
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+190 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:46 ; elapsed = 00:05:00 . Memory (MB): peak = 3745.320 ; gain = 2053.020 ; free physical = 159347 ; free virtual = 316056
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+[OPTRACE]|10470|9|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674282125|END|synth_design|
+[OPTRACE]|10470|10|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674282125|START|Write IP Cache|
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3745.320 ; gain = 0.000 ; free physical = 159342 ; free virtual = 316051
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_5dca_hbm_inst_0, cache-ID = 398e939a857919c3
+[OPTRACE]|10470|11|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674291684|END|Write IP Cache|
+INFO: [Coretcl 2-1174] Renamed 14 cell refs.
+[OPTRACE]|10470|12|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674291686|START|write_checkpoint|CHECKPOINT
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3745.320 ; gain = 0.000 ; free physical = 160207 ; free virtual = 316939
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
+[OPTRACE]|10470|13|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674295614|END|write_checkpoint|
+[OPTRACE]|10470|14|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674295614|START|synth_report|REPORT
+INFO: [runtcl-4] Executing : report_utilization -file bd_5dca_hbm_inst_0_utilization_synth.rpt -pb bd_5dca_hbm_inst_0_utilization_synth.pb
+[OPTRACE]|10470|15|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674295955|END|synth_report|
+[OPTRACE]|10470|16|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.tcl|vivado_synth|1585674301769|END|bd_5dca_hbm_inst_0_synth_1|
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 19:05:01 2020...

@@ -1,0 +1,54 @@
+╭─ln-0002 in /scratch/pc2-mitarbeiter/mariusme/synth2/stream_fpga/cmake-build/bin on master✔
+╰─○ srun -p fpga --constraint=19.2.0_hpc ./STREAM_FPGA_intel -f stream_kernels_single.aocx --single-kernel -r 4 -s 536870912                                                                                                                                [20-04-09 18:30:12]
+srun: SPANK_FPGALINKENABLED=NO
+srun: SPANK_COLLECTORS=normal
+srun: SPANK_RECOMMENDATIONS=off
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+Multiple devices have been found. Select the platform by typing a number:
+0) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+1) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie1)
+0
+Enter device id [0-1]:-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:stream_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.1.4
+-------------------------------------------------------------
+Summary:
+Array Size:          2.14748e+09 Byte
+Data Type            cl_float
+Repetitions:         10
+Kernel replications: 4
+Kernel type:         Single
+Kernel file:         stream_kernels_single.aocx
+Device:              p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+Each test below will take on the order of 7.34751e+04 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-06 on all three arrays
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    6.88987e+04    9.49561e-02    9.35061e-02    1.07773e-01
+           Copy    6.70127e+04    7.39987e-02    6.40919e-02    7.67020e-02
+       PCI read    6.40524e+03    1.00724e+00    1.00581e+00    1.01870e+00
+      PCI write    6.32110e+03    1.02840e+00    1.01920e+00    1.03244e+00
+          Scale    6.72356e+04    6.51301e-02    6.38793e-02    7.59879e-02
+          Triad    6.88993e+04    9.47726e-02    9.35054e-02    1.05896e-01

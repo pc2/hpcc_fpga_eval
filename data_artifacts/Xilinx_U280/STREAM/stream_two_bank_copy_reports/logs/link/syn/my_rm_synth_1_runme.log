@@ -1,0 +1,1302 @@
+
+*** Running vivado
+    with args -log pfm_dynamic.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfm_dynamic.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source pfm_dynamic.tcl -notrace
+[OPTRACE]|77723|1|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586889675049|START|my_rm_synth_1|ROLLUP_AUTO
+[OPTRACE]|77723|2|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586889675050|START|Creating in-memory project|
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_calc_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:Monitor_AXI_Master:1.0'. The one found in IP location '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo/iprepo/monitor_axi_master_v1_0' will take precedence over the same IP in location /opt/Xilinx/Vitis/2019.2/data/ip/xilinx/monitor_axi_master_v1_0
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:interface:sdsoc_trace:2.0'. The one found in location '/opt/Xilinx/Vitis/2019.2/data/ip/xilinx/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2019.2/data/ip/interfaces/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml'
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1693.090 ; gain = 185.773 ; free physical = 295032 ; free virtual = 431136
+[OPTRACE]|77723|3|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586889682435|END|Creating in-memory project|
+[OPTRACE]|77723|4|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586889682435|START|Adding files|
+add_files: Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1835.465 ; gain = 142.375 ; free physical = 292570 ; free virtual = 428726
+[OPTRACE]|77723|5|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586889713900|END|Adding files|
+[OPTRACE]|77723|6|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586889713958|START|synth_design|
+Command: synth_design -top pfm_dynamic -part xcu280-fsvh2892-2L-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 78274 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3185.676 ; gain = 124.719 ; free physical = 289862 ; free virtual = 426044
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6106]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0' (1#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_axi_vip_ctrl_mgntpf_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_ctrl_mgntpf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_axi_vip_ctrl_mgntpf_0' (2#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_ctrl_mgntpf_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_vip_ctrl_mgntpf' of module 'pfm_dynamic_axi_vip_ctrl_mgntpf_0' has 40 connections declared, but only 29 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:8385]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_axi_vip_ctrl_userpf_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_ctrl_userpf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_axi_vip_ctrl_userpf_0' (3#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_ctrl_userpf_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_axi_vip_data_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_data_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_axi_vip_data_0' (4#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_vip_data_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_axilite_user_input_reg_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axilite_user_input_reg_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_axilite_user_input_reg_0' (5#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axilite_user_input_reg_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_1_0' (6#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_1' of module 'pfm_dynamic_calc_0_1_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:8570]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_10_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_10_0' (7#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_10_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_10' of module 'pfm_dynamic_calc_0_10_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:8657]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_11_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_11_0' (8#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_11_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_11' of module 'pfm_dynamic_calc_0_11_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:8744]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_12_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_12_0' (9#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_12_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_12' of module 'pfm_dynamic_calc_0_12_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:8831]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_13_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_13_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_13_0' (10#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_13_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_13' of module 'pfm_dynamic_calc_0_13_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:8918]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_14_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_14_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_14_0' (11#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_14_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_14' of module 'pfm_dynamic_calc_0_14_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9005]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_15_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_15_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_15_0' (12#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_15_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_15' of module 'pfm_dynamic_calc_0_15_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9092]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_16_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_16_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_16_0' (13#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_16_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_16' of module 'pfm_dynamic_calc_0_16_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9179]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_2_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_2_0' (14#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_2_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_2' of module 'pfm_dynamic_calc_0_2_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9266]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_3_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_3_0' (15#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_3_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_3' of module 'pfm_dynamic_calc_0_3_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9353]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_4_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_4_0' (16#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_4_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_4' of module 'pfm_dynamic_calc_0_4_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9440]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_5_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_5_0' (17#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_5_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_5' of module 'pfm_dynamic_calc_0_5_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9527]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_6_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_6_0' (18#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_6_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_6' of module 'pfm_dynamic_calc_0_6_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9614]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_7_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_7_0' (19#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_7_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_7' of module 'pfm_dynamic_calc_0_7_0' has 90 connections declared, but only 88 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9701]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_8_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_8_0' (20#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_8_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_8' of module 'pfm_dynamic_calc_0_8_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9790]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_calc_0_9_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_calc_0_9_0' (21#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_calc_0_9_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'calc_0_9' of module 'pfm_dynamic_calc_0_9_0' has 90 connections declared, but only 86 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:9877]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_debug_bridge_xsdbm_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_debug_bridge_xsdbm_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_debug_bridge_xsdbm_0' (22#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_debug_bridge_xsdbm_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_hmss_0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_hmss_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_hmss_0_0' (23#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_hmss_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'interrupt_concat_imp_1SXQM3I' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:608]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_xlconcat_interrupt_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_0/synth/pfm_dynamic_xlconcat_interrupt_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 32 - type: integer 
+	Parameter IN1_WIDTH bound to: 32 - type: integer 
+	Parameter IN2_WIDTH bound to: 32 - type: integer 
+	Parameter IN3_WIDTH bound to: 32 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 128 - type: integer 
+	Parameter NUM_PORTS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (24#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_xlconcat_interrupt_0' (25#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_0/synth/pfm_dynamic_xlconcat_interrupt_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_xlconcat_interrupt_0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_0_0/synth/pfm_dynamic_xlconcat_interrupt_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat__parameterized0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 32 - type: integer 
+	Parameter NUM_PORTS bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat__parameterized0' (25#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_xlconcat_interrupt_0_0' (26#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_0_0/synth/pfm_dynamic_xlconcat_interrupt_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_xlconcat_interrupt_1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_1_0/synth/pfm_dynamic_xlconcat_interrupt_1_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_xlconcat_interrupt_1_0' (27#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_1_0/synth/pfm_dynamic_xlconcat_interrupt_1_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_xlconcat_interrupt_2_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_2_0/synth/pfm_dynamic_xlconcat_interrupt_2_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_xlconcat_interrupt_2_0' (28#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_2_0/synth/pfm_dynamic_xlconcat_interrupt_2_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_xlconcat_interrupt_3_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_3_0/synth/pfm_dynamic_xlconcat_interrupt_3_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_xlconcat_interrupt_3_0' (29#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconcat_interrupt_3_0/synth/pfm_dynamic_xlconcat_interrupt_3_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_xlconstant_gnd_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconstant_gnd_0/synth/pfm_dynamic_xlconstant_gnd_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 0 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (30#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_xlconstant_gnd_0' (31#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xlconstant_gnd_0/synth/pfm_dynamic_xlconstant_gnd_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'interrupt_concat_imp_1SXQM3I' (32#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:608]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0' (33#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'regslice_pipe_ctrl_hbm_mgntpf' of module 'pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0' has 40 connections declared, but only 37 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:11125]
+INFO: [Synth 8-6157] synthesizing module 'slr0_imp_1Q3M93Z' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:15732]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_axi_gpio_null_slr0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_gpio_null_slr0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_axi_gpio_null_slr0_0' (34#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_gpio_null_slr0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_gpio_null_slr0' of module 'pfm_dynamic_axi_gpio_null_slr0_0' has 22 connections declared, but only 20 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:16301]
+INFO: [Synth 8-6157] synthesizing module 'expanded_region_resets_slr0_imp_I3VDPV' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:12]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_logic_reset_op_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_logic_reset_op_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_logic_reset_op_0' (35#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_logic_reset_op_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_control_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_control_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_control_0' (36#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_control_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_control' of module 'pfm_dynamic_psreset_gate_pr_control_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:91]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_data_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_data_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_data_0' (37#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_data_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_data' of module 'pfm_dynamic_psreset_gate_pr_data_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:98]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_dataclk_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_dataclk_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_dataclk_0' (38#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_dataclk_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_dataclk' of module 'pfm_dynamic_psreset_gate_pr_dataclk_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:105]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel_0' (39#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_kernel' of module 'pfm_dynamic_psreset_gate_pr_kernel_0' has 10 connections declared, but only 7 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:112]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel2_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel2_0' (40#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel2_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_kernel2' of module 'pfm_dynamic_psreset_gate_pr_kernel2_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:120]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_util_and2_hbm_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_hbm_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_util_and2_hbm_0' (41#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_hbm_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_util_and2_hbm_ctrl_reset_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_hbm_ctrl_reset_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_util_and2_hbm_ctrl_reset_0' (42#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_hbm_ctrl_reset_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_util_and2_slr0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_slr0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_util_and2_slr0_0' (43#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_slr0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_util_slice_hbm_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_slice_hbm_0/synth/pfm_dynamic_util_slice_hbm_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 8 - type: integer 
+	Parameter DIN_FROM bound to: 3 - type: integer 
+	Parameter DIN_TO bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (44#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_util_slice_hbm_0' (45#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_slice_hbm_0/synth/pfm_dynamic_util_slice_hbm_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_util_slice_slr0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_slice_slr0_0/synth/pfm_dynamic_util_slice_slr0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 8 - type: integer 
+	Parameter DIN_FROM bound to: 2 - type: integer 
+	Parameter DIN_TO bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (45#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_util_slice_slr0_0' (46#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_slice_slr0_0/synth/pfm_dynamic_util_slice_slr0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'expanded_region_resets_slr0_imp_I3VDPV' (47#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:12]
+WARNING: [Synth 8-7023] instance 'expanded_region_resets_slr0' of module 'expanded_region_resets_slr0_imp_I3VDPV' has 20 connections declared, but only 17 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:16322]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_interconnect_axilite_user_slr0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:11626]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_C3A2D6' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1029]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m00_regslice_4' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m00_regslice_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m00_regslice_4' (48#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m00_regslice_4_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm00_regslice' of module 'pfm_dynamic_m00_regslice_4' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1188]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_C3A2D6' (49#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1029]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1E0TSRO' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1429]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_0' (50#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m01_regslice_11' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m01_regslice_11_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m01_regslice_11' (51#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m01_regslice_11_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm01_regslice' of module 'pfm_dynamic_m01_regslice_11' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1654]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1E0TSRO' (52#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1429]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1LJ36RR' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2171]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_1' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_1' (53#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m02_regslice_4' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m02_regslice_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m02_regslice_4' (54#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m02_regslice_4_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm02_regslice' of module 'pfm_dynamic_m02_regslice_4' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2396]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1LJ36RR' (55#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2171]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_MCLX95' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3445]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_2' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_2' (56#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m03_regslice_3' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m03_regslice_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m03_regslice_3' (57#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m03_regslice_3_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm03_regslice' of module 'pfm_dynamic_m03_regslice_3' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3670]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_MCLX95' (58#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3445]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_FXIRPD' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3977]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_3' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_3' (59#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m04_regslice_3' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m04_regslice_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m04_regslice_3' (60#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m04_regslice_3_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm04_regslice' of module 'pfm_dynamic_m04_regslice_3' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:4202]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_FXIRPD' (61#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3977]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1A9050F' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:4509]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_4' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_4' (62#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m05_regslice_3' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m05_regslice_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m05_regslice_3' (63#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m05_regslice_3_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm05_regslice' of module 'pfm_dynamic_m05_regslice_3' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:4734]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1A9050F' (64#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:4509]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1PIBOVW' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:5307]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_5' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_5' (65#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m06_regslice_2' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m06_regslice_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m06_regslice_2' (66#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m06_regslice_2_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm06_regslice' of module 'pfm_dynamic_m06_regslice_2' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:5532]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1PIBOVW' (67#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:5307]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1JDGC4Q' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:15102]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_s00_regslice_15' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_s00_regslice_15_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_s00_regslice_15' (68#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_s00_regslice_15_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1JDGC4Q' (69#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:15102]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_xbar_4' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_xbar_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_xbar_4' (70#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_xbar_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_interconnect_axilite_user_slr0_0' (71#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:11626]
+INFO: [Synth 8-6155] done synthesizing module 'slr0_imp_1Q3M93Z' (72#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:15732]
+INFO: [Synth 8-6157] synthesizing module 'slr1_imp_IZT2WG' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:16499]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_axi_gpio_null_slr1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_gpio_null_slr1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_axi_gpio_null_slr1_0' (73#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_axi_gpio_null_slr1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_gpio_null_slr1' of module 'pfm_dynamic_axi_gpio_null_slr1_0' has 22 connections declared, but only 20 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:17159]
+INFO: [Synth 8-6157] synthesizing module 'expanded_region_resets_slr1_imp_WN1LWB' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:147]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_control_1' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_control_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_control_1' (74#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_control_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_control' of module 'pfm_dynamic_psreset_gate_pr_control_1' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:221]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_data_1' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_data_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_data_1' (75#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_data_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_data' of module 'pfm_dynamic_psreset_gate_pr_data_1' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:228]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_dataclk_1' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_dataclk_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_dataclk_1' (76#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_dataclk_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_dataclk' of module 'pfm_dynamic_psreset_gate_pr_dataclk_1' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:235]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_ddr_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_ddr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_ddr_0' (77#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_ddr_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_ddr' of module 'pfm_dynamic_psreset_gate_pr_ddr_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:242]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel_1' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel_1' (78#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_kernel' of module 'pfm_dynamic_psreset_gate_pr_kernel_1' has 10 connections declared, but only 7 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:249]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel2_1' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel2_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_psreset_gate_pr_kernel2_1' (79#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_psreset_gate_pr_kernel2_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_kernel2' of module 'pfm_dynamic_psreset_gate_pr_kernel2_1' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:257]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_util_and2_slr1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_slr1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_util_and2_slr1_0' (80#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_util_and2_slr1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_util_slice_slr1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_slice_slr1_0/synth/pfm_dynamic_util_slice_slr1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 8 - type: integer 
+	Parameter DIN_FROM bound to: 1 - type: integer 
+	Parameter DIN_TO bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (80#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_util_slice_slr1_0' (81#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_slice_slr1_0/synth/pfm_dynamic_util_slice_slr1_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'expanded_region_resets_slr1_imp_WN1LWB' (82#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:147]
+WARNING: [Synth 8-7023] instance 'expanded_region_resets_slr1' of module 'expanded_region_resets_slr1_imp_WN1LWB' has 20 connections declared, but only 18 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:17180]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_interconnect_axilite_user_slr1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:12778]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_14XUPPF' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:829]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m00_regslice_5' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m00_regslice_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m00_regslice_5' (83#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m00_regslice_5_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm00_regslice' of module 'pfm_dynamic_m00_regslice_5' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:988]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_14XUPPF' (84#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:829]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_3FADDP' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1695]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m01_regslice_12' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m01_regslice_12_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m01_regslice_12' (85#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m01_regslice_12_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_3FADDP' (86#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1695]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_X3IKM6' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2703]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m02_regslice_5' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m02_regslice_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m02_regslice_5' (87#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m02_regslice_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_X3IKM6' (88#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2703]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1SJ5BGG' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2913]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_6' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_6' (89#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m03_regslice_4' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m03_regslice_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m03_regslice_4' (90#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m03_regslice_4_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm03_regslice' of module 'pfm_dynamic_m03_regslice_4' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3138]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1SJ5BGG' (91#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2913]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_ZX2VQ0' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:4243]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_auto_cc_7' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_7' (92#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_m04_regslice_4' [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m04_regslice_4_stub.v:6]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m04_regslice_4' (93#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m04_regslice_4_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm04_regslice' of module 'pfm_dynamic_m04_regslice_4' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:4468]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_ZX2VQ0' (94#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:4243]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_auto_cc_8' (95#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_auto_cc_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_m05_regslice_4' (96#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/.Xil/Vivado-77723-alveo0/realtime/pfm_dynamic_m05_regslice_4_stub.v:6]
+WARNING: [Synth 8-7023] instance 'm05_regslice' of module 'pfm_dynamic_m05_regslice_4' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:5266]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_8IH8XY' (97#1) [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:5041]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7023] instance 'm06_regslice' of module 'pfm_dynamic_m06_regslice_3' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:5798]
+WARNING: [Synth 8-7023] instance 'm07_regslice' of module 'pfm_dynamic_m07_regslice_0' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6064]
+WARNING: [Synth 8-7023] instance 'axi_gpio_null_slr2' of module 'pfm_dynamic_axi_gpio_null_slr2_0' has 22 connections declared, but only 20 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:18038]
+	Parameter CONST_VAL bound to: 255 - type: integer 
+	Parameter CONST_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_control' of module 'pfm_dynamic_psreset_gate_pr_control_2' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:341]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_data' of module 'pfm_dynamic_psreset_gate_pr_data_2' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:348]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_dataclk' of module 'pfm_dynamic_psreset_gate_pr_dataclk_2' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:355]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_kernel' of module 'pfm_dynamic_psreset_gate_pr_kernel_2' has 10 connections declared, but only 7 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:362]
+WARNING: [Synth 8-7023] instance 'psreset_gate_pr_kernel2' of module 'pfm_dynamic_psreset_gate_pr_kernel2_2' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:370]
+WARNING: [Synth 8-7023] instance 'expanded_region_resets_slr2' of module 'expanded_region_resets_slr2_imp_B8LNJ7' has 19 connections declared, but only 16 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:18061]
+WARNING: [Synth 8-7023] instance 'm00_regslice' of module 'pfm_dynamic_m00_regslice_6' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:1388]
+WARNING: [Synth 8-7023] instance 'm01_regslice' of module 'pfm_dynamic_m01_regslice_13' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2130]
+WARNING: [Synth 8-7023] instance 'm02_regslice' of module 'pfm_dynamic_m02_regslice_6' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:2662]
+WARNING: [Synth 8-7023] instance 'm03_regslice' of module 'pfm_dynamic_m03_regslice_5' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3404]
+WARNING: [Synth 8-7023] instance 'm04_regslice' of module 'pfm_dynamic_m04_regslice_5' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:3936]
+WARNING: [Synth 8-7023] instance 'm05_regslice' of module 'pfm_dynamic_m05_regslice_5' has 40 connections declared, but only 38 given [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:5000]
+WARNING: [Synth 8-3848] Net Res in module/entity slr2_imp_EEMOLC does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:17627]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_act_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6326]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_adr in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6327]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_ba in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6328]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_bg in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6329]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_ck_c in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6330]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_ck_t in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6331]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_cke in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6332]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_cs_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6333]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_odt in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6337]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_par in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6338]
+WARNING: [Synth 8-3848] Net ddrmem_0_C0_DDR4_reset_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6339]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_act_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6340]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_adr in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6341]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_ba in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6342]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_bg in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6343]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_ck_c in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6344]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_ck_t in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6345]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_cke in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6346]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_cs_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6347]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_odt in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6351]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_par in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6352]
+WARNING: [Synth 8-3848] Net ddrmem_1_C0_DDR4_reset_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6353]
+WARNING: [Synth 8-3848] Net io_gt_gtyquad_00_gtx_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6372]
+WARNING: [Synth 8-3848] Net io_gt_gtyquad_00_gtx_p in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6373]
+WARNING: [Synth 8-3848] Net io_gt_gtyquad_01_gtx_n in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6376]
+WARNING: [Synth 8-3848] Net io_gt_gtyquad_01_gtx_p in module/entity pfm_dynamic does not have driver. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/synth/pfm_dynamic.v:6377]
+WARNING: [Synth 8-3331] design s00_couplers_imp_U7G1P5 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_U7G1P5 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[31]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[30]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[29]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[28]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[27]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[26]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[25]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[24]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[23]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[22]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[21]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[20]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[19]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[18]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[17]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[16]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[15]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[14]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[13]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[12]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[11]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[10]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[9]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[8]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[7]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_araddr[6]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[31]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[30]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[29]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[28]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[27]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[26]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[25]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[24]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[23]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[22]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[21]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[20]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[19]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[18]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[17]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[16]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[15]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[14]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[13]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[12]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[11]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[10]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[9]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[8]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[7]
+WARNING: [Synth 8-3331] design m05_couplers_imp_3VP0VG has unconnected port S_AXI_awaddr[6]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[31]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[30]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[29]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[28]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[27]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[26]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[25]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[24]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[23]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[22]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[21]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[20]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[19]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[18]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[17]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[16]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[15]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[14]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[13]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[12]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[11]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[10]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[9]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[8]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[7]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_araddr[6]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[31]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[30]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[29]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[28]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[27]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[26]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[25]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[24]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[23]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[22]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[21]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[20]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[19]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[18]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[17]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[16]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[15]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[14]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[13]
+WARNING: [Synth 8-3331] design m04_couplers_imp_14JV3UA has unconnected port S_AXI_awaddr[12]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 3291.918 ; gain = 230.961 ; free physical = 289394 ; free virtual = 425577
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 3306.762 ; gain = 245.805 ; free physical = 289222 ; free virtual = 425405
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 3306.762 ; gain = 245.805 ; free physical = 289222 ; free virtual = 425405
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3306.762 ; gain = 0.000 ; free physical = 288989 ; free virtual = 425172
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_in_context.xdc] for cell 'axi_vip_ctrl_hbm_mgntpf'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_in_context.xdc] for cell 'axi_vip_ctrl_hbm_mgntpf'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_ctrl_mgntpf_0/pfm_dynamic_axi_vip_ctrl_mgntpf_0/pfm_dynamic_axi_vip_ctrl_userpf_0_in_context.xdc] for cell 'axi_vip_ctrl_mgntpf'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_ctrl_mgntpf_0/pfm_dynamic_axi_vip_ctrl_mgntpf_0/pfm_dynamic_axi_vip_ctrl_userpf_0_in_context.xdc] for cell 'axi_vip_ctrl_mgntpf'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_ctrl_userpf_0/pfm_dynamic_axi_vip_ctrl_userpf_0/pfm_dynamic_axi_vip_ctrl_userpf_0_in_context.xdc] for cell 'axi_vip_ctrl_userpf'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_ctrl_userpf_0/pfm_dynamic_axi_vip_ctrl_userpf_0/pfm_dynamic_axi_vip_ctrl_userpf_0_in_context.xdc] for cell 'axi_vip_ctrl_userpf'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_data_0/pfm_dynamic_axi_vip_data_0/pfm_dynamic_axi_vip_data_0_in_context.xdc] for cell 'axi_vip_data'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_vip_data_0/pfm_dynamic_axi_vip_data_0/pfm_dynamic_axi_vip_data_0_in_context.xdc] for cell 'axi_vip_data'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0_in_context.xdc] for cell 'axilite_user_input_reg'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0_in_context.xdc] for cell 'axilite_user_input_reg'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_debug_bridge_xsdbm_0/pfm_dynamic_debug_bridge_xsdbm_0/pfm_dynamic_debug_bridge_xsdbm_0_in_context.xdc] for cell 'debug_bridge_xsdbm'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_debug_bridge_xsdbm_0/pfm_dynamic_debug_bridge_xsdbm_0/pfm_dynamic_debug_bridge_xsdbm_0_in_context.xdc] for cell 'debug_bridge_xsdbm'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/pfm_dynamic_hmss_0_0/pfm_dynamic_hmss_0_0_in_context.xdc] for cell 'hmss_0'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/pfm_dynamic_hmss_0_0/pfm_dynamic_hmss_0_0_in_context.xdc] for cell 'hmss_0'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_in_context.xdc] for cell 'regslice_pipe_ctrl_hbm_mgntpf'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_in_context.xdc] for cell 'regslice_pipe_ctrl_hbm_mgntpf'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_gpio_null_slr0_0/pfm_dynamic_axi_gpio_null_slr0_0/pfm_dynamic_axi_gpio_null_slr1_0_in_context.xdc] for cell 'slr0/axi_gpio_null_slr0'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_gpio_null_slr0_0/pfm_dynamic_axi_gpio_null_slr0_0/pfm_dynamic_axi_gpio_null_slr1_0_in_context.xdc] for cell 'slr0/axi_gpio_null_slr0'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_logic_reset_op_0/pfm_dynamic_logic_reset_op_0/pfm_dynamic_logic_reset_op_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/logic_reset_op'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_logic_reset_op_0/pfm_dynamic_logic_reset_op_0/pfm_dynamic_logic_reset_op_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/logic_reset_op'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_control_0/pfm_dynamic_psreset_gate_pr_control_0/pfm_dynamic_psreset_gate_pr_control_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_control'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_control_0/pfm_dynamic_psreset_gate_pr_control_0/pfm_dynamic_psreset_gate_pr_control_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_control'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_data_0/pfm_dynamic_psreset_gate_pr_data_0/pfm_dynamic_psreset_gate_pr_data_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_data'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_data_0/pfm_dynamic_psreset_gate_pr_data_0/pfm_dynamic_psreset_gate_pr_data_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_data'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_dataclk_0/pfm_dynamic_psreset_gate_pr_dataclk_0/pfm_dynamic_psreset_gate_pr_dataclk_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_dataclk'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_dataclk_0/pfm_dynamic_psreset_gate_pr_dataclk_0/pfm_dynamic_psreset_gate_pr_dataclk_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_dataclk'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel_0/pfm_dynamic_psreset_gate_pr_kernel_0/pfm_dynamic_psreset_gate_pr_kernel_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_kernel'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel_0/pfm_dynamic_psreset_gate_pr_kernel_0/pfm_dynamic_psreset_gate_pr_kernel_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_kernel'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel2_0/pfm_dynamic_psreset_gate_pr_kernel2_0/pfm_dynamic_psreset_gate_pr_kernel2_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_kernel2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel2_0/pfm_dynamic_psreset_gate_pr_kernel2_0/pfm_dynamic_psreset_gate_pr_kernel2_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/psreset_gate_pr_kernel2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_hbm_0/pfm_dynamic_util_and2_hbm_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/util_and2_hbm'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_hbm_0/pfm_dynamic_util_and2_hbm_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/util_and2_hbm'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_hbm_ctrl_reset_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/util_and2_hbm_ctrl_reset'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_hbm_ctrl_reset_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/util_and2_hbm_ctrl_reset'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_slr0_0/pfm_dynamic_util_and2_slr0_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/util_and2_slr0'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_slr0_0/pfm_dynamic_util_and2_slr0_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr0/expanded_region_resets_slr0/util_and2_slr0'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_gpio_null_slr1_0/pfm_dynamic_axi_gpio_null_slr1_0/pfm_dynamic_axi_gpio_null_slr1_0_in_context.xdc] for cell 'slr1/axi_gpio_null_slr1'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_gpio_null_slr1_0/pfm_dynamic_axi_gpio_null_slr1_0/pfm_dynamic_axi_gpio_null_slr1_0_in_context.xdc] for cell 'slr1/axi_gpio_null_slr1'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_control_1/pfm_dynamic_psreset_gate_pr_control_1/pfm_dynamic_psreset_gate_pr_control_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_control'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_control_1/pfm_dynamic_psreset_gate_pr_control_1/pfm_dynamic_psreset_gate_pr_control_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_control'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_data_1/pfm_dynamic_psreset_gate_pr_data_1/pfm_dynamic_psreset_gate_pr_data_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_data'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_data_1/pfm_dynamic_psreset_gate_pr_data_1/pfm_dynamic_psreset_gate_pr_data_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_data'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_dataclk_1/pfm_dynamic_psreset_gate_pr_dataclk_1/pfm_dynamic_psreset_gate_pr_dataclk_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_dataclk'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_dataclk_1/pfm_dynamic_psreset_gate_pr_dataclk_1/pfm_dynamic_psreset_gate_pr_dataclk_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_dataclk'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_ddr_0/pfm_dynamic_psreset_gate_pr_ddr_0/pfm_dynamic_psreset_gate_pr_data_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_ddr'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_ddr_0/pfm_dynamic_psreset_gate_pr_ddr_0/pfm_dynamic_psreset_gate_pr_data_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_ddr'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel_1/pfm_dynamic_psreset_gate_pr_kernel_1/pfm_dynamic_psreset_gate_pr_kernel_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_kernel'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel_1/pfm_dynamic_psreset_gate_pr_kernel_1/pfm_dynamic_psreset_gate_pr_kernel_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_kernel'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel2_1/pfm_dynamic_psreset_gate_pr_kernel2_1/pfm_dynamic_psreset_gate_pr_kernel2_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_kernel2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel2_1/pfm_dynamic_psreset_gate_pr_kernel2_1/pfm_dynamic_psreset_gate_pr_kernel2_1_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/psreset_gate_pr_kernel2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_slr1_0/pfm_dynamic_util_and2_slr1_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/util_and2_slr1'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_util_and2_slr1_0/pfm_dynamic_util_and2_slr1_0/pfm_dynamic_util_and2_hbm_ctrl_reset_0_in_context.xdc] for cell 'slr1/expanded_region_resets_slr1/util_and2_slr1'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_gpio_null_slr2_0/pfm_dynamic_axi_gpio_null_slr2_0/pfm_dynamic_axi_gpio_null_slr1_0_in_context.xdc] for cell 'slr2/axi_gpio_null_slr2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axi_gpio_null_slr2_0/pfm_dynamic_axi_gpio_null_slr2_0/pfm_dynamic_axi_gpio_null_slr1_0_in_context.xdc] for cell 'slr2/axi_gpio_null_slr2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_logic_reset_op_1/pfm_dynamic_logic_reset_op_1/pfm_dynamic_logic_reset_op_1_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/logic_reset_op'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_logic_reset_op_1/pfm_dynamic_logic_reset_op_1/pfm_dynamic_logic_reset_op_1_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/logic_reset_op'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_control_2/pfm_dynamic_psreset_gate_pr_control_2/pfm_dynamic_psreset_gate_pr_control_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_control'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_control_2/pfm_dynamic_psreset_gate_pr_control_2/pfm_dynamic_psreset_gate_pr_control_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_control'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_data_2/pfm_dynamic_psreset_gate_pr_data_2/pfm_dynamic_psreset_gate_pr_data_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_data'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_data_2/pfm_dynamic_psreset_gate_pr_data_2/pfm_dynamic_psreset_gate_pr_data_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_data'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_dataclk_2/pfm_dynamic_psreset_gate_pr_dataclk_2/pfm_dynamic_psreset_gate_pr_dataclk_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_dataclk'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_dataclk_2/pfm_dynamic_psreset_gate_pr_dataclk_2/pfm_dynamic_psreset_gate_pr_dataclk_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_dataclk'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel_2/pfm_dynamic_psreset_gate_pr_kernel_2/pfm_dynamic_psreset_gate_pr_kernel_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_kernel'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel_2/pfm_dynamic_psreset_gate_pr_kernel_2/pfm_dynamic_psreset_gate_pr_kernel_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_kernel'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel2_2/pfm_dynamic_psreset_gate_pr_kernel2_2/pfm_dynamic_psreset_gate_pr_kernel2_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_kernel2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_psreset_gate_pr_kernel2_2/pfm_dynamic_psreset_gate_pr_kernel2_2/pfm_dynamic_psreset_gate_pr_kernel2_2_in_context.xdc] for cell 'slr2/expanded_region_resets_slr2/psreset_gate_pr_kernel2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_freq_counter_0_0/pfm_dynamic_freq_counter_0_0/pfm_dynamic_freq_counter_1_0_in_context.xdc] for cell 'slr2/frequency_counters/freq_counter_0'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_freq_counter_0_0/pfm_dynamic_freq_counter_0_0/pfm_dynamic_freq_counter_1_0_in_context.xdc] for cell 'slr2/frequency_counters/freq_counter_0'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_freq_counter_1_0/pfm_dynamic_freq_counter_1_0/pfm_dynamic_freq_counter_1_0_in_context.xdc] for cell 'slr2/frequency_counters/freq_counter_1'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_freq_counter_1_0/pfm_dynamic_freq_counter_1_0/pfm_dynamic_freq_counter_1_0_in_context.xdc] for cell 'slr2/frequency_counters/freq_counter_1'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xbar_2/pfm_dynamic_xbar_2/pfm_dynamic_xbar_2_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/xbar'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xbar_2/pfm_dynamic_xbar_2/pfm_dynamic_xbar_2_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/xbar'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xbar_4/pfm_dynamic_xbar_4/pfm_dynamic_xbar_4_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/xbar'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xbar_4/pfm_dynamic_xbar_4/pfm_dynamic_xbar_4_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/xbar'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xbar_5/pfm_dynamic_xbar_5/pfm_dynamic_xbar_5_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/xbar'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_xbar_5/pfm_dynamic_xbar_5/pfm_dynamic_xbar_5_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/xbar'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_1_0/pfm_dynamic_calc_0_1_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_1'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_1_0/pfm_dynamic_calc_0_1_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_1'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_2_0/pfm_dynamic_calc_0_2_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_2_0/pfm_dynamic_calc_0_2_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_3_0/pfm_dynamic_calc_0_3_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_3'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_3_0/pfm_dynamic_calc_0_3_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_3'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_4_0/pfm_dynamic_calc_0_4_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_4'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_4_0/pfm_dynamic_calc_0_4_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_4'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_5_0/pfm_dynamic_calc_0_5_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_5'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_5_0/pfm_dynamic_calc_0_5_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_5'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_6_0/pfm_dynamic_calc_0_6_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_6'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_6_0/pfm_dynamic_calc_0_6_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_6'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_7_0/pfm_dynamic_calc_0_7_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_7'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_7_0/pfm_dynamic_calc_0_7_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_7'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_8_0/pfm_dynamic_calc_0_8_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_8'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_8_0/pfm_dynamic_calc_0_8_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_8'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_9_0/pfm_dynamic_calc_0_9_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_9'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_9_0/pfm_dynamic_calc_0_9_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_9'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_10_0/pfm_dynamic_calc_0_10_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_10'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_10_0/pfm_dynamic_calc_0_10_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_10'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_11_0/pfm_dynamic_calc_0_11_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_11'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_11_0/pfm_dynamic_calc_0_11_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_11'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_12_0/pfm_dynamic_calc_0_12_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_12'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_12_0/pfm_dynamic_calc_0_12_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_12'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_13_0/pfm_dynamic_calc_0_13_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_13'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_13_0/pfm_dynamic_calc_0_13_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_13'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_14_0/pfm_dynamic_calc_0_14_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_14'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_14_0/pfm_dynamic_calc_0_14_0/pfm_dynamic_calc_0_2_0_in_context.xdc] for cell 'calc_0_14'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_15_0/pfm_dynamic_calc_0_15_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_15'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_15_0/pfm_dynamic_calc_0_15_0/pfm_dynamic_calc_0_3_0_in_context.xdc] for cell 'calc_0_15'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_16_0/pfm_dynamic_calc_0_16_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_16'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_calc_0_16_0/pfm_dynamic_calc_0_16_0/pfm_dynamic_calc_0_1_0_in_context.xdc] for cell 'calc_0_16'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_s00_regslice_15/pfm_dynamic_s00_regslice_15/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/s00_couplers/s00_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_s00_regslice_15/pfm_dynamic_s00_regslice_15/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/s00_couplers/s00_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m00_regslice_4/pfm_dynamic_m00_regslice_4/pfm_dynamic_s00_regslice_8_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m00_couplers/m00_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m00_regslice_4/pfm_dynamic_m00_regslice_4/pfm_dynamic_s00_regslice_8_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m00_couplers/m00_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m01_regslice_11/pfm_dynamic_m01_regslice_11/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m01_couplers/m01_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m01_regslice_11/pfm_dynamic_m01_regslice_11/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m01_couplers/m01_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_0/pfm_dynamic_auto_cc_0/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m01_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_0/pfm_dynamic_auto_cc_0/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m01_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m02_regslice_4/pfm_dynamic_m02_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m02_couplers/m02_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m02_regslice_4/pfm_dynamic_m02_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m02_couplers/m02_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_1/pfm_dynamic_auto_cc_1/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m02_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_1/pfm_dynamic_auto_cc_1/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m02_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m03_regslice_3/pfm_dynamic_m03_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m03_couplers/m03_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m03_regslice_3/pfm_dynamic_m03_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m03_couplers/m03_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_2/pfm_dynamic_auto_cc_2/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m03_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_2/pfm_dynamic_auto_cc_2/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m03_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m04_regslice_3/pfm_dynamic_m04_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m04_couplers/m04_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m04_regslice_3/pfm_dynamic_m04_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m04_couplers/m04_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_3/pfm_dynamic_auto_cc_3/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m04_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_3/pfm_dynamic_auto_cc_3/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m04_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m05_regslice_3/pfm_dynamic_m05_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m05_couplers/m05_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m05_regslice_3/pfm_dynamic_m05_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m05_couplers/m05_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_4/pfm_dynamic_auto_cc_4/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m05_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_4/pfm_dynamic_auto_cc_4/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m05_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m06_regslice_2/pfm_dynamic_m06_regslice_2/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m06_couplers/m06_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m06_regslice_2/pfm_dynamic_m06_regslice_2/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m06_couplers/m06_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_5/pfm_dynamic_auto_cc_5/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m06_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_5/pfm_dynamic_auto_cc_5/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr0/interconnect_axilite_user_slr0/m06_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_s00_regslice_16/pfm_dynamic_s00_regslice_16/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/s00_couplers/s00_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_s00_regslice_16/pfm_dynamic_s00_regslice_16/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/s00_couplers/s00_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m00_regslice_5/pfm_dynamic_m00_regslice_5/pfm_dynamic_s00_regslice_8_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m00_couplers/m00_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m00_regslice_5/pfm_dynamic_m00_regslice_5/pfm_dynamic_s00_regslice_8_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m00_couplers/m00_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m01_regslice_12/pfm_dynamic_m01_regslice_12/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m01_couplers/m01_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m01_regslice_12/pfm_dynamic_m01_regslice_12/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m01_couplers/m01_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m02_regslice_5/pfm_dynamic_m02_regslice_5/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m02_couplers/m02_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m02_regslice_5/pfm_dynamic_m02_regslice_5/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m02_couplers/m02_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m03_regslice_4/pfm_dynamic_m03_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m03_couplers/m03_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m03_regslice_4/pfm_dynamic_m03_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m03_couplers/m03_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_6/pfm_dynamic_auto_cc_6/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m03_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_6/pfm_dynamic_auto_cc_6/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m03_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m04_regslice_4/pfm_dynamic_m04_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m04_couplers/m04_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m04_regslice_4/pfm_dynamic_m04_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m04_couplers/m04_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_7/pfm_dynamic_auto_cc_7/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m04_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_7/pfm_dynamic_auto_cc_7/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m04_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m05_regslice_4/pfm_dynamic_m05_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m05_couplers/m05_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m05_regslice_4/pfm_dynamic_m05_regslice_4/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m05_couplers/m05_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_8/pfm_dynamic_auto_cc_8/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m05_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_8/pfm_dynamic_auto_cc_8/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m05_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m06_regslice_3/pfm_dynamic_m06_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m06_couplers/m06_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m06_regslice_3/pfm_dynamic_m06_regslice_3/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m06_couplers/m06_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_9/pfm_dynamic_auto_cc_9/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m06_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_9/pfm_dynamic_auto_cc_9/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m06_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m07_regslice_0/pfm_dynamic_m07_regslice_0/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m07_couplers/m07_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m07_regslice_0/pfm_dynamic_m07_regslice_0/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m07_couplers/m07_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_10/pfm_dynamic_auto_cc_10/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m07_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_10/pfm_dynamic_auto_cc_10/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr1/interconnect_axilite_user_slr1/m07_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_s00_regslice_17/pfm_dynamic_s00_regslice_17/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/s00_couplers/s00_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_s00_regslice_17/pfm_dynamic_s00_regslice_17/pfm_dynamic_s00_regslice_7_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/s00_couplers/s00_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m00_regslice_6/pfm_dynamic_m00_regslice_6/pfm_dynamic_s00_regslice_8_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m00_couplers/m00_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m00_regslice_6/pfm_dynamic_m00_regslice_6/pfm_dynamic_s00_regslice_8_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m00_couplers/m00_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m01_regslice_13/pfm_dynamic_m01_regslice_13/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m01_couplers/m01_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m01_regslice_13/pfm_dynamic_m01_regslice_13/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m01_couplers/m01_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_11/pfm_dynamic_auto_cc_11/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m01_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_11/pfm_dynamic_auto_cc_11/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m01_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m02_regslice_6/pfm_dynamic_m02_regslice_6/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m02_couplers/m02_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m02_regslice_6/pfm_dynamic_m02_regslice_6/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m02_couplers/m02_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_12/pfm_dynamic_auto_cc_12/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m02_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_12/pfm_dynamic_auto_cc_12/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m02_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m03_regslice_5/pfm_dynamic_m03_regslice_5/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m03_couplers/m03_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m03_regslice_5/pfm_dynamic_m03_regslice_5/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m03_couplers/m03_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_13/pfm_dynamic_auto_cc_13/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m03_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_13/pfm_dynamic_auto_cc_13/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m03_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m04_regslice_5/pfm_dynamic_m04_regslice_5/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m04_couplers/m04_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m04_regslice_5/pfm_dynamic_m04_regslice_5/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m04_couplers/m04_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_14/pfm_dynamic_auto_cc_14/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m04_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_14/pfm_dynamic_auto_cc_14/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m04_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m05_regslice_5/pfm_dynamic_m05_regslice_5/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m05_couplers/m05_regslice'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_m05_regslice_5/pfm_dynamic_m05_regslice_5/pfm_dynamic_m01_regslice_10_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m05_couplers/m05_regslice'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_15/pfm_dynamic_auto_cc_15/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m05_couplers/auto_cc'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_auto_cc_15/pfm_dynamic_auto_cc_15/pfm_dynamic_auto_cc_0_in_context.xdc] for cell 'slr2/interconnect_axilite_user_slr2/m05_couplers/auto_cc'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/pfm_dynamic_ooc.xdc]
+WARNING: [Constraints 18-619] A clock with name 'hbm_ref_clk' already exists, overwriting the previous clock with the same name. [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/pfm_dynamic_ooc.xdc:14]
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/pfm_dynamic_ooc.xdc]
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3582.766 ; gain = 0.000 ; free physical = 290645 ; free virtual = 426902
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+write_xdc: Time (s): cpu = 00:06:26 ; elapsed = 00:06:29 . Memory (MB): peak = 10430.766 ; gain = 6848.000 ; free physical = 298503 ; free virtual = 434602
+Constraint Validation Runtime : Time (s): cpu = 00:13:02 ; elapsed = 00:13:05 . Memory (MB): peak = 10455.578 ; gain = 6872.812 ; free physical = 292606 ; free virtual = 428704
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:13:40 ; elapsed = 00:13:53 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 299330 ; free virtual = 435430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:13:40 ; elapsed = 00:13:53 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 299330 ; free virtual = 435429
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-quiet" for "current_instance" at line 2 of file /home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0_in_context.xdc
+---------------------------------------------------------------------
+Usage:
+  current_instance
+    [-help]
+    instance
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+WARNING: set_property CLOCK_PERIOD_OOC_TARGET could not find object (constraint file  /home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_debug_bridge_xsdbm_0/pfm_dynamic_debug_bridge_xsdbm_0/pfm_dynamic_debug_bridge_xsdbm_0_in_context.xdc, line 1).
+Applied set_property DONT_TOUCH = true for axi_vip_ctrl_hbm_mgntpf. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for axi_vip_ctrl_mgntpf. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for axi_vip_ctrl_userpf. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for axi_vip_data. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for axilite_user_input_reg. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for debug_bridge_xsdbm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for hmss_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for interrupt_concat/xlconcat_interrupt. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for interrupt_concat/xlconcat_interrupt_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for interrupt_concat/xlconcat_interrupt_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for interrupt_concat/xlconcat_interrupt_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for interrupt_concat/xlconcat_interrupt_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for interrupt_concat/xlconstant_gnd. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for regslice_pipe_ctrl_hbm_mgntpf. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/axi_gpio_null_slr0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/logic_reset_op. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/psreset_gate_pr_control. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/psreset_gate_pr_data. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/psreset_gate_pr_dataclk. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/psreset_gate_pr_kernel. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/psreset_gate_pr_kernel2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/util_and2_hbm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/util_and2_hbm_ctrl_reset. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/util_and2_slr0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/util_slice_hbm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/expanded_region_resets_slr0/util_slice_slr0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/axi_gpio_null_slr1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/psreset_gate_pr_control. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/psreset_gate_pr_data. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/psreset_gate_pr_dataclk. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/psreset_gate_pr_ddr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/psreset_gate_pr_kernel. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/psreset_gate_pr_kernel2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/util_and2_slr1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/expanded_region_resets_slr1/util_slice_slr1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/axi_gpio_null_slr2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/dna_self_check_placeholder_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/expanded_region_resets_slr2/logic_reset_op. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/expanded_region_resets_slr2/psreset_gate_pr_control. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/expanded_region_resets_slr2/psreset_gate_pr_data. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/expanded_region_resets_slr2/psreset_gate_pr_dataclk. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/expanded_region_resets_slr2/psreset_gate_pr_kernel. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/expanded_region_resets_slr2/psreset_gate_pr_kernel2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/frequency_counters/freq_counter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/frequency_counters/freq_counter_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_11. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_13. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_14. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_15. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for calc_0_16. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/s00_couplers/s00_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m00_couplers/m00_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m01_couplers/m01_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m01_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m02_couplers/m02_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m02_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m03_couplers/m03_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m03_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m04_couplers/m04_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m04_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m05_couplers/m05_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m05_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m06_couplers/m06_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr0/interconnect_axilite_user_slr0/m06_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/s00_couplers/s00_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m00_couplers/m00_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m01_couplers/m01_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m02_couplers/m02_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m03_couplers/m03_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m03_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m04_couplers/m04_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m04_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m05_couplers/m05_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m05_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m06_couplers/m06_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m06_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m07_couplers/m07_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr1/interconnect_axilite_user_slr1/m07_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/s00_couplers/s00_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m00_couplers/m00_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m01_couplers/m01_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m01_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m02_couplers/m02_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m02_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m03_couplers/m03_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m03_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m04_couplers/m04_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m04_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m05_couplers/m05_regslice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for slr2/interconnect_axilite_user_slr2/m05_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:13:46 ; elapsed = 00:14:00 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 299183 ; free virtual = 435282
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:13:47 ; elapsed = 00:14:01 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 299150 ; free virtual = 435252
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:13:49 ; elapsed = 00:14:03 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 299077 ; free virtual = 435192
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-quiet" for "current_instance" at line 2 of file /home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0/pfm_dynamic_axilite_user_input_reg_0_in_context.xdc
+---------------------------------------------------------------------
+Usage:
+  current_instance
+    [-help]
+    instance
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'hbm_ref_clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:14:27 ; elapsed = 00:15:00 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297196 ; free virtual = 433311
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:14:27 ; elapsed = 00:15:01 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297180 ; free virtual = 433295
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:14:28 ; elapsed = 00:15:02 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297146 ; free virtual = 433261
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:14:31 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297076 ; free virtual = 433190
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:14:31 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297075 ; free virtual = 433190
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:14:31 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297068 ; free virtual = 433182
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:14:31 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297066 ; free virtual = 433181
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:14:31 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297065 ; free virtual = 433179
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:14:31 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297062 ; free virtual = 433177
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------------+----------+
+|      |BlackBox name                               |Instances |
++------+--------------------------------------------+----------+
+|1     |pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0       |         1|
+|2     |pfm_dynamic_axi_vip_ctrl_mgntpf_0           |         1|
+|3     |pfm_dynamic_axi_vip_ctrl_userpf_0           |         1|
+|4     |pfm_dynamic_axi_vip_data_0                  |         1|
+|5     |pfm_dynamic_axilite_user_input_reg_0        |         1|
+|6     |pfm_dynamic_calc_0_1_0                      |         1|
+|7     |pfm_dynamic_calc_0_10_0                     |         1|
+|8     |pfm_dynamic_calc_0_11_0                     |         1|
+|9     |pfm_dynamic_calc_0_12_0                     |         1|
+|10    |pfm_dynamic_calc_0_13_0                     |         1|
+|11    |pfm_dynamic_calc_0_14_0                     |         1|
+|12    |pfm_dynamic_calc_0_15_0                     |         1|
+|13    |pfm_dynamic_calc_0_16_0                     |         1|
+|14    |pfm_dynamic_calc_0_2_0                      |         1|
+|15    |pfm_dynamic_calc_0_3_0                      |         1|
+|16    |pfm_dynamic_calc_0_4_0                      |         1|
+|17    |pfm_dynamic_calc_0_5_0                      |         1|
+|18    |pfm_dynamic_calc_0_6_0                      |         1|
+|19    |pfm_dynamic_calc_0_7_0                      |         1|
+|20    |pfm_dynamic_calc_0_8_0                      |         1|
+|21    |pfm_dynamic_calc_0_9_0                      |         1|
+|22    |pfm_dynamic_debug_bridge_xsdbm_0            |         1|
+|23    |pfm_dynamic_hmss_0_0                        |         1|
+|24    |pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0 |         1|
+|25    |pfm_dynamic_xbar_4                          |         1|
+|26    |pfm_dynamic_m00_regslice_4                  |         1|
+|27    |pfm_dynamic_auto_cc_0                       |         1|
+|28    |pfm_dynamic_m01_regslice_11                 |         1|
+|29    |pfm_dynamic_auto_cc_1                       |         1|
+|30    |pfm_dynamic_m02_regslice_4                  |         1|
+|31    |pfm_dynamic_auto_cc_2                       |         1|
+|32    |pfm_dynamic_m03_regslice_3                  |         1|
+|33    |pfm_dynamic_auto_cc_3                       |         1|
+|34    |pfm_dynamic_m04_regslice_3                  |         1|
+|35    |pfm_dynamic_auto_cc_4                       |         1|
+|36    |pfm_dynamic_m05_regslice_3                  |         1|
+|37    |pfm_dynamic_auto_cc_5                       |         1|
+|38    |pfm_dynamic_m06_regslice_2                  |         1|
+|39    |pfm_dynamic_s00_regslice_15                 |         1|
+|40    |pfm_dynamic_axi_gpio_null_slr0_0            |         1|
+|41    |pfm_dynamic_logic_reset_op_0                |         1|
+|42    |pfm_dynamic_psreset_gate_pr_control_0       |         1|
+|43    |pfm_dynamic_psreset_gate_pr_data_0          |         1|
+|44    |pfm_dynamic_psreset_gate_pr_dataclk_0       |         1|
+|45    |pfm_dynamic_psreset_gate_pr_kernel_0        |         1|
+|46    |pfm_dynamic_psreset_gate_pr_kernel2_0       |         1|
+|47    |pfm_dynamic_util_and2_hbm_0                 |         1|
+|48    |pfm_dynamic_util_and2_hbm_ctrl_reset_0      |         1|
+|49    |pfm_dynamic_util_and2_slr0_0                |         1|
+|50    |pfm_dynamic_xbar_2                          |         1|
+|51    |pfm_dynamic_m00_regslice_5                  |         1|
+|52    |pfm_dynamic_m01_regslice_12                 |         1|
+|53    |pfm_dynamic_m02_regslice_5                  |         1|
+|54    |pfm_dynamic_auto_cc_6                       |         1|
+|55    |pfm_dynamic_m03_regslice_4                  |         1|
+|56    |pfm_dynamic_auto_cc_7                       |         1|
+|57    |pfm_dynamic_m04_regslice_4                  |         1|
+|58    |pfm_dynamic_auto_cc_8                       |         1|
+|59    |pfm_dynamic_m05_regslice_4                  |         1|
+|60    |pfm_dynamic_auto_cc_9                       |         1|
+|61    |pfm_dynamic_m06_regslice_3                  |         1|
+|62    |pfm_dynamic_auto_cc_10                      |         1|
+|63    |pfm_dynamic_m07_regslice_0                  |         1|
+|64    |pfm_dynamic_s00_regslice_16                 |         1|
+|65    |pfm_dynamic_axi_gpio_null_slr1_0            |         1|
+|66    |pfm_dynamic_psreset_gate_pr_control_1       |         1|
+|67    |pfm_dynamic_psreset_gate_pr_data_1          |         1|
+|68    |pfm_dynamic_psreset_gate_pr_dataclk_1       |         1|
+|69    |pfm_dynamic_psreset_gate_pr_ddr_0           |         1|
+|70    |pfm_dynamic_psreset_gate_pr_kernel_1        |         1|
+|71    |pfm_dynamic_psreset_gate_pr_kernel2_1       |         1|
+|72    |pfm_dynamic_util_and2_slr1_0                |         1|
+|73    |pfm_dynamic_xbar_5                          |         1|
+|74    |pfm_dynamic_m00_regslice_6                  |         1|
+|75    |pfm_dynamic_auto_cc_11                      |         1|
+|76    |pfm_dynamic_m01_regslice_13                 |         1|
+|77    |pfm_dynamic_auto_cc_12                      |         1|
+|78    |pfm_dynamic_m02_regslice_6                  |         1|
+|79    |pfm_dynamic_auto_cc_13                      |         1|
+|80    |pfm_dynamic_m03_regslice_5                  |         1|
+|81    |pfm_dynamic_auto_cc_14                      |         1|
+|82    |pfm_dynamic_m04_regslice_5                  |         1|
+|83    |pfm_dynamic_auto_cc_15                      |         1|
+|84    |pfm_dynamic_m05_regslice_5                  |         1|
+|85    |pfm_dynamic_s00_regslice_17                 |         1|
+|86    |pfm_dynamic_axi_gpio_null_slr2_0            |         1|
+|87    |pfm_dynamic_logic_reset_op_1                |         1|
+|88    |pfm_dynamic_psreset_gate_pr_control_2       |         1|
+|89    |pfm_dynamic_psreset_gate_pr_data_2          |         1|
+|90    |pfm_dynamic_psreset_gate_pr_dataclk_2       |         1|
+|91    |pfm_dynamic_psreset_gate_pr_kernel_2        |         1|
+|92    |pfm_dynamic_psreset_gate_pr_kernel2_2       |         1|
+|93    |pfm_dynamic_freq_counter_0_0                |         1|
+|94    |pfm_dynamic_freq_counter_1_0                |         1|
++------+--------------------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------------------+------+
+|      |Cell                                        |Count |
++------+--------------------------------------------+------+
+|1     |pfm_dynamic_auto_cc_0                       |     1|
+|2     |pfm_dynamic_auto_cc_1                       |     1|
+|3     |pfm_dynamic_auto_cc_10                      |     1|
+|4     |pfm_dynamic_auto_cc_11                      |     1|
+|5     |pfm_dynamic_auto_cc_12                      |     1|
+|6     |pfm_dynamic_auto_cc_13                      |     1|
+|7     |pfm_dynamic_auto_cc_14                      |     1|
+|8     |pfm_dynamic_auto_cc_15                      |     1|
+|9     |pfm_dynamic_auto_cc_2                       |     1|
+|10    |pfm_dynamic_auto_cc_3                       |     1|
+|11    |pfm_dynamic_auto_cc_4                       |     1|
+|12    |pfm_dynamic_auto_cc_5                       |     1|
+|13    |pfm_dynamic_auto_cc_6                       |     1|
+|14    |pfm_dynamic_auto_cc_7                       |     1|
+|15    |pfm_dynamic_auto_cc_8                       |     1|
+|16    |pfm_dynamic_auto_cc_9                       |     1|
+|17    |pfm_dynamic_axi_gpio_null_slr0_0            |     1|
+|18    |pfm_dynamic_axi_gpio_null_slr1_0            |     1|
+|19    |pfm_dynamic_axi_gpio_null_slr2_0            |     1|
+|20    |pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0       |     1|
+|21    |pfm_dynamic_axi_vip_ctrl_mgntpf_0           |     1|
+|22    |pfm_dynamic_axi_vip_ctrl_userpf_0           |     1|
+|23    |pfm_dynamic_axi_vip_data_0                  |     1|
+|24    |pfm_dynamic_axilite_user_input_reg_0        |     1|
+|25    |pfm_dynamic_calc_0_10_0                     |     1|
+|26    |pfm_dynamic_calc_0_11_0                     |     1|
+|27    |pfm_dynamic_calc_0_12_0                     |     1|
+|28    |pfm_dynamic_calc_0_13_0                     |     1|
+|29    |pfm_dynamic_calc_0_14_0                     |     1|
+|30    |pfm_dynamic_calc_0_15_0                     |     1|
+|31    |pfm_dynamic_calc_0_16_0                     |     1|
+|32    |pfm_dynamic_calc_0_1_0                      |     1|
+|33    |pfm_dynamic_calc_0_2_0                      |     1|
+|34    |pfm_dynamic_calc_0_3_0                      |     1|
+|35    |pfm_dynamic_calc_0_4_0                      |     1|
+|36    |pfm_dynamic_calc_0_5_0                      |     1|
+|37    |pfm_dynamic_calc_0_6_0                      |     1|
+|38    |pfm_dynamic_calc_0_7_0                      |     1|
+|39    |pfm_dynamic_calc_0_8_0                      |     1|
+|40    |pfm_dynamic_calc_0_9_0                      |     1|
+|41    |pfm_dynamic_debug_bridge_xsdbm_0            |     1|
+|42    |pfm_dynamic_freq_counter_0_0                |     1|
+|43    |pfm_dynamic_freq_counter_1_0                |     1|
+|44    |pfm_dynamic_hmss_0_0                        |     1|
+|45    |pfm_dynamic_logic_reset_op_0                |     1|
+|46    |pfm_dynamic_logic_reset_op_1                |     1|
+|47    |pfm_dynamic_m00_regslice_4                  |     1|
+|48    |pfm_dynamic_m00_regslice_5                  |     1|
+|49    |pfm_dynamic_m00_regslice_6                  |     1|
+|50    |pfm_dynamic_m01_regslice_11                 |     1|
+|51    |pfm_dynamic_m01_regslice_12                 |     1|
+|52    |pfm_dynamic_m01_regslice_13                 |     1|
+|53    |pfm_dynamic_m02_regslice_4                  |     1|
+|54    |pfm_dynamic_m02_regslice_5                  |     1|
+|55    |pfm_dynamic_m02_regslice_6                  |     1|
+|56    |pfm_dynamic_m03_regslice_3                  |     1|
+|57    |pfm_dynamic_m03_regslice_4                  |     1|
+|58    |pfm_dynamic_m03_regslice_5                  |     1|
+|59    |pfm_dynamic_m04_regslice_3                  |     1|
+|60    |pfm_dynamic_m04_regslice_4                  |     1|
+|61    |pfm_dynamic_m04_regslice_5                  |     1|
+|62    |pfm_dynamic_m05_regslice_3                  |     1|
+|63    |pfm_dynamic_m05_regslice_4                  |     1|
+|64    |pfm_dynamic_m05_regslice_5                  |     1|
+|65    |pfm_dynamic_m06_regslice_2                  |     1|
+|66    |pfm_dynamic_m06_regslice_3                  |     1|
+|67    |pfm_dynamic_m07_regslice_0                  |     1|
+|68    |pfm_dynamic_psreset_gate_pr_control_0       |     1|
+|69    |pfm_dynamic_psreset_gate_pr_control_1       |     1|
+|70    |pfm_dynamic_psreset_gate_pr_control_2       |     1|
+|71    |pfm_dynamic_psreset_gate_pr_data_0          |     1|
+|72    |pfm_dynamic_psreset_gate_pr_data_1          |     1|
+|73    |pfm_dynamic_psreset_gate_pr_data_2          |     1|
+|74    |pfm_dynamic_psreset_gate_pr_dataclk_0       |     1|
+|75    |pfm_dynamic_psreset_gate_pr_dataclk_1       |     1|
+|76    |pfm_dynamic_psreset_gate_pr_dataclk_2       |     1|
+|77    |pfm_dynamic_psreset_gate_pr_ddr_0           |     1|
+|78    |pfm_dynamic_psreset_gate_pr_kernel2_0       |     1|
+|79    |pfm_dynamic_psreset_gate_pr_kernel2_1       |     1|
+|80    |pfm_dynamic_psreset_gate_pr_kernel2_2       |     1|
+|81    |pfm_dynamic_psreset_gate_pr_kernel_0        |     1|
+|82    |pfm_dynamic_psreset_gate_pr_kernel_1        |     1|
+|83    |pfm_dynamic_psreset_gate_pr_kernel_2        |     1|
+|84    |pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0 |     1|
+|85    |pfm_dynamic_s00_regslice_15                 |     1|
+|86    |pfm_dynamic_s00_regslice_16                 |     1|
+|87    |pfm_dynamic_s00_regslice_17                 |     1|
+|88    |pfm_dynamic_util_and2_hbm_0                 |     1|
+|89    |pfm_dynamic_util_and2_hbm_ctrl_reset_0      |     1|
+|90    |pfm_dynamic_util_and2_slr0_0                |     1|
+|91    |pfm_dynamic_util_and2_slr1_0                |     1|
+|92    |pfm_dynamic_xbar_2                          |     1|
+|93    |pfm_dynamic_xbar_4                          |     1|
+|94    |pfm_dynamic_xbar_5                          |     1|
++------+--------------------------------------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+---------------------------------------------+------+
+|      |Instance                           |Module                                       |Cells |
++------+-----------------------------------+---------------------------------------------+------+
+|1     |top                                |                                             | 51757|
+|2     |  xlconstant_0                     |pfm_dynamic_xlconstant_0_0                   |     0|
+|3     |  interrupt_concat                 |interrupt_concat_imp_1SXQM3I                 |     0|
+|4     |    xlconcat_interrupt             |pfm_dynamic_xlconcat_interrupt_0             |     0|
+|5     |    xlconcat_interrupt_0           |pfm_dynamic_xlconcat_interrupt_0_0           |     0|
+|6     |    xlconcat_interrupt_1           |pfm_dynamic_xlconcat_interrupt_1_0           |     0|
+|7     |    xlconcat_interrupt_2           |pfm_dynamic_xlconcat_interrupt_2_0           |     0|
+|8     |    xlconcat_interrupt_3           |pfm_dynamic_xlconcat_interrupt_3_0           |     0|
+|9     |    xlconstant_gnd                 |pfm_dynamic_xlconstant_gnd_0                 |     0|
+|10    |  slr0                             |slr0_imp_1Q3M93Z                             |  2410|
+|11    |    interconnect_axilite_user_slr0 |pfm_dynamic_interconnect_axilite_user_slr0_0 |  2276|
+|12    |      m00_couplers                 |m00_couplers_imp_C3A2D6                      |   106|
+|13    |      m01_couplers                 |m01_couplers_imp_1E0TSRO                     |   200|
+|14    |      m02_couplers                 |m02_couplers_imp_1LJ36RR                     |   200|
+|15    |      m03_couplers                 |m03_couplers_imp_MCLX95                      |   200|
+|16    |      m04_couplers                 |m04_couplers_imp_FXIRPD                      |   200|
+|17    |      m05_couplers                 |m05_couplers_imp_1A9050F                     |   200|
+|18    |      m06_couplers                 |m06_couplers_imp_1PIBOVW                     |   200|
+|19    |      s00_couplers                 |s00_couplers_imp_1JDGC4Q                     |   152|
+|20    |    expanded_region_resets_slr0    |expanded_region_resets_slr0_imp_I3VDPV       |    29|
+|21    |      util_slice_hbm               |pfm_dynamic_util_slice_hbm_0                 |     0|
+|22    |      util_slice_slr0              |pfm_dynamic_util_slice_slr0_0                |     0|
+|23    |  slr1                             |slr1_imp_IZT2WG                              |  2627|
+|24    |    interconnect_axilite_user_slr1 |pfm_dynamic_interconnect_axilite_user_slr1_0 |  2491|
+|25    |      m00_couplers                 |m00_couplers_imp_14XUPPF                     |   106|
+|26    |      m01_couplers                 |m01_couplers_imp_3FADDP                      |   152|
+|27    |      m02_couplers                 |m02_couplers_imp_X3IKM6                      |   152|
+|28    |      m03_couplers                 |m03_couplers_imp_1SJ5BGG                     |   200|
+|29    |      m04_couplers                 |m04_couplers_imp_ZX2VQ0                      |   200|
+|30    |      m05_couplers                 |m05_couplers_imp_8IH8XY                      |   200|
+|31    |      m06_couplers                 |m06_couplers_imp_S7QJC5                      |   200|
+|32    |      m07_couplers                 |m07_couplers_imp_1XHCEEZ                     |   200|
+|33    |      s00_couplers                 |s00_couplers_imp_ZE1UB7                      |   152|
+|34    |    expanded_region_resets_slr1    |expanded_region_resets_slr1_imp_WN1LWB       |    31|
+|35    |      util_slice_slr1              |pfm_dynamic_util_slice_slr1_0                |     0|
+|36    |  slr2                             |slr2_imp_EEMOLC                              |  2178|
+|37    |    dna_self_check_placeholder_0   |pfm_dynamic_dna_self_check_placeholder_0_0   |     0|
+|38    |    interconnect_axilite_user_slr2 |pfm_dynamic_interconnect_axilite_user_slr2_0 |  1965|
+|39    |      m00_couplers                 |m00_couplers_imp_ZRAAVD                      |   106|
+|40    |      m01_couplers                 |m01_couplers_imp_8LUS5Z                      |   200|
+|41    |      m02_couplers                 |m02_couplers_imp_RRYD4K                      |   200|
+|42    |      m03_couplers                 |m03_couplers_imp_1XUPIZU                     |   200|
+|43    |      m04_couplers                 |m04_couplers_imp_14JV3UA                     |   200|
+|44    |      m05_couplers                 |m05_couplers_imp_3VP0VG                      |   200|
+|45    |      s00_couplers                 |s00_couplers_imp_U7G1P5                      |   152|
+|46    |    expanded_region_resets_slr2    |expanded_region_resets_slr2_imp_B8LNJ7       |    26|
+|47    |    frequency_counters             |frequency_counters_imp_L6ZI6S                |    82|
++------+-----------------------------------+---------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:14:31 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.578 ; gain = 7394.621 ; free physical = 297061 ; free virtual = 433176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 341 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:25 . Memory (MB): peak = 10455.578 ; gain = 245.805 ; free physical = 297093 ; free virtual = 433208
+Synthesis Optimization Complete : Time (s): cpu = 00:14:32 ; elapsed = 00:15:05 . Memory (MB): peak = 10455.586 ; gain = 7394.621 ; free physical = 297154 ; free virtual = 433269
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.20 . Memory (MB): peak = 10455.586 ; gain = 0.000 ; free physical = 297110 ; free virtual = 433224
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10455.586 ; gain = 0.000 ; free physical = 296953 ; free virtual = 433068
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+220 Infos, 190 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:14:50 ; elapsed = 00:15:42 . Memory (MB): peak = 10455.586 ; gain = 8618.121 ; free physical = 297093 ; free virtual = 433207
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+[OPTRACE]|77723|7|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586890656256|END|synth_design|
+INFO: [Coretcl 2-1174] Renamed 140 cell refs.
+[OPTRACE]|77723|8|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586890656286|START|write_checkpoint|CHECKPOINT
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10455.586 ; gain = 0.000 ; free physical = 297091 ; free virtual = 433206
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.dcp' has been generated.
+[OPTRACE]|77723|9|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586890659027|END|write_checkpoint|
+[OPTRACE]|77723|10|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586890659027|START|synth_report|REPORT
+[OPTRACE]|77723|11|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586890659028|END|synth_report|
+[OPTRACE]|77723|12|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1586890660298|END|my_rm_synth_1|
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 14 20:57:40 2020...

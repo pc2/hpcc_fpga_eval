@@ -1,0 +1,47 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Xilinx
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Xilinx
+Device Name:   xilinx_u280_xdma_201920_3
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:stream_kernels_multi.xclbin
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.1.4
+-------------------------------------------------------------
+Summary:
+Array Size:          2.14748e+09 Byte
+Data Type            cl_float
+Repetitions:         10
+Kernel replications: 15
+Kernel type:         Single
+Kernel file:         stream_kernels_multi.xclbin
+Device:              xilinx_u280_xdma_201920_3
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+Failed Validation on array a[], AvgRelAbsErr > epsilon (1.000000e-06)
+     Expected Value: 1.153301e+12, AvgAbsErr: 6.871948e+10, AvgRelAbsErr: 5.958505e-02
+     For array a[], 536870912 errors were found.
+Failed Validation on array b[], AvgRelAbsErr > epsilon (1.000000e-06)
+     Expected Value: 2.306601e+11, AvgAbsErr: 8.589935e+09, AvgRelAbsErr: 3.724065e-02
+     AvgRelAbsErr > Epsilon (1.000000e-06)
+     For array b[], 536870912 errors were found.
+Failed Validation on array c[], AvgRelAbsErr > epsilon (1.000000e-06)
+     Expected Value: 3.075468e+11, AvgAbsErr: 1.717987e+10, AvgRelAbsErr: 5.586098e-02
+     AvgRelAbsErr > Epsilon (1.000000e-06)
+     For array c[], 536870912 errors were found.
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    5.59591e+05    6.81937e-02    1.15128e-02    5.73951e-01
+           Copy    3.73061e+05    6.81937e-02    1.15128e-02    5.73951e-01
+       PCI read    9.69221e+03    7.59505e-01    6.64704e-01    8.74952e-01
+      PCI write    9.51371e+03    8.27298e-01    6.77175e-01    1.46715e+00
+          Scale    3.73061e+05    6.81937e-02    1.15128e-02    5.73951e-01
+          Triad    5.59591e+05    6.81937e-02    1.15128e-02    5.73951e-01

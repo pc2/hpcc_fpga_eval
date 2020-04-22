@@ -1,0 +1,49 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+Multiple devices have been found. Select the platform by typing a number:
+0) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+1) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie1)
+0
+Enter device id [0-1]:-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:stream_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.1.4
+-------------------------------------------------------------
+Summary:
+Array Size:          2.14748e+09 Byte
+Data Type            cl_float
+Repetitions:         10
+Kernel replications: 4
+Kernel type:         Single
+Kernel file:         stream_kernels_single.aocx
+Device:              p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+Each test below will take on the order of 6.76198e+04 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-06 on all three arrays
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    5.89609e+04    1.11918e-01    1.09266e-01    1.21734e-01
+           Copy    6.34777e+04    7.01700e-02    6.76611e-02    8.03280e-02
+       PCI read    6.40236e+03    1.00797e+00    1.00626e+00    1.02080e+00
+      PCI write    6.32092e+03    1.02073e+00    1.01923e+00    1.03231e+00
+          Scale    6.34889e+04    7.01277e-02    6.76491e-02    7.99877e-02
+          Triad    5.89990e+04    1.11305e-01    1.09196e-01    1.19059e-01

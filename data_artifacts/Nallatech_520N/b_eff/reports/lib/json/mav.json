@@ -1,0 +1,1046 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"send"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":3
+          , "name":"send.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"12"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":4
+          , "name":"send.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"19"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+              , "Loops To":"8"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":5
+          , "name":"send.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":6
+          , "name":"send.B3"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":7
+          , "name":"send.B4"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":10
+              , "name":"Channel Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":84
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"11"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":12
+              , "name":"Channel Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":85
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"11"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":18
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":83
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"19"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":19
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"11"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"11"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":8
+          , "name":"send.B5"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Exit which branches back to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":9
+          , "name":"send.B6"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":14
+              , "name":"Channel Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":90
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"10"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":16
+              , "name":"Channel Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":91
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"10"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":20
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":89
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"21"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":21
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"10"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"10"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":22
+      , "name":"recv"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":23
+          , "name":"recv.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"12"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":24
+          , "name":"recv.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"19"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+              , "Loops To":"28"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":25
+          , "name":"recv.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":26
+          , "name":"recv.B3"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"10"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":27
+          , "name":"recv.B4"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":30
+              , "name":"Channel Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":125
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"11"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":32
+              , "name":"Channel Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":126
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"11"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":38
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":124
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"39"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":39
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"11"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"11"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":28
+          , "name":"recv.B5"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Exit which branches back to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":29
+          , "name":"recv.B6"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":34
+              , "name":"Channel Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":129
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"11"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":36
+              , "name":"Channel Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":130
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"256 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"11"
+                  , "Latency":"0"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":40
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":128
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"41"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":41
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"11"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"11"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":15
+      , "name":"ch_in_1"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":72
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":17
+      , "name":"ch_in_2"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":72
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":31
+      , "name":"ch_in_3"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":111
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":33
+      , "name":"ch_in_4"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":111
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":11
+      , "name":"ch_out_1"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":72
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":13
+      , "name":"ch_out_2"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":72
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":35
+      , "name":"ch_out_3"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":111
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":37
+      , "name":"ch_out_4"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+            , "line":111
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"256 bits"
+          , "Depth":"0"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":10
+      , "to":11
+    }
+    , {
+      "from":12
+      , "to":13
+    }
+    , {
+      "from":15
+      , "to":14
+    }
+    , {
+      "from":17
+      , "to":16
+    }
+    , {
+      "from":8
+      , "to":4
+    }
+    , {
+      "from":3
+      , "to":4
+    }
+    , {
+      "from":8
+      , "to":5
+    }
+    , {
+      "from":19
+      , "to":6
+    }
+    , {
+      "from":19
+      , "to":18
+    }
+    , {
+      "from":4
+      , "to":18
+    }
+    , {
+      "from":10
+      , "to":19
+    }
+    , {
+      "from":12
+      , "to":19
+    }
+    , {
+      "from":21
+      , "to":8
+    }
+    , {
+      "from":21
+      , "to":20
+    }
+    , {
+      "from":6
+      , "to":20
+    }
+    , {
+      "from":14
+      , "to":21
+    }
+    , {
+      "from":16
+      , "to":21
+    }
+    , {
+      "from":18
+      , "to":10
+    }
+    , {
+      "from":18
+      , "to":12
+    }
+    , {
+      "from":20
+      , "to":14
+    }
+    , {
+      "from":20
+      , "to":16
+    }
+    , {
+      "from":31
+      , "to":30
+    }
+    , {
+      "from":33
+      , "to":32
+    }
+    , {
+      "from":34
+      , "to":35
+    }
+    , {
+      "from":36
+      , "to":37
+    }
+    , {
+      "from":28
+      , "to":24
+    }
+    , {
+      "from":23
+      , "to":24
+    }
+    , {
+      "from":28
+      , "to":25
+    }
+    , {
+      "from":39
+      , "to":26
+    }
+    , {
+      "from":39
+      , "to":38
+    }
+    , {
+      "from":24
+      , "to":38
+    }
+    , {
+      "from":30
+      , "to":39
+    }
+    , {
+      "from":32
+      , "to":39
+    }
+    , {
+      "from":41
+      , "to":28
+    }
+    , {
+      "from":41
+      , "to":40
+    }
+    , {
+      "from":26
+      , "to":40
+    }
+    , {
+      "from":34
+      , "to":41
+    }
+    , {
+      "from":36
+      , "to":41
+    }
+    , {
+      "from":38
+      , "to":30
+    }
+    , {
+      "from":38
+      , "to":32
+    }
+    , {
+      "from":40
+      , "to":34
+    }
+    , {
+      "from":40
+      , "to":36
+    }
+  ]
+}

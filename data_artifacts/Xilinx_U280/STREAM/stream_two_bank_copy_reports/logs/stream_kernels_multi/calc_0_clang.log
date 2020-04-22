@@ -1,0 +1,7 @@
+/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/replicated_stream_kernels_multi_xilinx.cl:11:16: warning: unknown attribute 'uses_global_work_offset' ignored [-Wunknown-attributes]
+__attribute__((uses_global_work_offset(0)))
+               ^
+/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/replicated_stream_kernels_multi_xilinx.cl:24:32: warning: unused variable 'buffer1' [-Wunused-variable]
+        DEVICE_ARRAY_DATA_TYPE buffer1[BUFFER_SIZE];
+                               ^
+2 warnings generated.

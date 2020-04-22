@@ -1,0 +1,4052 @@
+{
+  "961354592":
+  {
+    "nodes":
+    [
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961354672":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 1"
+        , "id":967386912
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_0s_c0_enter649_calc_049"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":967393408
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_0s_c0_enter649_calc_049"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":967555504
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"64"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"?"
+        , "id":996636064
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":967393408
+        , "to":967555504
+      }
+    ]
+  }
+  , "961354752":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":997057088
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_0.B4"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961354832":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 2"
+        , "id":967775504
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_0s_c0_enter6711_calc_099"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":967781760
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_0s_c0_enter6711_calc_099"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":968024896
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"256"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 3"
+        , "id":968232800
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_0s_c1_enter_calc_0166"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":968238144
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_0s_c1_enter_calc_0166"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":968700080
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1536"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"ST"
+        , "id":969271056
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":29
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":974704160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_0.B4, calc_0.B2"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":992382336
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"14"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":29
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":967781760
+        , "to":968024896
+      }
+      , {
+        "from":968238144
+        , "to":968700080
+      }
+      , {
+        "from":968700080
+        , "to":969271056
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1536"
+          }
+        ]
+      }
+      , {
+        "from":974704160
+        , "to":967781760
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":992382336
+        , "to":968238144
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":968024896
+        , "to":992382336
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":974704160
+        , "to":967781760
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":974704160
+        , "to":967781760
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"10"
+          }
+        ]
+      }
+    ]
+  }
+  , "961354912":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 5"
+        , "id":969506896
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_0s_c1_enter104_calc_0363"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"3"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":969511808
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_0s_c1_enter104_calc_0363"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"3"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":969719600
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1024"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 4"
+        , "id":968922080
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_0s_c0_enter8013_calc_0277"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":968928288
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_0s_c0_enter8013_calc_0277"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":969219664
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"LD"
+        , "id":969753776
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"202"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":35
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":994280624
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_0.B5, calc_0.B3"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1020525888
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"15"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":35
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1036378608
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":35
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":969511808
+        , "to":969719600
+      }
+      , {
+        "from":968928288
+        , "to":969219664
+      }
+      , {
+        "from":969753776
+        , "to":969511808
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":969219664
+        , "to":969753776
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":994280624
+        , "to":968928288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":994280624
+        , "to":968928288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1020525888
+        , "to":969511808
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":969219664
+        , "to":1020525888
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":994280624
+        , "to":968928288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":969719600
+        , "to":1036378608
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1024"
+          }
+        ]
+      }
+      , {
+        "from":969219664
+        , "to":1036378608
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+    ]
+  }
+  , "961354992":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":970641392
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_0.B5"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961435024":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 0"
+        , "id":967107360
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_calc_0s_c0_enter_calc_03"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":967113616
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_entry_calc_0s_c0_enter_calc_03"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":967250160
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":967113616
+        , "to":967250160
+      }
+    ]
+  }
+  , "961448416":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":967049856
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_0.B8"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Feedback"
+        , "id":1013577696
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"4"
+            , "Feedback FIFO Width":"16"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961448496":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 6"
+        , "id":970013728
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_0s_c0_enter11415_calc_0415"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"7"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":970020016
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_0s_c0_enter11415_calc_0415"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"7"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":970269488
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 7"
+        , "id":970442144
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_0s_c1_enter135_calc_0484"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"2"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":970447840
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_0s_c1_enter135_calc_0484"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"2"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":970493040
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"192"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Loop Input"
+        , "id":994102288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_0.B8, calc_0.B6"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1012932320
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Start Cycle":"45"
+            , "Latency":"2"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":41
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1015140208
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"13"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":41
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":970020016
+        , "to":970269488
+      }
+      , {
+        "from":970447840
+        , "to":970493040
+      }
+      , {
+        "from":994102288
+        , "to":970020016
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":970493040
+        , "to":1012932320
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1015140208
+        , "to":1012932320
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":970269488
+        , "to":1015140208
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":994102288
+        , "to":970020016
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":994102288
+        , "to":970020016
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+    ]
+  }
+  , "961589056":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 24"
+        , "id":1024517120
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_calc_3s_c0_enter_calc_33"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1022680240
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_entry_calc_3s_c0_enter_calc_33"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1022959392
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1022680240
+        , "to":1022959392
+      }
+    ]
+  }
+  , "961639856":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 8"
+        , "id":985029232
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_calc_1s_c0_enter_calc_13"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":966196768
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_entry_calc_1s_c0_enter_calc_13"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":985423520
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":966196768
+        , "to":985423520
+      }
+    ]
+  }
+  , "961655216":
+  {
+    "nodes":
+    [
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961656016":
+  {
+    "nodes":
+    [
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961656096":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 17"
+        , "id":1004141680
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_2s_c0_enter649_calc_249"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1010936896
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_2s_c0_enter649_calc_249"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1000475424
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"64"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"?"
+        , "id":992936768
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":70
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1010936896
+        , "to":1000475424
+      }
+    ]
+  }
+  , "961656176":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":984939840
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_2.B4"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961656256":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 18"
+        , "id":1012606048
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_2s_c0_enter6711_calc_299"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1002459904
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_2s_c0_enter6711_calc_299"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1012968208
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"256"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 19"
+        , "id":1013593488
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_2s_c1_enter_calc_2166"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1013599296
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_2s_c1_enter_calc_2166"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1014053568
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1536"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"LD"
+        , "id":973472736
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"14"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":121
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":1016587840
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_2.B4, calc_2.B2"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1052010496
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":121
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1002459904
+        , "to":1012968208
+      }
+      , {
+        "from":1013599296
+        , "to":1014053568
+      }
+      , {
+        "from":973472736
+        , "to":1013599296
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1012968208
+        , "to":973472736
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":1016587840
+        , "to":1002459904
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1016587840
+        , "to":1002459904
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"10"
+          }
+        ]
+      }
+      , {
+        "from":1016587840
+        , "to":1002459904
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1014053568
+        , "to":1052010496
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1536"
+          }
+        ]
+      }
+    ]
+  }
+  , "961656336":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 21"
+        , "id":1014847168
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_2s_c1_enter104_calc_2363"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"3"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1014853040
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_2s_c1_enter104_calc_2363"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"3"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1015060704
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1024"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 20"
+        , "id":1014267360
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_2s_c0_enter8013_calc_2277"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1014273728
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_2s_c0_enter8013_calc_2277"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1014562096
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"ST"
+        , "id":973589936
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":127
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":973758832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"15"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":127
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":988377808
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_2.B5, calc_2.B3"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1040863216
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"202"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":127
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1014853040
+        , "to":1015060704
+      }
+      , {
+        "from":1014273728
+        , "to":1014562096
+      }
+      , {
+        "from":1015060704
+        , "to":973589936
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1024"
+          }
+        ]
+      }
+      , {
+        "from":1014562096
+        , "to":973589936
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":973758832
+        , "to":1014853040
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1014562096
+        , "to":973758832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":988377808
+        , "to":1014273728
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":988377808
+        , "to":1014273728
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":988377808
+        , "to":1014273728
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1040863216
+        , "to":1014853040
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1014562096
+        , "to":1040863216
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+    ]
+  }
+  , "961656416":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":975816176
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_2.B5"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961656496":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":993732608
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_2.B8"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Feedback"
+        , "id":1018357088
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"4"
+            , "Feedback FIFO Width":"16"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":70
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961656576":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 23"
+        , "id":1015774128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_2s_c1_enter135_calc_2484"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"2"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1015780096
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_2s_c1_enter135_calc_2484"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"2"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1015825392
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"192"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 22"
+        , "id":1015348912
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_2s_c0_enter11415_calc_2415"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"7"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1015355280
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_2s_c0_enter11415_calc_2415"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"7"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1015602592
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Loop Input"
+        , "id":974302048
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_2.B8, calc_2.B6"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":996641680
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Start Cycle":"45"
+            , "Latency":"2"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":133
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":996727552
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"13"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":133
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1015780096
+        , "to":1015825392
+      }
+      , {
+        "from":1015355280
+        , "to":1015602592
+      }
+      , {
+        "from":974302048
+        , "to":1015355280
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1015825392
+        , "to":996641680
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":996727552
+        , "to":996641680
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1015602592
+        , "to":996727552
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":974302048
+        , "to":1015355280
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":974302048
+        , "to":1015355280
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+    ]
+  }
+  , "961659616":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 9"
+        , "id":966365152
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_1s_c0_enter649_calc_149"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":990688176
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_1s_c0_enter649_calc_149"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":990859472
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"64"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"?"
+        , "id":1036929488
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":24
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":990688176
+        , "to":990859472
+      }
+    ]
+  }
+  , "961659696":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":971041136
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_1.B4"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961659776":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 10"
+        , "id":966773712
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_1s_c0_enter6711_calc_199"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":966780096
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_1s_c0_enter6711_calc_199"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":991213120
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"256"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 11"
+        , "id":991386048
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_1s_c1_enter_calc_1166"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":991391856
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_1s_c1_enter_calc_1166"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":991845744
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1536"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Loop Input"
+        , "id":970986320
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_1.B4, calc_1.B2"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":993694464
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"14"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":75
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1057718864
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":75
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":966780096
+        , "to":991213120
+      }
+      , {
+        "from":991391856
+        , "to":991845744
+      }
+      , {
+        "from":970986320
+        , "to":966780096
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"10"
+          }
+        ]
+      }
+      , {
+        "from":993694464
+        , "to":991391856
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":991213120
+        , "to":993694464
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":970986320
+        , "to":966780096
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":970986320
+        , "to":966780096
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":991845744
+        , "to":1057718864
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1536"
+          }
+        ]
+      }
+    ]
+  }
+  , "961659856":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 12"
+        , "id":992059600
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_1s_c0_enter8013_calc_1277"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":992065696
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_1s_c0_enter8013_calc_1277"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":992354272
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 13"
+        , "id":992639376
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_1s_c1_enter104_calc_1363"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"3"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":992645248
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_1s_c1_enter104_calc_1363"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"3"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":992852896
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1024"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"LD"
+        , "id":967394064
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"202"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":81
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":974393328
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_1.B5, calc_1.B3"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":997260832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":81
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1069959216
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"15"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":81
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":992065696
+        , "to":992354272
+      }
+      , {
+        "from":992645248
+        , "to":992852896
+      }
+      , {
+        "from":967394064
+        , "to":992645248
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":992354272
+        , "to":967394064
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":974393328
+        , "to":992065696
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":992354272
+        , "to":997260832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":992852896
+        , "to":997260832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1024"
+          }
+        ]
+      }
+      , {
+        "from":974393328
+        , "to":992065696
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":974393328
+        , "to":992065696
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1069959216
+        , "to":992645248
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":992354272
+        , "to":1069959216
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+    ]
+  }
+  , "961659936":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":968221360
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_1.B5"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961660016":
+  {
+    "nodes":
+    [
+      {
+        "name":"Feedback"
+        , "id":1002901024
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"4"
+            , "Feedback FIFO Width":"16"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":24
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Input"
+        , "id":1039951792
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_1.B8"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961660096":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 15"
+        , "id":993565984
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_1s_c1_enter135_calc_1484"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"2"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":993571952
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_1s_c1_enter135_calc_1484"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"2"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":993617376
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"192"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 14"
+        , "id":993141248
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_1s_c0_enter11415_calc_1415"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"7"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":993147344
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_1s_c0_enter11415_calc_1415"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"7"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":993394480
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"ST"
+        , "id":967080368
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Start Cycle":"45"
+            , "Latency":"2"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":87
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":995917472
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"13"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":87
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":1014727232
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_1.B8, calc_1.B6"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":993571952
+        , "to":993617376
+      }
+      , {
+        "from":993147344
+        , "to":993394480
+      }
+      , {
+        "from":993617376
+        , "to":967080368
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":995917472
+        , "to":967080368
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":993394480
+        , "to":995917472
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":1014727232
+        , "to":993147344
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1014727232
+        , "to":993147344
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1014727232
+        , "to":993147344
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+    ]
+  }
+  , "961788928":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 16"
+        , "id":1013224640
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_calc_2s_c0_enter_calc_23"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1001436672
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_entry_calc_2s_c0_enter_calc_23"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1010697664
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1001436672
+        , "to":1010697664
+      }
+    ]
+  }
+  , "961947232":
+  {
+    "nodes":
+    [
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961947632":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 25"
+        , "id":1026321520
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_3s_c0_enter649_calc_349"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1024012096
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body_calc_3s_c0_enter649_calc_349"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1030789024
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"64"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"?"
+        , "id":1015700656
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":116
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1024012096
+        , "to":1030789024
+      }
+    ]
+  }
+  , "961948576":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":969923328
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_3.B4"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961948656":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 26"
+        , "id":1024734176
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_3s_c0_enter6711_calc_399"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1035088656
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body4_calc_3s_c0_enter6711_calc_399"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1035277968
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"256"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 27"
+        , "id":1035800512
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_3s_c1_enter_calc_3166"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"4"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1035806512
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body4_calc_3s_c1_enter_calc_3166"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1036260560
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1536"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"LD"
+        , "id":992249952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"14"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":167
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":995804320
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_3.B4, calc_3.B2"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1067799552
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":167
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1035088656
+        , "to":1035277968
+      }
+      , {
+        "from":1035806512
+        , "to":1036260560
+      }
+      , {
+        "from":992249952
+        , "to":1035806512
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1035277968
+        , "to":992249952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":995804320
+        , "to":1035088656
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":995804320
+        , "to":1035088656
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":995804320
+        , "to":1035088656
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"10"
+          }
+        ]
+      }
+      , {
+        "from":1036260560
+        , "to":1067799552
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1536"
+          }
+        ]
+      }
+    ]
+  }
+  , "961948736":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 28"
+        , "id":1036474544
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_3s_c0_enter8013_calc_3277"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1036480832
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body13_calc_3s_c0_enter8013_calc_3277"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1036769072
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 29"
+        , "id":1037054992
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_3s_c1_enter104_calc_3363"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"3"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1037059904
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body13_calc_3s_c1_enter104_calc_3363"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"3"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1037267536
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"1024"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Loop Input"
+        , "id":993699072
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_3.B5, calc_3.B3"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1061071152
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Start Cycle":"15"
+            , "Latency":"218"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":173
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1067628768
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"202"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":173
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1067644144
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"243"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":173
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1036480832
+        , "to":1036769072
+      }
+      , {
+        "from":1037059904
+        , "to":1037267536
+      }
+      , {
+        "from":993699072
+        , "to":1036480832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":993699072
+        , "to":1036480832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":993699072
+        , "to":1036480832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1061071152
+        , "to":1037059904
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1036769072
+        , "to":1061071152
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":1067628768
+        , "to":1037059904
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1036769072
+        , "to":1067628768
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":1037267536
+        , "to":1067644144
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1024"
+          }
+        ]
+      }
+      , {
+        "from":1036769072
+        , "to":1067644144
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+    ]
+  }
+  , "961948816":
+  {
+    "nodes":
+    [
+      {
+        "name":"Input"
+        , "id":997450448
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_3.B5"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961948896":
+  {
+    "nodes":
+    [
+      {
+        "name":"Feedback"
+        , "id":993719648
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"4"
+            , "Feedback FIFO Width":"16"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":116
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Input"
+        , "id":1018860448
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"calc_3.B8"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "961948976":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 30"
+        , "id":1037556000
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_3s_c0_enter11415_calc_3415"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"7"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1037562112
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body27_calc_3s_c0_enter11415_calc_3415"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"7"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1037808992
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"320"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 31"
+        , "id":1037981408
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_3s_c1_enter135_calc_3484"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Latency":"2"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1037987104
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body27_calc_3s_c1_enter135_calc_3484"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Latency":"2"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1038031712
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Exit FIFO Depth":"16"
+                , "Exit FIFO Width":"192"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"bb"
+          }
+        ]
+      }
+      , {
+        "name":"Loop Input"
+        , "id":973580256
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"calc_3.B8, calc_3.B6"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1068825600
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"512 bits"
+            , "LSU Style":"Local-pipelined"
+            , "Start Cycle":"13"
+            , "Latency":"31"
+            , "Stall-free":"No"
+            , "Global Memory":"No"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":179
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1068841776
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"512 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Start Cycle":"45"
+            , "Latency":"2"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":179
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1037562112
+        , "to":1037808992
+      }
+      , {
+        "from":1037987104
+        , "to":1038031712
+      }
+      , {
+        "from":973580256
+        , "to":1037562112
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":973580256
+        , "to":1037562112
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":973580256
+        , "to":1037562112
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1068825600
+        , "to":1068841776
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"512"
+          }
+        ]
+      }
+      , {
+        "from":1037808992
+        , "to":1068825600
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":1038031712
+        , "to":1068841776
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+    ]
+  }
+}

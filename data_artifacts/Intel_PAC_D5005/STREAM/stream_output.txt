@@ -1,0 +1,48 @@
+aocl program: Running program from /cm/shared/opt/intelFPGA_pro/18.1.2/hld/board/opencl_bsp_svmddr/linux64/libexec
+Program succeed. 
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   Initialized BSP
+Initialized BSP
+pac_s10_dc : Intel PAC Platform (pac_e600000)
+-------------------------------------------------------------
+Initialized BSP
+-------------------------------------------------------------
+FPGA Setup:stream_fpga/cmake-build-syn-nobuffer/bin/stream_kernels_single.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.1.4.1
+-------------------------------------------------------------
+Summary:
+Array Size:          2.14748e+09 Byte
+Data Type            cl_float
+Repetitions:         20
+Kernel replications: 1
+Kernel type:         Single
+Kernel file:         stream_fpga/cmake-build-syn-nobuffer/bin/stream_kernels_single.aocx
+Device:              pac_s10_dc : Intel PAC Platform (pac_e600000)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+Each test below will take on the order of 1.85077e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-06 on all three arrays
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    1.50397e+04    4.37811e-01    4.28362e-01    4.40406e-01
+           Copy    2.01497e+04    2.24060e-01    2.13153e-01    2.26391e-01
+       PCI read    8.71426e+08    3.99924e-05    7.39300e-06    1.12447e-04
+      PCI write    5.34067e+08    1.36321e-03    1.20630e-05    2.69928e-02
+          Scale    2.00414e+04    2.23662e-01    2.14305e-01    2.26678e-01
+          Triad    1.16562e+04    5.56330e-01    5.52704e-01    5.57074e-01

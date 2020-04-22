@@ -1,0 +1,435 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units", "Hyper-Optimized Handshaking"]
+    , "children":
+    [
+      {
+        "name":"calc_0"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "Off"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+          , {
+            "type":"text"
+            , "text":"Hyper-optimized handshaking disabled due to instruction Load Operation which does not support it."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":12
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_1"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "Off"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+          , {
+            "type":"text"
+            , "text":"Hyper-optimized handshaking disabled due to instruction in Kernel calc_0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":58
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_2"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "Off"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+          , {
+            "type":"text"
+            , "text":"Hyper-optimized handshaking disabled due to instruction in Kernel calc_0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":104
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_3"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "Off"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+          , {
+            "type":"text"
+            , "text":"Hyper-optimized handshaking disabled due to instruction in Kernel calc_0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":150
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"calc_0"
+        , "data":
+        [12701, 23884, 2163, 32, 224]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":12
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_1"
+        , "data":
+        [12701, 23884, 2163, 32, 224]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":58
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_2"
+        , "data":
+        [12701, 23884, 2163, 32, 224]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":104
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_3"
+        , "data":
+        [12701, 23884, 2163, 32, 224]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":150
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Kernel Subtotal"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [50804, 95536, 8652, 128, 896]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [19004, 23256, 0, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [455240, 910480, 2627, 1047, 0]
+      }
+      , {
+        "name":"System description ROM"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2, 71, 2, 0, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [525050, 1029343, 11281, 1175, 896]
+        , "data_percent":
+        [28.1341, 27.578, 96.2461, 20.3993]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [1866240, 3732480, 11721, 5760, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+      {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":29
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":35
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":75
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":81
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":121
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":127
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":167
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+              , "line":173
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

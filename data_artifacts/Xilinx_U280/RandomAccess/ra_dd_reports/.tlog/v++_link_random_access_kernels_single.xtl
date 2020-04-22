@@ -1,0 +1,656 @@
+<ENTRY>
+{
+ "session": {
+  "name": "v++_link_random_access_kernels_single",
+  "pid": "0",
+  "uuid": "e1284aff-9315-4ca2-a0e7-d76d978d9cd6",
+  "description": "",
+  "timestamp": "0",
+  "outputFiles": [
+   {
+    "type": "JSON",
+    "mode": "CLIENT_ONLY",
+    "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/.tlog/v++_link_random_access_kernels_single.xtl",
+    "continuous": true
+   },
+   {
+    "type": "JSON",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/bin/random_access_kernels_single.xclbin.link_summary",
+    "continuous": true
+   },
+   {
+    "type": "BINARY_PROTOBUF",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/bin/random_access_kernels_single.xclbin.link_summary.pb",
+    "continuous": true
+   }
+  ]
+ },
+ "thisFile": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/.tlog/v++_link_random_access_kernels_single.xtl",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr 22 14:27:33 2020",
+ "timestampMillis": "1587558453309",
+ "buildStep": {
+  "cmdId": "d67a9a05-d45b-4ec3-a86a-ca2accea0292",
+  "name": "v++",
+  "logFile": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/settings/settings.link.xilinx.random_access.ddr.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-ddr3/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-ddr3/bin/tmp_compile/random_access_kernels_single.xo ",
+  "args": [
+   "--config",
+   "/home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini",
+   "-t",
+   "hw",
+   "-I/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/../common",
+   "--platform",
+   "xilinx_u280_xdma_201920_3",
+   "-R2",
+   "-l",
+   "--config",
+   "/home/marimeyer/repos/frandom/settings/settings.link.xilinx.random_access.ddr.ini",
+   "-j",
+   "40",
+   "-o",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/bin/random_access_kernels_single.xclbin",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/bin/tmp_compile/random_access_kernels_single.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini",
+    "content": "kernel_frequency=450\n\n#[hls]\n#max_memory_ports=all\n"
+   },
+   {
+    "path": "/home/marimeyer/repos/frandom/settings/settings.link.xilinx.random_access.ddr.ini",
+    "content": "[connectivity]\nnk=accessMemory_0:2\n# slrs\nslr=accessMemory_0_1:SLR0\nslr=accessMemory_0_2:SLR1\n\n# matrix ports\nsp=accessMemory_0_1.m_axi_gmem:DDR[0]\nsp=accessMemory_0_2.m_axi_gmem:DDR[1]\n"
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:27:33 2020",
+ "timestampMillis": "1587558453310",
+ "status": {
+  "cmdId": "d67a9a05-d45b-4ec3-a86a-ca2accea0292",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Apr 22 14:27:41 2020",
+ "timestampMillis": "1587558461476",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_xdma_201920_3.xpfm",
+  "hardwareDsa": "xilinx_u280_xdma_201920_3.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "random_access_kernels_single",
+    "file": "/home/marimeyer/repos/frandom/cmake-build-ddr3/bin/random_access_kernels_single.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "accessMemory_0",
+     "file": "/home/marimeyer/repos/frandom/cmake-build-ddr3/bin/tmp_compile/random_access_kernels_single.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xo/accessMemory_0/accessMemory_0/cpu_sources/replicated_random_access_kernels_single_xilinx.cl"
+    ],
+    "cuNames": [
+     "accessMemory_0_1",
+     "accessMemory_0_2"
+    ]
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 14:27:41 2020",
+ "timestampMillis": "1587558461704",
+ "buildStep": {
+  "cmdId": "3cba970a-bf84-4754-9b27-d3e744734c2b",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/marimeyer/repos/frandom/cmake-build-ddr3/bin/tmp_compile/random_access_kernels_single.xo --config /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int --temp_dir /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/bin/tmp_compile/random_access_kernels_single.xo",
+   "--config",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int",
+   "--temp_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/sys_link"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:27:41 2020",
+ "timestampMillis": "1587558461705",
+ "status": {
+  "cmdId": "3cba970a-bf84-4754-9b27-d3e744734c2b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:28:03 2020",
+ "timestampMillis": "1587558483587",
+ "status": {
+  "cmdId": "3cba970a-bf84-4754-9b27-d3e744734c2b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 14:28:03 2020",
+ "timestampMillis": "1587558483593",
+ "buildStep": {
+  "cmdId": "feb55e65-ab40-42bf-bcb6-dde370367896",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/sdsl.dat -rtd /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/cf2sw.rtd -xclbin /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xclbin_orig.xml -o /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:28:03 2020",
+ "timestampMillis": "1587558483595",
+ "status": {
+  "cmdId": "feb55e65-ab40-42bf-bcb6-dde370367896",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:28:05 2020",
+ "timestampMillis": "1587558485480",
+ "status": {
+  "cmdId": "feb55e65-ab40-42bf-bcb6-dde370367896",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 14:28:05 2020",
+ "timestampMillis": "1587558485486",
+ "buildStep": {
+  "cmdId": "22a320eb-624c-425d-b582-9fe92d93cc99",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/cf2sw.rtd --diagramJsonFileName /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/settings/settings.link.xilinx.random_access.ddr.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-ddr3/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-ddr3/bin/tmp_compile/random_access_kernels_single.xo  --generatedByXclbinName random_access_kernels_single --kernelInfoDataFileName /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/kernel_info.dat",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/cf2sw.rtd",
+   "--diagramJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModel.json",
+   "--platformFilePath",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm",
+   "--generatedByName",
+   "v++",
+   "--generatedByVersion",
+   "2019.2",
+   "--generatedByChangeList",
+   "2708876",
+   "--generatedByTimeStamp",
+   "Wed Nov  6 21:39:14 MST 2019",
+   "--generatedByOptions",
+   "/opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/settings/settings.link.xilinx.random_access.ddr.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-ddr3/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-ddr3/bin/tmp_compile/random_access_kernels_single.xo ",
+   "--generatedByXclbinName",
+   "random_access_kernels_single",
+   "--kernelInfoDataFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/kernel_info.dat"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:28:05 2020",
+ "timestampMillis": "1587558485488",
+ "status": {
+  "cmdId": "22a320eb-624c-425d-b582-9fe92d93cc99",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:28:07 2020",
+ "timestampMillis": "1587558487068",
+ "status": {
+  "cmdId": "22a320eb-624c-425d-b582-9fe92d93cc99",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 14:28:07 2020",
+ "timestampMillis": "1587558487075",
+ "buildStep": {
+  "cmdId": "a4ccd89e-0740-4b7b-bbe1-90e47c8d1629",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_xdma_201920_3 -j 40 --kernel_frequency 450 --output_dir /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int --log_dir /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/logs/link --report_dir /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/reports/link --config /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/vplConfig.ini -k /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link --no-info --tlog_dir /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/.tlog/v++_link_random_access_kernels_single --iprepo /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_accessMemory_0_1_0 --messageDb /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/run_link/vpl.pb /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_xdma_201920_3",
+   "-j",
+   "40",
+   "--kernel_frequency",
+   "450",
+   "--output_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int",
+   "--log_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/logs/link",
+   "--report_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/reports/link",
+   "--config",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link",
+   "--no-info",
+   "--tlog_dir",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/.tlog/v++_link_random_access_kernels_single",
+   "--iprepo",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_accessMemory_0_1_0",
+   "--messageDb",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/run_link/vpl.pb",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 14:28:07 2020",
+ "timestampMillis": "1587558487076",
+ "status": {
+  "cmdId": "a4ccd89e-0740-4b7b-bbe1-90e47c8d1629",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:22 2020",
+ "timestampMillis": "1587566242215",
+ "status": {
+  "cmdId": "a4ccd89e-0740-4b7b-bbe1-90e47c8d1629",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 16:37:22 2020",
+ "timestampMillis": "1587566242220",
+ "buildStep": {
+  "cmdId": "be44c11f-d6dc-4a2b-a430-fd2142838b9d",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:22 2020",
+ "timestampMillis": "1587566242221",
+ "status": {
+  "cmdId": "be44c11f-d6dc-4a2b-a430-fd2142838b9d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 22 16:37:22 2020",
+ "timestampMillis": "1587566242232",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 16:37:22 2020",
+ "timestampMillis": "1587566242240",
+ "buildStep": {
+  "cmdId": "c1181799-a8e0-430b-b36a-5e3568a31f5b",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/address_map.xml -sdsl /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/sdsl.dat -xclbin /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xclbin_orig.xml -rtd /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.rtd -o /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xml",
+  "args": [
+   "-a",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.rtd",
+   "-o",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:22 2020",
+ "timestampMillis": "1587566242242",
+ "status": {
+  "cmdId": "c1181799-a8e0-430b-b36a-5e3568a31f5b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:24 2020",
+ "timestampMillis": "1587566244355",
+ "status": {
+  "cmdId": "c1181799-a8e0-430b-b36a-5e3568a31f5b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 16:37:24 2020",
+ "timestampMillis": "1587566244358",
+ "buildStep": {
+  "cmdId": "341e723c-3be4-4f6b-91dd-cbd12808af00",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.rtd --diagramJsonFileName /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModel_resource_use.json --diagramWithAddressesAndSlrsJsonFileName /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.rtd",
+   "--diagramJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModel_resource_use.json",
+   "--diagramWithAddressesAndSlrsJsonFileName",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:24 2020",
+ "timestampMillis": "1587566244359",
+ "status": {
+  "cmdId": "341e723c-3be4-4f6b-91dd-cbd12808af00",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:25 2020",
+ "timestampMillis": "1587566245724",
+ "status": {
+  "cmdId": "341e723c-3be4-4f6b-91dd-cbd12808af00",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:25 2020",
+ "timestampMillis": "1587566245727",
+ "status": {
+  "cmdId": "be44c11f-d6dc-4a2b-a430-fd2142838b9d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 16:37:25 2020",
+ "timestampMillis": "1587566245734",
+ "buildStep": {
+  "cmdId": "dfcdd313-124c-4210-ae53-c3a775551a4d",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.rtd --append-section :JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single_xml.rtd --add-section BUILD_METADATA:JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xml --add-section SYSTEM_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json --output /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/partial.bit",
+   "--force",
+   "--key-value",
+   "SYS:mode:hw_pr",
+   "--add-section",
+   ":JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.rtd",
+   "--append-section",
+   ":JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:25 2020",
+ "timestampMillis": "1587566245735",
+ "status": {
+  "cmdId": "dfcdd313-124c-4210-ae53-c3a775551a4d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:26 2020",
+ "timestampMillis": "1587566246298",
+ "status": {
+  "cmdId": "dfcdd313-124c-4210-ae53-c3a775551a4d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 22 16:37:26 2020",
+ "timestampMillis": "1587566246303",
+ "buildStep": {
+  "cmdId": "5233677f-bc5d-4b7a-96a3-edc804b47541",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --info /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xclbin.info --input /home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xclbin.info",
+   "--input",
+   "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/int/random_access_kernels_single.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:26 2020",
+ "timestampMillis": "1587566246304",
+ "status": {
+  "cmdId": "5233677f-bc5d-4b7a-96a3-edc804b47541",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:26 2020",
+ "timestampMillis": "1587566246678",
+ "status": {
+  "cmdId": "5233677f-bc5d-4b7a-96a3-edc804b47541",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 22 16:37:26 2020",
+ "timestampMillis": "1587566246709",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/reports/link/system_estimate_random_access_kernels_single.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 22 16:37:30 2020",
+ "timestampMillis": "1587566250953",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/reports/link/v++_link_random_access_kernels_single_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 22 16:37:30 2020",
+ "timestampMillis": "1587566250955",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/v++_link_random_access_kernels_single_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 22 16:37:31 2020",
+ "timestampMillis": "1587566251055",
+ "report": {
+  "path": "/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 22 16:37:31 2020",
+ "timestampMillis": "1587566251060",
+ "status": {
+  "cmdId": "d67a9a05-d45b-4ec3-a86a-ca2accea0292",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

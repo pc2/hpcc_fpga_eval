@@ -1,0 +1,1181 @@
+
+*** Running vivado
+    with args -log pfm_dynamic_hmss_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfm_dynamic_hmss_0_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source pfm_dynamic_hmss_0_0.tcl -notrace
+[OPTRACE]|16308|1|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674379411|START|pfm_dynamic_hmss_0_0_synth_1|ROLLUP_AUTO
+[OPTRACE]|16308|2|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674379413|START|Creating in-memory project|
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_calc_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:Monitor_AXI_Master:1.0'. The one found in IP location '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo/iprepo/monitor_axi_master_v1_0' will take precedence over the same IP in location /opt/Xilinx/Vitis/2019.2/data/ip/xilinx/monitor_axi_master_v1_0
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:interface:sdsoc_trace:2.0'. The one found in location '/opt/Xilinx/Vitis/2019.2/data/ip/xilinx/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2019.2/data/ip/interfaces/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml'
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1693.086 ; gain = 185.773 ; free physical = 166599 ; free virtual = 324271
+[OPTRACE]|16308|3|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674386512|END|Creating in-memory project|
+[OPTRACE]|16308|4|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674386512|START|Adding files|
+[OPTRACE]|16308|5|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674407810|END|Adding files|
+[OPTRACE]|16308|6|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674407840|START|Configure IP Cache|
+[OPTRACE]|16308|7|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674408129|END|Configure IP Cache|
+[OPTRACE]|16308|8|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674408130|START|synth_design|
+Command: synth_design -top pfm_dynamic_hmss_0_0 -part xcu280-fsvh2892-2L-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16336 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3142.891 ; gain = 122.719 ; free physical = 165321 ; free virtual = 323033
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_hmss_0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/synth/pfm_dynamic_hmss_0_0.v:65]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_axi_apb_bridge_inst_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_axi_apb_bridge_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_axi_apb_bridge_inst_0' (1#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_axi_apb_bridge_inst_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_inst_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_inst_0' (2#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_inst_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'hbm_inst' of module 'bd_5dca_hbm_inst_0' has 1084 connections declared, but only 988 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:6271]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_reset_sync_SLR0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_reset_sync_SLR0_0' (3#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR0' of module 'bd_5dca_hbm_reset_sync_SLR0_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:7260]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_reset_sync_SLR1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_reset_sync_SLR1_0' (4#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR1' of module 'bd_5dca_hbm_reset_sync_SLR1_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:7267]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_reset_sync_SLR2_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_reset_sync_SLR2_0' (5#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR2_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR2' of module 'bd_5dca_hbm_reset_sync_SLR2_0' has 10 connections declared, but only 6 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:7274]
+INFO: [Synth 8-6157] synthesizing module 'init_logic_imp_156LN22' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11303]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_init_concat_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_101/synth/bd_5dca_init_concat_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 2 - type: integer 
+	Parameter NUM_PORTS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (6#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_init_concat_0' (7#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_101/synth/bd_5dca_init_concat_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_init_reduce_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_init_reduce_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_init_reduce_0' (8#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_init_reduce_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'init_logic_imp_156LN22' (9#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11303]
+INFO: [Synth 8-6157] synthesizing module 'path_0_imp_D0DQII' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11328]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect1_0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect1_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect1_0_0' (10#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect1_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice1_0_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice1_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice1_0_0' (11#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice1_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice1_0' of module 'bd_5dca_slice1_0_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11706]
+INFO: [Synth 8-6155] done synthesizing module 'path_0_imp_D0DQII' (12#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11328]
+INFO: [Synth 8-6157] synthesizing module 'path_1_imp_1QSHYAS' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16543]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect2_1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect2_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect2_1_0' (13#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect2_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice2_1_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice2_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice2_1_0' (14#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice2_1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice2_1' of module 'bd_5dca_slice2_1_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16921]
+INFO: [Synth 8-6155] done synthesizing module 'path_1_imp_1QSHYAS' (15#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16543]
+INFO: [Synth 8-6157] synthesizing module 'path_10_imp_1HUOXYY' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11775]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect11_10_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect11_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect11_10_0' (16#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect11_10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice11_10_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice11_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice11_10_0' (17#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice11_10_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice11_10' of module 'bd_5dca_slice11_10_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:12153]
+INFO: [Synth 8-6155] done synthesizing module 'path_10_imp_1HUOXYY' (18#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11775]
+INFO: [Synth 8-6157] synthesizing module 'path_11_imp_43778K' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:12222]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect12_11_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect12_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect12_11_0' (19#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect12_11_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice12_11_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice12_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice12_11_0' (20#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice12_11_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice12_11' of module 'bd_5dca_slice12_11_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:12600]
+INFO: [Synth 8-6155] done synthesizing module 'path_11_imp_43778K' (21#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:12222]
+INFO: [Synth 8-6157] synthesizing module 'path_12_imp_ZKKHAF' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:12669]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice0_12_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice0_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice0_12_0' (22#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice0_12_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice0_12' of module 'bd_5dca_slice0_12_0' has 80 connections declared, but only 78 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13162]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice13_12_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice13_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice13_12_0' (23#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice13_12_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice13_12' of module 'bd_5dca_slice13_12_0' has 72 connections declared, but only 70 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13241]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_switch_2to1_12_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_switch_2to1_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_switch_2to1_12_0' (24#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_switch_2to1_12_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'switch_2to1_12' of module 'bd_5dca_switch_2to1_12_0' has 107 connections declared, but only 99 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13312]
+INFO: [Synth 8-6155] done synthesizing module 'path_12_imp_ZKKHAF' (25#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:12669]
+INFO: [Synth 8-6157] synthesizing module 'path_13_imp_L94V89' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13414]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect14_13_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect14_13_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect14_13_0' (26#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect14_13_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice14_13_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice14_13_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice14_13_0' (27#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice14_13_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice14_13' of module 'bd_5dca_slice14_13_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13792]
+INFO: [Synth 8-6155] done synthesizing module 'path_13_imp_L94V89' (28#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13414]
+INFO: [Synth 8-6157] synthesizing module 'path_14_imp_JITO1S' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13861]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect15_14_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect15_14_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect15_14_0' (29#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect15_14_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice15_14_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice15_14_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice15_14_0' (30#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice15_14_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice15_14' of module 'bd_5dca_slice15_14_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:14239]
+INFO: [Synth 8-6155] done synthesizing module 'path_14_imp_JITO1S' (31#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:13861]
+INFO: [Synth 8-6157] synthesizing module 'path_15_imp_12K2DNI' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:14308]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect16_15_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect16_15_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect16_15_0' (32#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect16_15_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice16_15_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice16_15_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice16_15_0' (33#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice16_15_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice16_15' of module 'bd_5dca_slice16_15_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:14686]
+INFO: [Synth 8-6155] done synthesizing module 'path_15_imp_12K2DNI' (34#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:14308]
+INFO: [Synth 8-6157] synthesizing module 'path_16_imp_18P6RH' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:14755]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect17_16_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect17_16_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect17_16_0' (35#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect17_16_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice17_16_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice17_16_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice17_16_0' (36#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice17_16_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice17_16' of module 'bd_5dca_slice17_16_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:15133]
+INFO: [Synth 8-6155] done synthesizing module 'path_16_imp_18P6RH' (37#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:14755]
+INFO: [Synth 8-6157] synthesizing module 'path_17_imp_1JQ00YR' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:15202]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect18_17_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect18_17_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect18_17_0' (38#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect18_17_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice18_17_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice18_17_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice18_17_0' (39#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice18_17_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice18_17' of module 'bd_5dca_slice18_17_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:15580]
+INFO: [Synth 8-6155] done synthesizing module 'path_17_imp_1JQ00YR' (40#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:15202]
+INFO: [Synth 8-6157] synthesizing module 'path_18_imp_4ZB6FJ' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:15649]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect19_18_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect19_18_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect19_18_0' (41#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect19_18_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice19_18_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice19_18_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice19_18_0' (42#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice19_18_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice19_18' of module 'bd_5dca_slice19_18_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16027]
+INFO: [Synth 8-6155] done synthesizing module 'path_18_imp_4ZB6FJ' (43#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:15649]
+INFO: [Synth 8-6157] synthesizing module 'path_19_imp_1PF015D' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16096]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect20_19_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect20_19_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect20_19_0' (44#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect20_19_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice20_19_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice20_19_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice20_19_0' (45#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice20_19_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice20_19' of module 'bd_5dca_slice20_19_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16474]
+INFO: [Synth 8-6155] done synthesizing module 'path_19_imp_1PF015D' (46#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16096]
+INFO: [Synth 8-6157] synthesizing module 'path_2_imp_U6BEH3' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21460]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect3_2_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect3_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect3_2_0' (47#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect3_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice3_2_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice3_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice3_2_0' (48#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice3_2_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice3_2' of module 'bd_5dca_slice3_2_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21838]
+INFO: [Synth 8-6155] done synthesizing module 'path_2_imp_U6BEH3' (49#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21460]
+INFO: [Synth 8-6157] synthesizing module 'path_20_imp_1XT8RPB' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16990]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect21_20_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect21_20_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect21_20_0' (50#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect21_20_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice21_20_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice21_20_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice21_20_0' (51#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice21_20_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice21_20' of module 'bd_5dca_slice21_20_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:17368]
+INFO: [Synth 8-6155] done synthesizing module 'path_20_imp_1XT8RPB' (52#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:16990]
+INFO: [Synth 8-6157] synthesizing module 'path_21_imp_FBBGKH' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:17437]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect22_21_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect22_21_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect22_21_0' (53#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect22_21_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice22_21_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice22_21_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice22_21_0' (54#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice22_21_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice22_21' of module 'bd_5dca_slice22_21_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:17815]
+INFO: [Synth 8-6155] done synthesizing module 'path_21_imp_FBBGKH' (55#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:17437]
+INFO: [Synth 8-6157] synthesizing module 'path_22_imp_1FJCOXU' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:17884]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect23_22_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect23_22_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect23_22_0' (56#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect23_22_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice23_22_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice23_22_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice23_22_0' (57#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice23_22_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice23_22' of module 'bd_5dca_slice23_22_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:18262]
+INFO: [Synth 8-6155] done synthesizing module 'path_22_imp_1FJCOXU' (58#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:17884]
+INFO: [Synth 8-6157] synthesizing module 'path_23_imp_WHHIHO' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:18331]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect24_23_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect24_23_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect24_23_0' (59#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect24_23_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice24_23_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice24_23_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice24_23_0' (60#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice24_23_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice24_23' of module 'bd_5dca_slice24_23_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:18709]
+INFO: [Synth 8-6155] done synthesizing module 'path_23_imp_WHHIHO' (61#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:18331]
+INFO: [Synth 8-6157] synthesizing module 'path_24_imp_ZGQW91' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:18778]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect25_24_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect25_24_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect25_24_0' (62#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect25_24_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice25_24_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice25_24_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice25_24_0' (63#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice25_24_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice25_24' of module 'bd_5dca_slice25_24_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:19156]
+INFO: [Synth 8-6155] done synthesizing module 'path_24_imp_ZGQW91' (64#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:18778]
+INFO: [Synth 8-6157] synthesizing module 'path_25_imp_1DSSZ8B' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:19225]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect26_25_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect26_25_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect26_25_0' (65#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect26_25_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice26_25_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice26_25_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice26_25_0' (66#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice26_25_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice26_25' of module 'bd_5dca_slice26_25_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:19603]
+INFO: [Synth 8-6155] done synthesizing module 'path_25_imp_1DSSZ8B' (67#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:19225]
+INFO: [Synth 8-6157] synthesizing module 'path_26_imp_H6UVUG' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:19672]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect27_26_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect27_26_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect27_26_0' (68#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect27_26_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice27_26_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice27_26_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice27_26_0' (69#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice27_26_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice27_26' of module 'bd_5dca_slice27_26_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:20050]
+INFO: [Synth 8-6155] done synthesizing module 'path_26_imp_H6UVUG' (70#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:19672]
+INFO: [Synth 8-6157] synthesizing module 'path_27_imp_1UYZ3FQ' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:20119]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect28_27_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect28_27_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect28_27_0' (71#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect28_27_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice28_27_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice28_27_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice28_27_0' (72#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice28_27_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice28_27' of module 'bd_5dca_slice28_27_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:20497]
+INFO: [Synth 8-6155] done synthesizing module 'path_27_imp_1UYZ3FQ' (73#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:20119]
+INFO: [Synth 8-6157] synthesizing module 'path_28_imp_B8HQIY' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:20566]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect29_28_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect29_28_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect29_28_0' (74#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect29_28_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice29_28_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice29_28_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice29_28_0' (75#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice29_28_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice29_28' of module 'bd_5dca_slice29_28_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:20944]
+INFO: [Synth 8-6155] done synthesizing module 'path_28_imp_B8HQIY' (76#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:20566]
+INFO: [Synth 8-6157] synthesizing module 'path_29_imp_1RHQ784' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21013]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect30_29_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect30_29_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect30_29_0' (77#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect30_29_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice30_29_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice30_29_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice30_29_0' (78#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice30_29_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice30_29' of module 'bd_5dca_slice30_29_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21391]
+INFO: [Synth 8-6155] done synthesizing module 'path_29_imp_1RHQ784' (79#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21013]
+INFO: [Synth 8-6157] synthesizing module 'path_3_imp_18IDHND' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:22801]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect4_3_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect4_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect4_3_0' (80#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect4_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice4_3_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice4_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice4_3_0' (81#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice4_3_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice4_3' of module 'bd_5dca_slice4_3_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:23179]
+INFO: [Synth 8-6155] done synthesizing module 'path_3_imp_18IDHND' (82#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:22801]
+INFO: [Synth 8-6157] synthesizing module 'path_30_imp_1TQ3UKC' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21907]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect31_30_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect31_30_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect31_30_0' (83#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect31_30_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice31_30_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice31_30_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice31_30_0' (84#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice31_30_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice31_30' of module 'bd_5dca_slice31_30_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:22285]
+INFO: [Synth 8-6155] done synthesizing module 'path_30_imp_1TQ3UKC' (85#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:21907]
+INFO: [Synth 8-6157] synthesizing module 'path_31_imp_8YJZDU' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:22354]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect32_31_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect32_31_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect32_31_0' (86#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect32_31_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice32_31_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice32_31_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice32_31_0' (87#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice32_31_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice32_31' of module 'bd_5dca_slice32_31_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:22732]
+INFO: [Synth 8-6155] done synthesizing module 'path_31_imp_8YJZDU' (88#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:22354]
+INFO: [Synth 8-6157] synthesizing module 'path_4_imp_1BCVI4G' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:23248]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect5_4_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect5_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect5_4_0' (89#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect5_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice5_4_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice5_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice5_4_0' (90#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice5_4_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice5_4' of module 'bd_5dca_slice5_4_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:23626]
+INFO: [Synth 8-6155] done synthesizing module 'path_4_imp_1BCVI4G' (91#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:23248]
+INFO: [Synth 8-6157] synthesizing module 'path_5_imp_SB0BHA' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:23695]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect6_5_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect6_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect6_5_0' (92#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect6_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice6_5_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice6_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice6_5_0' (93#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice6_5_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice6_5' of module 'bd_5dca_slice6_5_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:24073]
+INFO: [Synth 8-6155] done synthesizing module 'path_5_imp_SB0BHA' (94#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:23695]
+INFO: [Synth 8-6157] synthesizing module 'path_6_imp_1SIT5H9' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:24142]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect7_6_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect7_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect7_6_0' (95#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect7_6_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice7_6_0' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice7_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice7_6_0' (96#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice7_6_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice7_6' of module 'bd_5dca_slice7_6_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:24520]
+INFO: [Synth 8-6155] done synthesizing module 'path_6_imp_1SIT5H9' (97#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:24142]
+INFO: [Synth 8-6157] synthesizing module 'path_7_imp_A0VU5F' [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:24589]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect8_7_0' (98#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_interconnect8_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice8_7_0' (99#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-16308-alveo0/realtime/bd_5dca_slice8_7_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice8_7' of module 'bd_5dca_slice8_7_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:24967]
+INFO: [Synth 8-6155] done synthesizing module 'path_7_imp_A0VU5F' (100#1) [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:24589]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7023] instance 'slice9_8' of module 'bd_5dca_slice9_8_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:25414]
+WARNING: [Synth 8-7023] instance 'slice10_9' of module 'bd_5dca_slice10_9_0' has 68 connections declared, but only 66 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:25861]
+WARNING: [Synth 8-7023] instance 'vip_S01' of module 'bd_5dca_vip_S01_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9534]
+WARNING: [Synth 8-7023] instance 'vip_S02' of module 'bd_5dca_vip_S02_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9591]
+WARNING: [Synth 8-7023] instance 'vip_S03' of module 'bd_5dca_vip_S03_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9648]
+WARNING: [Synth 8-7023] instance 'vip_S04' of module 'bd_5dca_vip_S04_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9705]
+WARNING: [Synth 8-7023] instance 'vip_S05' of module 'bd_5dca_vip_S05_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9762]
+WARNING: [Synth 8-7023] instance 'vip_S06' of module 'bd_5dca_vip_S06_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9819]
+WARNING: [Synth 8-7023] instance 'vip_S07' of module 'bd_5dca_vip_S07_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9876]
+WARNING: [Synth 8-7023] instance 'vip_S08' of module 'bd_5dca_vip_S08_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9933]
+WARNING: [Synth 8-7023] instance 'vip_S09' of module 'bd_5dca_vip_S09_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:9990]
+WARNING: [Synth 8-7023] instance 'vip_S10' of module 'bd_5dca_vip_S10_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10047]
+WARNING: [Synth 8-7023] instance 'vip_S11' of module 'bd_5dca_vip_S11_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10104]
+WARNING: [Synth 8-7023] instance 'vip_S12' of module 'bd_5dca_vip_S12_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10161]
+WARNING: [Synth 8-7023] instance 'vip_S14' of module 'bd_5dca_vip_S14_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10218]
+WARNING: [Synth 8-7023] instance 'vip_S15' of module 'bd_5dca_vip_S15_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10275]
+WARNING: [Synth 8-7023] instance 'vip_S16' of module 'bd_5dca_vip_S16_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10332]
+WARNING: [Synth 8-7023] instance 'vip_S17' of module 'bd_5dca_vip_S17_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10389]
+WARNING: [Synth 8-7023] instance 'vip_S18' of module 'bd_5dca_vip_S18_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10446]
+WARNING: [Synth 8-7023] instance 'vip_S19' of module 'bd_5dca_vip_S19_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10503]
+WARNING: [Synth 8-7023] instance 'vip_S20' of module 'bd_5dca_vip_S20_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10560]
+WARNING: [Synth 8-7023] instance 'vip_S21' of module 'bd_5dca_vip_S21_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10617]
+WARNING: [Synth 8-7023] instance 'vip_S22' of module 'bd_5dca_vip_S22_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10674]
+WARNING: [Synth 8-7023] instance 'vip_S23' of module 'bd_5dca_vip_S23_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10731]
+WARNING: [Synth 8-7023] instance 'vip_S24' of module 'bd_5dca_vip_S24_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10788]
+WARNING: [Synth 8-7023] instance 'vip_S25' of module 'bd_5dca_vip_S25_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10845]
+WARNING: [Synth 8-7023] instance 'vip_S26' of module 'bd_5dca_vip_S26_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10902]
+WARNING: [Synth 8-7023] instance 'vip_S27' of module 'bd_5dca_vip_S27_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10959]
+WARNING: [Synth 8-7023] instance 'vip_S28' of module 'bd_5dca_vip_S28_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11016]
+WARNING: [Synth 8-7023] instance 'vip_S29' of module 'bd_5dca_vip_S29_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11073]
+WARNING: [Synth 8-7023] instance 'vip_S30' of module 'bd_5dca_vip_S30_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11130]
+WARNING: [Synth 8-7023] instance 'vip_S31' of module 'bd_5dca_vip_S31_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11187]
+WARNING: [Synth 8-7023] instance 'vip_S32' of module 'bd_5dca_vip_S32_0' has 64 connections declared, but only 56 given [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:11244]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In2[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In31[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3302.938 ; gain = 282.766 ; free physical = 163994 ; free virtual = 321710
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 3314.812 ; gain = 294.641 ; free physical = 162938 ; free virtual = 320653
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 3314.812 ; gain = 294.641 ; free physical = 162938 ; free virtual = 320653
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.53 . Memory (MB): peak = 3314.812 ; gain = 0.000 ; free physical = 161584 ; free virtual = 319300
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/bd_5dca_hbm_inst_0/bd_5dca_hbm_inst_0_in_context.xdc] for cell 'inst/hbm_inst'
+WARNING: [Constraints 18-619] A clock with name 'hbm_ref_clk' already exists, overwriting the previous clock with the same name. [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/bd_5dca_hbm_inst_0/bd_5dca_hbm_inst_0_in_context.xdc:2]
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/bd_5dca_hbm_inst_0/bd_5dca_hbm_inst_0_in_context.xdc] for cell 'inst/hbm_inst'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_1/bd_5dca_hbm_reset_sync_SLR0_0/bd_5dca_hbm_reset_sync_SLR2_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR0'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_1/bd_5dca_hbm_reset_sync_SLR0_0/bd_5dca_hbm_reset_sync_SLR2_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR0'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_2/bd_5dca_hbm_reset_sync_SLR1_0/bd_5dca_hbm_reset_sync_SLR2_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR1'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_2/bd_5dca_hbm_reset_sync_SLR1_0/bd_5dca_hbm_reset_sync_SLR2_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR1'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_3/bd_5dca_hbm_reset_sync_SLR2_0/bd_5dca_hbm_reset_sync_SLR2_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_3/bd_5dca_hbm_reset_sync_SLR2_0/bd_5dca_hbm_reset_sync_SLR2_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_6/bd_5dca_vip_S01_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S01'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_6/bd_5dca_vip_S01_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S01'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_9/bd_5dca_vip_S02_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S02'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_9/bd_5dca_vip_S02_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S02'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_12/bd_5dca_vip_S03_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S03'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_12/bd_5dca_vip_S03_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S03'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_15/bd_5dca_vip_S04_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S04'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_15/bd_5dca_vip_S04_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S04'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_18/bd_5dca_vip_S05_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S05'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_18/bd_5dca_vip_S05_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S05'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_21/bd_5dca_vip_S06_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S06'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_21/bd_5dca_vip_S06_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S06'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_24/bd_5dca_vip_S07_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S07'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_24/bd_5dca_vip_S07_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S07'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_27/bd_5dca_vip_S08_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S08'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_27/bd_5dca_vip_S08_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S08'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_30/bd_5dca_vip_S09_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S09'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_30/bd_5dca_vip_S09_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S09'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_33/bd_5dca_vip_S10_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S10'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_33/bd_5dca_vip_S10_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S10'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_36/bd_5dca_vip_S11_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S11'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_36/bd_5dca_vip_S11_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S11'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_39/bd_5dca_vip_S12_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S12'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_39/bd_5dca_vip_S12_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S12'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_45/bd_5dca_vip_S14_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S14'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_45/bd_5dca_vip_S14_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S14'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_48/bd_5dca_vip_S15_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S15'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_48/bd_5dca_vip_S15_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S15'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_51/bd_5dca_vip_S16_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S16'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_51/bd_5dca_vip_S16_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S16'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_54/bd_5dca_vip_S17_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S17'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_54/bd_5dca_vip_S17_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S17'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_57/bd_5dca_vip_S18_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S18'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_57/bd_5dca_vip_S18_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S18'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_60/bd_5dca_vip_S19_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S19'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_60/bd_5dca_vip_S19_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S19'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_63/bd_5dca_vip_S20_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S20'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_63/bd_5dca_vip_S20_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S20'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_66/bd_5dca_vip_S21_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S21'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_66/bd_5dca_vip_S21_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S21'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_69/bd_5dca_vip_S22_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S22'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_69/bd_5dca_vip_S22_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S22'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_72/bd_5dca_vip_S23_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S23'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_72/bd_5dca_vip_S23_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S23'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_75/bd_5dca_vip_S24_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S24'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_75/bd_5dca_vip_S24_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S24'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_78/bd_5dca_vip_S25_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S25'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_78/bd_5dca_vip_S25_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S25'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_81/bd_5dca_vip_S26_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S26'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_81/bd_5dca_vip_S26_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S26'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_84/bd_5dca_vip_S27_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S27'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_84/bd_5dca_vip_S27_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S27'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_87/bd_5dca_vip_S28_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S28'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_87/bd_5dca_vip_S28_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S28'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_90/bd_5dca_vip_S29_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S29'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_90/bd_5dca_vip_S29_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S29'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_93/bd_5dca_vip_S30_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S30'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_93/bd_5dca_vip_S30_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S30'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_96/bd_5dca_vip_S31_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S31'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_96/bd_5dca_vip_S31_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S31'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_99/bd_5dca_vip_S32_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S32'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_99/bd_5dca_vip_S32_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S32'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_100/bd_5dca_axi_apb_bridge_inst_0/bd_5dca_axi_apb_bridge_inst_0_in_context.xdc] for cell 'inst/axi_apb_bridge_inst'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_100/bd_5dca_axi_apb_bridge_inst_0/bd_5dca_axi_apb_bridge_inst_0_in_context.xdc] for cell 'inst/axi_apb_bridge_inst'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_103/bd_5dca_util_vector_logic_0/pfm_top_irq_or_gate_userdebug_firewall_0_in_context.xdc] for cell 'inst/util_vector_logic'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_103/bd_5dca_util_vector_logic_0/pfm_top_irq_or_gate_userdebug_firewall_0_in_context.xdc] for cell 'inst/util_vector_logic'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_4/bd_5dca_interconnect1_0_0/bd_5dca_interconnect1_0_0_in_context.xdc] for cell 'inst/path_0/interconnect1_0'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_4/bd_5dca_interconnect1_0_0/bd_5dca_interconnect1_0_0_in_context.xdc] for cell 'inst/path_0/interconnect1_0'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_5/bd_5dca_slice1_0_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_0/slice1_0'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_5/bd_5dca_slice1_0_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_0/slice1_0'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_7/bd_5dca_interconnect2_1_0/bd_5dca_interconnect2_1_0_in_context.xdc] for cell 'inst/path_1/interconnect2_1'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_7/bd_5dca_interconnect2_1_0/bd_5dca_interconnect2_1_0_in_context.xdc] for cell 'inst/path_1/interconnect2_1'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_8/bd_5dca_slice2_1_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_1/slice2_1'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_8/bd_5dca_slice2_1_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_1/slice2_1'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_10/bd_5dca_interconnect3_2_0/bd_5dca_interconnect3_2_0_in_context.xdc] for cell 'inst/path_2/interconnect3_2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_10/bd_5dca_interconnect3_2_0/bd_5dca_interconnect3_2_0_in_context.xdc] for cell 'inst/path_2/interconnect3_2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_11/bd_5dca_slice3_2_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_2/slice3_2'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_11/bd_5dca_slice3_2_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_2/slice3_2'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_13/bd_5dca_interconnect4_3_0/bd_5dca_interconnect4_3_0_in_context.xdc] for cell 'inst/path_3/interconnect4_3'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_13/bd_5dca_interconnect4_3_0/bd_5dca_interconnect4_3_0_in_context.xdc] for cell 'inst/path_3/interconnect4_3'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_14/bd_5dca_slice4_3_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_3/slice4_3'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_14/bd_5dca_slice4_3_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_3/slice4_3'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_16/bd_5dca_interconnect5_4_0/bd_5dca_interconnect5_4_0_in_context.xdc] for cell 'inst/path_4/interconnect5_4'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_16/bd_5dca_interconnect5_4_0/bd_5dca_interconnect5_4_0_in_context.xdc] for cell 'inst/path_4/interconnect5_4'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_17/bd_5dca_slice5_4_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_4/slice5_4'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_17/bd_5dca_slice5_4_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_4/slice5_4'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_19/bd_5dca_interconnect6_5_0/bd_5dca_interconnect6_5_0_in_context.xdc] for cell 'inst/path_5/interconnect6_5'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_19/bd_5dca_interconnect6_5_0/bd_5dca_interconnect6_5_0_in_context.xdc] for cell 'inst/path_5/interconnect6_5'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_20/bd_5dca_slice6_5_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_5/slice6_5'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_20/bd_5dca_slice6_5_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_5/slice6_5'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_22/bd_5dca_interconnect7_6_0/bd_5dca_interconnect7_6_0_in_context.xdc] for cell 'inst/path_6/interconnect7_6'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_22/bd_5dca_interconnect7_6_0/bd_5dca_interconnect7_6_0_in_context.xdc] for cell 'inst/path_6/interconnect7_6'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_23/bd_5dca_slice7_6_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_6/slice7_6'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_23/bd_5dca_slice7_6_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_6/slice7_6'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_25/bd_5dca_interconnect8_7_0/bd_5dca_interconnect8_7_0_in_context.xdc] for cell 'inst/path_7/interconnect8_7'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_25/bd_5dca_interconnect8_7_0/bd_5dca_interconnect8_7_0_in_context.xdc] for cell 'inst/path_7/interconnect8_7'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_26/bd_5dca_slice8_7_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_7/slice8_7'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_26/bd_5dca_slice8_7_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_7/slice8_7'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_28/bd_5dca_interconnect9_8_0/bd_5dca_interconnect9_8_0_in_context.xdc] for cell 'inst/path_8/interconnect9_8'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_28/bd_5dca_interconnect9_8_0/bd_5dca_interconnect9_8_0_in_context.xdc] for cell 'inst/path_8/interconnect9_8'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_29/bd_5dca_slice9_8_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_8/slice9_8'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_29/bd_5dca_slice9_8_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_8/slice9_8'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_31/bd_5dca_interconnect10_9_0/bd_5dca_interconnect10_9_0_in_context.xdc] for cell 'inst/path_9/interconnect10_9'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_31/bd_5dca_interconnect10_9_0/bd_5dca_interconnect10_9_0_in_context.xdc] for cell 'inst/path_9/interconnect10_9'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_32/bd_5dca_slice10_9_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_9/slice10_9'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_32/bd_5dca_slice10_9_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_9/slice10_9'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_34/bd_5dca_interconnect11_10_0/bd_5dca_interconnect11_10_0_in_context.xdc] for cell 'inst/path_10/interconnect11_10'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_34/bd_5dca_interconnect11_10_0/bd_5dca_interconnect11_10_0_in_context.xdc] for cell 'inst/path_10/interconnect11_10'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_35/bd_5dca_slice11_10_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_10/slice11_10'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_35/bd_5dca_slice11_10_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_10/slice11_10'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_37/bd_5dca_interconnect12_11_0/bd_5dca_interconnect12_11_0_in_context.xdc] for cell 'inst/path_11/interconnect12_11'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_37/bd_5dca_interconnect12_11_0/bd_5dca_interconnect12_11_0_in_context.xdc] for cell 'inst/path_11/interconnect12_11'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_38/bd_5dca_slice12_11_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_11/slice12_11'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_38/bd_5dca_slice12_11_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_11/slice12_11'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_42/bd_5dca_slice0_12_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_12/slice0_12'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_42/bd_5dca_slice0_12_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_12/slice0_12'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_41/bd_5dca_slice13_12_0/bd_5dca_slice13_12_0_in_context.xdc] for cell 'inst/path_12/slice13_12'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_41/bd_5dca_slice13_12_0/bd_5dca_slice13_12_0_in_context.xdc] for cell 'inst/path_12/slice13_12'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_40/bd_5dca_switch_2to1_12_0/bd_5dca_switch_2to1_12_0_in_context.xdc] for cell 'inst/path_12/switch_2to1_12'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_40/bd_5dca_switch_2to1_12_0/bd_5dca_switch_2to1_12_0_in_context.xdc] for cell 'inst/path_12/switch_2to1_12'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_43/bd_5dca_interconnect14_13_0/bd_5dca_interconnect14_13_0_in_context.xdc] for cell 'inst/path_13/interconnect14_13'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_43/bd_5dca_interconnect14_13_0/bd_5dca_interconnect14_13_0_in_context.xdc] for cell 'inst/path_13/interconnect14_13'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_44/bd_5dca_slice14_13_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_13/slice14_13'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_44/bd_5dca_slice14_13_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_13/slice14_13'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_46/bd_5dca_interconnect15_14_0/bd_5dca_interconnect15_14_0_in_context.xdc] for cell 'inst/path_14/interconnect15_14'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_46/bd_5dca_interconnect15_14_0/bd_5dca_interconnect15_14_0_in_context.xdc] for cell 'inst/path_14/interconnect15_14'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_47/bd_5dca_slice15_14_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_14/slice15_14'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_47/bd_5dca_slice15_14_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_14/slice15_14'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_49/bd_5dca_interconnect16_15_0/bd_5dca_interconnect16_15_0_in_context.xdc] for cell 'inst/path_15/interconnect16_15'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_49/bd_5dca_interconnect16_15_0/bd_5dca_interconnect16_15_0_in_context.xdc] for cell 'inst/path_15/interconnect16_15'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_50/bd_5dca_slice16_15_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_15/slice16_15'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_50/bd_5dca_slice16_15_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_15/slice16_15'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_52/bd_5dca_interconnect17_16_0/bd_5dca_interconnect17_16_0_in_context.xdc] for cell 'inst/path_16/interconnect17_16'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_52/bd_5dca_interconnect17_16_0/bd_5dca_interconnect17_16_0_in_context.xdc] for cell 'inst/path_16/interconnect17_16'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_53/bd_5dca_slice17_16_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_16/slice17_16'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_53/bd_5dca_slice17_16_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_16/slice17_16'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_55/bd_5dca_interconnect18_17_0/bd_5dca_interconnect18_17_0_in_context.xdc] for cell 'inst/path_17/interconnect18_17'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_55/bd_5dca_interconnect18_17_0/bd_5dca_interconnect18_17_0_in_context.xdc] for cell 'inst/path_17/interconnect18_17'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_56/bd_5dca_slice18_17_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_17/slice18_17'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_56/bd_5dca_slice18_17_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_17/slice18_17'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_58/bd_5dca_interconnect19_18_0/bd_5dca_interconnect19_18_0_in_context.xdc] for cell 'inst/path_18/interconnect19_18'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_58/bd_5dca_interconnect19_18_0/bd_5dca_interconnect19_18_0_in_context.xdc] for cell 'inst/path_18/interconnect19_18'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_59/bd_5dca_slice19_18_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_18/slice19_18'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_59/bd_5dca_slice19_18_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_18/slice19_18'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_61/bd_5dca_interconnect20_19_0/bd_5dca_interconnect20_19_0_in_context.xdc] for cell 'inst/path_19/interconnect20_19'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_61/bd_5dca_interconnect20_19_0/bd_5dca_interconnect20_19_0_in_context.xdc] for cell 'inst/path_19/interconnect20_19'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_62/bd_5dca_slice20_19_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_19/slice20_19'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_62/bd_5dca_slice20_19_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_19/slice20_19'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_64/bd_5dca_interconnect21_20_0/bd_5dca_interconnect21_20_0_in_context.xdc] for cell 'inst/path_20/interconnect21_20'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_64/bd_5dca_interconnect21_20_0/bd_5dca_interconnect21_20_0_in_context.xdc] for cell 'inst/path_20/interconnect21_20'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_65/bd_5dca_slice21_20_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_20/slice21_20'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_65/bd_5dca_slice21_20_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_20/slice21_20'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_67/bd_5dca_interconnect22_21_0/bd_5dca_interconnect22_21_0_in_context.xdc] for cell 'inst/path_21/interconnect22_21'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_67/bd_5dca_interconnect22_21_0/bd_5dca_interconnect22_21_0_in_context.xdc] for cell 'inst/path_21/interconnect22_21'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_68/bd_5dca_slice22_21_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_21/slice22_21'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_68/bd_5dca_slice22_21_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_21/slice22_21'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_70/bd_5dca_interconnect23_22_0/bd_5dca_interconnect23_22_0_in_context.xdc] for cell 'inst/path_22/interconnect23_22'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_70/bd_5dca_interconnect23_22_0/bd_5dca_interconnect23_22_0_in_context.xdc] for cell 'inst/path_22/interconnect23_22'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_71/bd_5dca_slice23_22_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_22/slice23_22'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_71/bd_5dca_slice23_22_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_22/slice23_22'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_73/bd_5dca_interconnect24_23_0/bd_5dca_interconnect24_23_0_in_context.xdc] for cell 'inst/path_23/interconnect24_23'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_73/bd_5dca_interconnect24_23_0/bd_5dca_interconnect24_23_0_in_context.xdc] for cell 'inst/path_23/interconnect24_23'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_74/bd_5dca_slice24_23_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_23/slice24_23'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_74/bd_5dca_slice24_23_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_23/slice24_23'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_76/bd_5dca_interconnect25_24_0/bd_5dca_interconnect25_24_0_in_context.xdc] for cell 'inst/path_24/interconnect25_24'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_76/bd_5dca_interconnect25_24_0/bd_5dca_interconnect25_24_0_in_context.xdc] for cell 'inst/path_24/interconnect25_24'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_77/bd_5dca_slice25_24_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_24/slice25_24'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_77/bd_5dca_slice25_24_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_24/slice25_24'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_79/bd_5dca_interconnect26_25_0/bd_5dca_interconnect26_25_0_in_context.xdc] for cell 'inst/path_25/interconnect26_25'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_79/bd_5dca_interconnect26_25_0/bd_5dca_interconnect26_25_0_in_context.xdc] for cell 'inst/path_25/interconnect26_25'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_80/bd_5dca_slice26_25_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_25/slice26_25'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_80/bd_5dca_slice26_25_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_25/slice26_25'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_82/bd_5dca_interconnect27_26_0/bd_5dca_interconnect27_26_0_in_context.xdc] for cell 'inst/path_26/interconnect27_26'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_82/bd_5dca_interconnect27_26_0/bd_5dca_interconnect27_26_0_in_context.xdc] for cell 'inst/path_26/interconnect27_26'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_83/bd_5dca_slice27_26_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_26/slice27_26'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_83/bd_5dca_slice27_26_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_26/slice27_26'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_85/bd_5dca_interconnect28_27_0/bd_5dca_interconnect28_27_0_in_context.xdc] for cell 'inst/path_27/interconnect28_27'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_85/bd_5dca_interconnect28_27_0/bd_5dca_interconnect28_27_0_in_context.xdc] for cell 'inst/path_27/interconnect28_27'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_86/bd_5dca_slice28_27_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_27/slice28_27'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_86/bd_5dca_slice28_27_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_27/slice28_27'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_88/bd_5dca_interconnect29_28_0/bd_5dca_interconnect29_28_0_in_context.xdc] for cell 'inst/path_28/interconnect29_28'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_88/bd_5dca_interconnect29_28_0/bd_5dca_interconnect29_28_0_in_context.xdc] for cell 'inst/path_28/interconnect29_28'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_89/bd_5dca_slice29_28_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_28/slice29_28'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_89/bd_5dca_slice29_28_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_28/slice29_28'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_91/bd_5dca_interconnect30_29_0/bd_5dca_interconnect30_29_0_in_context.xdc] for cell 'inst/path_29/interconnect30_29'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_91/bd_5dca_interconnect30_29_0/bd_5dca_interconnect30_29_0_in_context.xdc] for cell 'inst/path_29/interconnect30_29'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_92/bd_5dca_slice30_29_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_29/slice30_29'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_92/bd_5dca_slice30_29_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_29/slice30_29'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_94/bd_5dca_interconnect31_30_0/bd_5dca_interconnect31_30_0_in_context.xdc] for cell 'inst/path_30/interconnect31_30'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_94/bd_5dca_interconnect31_30_0/bd_5dca_interconnect31_30_0_in_context.xdc] for cell 'inst/path_30/interconnect31_30'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_95/bd_5dca_slice31_30_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_30/slice31_30'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_95/bd_5dca_slice31_30_0/bd_5dca_slice2_1_0_in_context.xdc] for cell 'inst/path_30/slice31_30'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_97/bd_5dca_interconnect32_31_0/bd_5dca_interconnect32_31_0_in_context.xdc] for cell 'inst/path_31/interconnect32_31'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_97/bd_5dca_interconnect32_31_0/bd_5dca_interconnect32_31_0_in_context.xdc] for cell 'inst/path_31/interconnect32_31'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_98/bd_5dca_slice32_31_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_31/slice32_31'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_98/bd_5dca_slice32_31_0/bd_5dca_slice1_0_0_in_context.xdc] for cell 'inst/path_31/slice32_31'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_102/bd_5dca_init_reduce_0/bd_d216_calib_reduce_0_in_context.xdc] for cell 'inst/init_logic/init_reduce'
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_102/bd_5dca_init_reduce_0/bd_d216_calib_reduce_0_in_context.xdc] for cell 'inst/init_logic/init_reduce'
+Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3721.973 ; gain = 0.000 ; free physical = 162138 ; free virtual = 320107
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3749.785 ; gain = 27.812 ; free physical = 161930 ; free virtual = 320005
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 3749.785 ; gain = 729.613 ; free physical = 162346 ; free virtual = 320465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 3749.785 ; gain = 729.613 ; free physical = 162345 ; free virtual = 320463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/hbm_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/hbm_reset_sync_SLR0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/hbm_reset_sync_SLR1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/hbm_reset_sync_SLR2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S01. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S02. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S03. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S04. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S05. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S06. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S07. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S08. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S09. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S11. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S14. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S15. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S16. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S17. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S18. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S19. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S20. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S21. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S22. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S23. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S24. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S25. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S26. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S27. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S28. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S29. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S30. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S31. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/vip_S32. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/axi_apb_bridge_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/util_vector_logic. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_0/interconnect1_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_0/slice1_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_1/interconnect2_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_1/slice2_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_2/interconnect3_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_2/slice3_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_3/interconnect4_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_3/slice4_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_4/interconnect5_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_4/slice5_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_5/interconnect6_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_5/slice6_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_6/interconnect7_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_6/slice7_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_7/interconnect8_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_7/slice8_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_8/interconnect9_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_8/slice9_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_9/interconnect10_9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_9/slice10_9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_10/interconnect11_10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_10/slice11_10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_11/interconnect12_11. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_11/slice12_11. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_12/slice0_12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_12/slice13_12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_12/switch_2to1_12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_13/interconnect14_13. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_13/slice14_13. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_14/interconnect15_14. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_14/slice15_14. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_15/interconnect16_15. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_15/slice16_15. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_16/interconnect17_16. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_16/slice17_16. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_17/interconnect18_17. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_17/slice18_17. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_18/interconnect19_18. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_18/slice19_18. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_19/interconnect20_19. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_19/slice20_19. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_20/interconnect21_20. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_20/slice21_20. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_21/interconnect22_21. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_21/slice22_21. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_22/interconnect23_22. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_22/slice23_22. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_23/interconnect24_23. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_23/slice24_23. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_24/interconnect25_24. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_24/slice25_24. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_25/interconnect26_25. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_25/slice26_25. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_26/interconnect27_26. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_26/slice27_26. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_27/interconnect28_27. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_27/slice28_27. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_28/interconnect29_28. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_28/slice29_28. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_29/interconnect30_29. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_29/slice30_29. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_30/interconnect31_30. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_30/slice31_30. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_31/interconnect32_31. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/path_31/slice32_31. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/init_logic/init_concat. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/init_logic/init_reduce. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 3749.785 ; gain = 729.613 ; free physical = 162347 ; free virtual = 320465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 3749.785 ; gain = 729.613 ; free physical = 162800 ; free virtual = 320922
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 3749.785 ; gain = 729.613 ; free physical = 166392 ; free virtual = 324535
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'hbm_ref_clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:28 . Memory (MB): peak = 3787.754 ; gain = 767.582 ; free physical = 165986 ; free virtual = 324161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:28 . Memory (MB): peak = 3802.324 ; gain = 782.152 ; free physical = 166000 ; free virtual = 324174
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:31 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 165971 ; free virtual = 324145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:34 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 165979 ; free virtual = 324180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:34 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 165982 ; free virtual = 324183
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 166068 ; free virtual = 324269
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 166123 ; free virtual = 324323
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 166202 ; free virtual = 324402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 166278 ; free virtual = 324478
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |bd_5dca_axi_apb_bridge_inst_0 |         1|
+|2     |bd_5dca_hbm_inst_0            |         1|
+|3     |bd_5dca_hbm_reset_sync_SLR0_0 |         1|
+|4     |bd_5dca_hbm_reset_sync_SLR1_0 |         1|
+|5     |bd_5dca_hbm_reset_sync_SLR2_0 |         1|
+|6     |bd_5dca_util_vector_logic_0   |         1|
+|7     |bd_5dca_vip_S01_0             |         1|
+|8     |bd_5dca_vip_S02_0             |         1|
+|9     |bd_5dca_vip_S03_0             |         1|
+|10    |bd_5dca_vip_S04_0             |         1|
+|11    |bd_5dca_vip_S05_0             |         1|
+|12    |bd_5dca_vip_S06_0             |         1|
+|13    |bd_5dca_vip_S07_0             |         1|
+|14    |bd_5dca_vip_S08_0             |         1|
+|15    |bd_5dca_vip_S09_0             |         1|
+|16    |bd_5dca_vip_S10_0             |         1|
+|17    |bd_5dca_vip_S11_0             |         1|
+|18    |bd_5dca_vip_S12_0             |         1|
+|19    |bd_5dca_vip_S14_0             |         1|
+|20    |bd_5dca_vip_S15_0             |         1|
+|21    |bd_5dca_vip_S16_0             |         1|
+|22    |bd_5dca_vip_S17_0             |         1|
+|23    |bd_5dca_vip_S18_0             |         1|
+|24    |bd_5dca_vip_S19_0             |         1|
+|25    |bd_5dca_vip_S20_0             |         1|
+|26    |bd_5dca_vip_S21_0             |         1|
+|27    |bd_5dca_vip_S22_0             |         1|
+|28    |bd_5dca_vip_S23_0             |         1|
+|29    |bd_5dca_vip_S24_0             |         1|
+|30    |bd_5dca_vip_S25_0             |         1|
+|31    |bd_5dca_vip_S26_0             |         1|
+|32    |bd_5dca_vip_S27_0             |         1|
+|33    |bd_5dca_vip_S28_0             |         1|
+|34    |bd_5dca_vip_S29_0             |         1|
+|35    |bd_5dca_vip_S30_0             |         1|
+|36    |bd_5dca_vip_S31_0             |         1|
+|37    |bd_5dca_vip_S32_0             |         1|
+|38    |bd_5dca_init_reduce_0         |         1|
+|39    |bd_5dca_interconnect1_0_0     |         1|
+|40    |bd_5dca_slice1_0_0            |         1|
+|41    |bd_5dca_interconnect2_1_0     |         1|
+|42    |bd_5dca_slice2_1_0            |         1|
+|43    |bd_5dca_interconnect11_10_0   |         1|
+|44    |bd_5dca_slice11_10_0          |         1|
+|45    |bd_5dca_interconnect12_11_0   |         1|
+|46    |bd_5dca_slice12_11_0          |         1|
+|47    |bd_5dca_slice0_12_0           |         1|
+|48    |bd_5dca_slice13_12_0          |         1|
+|49    |bd_5dca_switch_2to1_12_0      |         1|
+|50    |bd_5dca_interconnect14_13_0   |         1|
+|51    |bd_5dca_slice14_13_0          |         1|
+|52    |bd_5dca_interconnect15_14_0   |         1|
+|53    |bd_5dca_slice15_14_0          |         1|
+|54    |bd_5dca_interconnect16_15_0   |         1|
+|55    |bd_5dca_slice16_15_0          |         1|
+|56    |bd_5dca_interconnect17_16_0   |         1|
+|57    |bd_5dca_slice17_16_0          |         1|
+|58    |bd_5dca_interconnect18_17_0   |         1|
+|59    |bd_5dca_slice18_17_0          |         1|
+|60    |bd_5dca_interconnect19_18_0   |         1|
+|61    |bd_5dca_slice19_18_0          |         1|
+|62    |bd_5dca_interconnect20_19_0   |         1|
+|63    |bd_5dca_slice20_19_0          |         1|
+|64    |bd_5dca_interconnect3_2_0     |         1|
+|65    |bd_5dca_slice3_2_0            |         1|
+|66    |bd_5dca_interconnect21_20_0   |         1|
+|67    |bd_5dca_slice21_20_0          |         1|
+|68    |bd_5dca_interconnect22_21_0   |         1|
+|69    |bd_5dca_slice22_21_0          |         1|
+|70    |bd_5dca_interconnect23_22_0   |         1|
+|71    |bd_5dca_slice23_22_0          |         1|
+|72    |bd_5dca_interconnect24_23_0   |         1|
+|73    |bd_5dca_slice24_23_0          |         1|
+|74    |bd_5dca_interconnect25_24_0   |         1|
+|75    |bd_5dca_slice25_24_0          |         1|
+|76    |bd_5dca_interconnect26_25_0   |         1|
+|77    |bd_5dca_slice26_25_0          |         1|
+|78    |bd_5dca_interconnect27_26_0   |         1|
+|79    |bd_5dca_slice27_26_0          |         1|
+|80    |bd_5dca_interconnect28_27_0   |         1|
+|81    |bd_5dca_slice28_27_0          |         1|
+|82    |bd_5dca_interconnect29_28_0   |         1|
+|83    |bd_5dca_slice29_28_0          |         1|
+|84    |bd_5dca_interconnect30_29_0   |         1|
+|85    |bd_5dca_slice30_29_0          |         1|
+|86    |bd_5dca_interconnect4_3_0     |         1|
+|87    |bd_5dca_slice4_3_0            |         1|
+|88    |bd_5dca_interconnect31_30_0   |         1|
+|89    |bd_5dca_slice31_30_0          |         1|
+|90    |bd_5dca_interconnect32_31_0   |         1|
+|91    |bd_5dca_slice32_31_0          |         1|
+|92    |bd_5dca_interconnect5_4_0     |         1|
+|93    |bd_5dca_slice5_4_0            |         1|
+|94    |bd_5dca_interconnect6_5_0     |         1|
+|95    |bd_5dca_slice6_5_0            |         1|
+|96    |bd_5dca_interconnect7_6_0     |         1|
+|97    |bd_5dca_slice7_6_0            |         1|
+|98    |bd_5dca_interconnect8_7_0     |         1|
+|99    |bd_5dca_slice8_7_0            |         1|
+|100   |bd_5dca_interconnect9_8_0     |         1|
+|101   |bd_5dca_slice9_8_0            |         1|
+|102   |bd_5dca_interconnect10_9_0    |         1|
+|103   |bd_5dca_slice10_9_0           |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |bd_5dca_axi_apb_bridge_inst_0 |     1|
+|2     |bd_5dca_hbm_inst_0            |     1|
+|3     |bd_5dca_hbm_reset_sync_SLR0_0 |     1|
+|4     |bd_5dca_hbm_reset_sync_SLR1_0 |     1|
+|5     |bd_5dca_hbm_reset_sync_SLR2_0 |     1|
+|6     |bd_5dca_init_reduce_0         |     1|
+|7     |bd_5dca_interconnect10_9_0    |     1|
+|8     |bd_5dca_interconnect11_10_0   |     1|
+|9     |bd_5dca_interconnect12_11_0   |     1|
+|10    |bd_5dca_interconnect14_13_0   |     1|
+|11    |bd_5dca_interconnect15_14_0   |     1|
+|12    |bd_5dca_interconnect16_15_0   |     1|
+|13    |bd_5dca_interconnect17_16_0   |     1|
+|14    |bd_5dca_interconnect18_17_0   |     1|
+|15    |bd_5dca_interconnect19_18_0   |     1|
+|16    |bd_5dca_interconnect1_0_0     |     1|
+|17    |bd_5dca_interconnect20_19_0   |     1|
+|18    |bd_5dca_interconnect21_20_0   |     1|
+|19    |bd_5dca_interconnect22_21_0   |     1|
+|20    |bd_5dca_interconnect23_22_0   |     1|
+|21    |bd_5dca_interconnect24_23_0   |     1|
+|22    |bd_5dca_interconnect25_24_0   |     1|
+|23    |bd_5dca_interconnect26_25_0   |     1|
+|24    |bd_5dca_interconnect27_26_0   |     1|
+|25    |bd_5dca_interconnect28_27_0   |     1|
+|26    |bd_5dca_interconnect29_28_0   |     1|
+|27    |bd_5dca_interconnect2_1_0     |     1|
+|28    |bd_5dca_interconnect30_29_0   |     1|
+|29    |bd_5dca_interconnect31_30_0   |     1|
+|30    |bd_5dca_interconnect32_31_0   |     1|
+|31    |bd_5dca_interconnect3_2_0     |     1|
+|32    |bd_5dca_interconnect4_3_0     |     1|
+|33    |bd_5dca_interconnect5_4_0     |     1|
+|34    |bd_5dca_interconnect6_5_0     |     1|
+|35    |bd_5dca_interconnect7_6_0     |     1|
+|36    |bd_5dca_interconnect8_7_0     |     1|
+|37    |bd_5dca_interconnect9_8_0     |     1|
+|38    |bd_5dca_slice0_12_0           |     1|
+|39    |bd_5dca_slice10_9_0           |     1|
+|40    |bd_5dca_slice11_10_0          |     1|
+|41    |bd_5dca_slice12_11_0          |     1|
+|42    |bd_5dca_slice13_12_0          |     1|
+|43    |bd_5dca_slice14_13_0          |     1|
+|44    |bd_5dca_slice15_14_0          |     1|
+|45    |bd_5dca_slice16_15_0          |     1|
+|46    |bd_5dca_slice17_16_0          |     1|
+|47    |bd_5dca_slice18_17_0          |     1|
+|48    |bd_5dca_slice19_18_0          |     1|
+|49    |bd_5dca_slice1_0_0            |     1|
+|50    |bd_5dca_slice20_19_0          |     1|
+|51    |bd_5dca_slice21_20_0          |     1|
+|52    |bd_5dca_slice22_21_0          |     1|
+|53    |bd_5dca_slice23_22_0          |     1|
+|54    |bd_5dca_slice24_23_0          |     1|
+|55    |bd_5dca_slice25_24_0          |     1|
+|56    |bd_5dca_slice26_25_0          |     1|
+|57    |bd_5dca_slice27_26_0          |     1|
+|58    |bd_5dca_slice28_27_0          |     1|
+|59    |bd_5dca_slice29_28_0          |     1|
+|60    |bd_5dca_slice2_1_0            |     1|
+|61    |bd_5dca_slice30_29_0          |     1|
+|62    |bd_5dca_slice31_30_0          |     1|
+|63    |bd_5dca_slice32_31_0          |     1|
+|64    |bd_5dca_slice3_2_0            |     1|
+|65    |bd_5dca_slice4_3_0            |     1|
+|66    |bd_5dca_slice5_4_0            |     1|
+|67    |bd_5dca_slice6_5_0            |     1|
+|68    |bd_5dca_slice7_6_0            |     1|
+|69    |bd_5dca_slice8_7_0            |     1|
+|70    |bd_5dca_slice9_8_0            |     1|
+|71    |bd_5dca_switch_2to1_12_0      |     1|
+|72    |bd_5dca_util_vector_logic_0   |     1|
+|73    |bd_5dca_vip_S01_0             |     1|
+|74    |bd_5dca_vip_S02_0             |     1|
+|75    |bd_5dca_vip_S03_0             |     1|
+|76    |bd_5dca_vip_S04_0             |     1|
+|77    |bd_5dca_vip_S05_0             |     1|
+|78    |bd_5dca_vip_S06_0             |     1|
+|79    |bd_5dca_vip_S07_0             |     1|
+|80    |bd_5dca_vip_S08_0             |     1|
+|81    |bd_5dca_vip_S09_0             |     1|
+|82    |bd_5dca_vip_S10_0             |     1|
+|83    |bd_5dca_vip_S11_0             |     1|
+|84    |bd_5dca_vip_S12_0             |     1|
+|85    |bd_5dca_vip_S14_0             |     1|
+|86    |bd_5dca_vip_S15_0             |     1|
+|87    |bd_5dca_vip_S16_0             |     1|
+|88    |bd_5dca_vip_S17_0             |     1|
+|89    |bd_5dca_vip_S18_0             |     1|
+|90    |bd_5dca_vip_S19_0             |     1|
+|91    |bd_5dca_vip_S20_0             |     1|
+|92    |bd_5dca_vip_S21_0             |     1|
+|93    |bd_5dca_vip_S22_0             |     1|
+|94    |bd_5dca_vip_S23_0             |     1|
+|95    |bd_5dca_vip_S24_0             |     1|
+|96    |bd_5dca_vip_S25_0             |     1|
+|97    |bd_5dca_vip_S26_0             |     1|
+|98    |bd_5dca_vip_S27_0             |     1|
+|99    |bd_5dca_vip_S28_0             |     1|
+|100   |bd_5dca_vip_S29_0             |     1|
+|101   |bd_5dca_vip_S30_0             |     1|
+|102   |bd_5dca_vip_S31_0             |     1|
+|103   |bd_5dca_vip_S32_0             |     1|
++------+------------------------------+------+
+
+Report Instance Areas: 
++------+------------------+-----------------------+------+
+|      |Instance          |Module                 |Cells |
++------+------------------+-----------------------+------+
+|1     |top               |                       | 84103|
+|2     |  inst            |bd_5dca                | 84103|
+|3     |    init_logic    |init_logic_imp_156LN22 |     1|
+|4     |      init_concat |bd_5dca_init_concat_0  |     0|
+|5     |    path_0        |path_0_imp_D0DQII      |  1596|
+|6     |    path_1        |path_1_imp_1QSHYAS     |  1596|
+|7     |    path_10       |path_10_imp_1HUOXYY    |  1596|
+|8     |    path_11       |path_11_imp_43778K     |  1596|
+|9     |    path_12       |path_12_imp_ZKKHAF     |  3920|
+|10    |    path_13       |path_13_imp_L94V89     |  1596|
+|11    |    path_14       |path_14_imp_JITO1S     |  1596|
+|12    |    path_15       |path_15_imp_12K2DNI    |  1596|
+|13    |    path_16       |path_16_imp_18P6RH     |  1596|
+|14    |    path_17       |path_17_imp_1JQ00YR    |  1596|
+|15    |    path_18       |path_18_imp_4ZB6FJ     |  1596|
+|16    |    path_19       |path_19_imp_1PF015D    |  1596|
+|17    |    path_2        |path_2_imp_U6BEH3      |  1596|
+|18    |    path_20       |path_20_imp_1XT8RPB    |  1596|
+|19    |    path_21       |path_21_imp_FBBGKH     |  1596|
+|20    |    path_22       |path_22_imp_1FJCOXU    |  1596|
+|21    |    path_23       |path_23_imp_WHHIHO     |  1596|
+|22    |    path_24       |path_24_imp_ZGQW91     |  1596|
+|23    |    path_25       |path_25_imp_1DSSZ8B    |  1596|
+|24    |    path_26       |path_26_imp_H6UVUG     |  1596|
+|25    |    path_27       |path_27_imp_1UYZ3FQ    |  1596|
+|26    |    path_28       |path_28_imp_B8HQIY     |  1596|
+|27    |    path_29       |path_29_imp_1RHQ784    |  1596|
+|28    |    path_3        |path_3_imp_18IDHND     |  1596|
+|29    |    path_30       |path_30_imp_1TQ3UKC    |  1596|
+|30    |    path_31       |path_31_imp_8YJZDU     |  1596|
+|31    |    path_4        |path_4_imp_1BCVI4G     |  1596|
+|32    |    path_5        |path_5_imp_SB0BHA      |  1596|
+|33    |    path_6        |path_6_imp_1SIT5H9     |  1596|
+|34    |    path_7        |path_7_imp_A0VU5F      |  1596|
+|35    |    path_8        |path_8_imp_1Y76OJZ     |  1596|
+|36    |    path_9        |path_9_imp_DS4AXD      |  1596|
++------+------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 3898.957 ; gain = 878.785 ; free physical = 166277 ; free virtual = 324478
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:14 . Memory (MB): peak = 3898.957 ; gain = 443.812 ; free physical = 166310 ; free virtual = 324511
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 3898.965 ; gain = 878.785 ; free physical = 166319 ; free virtual = 324519
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.44 . Memory (MB): peak = 3898.965 ; gain = 0.000 ; free physical = 166314 ; free virtual = 324514
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4058.770 ; gain = 0.000 ; free physical = 166309 ; free virtual = 324509
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+219 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:02:15 . Memory (MB): peak = 4070.738 ; gain = 2223.348 ; free physical = 166495 ; free virtual = 324696
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+[OPTRACE]|16308|9|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674543479|END|synth_design|
+[OPTRACE]|16308|10|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674543480|START|Write IP Cache|
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4070.738 ; gain = 0.000 ; free physical = 166514 ; free virtual = 324715
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 4070.738 ; gain = 0.000 ; free physical = 166572 ; free virtual = 324780
+write_vhdl: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 4070.738 ; gain = 0.000 ; free physical = 166418 ; free virtual = 324629
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pfm_dynamic_hmss_0_0, cache-ID = eb4ae3ddaf07b2c8
+[OPTRACE]|16308|11|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674561858|END|Write IP Cache|
+INFO: [Coretcl 2-1174] Renamed 138 cell refs.
+[OPTRACE]|16308|12|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674561862|START|write_checkpoint|CHECKPOINT
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4070.738 ; gain = 0.000 ; free physical = 166381 ; free virtual = 324600
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 4070.738 ; gain = 0.000 ; free physical = 166337 ; free virtual = 324556
+[OPTRACE]|16308|13|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674570160|END|write_checkpoint|
+[OPTRACE]|16308|14|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674570160|START|synth_report|REPORT
+INFO: [runtcl-4] Executing : report_utilization -file pfm_dynamic_hmss_0_0_utilization_synth.rpt -pb pfm_dynamic_hmss_0_0_utilization_synth.pb
+[OPTRACE]|16308|15|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674570568|END|synth_report|
+write_vhdl: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 4070.738 ; gain = 0.000 ; free physical = 165474 ; free virtual = 323703
+[OPTRACE]|16308|16|/home/marimeyer/repos/stream_fpga/cmake-build-hbm-halfedmem/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.tcl|vivado_synth|1585674580263|END|pfm_dynamic_hmss_0_0_synth_1|
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 19:09:40 2020...

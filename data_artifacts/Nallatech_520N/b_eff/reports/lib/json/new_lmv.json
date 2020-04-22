@@ -1,0 +1,320 @@
+{
+  "nodes":
+  [
+    {
+      "name":"send"
+      , "id":1435049368
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":1
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"send_part1"
+              , "id":2
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"75"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"send_part2"
+              , "id":3
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"76"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":76
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"recv_part1"
+              , "id":4
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"87"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":87
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"recv_part2"
+              , "id":5
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"88"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":88
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"recv"
+      , "id":1435062264
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":6
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"send_part1"
+              , "id":7
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"114"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":114
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"send_part2"
+              , "id":8
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"115"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":115
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"recv_part1"
+              , "id":9
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"116"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":116
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"recv_part2"
+              , "id":10
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                          , "line":"117"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                    , "line":117
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

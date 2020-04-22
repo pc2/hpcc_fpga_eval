@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+
+<html>
+<!-- Styles -->
+<style>
+    #chartdiv {
+      width: 100%;
+      height: 1000px;
+    }
+</style>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>OPTraceViewer</title>
+  <script src="https://www.amcharts.com/lib/3/amcharts.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/serial.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/gantt.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js">
+  </script>
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
+  <form name="userInputForm" action="javascript:userInputFormCallback()">
+    <fieldset>
+    <legend>Graph Filters:</legend>
+    <table style="width:100%">
+      <col width="50"></col>
+      <col width="20"></col>
+      <col width="60"></col>
+      <tr>
+        <td style="text-align: center"; colspan="3"><input type="number" name="userDurationFilterSecInput" id="userDurationFilterSecInput" value="2" min="0" max="6000" step="1"> sec</td>
+        <td>Filter out run durations lower than this value</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td style="text-align: center"><input type="checkbox" name="userGroupPidSortSelected" id="userGroupPidSortSelected"></td>
+        <td>Group sort by process ID</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#0099ff"></td>
+        <td style="text-align: center"><input type="checkbox" name="userRollupSelected" id="userRollupSelected"></td>
+        <td>Show rollup entries</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#8dc49f"></td>
+        <td style="text-align: center"><input type="checkbox" name="userIndividualEntrySelected" id="userIndividualEntrySelected"></td>
+        <td>Show individual entries</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#cd82ad"></td>
+        <td style="text-align: center"><input type="checkbox" name="userCheckpointEntrySelected" id="userCheckpointEntrySelected"></td>
+        <td>Show checkpoints entry</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td bgcolor="#b9783f"></td>
+        <td style="text-align: center"><input type="checkbox" name="userReportEntrySelected" id="userReportEntrySelected"></td>
+        <td>Show report entry</td>
+      </tr>
+
+    </table>
+    <br>
+    <input name="Submit" type="submit" value="Update Graph">
+    </fieldset>
+  </form> 
+
+  <div id="chartdiv">
+  </div>
+
+  <script>
+  </script>
+
+</head>
+
+
+<body>
+<table id="myDynamicTable" cellpadding="2" cellspacing="2" border="1" onclick="tester()">
+  <tr>
+  <td>Task</td>
+  <td>Start</td>
+  <td>Duration</td>
+  </tr>
+</table>
+<script>
+  // Default User Selected variables
+  var m_secondFilter = 1;
+  var m_groupPidSort = true;
+  var m_showRollup = true;
+  var m_showIndividualEntry = false;
+  var m_showCheckpointEntry = false;
+  var m_showReportEntry = false;
+
+  function SetDefaultUserValues()
+  {
+    document.getElementById("userDurationFilterSecInput").value = m_secondFilter;
+    document.getElementById("userGroupPidSortSelected").checked = m_groupPidSort;
+    document.getElementById("userRollupSelected").checked = m_showRollup;
+    document.getElementById("userIndividualEntrySelected").checked = m_showIndividualEntry;
+    document.getElementById("userCheckpointEntrySelected").checked = m_showCheckpointEntry;
+    document.getElementById("userReportEntrySelected").checked = m_showReportEntry;
+  }
+
+  window.onload = function(){
+    SetDefaultUserValues();
+  }
+
+
+
+
+  // Header
+  var header = "Keyword|pid|Entry|SrcFile|Catagory|TimeStampMSec|Action|Task|Tags|Misc";
+                         
+  // Insert Raw Data Here
+  // Note: Do not change the following signature. 
+  var csvData =    [
+      "[OPTRACE]|139668778575872|10|OPTraceCPP|cpp|1587558461151|START|OCL_LINK|",
+      "[OPTRACE]|139668778575872|11|OPTraceCPP|cpp|1587558461151|START|CreateBinary|",
+      "[OPTRACE]|139668778575872|12|OPTraceCPP|cpp|1587558461152|END|CreateBinary|",
+      "[OPTRACE]|139668778575872|13|OPTraceCPP|cpp|1587558461152|START|Extract Kernels|",
+      "[OPTRACE]|139668778575872|14|OPTraceCPP|cpp|1587558461475|END|Extract Kernels|",
+      "[OPTRACE]|139668778575872|15|OPTraceCPP|cpp|1587558461702|START|Launch Step: system_link|",
+      "[OPTRACE]|139668778575872|16|OPTraceCPP|cpp|1587558483589|END|Launch Step: system_link|",
+      "[OPTRACE]|139668778575872|17|OPTraceCPP|cpp|1587558483591|START|Launch Step: cf2sw|",
+      "[OPTRACE]|139668778575872|18|OPTraceCPP|cpp|1587558485482|END|Launch Step: cf2sw|",
+      "[OPTRACE]|139668778575872|19|OPTraceCPP|cpp|1587558485484|START|Launch Step: rtd2_system_diagram|",
+      "[OPTRACE]|139668778575872|1|OPTraceCPP|cpp|1587558453073|START|v++|ROLLUP_0",
+      "[OPTRACE]|139668778575872|20|OPTraceCPP|cpp|1587558487069|END|Launch Step: rtd2_system_diagram|",
+      "[OPTRACE]|139668778575872|21|OPTraceCPP|cpp|1587558487071|START|Launch Step: vpl|",
+      "[OPTRACE]|139668778575872|22|OPTraceCPP|cpp|1587566242215|END|Launch Step: vpl|",
+      "[OPTRACE]|139668778575872|23|OPTraceCPP|cpp|1587566242218|START|Launch Step: rtdgen|",
+      "[OPTRACE]|139668778575872|24|OPTraceCPP|cpp|1587566242234|START|Launch cf2sw|",
+      "[OPTRACE]|139668778575872|25|OPTraceCPP|cpp|1587566244356|END|Launch cf2sw|",
+      "[OPTRACE]|139668778575872|26|OPTraceCPP|cpp|1587566245725|END|Launch rtd2_system_diagram|",
+      "[OPTRACE]|139668778575872|27|OPTraceCPP|cpp|1587566245728|END|Launch Step: rtdgen|",
+      "[OPTRACE]|139668778575872|28|OPTraceCPP|cpp|1587566245731|START|Launch Step: xclbinutil|",
+      "[OPTRACE]|139668778575872|29|OPTraceCPP|cpp|1587566246299|END|Launch Step: xclbinutil|",
+      "[OPTRACE]|139668778575872|2|OPTraceCPP|cpp|1587558453073|START|Validate Kernels|",
+      "[OPTRACE]|139668778575872|30|OPTraceCPP|cpp|1587566246301|START|Launch Step: xclbinutilinfo|",
+      "[OPTRACE]|139668778575872|31|OPTraceCPP|cpp|1587566246680|END|Launch Step: xclbinutilinfo|",
+      "[OPTRACE]|139668778575872|32|OPTraceCPP|cpp|1587566246693|END|OCL_LINK|",
+      "[OPTRACE]|139668778575872|33|OPTraceCPP|cpp|1587566250955|END|v++|",
+      "[OPTRACE]|139668778575872|3|OPTraceCPP|cpp|1587558453255|END|Validate Kernels|",
+      "[OPTRACE]|139668778575872|4|OPTraceCPP|cpp|1587558453297|START|CreateSolution|",
+      "[OPTRACE]|139668778575872|5|OPTraceCPP|cpp|1587558455270|END|CreateSolution|",
+      "[OPTRACE]|139668778575872|6|OPTraceCPP|cpp|1587558455270|START|AddDevice|",
+      "[OPTRACE]|139668778575872|7|OPTraceCPP|cpp|1587558455270|START|Find & load device|",
+      "[OPTRACE]|139668778575872|8|OPTraceCPP|cpp|1587558455425|END|Find & load device|",
+      "[OPTRACE]|139668778575872|9|OPTraceCPP|cpp|1587558461139|END|AddDevice|",
+      "[OPTRACE]|38732|10|ipirun.tcl|sdx_vpl|1587558621136|END|Import / add dynamic bd|",
+      "[OPTRACE]|38732|11|ipirun.tcl|sdx_vpl|1587558621136|START|Open bd and insert kernels|",
+      "[OPTRACE]|38732|12|ipirun.tcl|sdx_vpl|1587558637486|END|Open bd and insert kernels|",
+      "[OPTRACE]|38732|13|ipirun.tcl|sdx_vpl|1587558637489|START|Add debug / profiling support|",
+      "[OPTRACE]|38732|14|ipirun.tcl|sdx_vpl|1587558642631|END|Add debug / profiling support|",
+      "[OPTRACE]|38732|15|ipirun.tcl|sdx_vpl|1587558642631|START|IPI address assignments|",
+      "[OPTRACE]|38732|16|ipirun.tcl|sdx_vpl|1587558642644|END|IPI address assignments|",
+      "[OPTRACE]|38732|17|ipirun.tcl|sdx_vpl|1587558642644|START|Sourcing hardware platform post_sys_link Tcl script|",
+      "[OPTRACE]|38732|18|ipirun.tcl|sdx_vpl|1587558642655|END|Sourcing hardware platform post_sys_link Tcl script|",
+      "[OPTRACE]|38732|19|ipirun.tcl|sdx_vpl|1587558642669|START|Save BD|",
+      "[OPTRACE]|38732|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/vpl.tcl|vivado_impl|1587558552177|START|Implementation|ROLLUP_1",
+      "[OPTRACE]|38732|1|ipirun.tcl|sdx_vpl|1587558552247|START|ipirun|ROLLUP_0",
+      "[OPTRACE]|38732|20|ipirun.tcl|sdx_vpl|1587558643786|END|Save BD|",
+      "[OPTRACE]|38732|21|ipirun.tcl|sdx_vpl|1587558643786|START|Create address map and debug IP profile files|",
+      "[OPTRACE]|38732|22|ipirun.tcl|sdx_vpl|1587558643807|START|Generate output products|",
+      "[OPTRACE]|38732|23|ipirun.tcl|sdx_vpl|1587558852392|END|Generate output products|",
+      "[OPTRACE]|38732|24|ipirun.tcl|sdx_vpl|1587558852412|START|Source report_commands_tcl|",
+      "[OPTRACE]|38732|25|ipirun.tcl|sdx_vpl|1587558852797|END|Source report_commands_tcl|",
+      "[OPTRACE]|38732|26|ipirun.tcl|sdx_vpl|1587558852797|START|Source synth_props_tcl|",
+      "[OPTRACE]|38732|27|ipirun.tcl|sdx_vpl|1587558856483|END|Source synth_props_tcl|",
+      "[OPTRACE]|38732|28|ipirun.tcl|sdx_vpl|1587558856489|START|Source impl_props_tcl|",
+      "[OPTRACE]|38732|29|ipirun.tcl|sdx_vpl|1587558856607|END|Source impl_props_tcl|",
+      "[OPTRACE]|38732|2|ipirun.tcl|sdx_vpl|1587558552248|END|ipirun|",
+      "[OPTRACE]|38732|30|ipirun.tcl|sdx_vpl|1587558856611|START|Synthesis|SYNTH,ROLLUP_1",
+      "[OPTRACE]|38732|31|ipirun.tcl|sdx_vpl|1587559461562|END|Synthesis|",
+      "[OPTRACE]|38732|3|ipirun.tcl|sdx_vpl|1587558552253|START|Source pre_sys_link Tcl script|",
+      "[OPTRACE]|38732|4|ipirun.tcl|sdx_vpl|1587558552258|END|Source pre_sys_link Tcl script|",
+      "[OPTRACE]|38732|5|ipirun.tcl|sdx_vpl|1587558552258|START|Create project|",
+      "[OPTRACE]|38732|6|ipirun.tcl|sdx_vpl|1587558554806|END|Create project|",
+      "[OPTRACE]|38732|7|ipirun.tcl|sdx_vpl|1587558554820|START|Create IP caching environment|",
+      "[OPTRACE]|38732|8|ipirun.tcl|sdx_vpl|1587558559879|END|Create IP caching environment|",
+      "[OPTRACE]|38732|9|ipirun.tcl|sdx_vpl|1587558559880|START|Import / add dynamic bd|",
+      "[OPTRACE]|39836|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558979814|START|Write IP Cache|",
+      "[OPTRACE]|39836|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558980961|END|Write IP Cache|",
+      "[OPTRACE]|39836|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558980961|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39836|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558981237|END|write_checkpoint|",
+      "[OPTRACE]|39836|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558981237|START|synth_report|REPORT",
+      "[OPTRACE]|39836|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558981522|END|synth_report|",
+      "[OPTRACE]|39836|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558982091|END|bd_d216_vip_S02_AXI_0_synth_1|",
+      "[OPTRACE]|39836|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558868398|START|bd_d216_vip_S02_AXI_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39836|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558868401|START|Creating in-memory project|",
+      "[OPTRACE]|39836|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558875418|END|Creating in-memory project|",
+      "[OPTRACE]|39836|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558875418|START|Adding files|",
+      "[OPTRACE]|39836|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558875697|END|Adding files|",
+      "[OPTRACE]|39836|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558875699|START|Configure IP Cache|",
+      "[OPTRACE]|39836|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558875701|END|Configure IP Cache|",
+      "[OPTRACE]|39836|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558875702|START|synth_design|",
+      "[OPTRACE]|39836|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S02_AXI_0_synth_1/bd_d216_vip_S02_AXI_0.tcl|vivado_synth|1587558979813|END|synth_design|",
+      "[OPTRACE]|39837|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559121468|START|Write IP Cache|",
+      "[OPTRACE]|39837|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559135443|END|Write IP Cache|",
+      "[OPTRACE]|39837|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559135463|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39837|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559144115|END|write_checkpoint|",
+      "[OPTRACE]|39837|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559144115|START|synth_report|REPORT",
+      "[OPTRACE]|39837|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559144592|END|synth_report|",
+      "[OPTRACE]|39837|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559149158|END|bd_d216_interconnect_S00_AXI_0_synth_1|",
+      "[OPTRACE]|39837|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558868402|START|bd_d216_interconnect_S00_AXI_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39837|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558868407|START|Creating in-memory project|",
+      "[OPTRACE]|39837|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558875250|END|Creating in-memory project|",
+      "[OPTRACE]|39837|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558875251|START|Adding files|",
+      "[OPTRACE]|39837|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558876524|END|Adding files|",
+      "[OPTRACE]|39837|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558876526|START|Configure IP Cache|",
+      "[OPTRACE]|39837|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558876557|END|Configure IP Cache|",
+      "[OPTRACE]|39837|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587558876558|START|synth_design|",
+      "[OPTRACE]|39837|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_S00_AXI_0_synth_1/bd_d216_interconnect_S00_AXI_0.tcl|vivado_synth|1587559121468|END|synth_design|",
+      "[OPTRACE]|39838|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558977946|START|Write IP Cache|",
+      "[OPTRACE]|39838|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558978925|END|Write IP Cache|",
+      "[OPTRACE]|39838|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558978926|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39838|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558979184|END|write_checkpoint|",
+      "[OPTRACE]|39838|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558979184|START|synth_report|REPORT",
+      "[OPTRACE]|39838|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558979443|END|synth_report|",
+      "[OPTRACE]|39838|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558979950|END|bd_d216_vip_S01_AXI_0_synth_1|",
+      "[OPTRACE]|39838|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558868419|START|bd_d216_vip_S01_AXI_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39838|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558868422|START|Creating in-memory project|",
+      "[OPTRACE]|39838|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558875197|END|Creating in-memory project|",
+      "[OPTRACE]|39838|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558875197|START|Adding files|",
+      "[OPTRACE]|39838|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558875462|END|Adding files|",
+      "[OPTRACE]|39838|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558875464|START|Configure IP Cache|",
+      "[OPTRACE]|39838|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558875466|END|Configure IP Cache|",
+      "[OPTRACE]|39838|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558875467|START|synth_design|",
+      "[OPTRACE]|39838|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_vip_S01_AXI_0_synth_1/bd_d216_vip_S01_AXI_0.tcl|vivado_synth|1587558977946|END|synth_design|",
+      "[OPTRACE]|39839|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559090147|START|Write IP Cache|",
+      "[OPTRACE]|39839|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559102461|END|Write IP Cache|",
+      "[OPTRACE]|39839|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559102470|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39839|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559109727|END|write_checkpoint|",
+      "[OPTRACE]|39839|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559109728|START|synth_report|REPORT",
+      "[OPTRACE]|39839|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559110160|END|synth_report|",
+      "[OPTRACE]|39839|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559113685|END|bd_d216_interconnect_DDR4_MEM01_0_synth_1|",
+      "[OPTRACE]|39839|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558868419|START|bd_d216_interconnect_DDR4_MEM01_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39839|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558868425|START|Creating in-memory project|",
+      "[OPTRACE]|39839|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558875202|END|Creating in-memory project|",
+      "[OPTRACE]|39839|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558875202|START|Adding files|",
+      "[OPTRACE]|39839|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558876724|END|Adding files|",
+      "[OPTRACE]|39839|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558876726|START|Configure IP Cache|",
+      "[OPTRACE]|39839|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558876761|END|Configure IP Cache|",
+      "[OPTRACE]|39839|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587558876762|START|synth_design|",
+      "[OPTRACE]|39839|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM01_0_synth_1/bd_d216_interconnect_DDR4_MEM01_0.tcl|vivado_synth|1587559090146|END|synth_design|",
+      "[OPTRACE]|39840|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559089478|START|Write IP Cache|",
+      "[OPTRACE]|39840|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559100577|END|Write IP Cache|",
+      "[OPTRACE]|39840|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559100585|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39840|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559107795|END|write_checkpoint|",
+      "[OPTRACE]|39840|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559107795|START|synth_report|REPORT",
+      "[OPTRACE]|39840|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559108217|END|synth_report|",
+      "[OPTRACE]|39840|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559111778|END|bd_d216_interconnect_DDR4_MEM00_0_synth_1|",
+      "[OPTRACE]|39840|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558868445|START|bd_d216_interconnect_DDR4_MEM00_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39840|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558868448|START|Creating in-memory project|",
+      "[OPTRACE]|39840|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558875196|END|Creating in-memory project|",
+      "[OPTRACE]|39840|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558875196|START|Adding files|",
+      "[OPTRACE]|39840|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558876740|END|Adding files|",
+      "[OPTRACE]|39840|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558876742|START|Configure IP Cache|",
+      "[OPTRACE]|39840|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558876777|END|Configure IP Cache|",
+      "[OPTRACE]|39840|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587558876778|START|synth_design|",
+      "[OPTRACE]|39840|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_d216_interconnect_DDR4_MEM00_0_synth_1/bd_d216_interconnect_DDR4_MEM00_0.tcl|vivado_synth|1587559089478|END|synth_design|",
+      "[OPTRACE]|39841|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558996330|START|Write IP Cache|",
+      "[OPTRACE]|39841|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558997474|END|Write IP Cache|",
+      "[OPTRACE]|39841|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558997474|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39841|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558997801|END|write_checkpoint|",
+      "[OPTRACE]|39841|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558997801|START|synth_report|REPORT",
+      "[OPTRACE]|39841|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558998081|END|synth_report|",
+      "[OPTRACE]|39841|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558998678|END|pfm_dynamic_xbar_4_synth_1|",
+      "[OPTRACE]|39841|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558868393|START|pfm_dynamic_xbar_4_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39841|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558868396|START|Creating in-memory project|",
+      "[OPTRACE]|39841|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558875198|END|Creating in-memory project|",
+      "[OPTRACE]|39841|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558875198|START|Adding files|",
+      "[OPTRACE]|39841|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558875779|END|Adding files|",
+      "[OPTRACE]|39841|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558875780|START|Configure IP Cache|",
+      "[OPTRACE]|39841|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558875835|END|Configure IP Cache|",
+      "[OPTRACE]|39841|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558875836|START|synth_design|",
+      "[OPTRACE]|39841|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_4_synth_1/pfm_dynamic_xbar_4.tcl|vivado_synth|1587558996330|END|synth_design|",
+      "[OPTRACE]|39842|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558996963|START|Write IP Cache|",
+      "[OPTRACE]|39842|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558998141|END|Write IP Cache|",
+      "[OPTRACE]|39842|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558998142|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39842|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558998502|END|write_checkpoint|",
+      "[OPTRACE]|39842|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558998502|START|synth_report|REPORT",
+      "[OPTRACE]|39842|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558998772|END|synth_report|",
+      "[OPTRACE]|39842|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558999320|END|pfm_dynamic_xbar_2_synth_1|",
+      "[OPTRACE]|39842|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558868456|START|pfm_dynamic_xbar_2_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39842|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558868459|START|Creating in-memory project|",
+      "[OPTRACE]|39842|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558875199|END|Creating in-memory project|",
+      "[OPTRACE]|39842|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558875199|START|Adding files|",
+      "[OPTRACE]|39842|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558875790|END|Adding files|",
+      "[OPTRACE]|39842|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558875791|START|Configure IP Cache|",
+      "[OPTRACE]|39842|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558875846|END|Configure IP Cache|",
+      "[OPTRACE]|39842|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558875847|START|synth_design|",
+      "[OPTRACE]|39842|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_xbar_2_synth_1/pfm_dynamic_xbar_2.tcl|vivado_synth|1587558996963|END|synth_design|",
+      "[OPTRACE]|39843|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559017151|START|Write IP Cache|",
+      "[OPTRACE]|39843|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559020735|END|Write IP Cache|",
+      "[OPTRACE]|39843|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559020736|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39843|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559022946|END|write_checkpoint|",
+      "[OPTRACE]|39843|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559022946|START|synth_report|REPORT",
+      "[OPTRACE]|39843|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559023269|END|synth_report|",
+      "[OPTRACE]|39843|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559024416|END|pfm_dynamic_accessMemory_0_2_0_synth_1|",
+      "[OPTRACE]|39843|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558868419|START|pfm_dynamic_accessMemory_0_2_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39843|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558868422|START|Creating in-memory project|",
+      "[OPTRACE]|39843|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558875197|END|Creating in-memory project|",
+      "[OPTRACE]|39843|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558875198|START|Adding files|",
+      "[OPTRACE]|39843|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558875447|END|Adding files|",
+      "[OPTRACE]|39843|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558875449|START|Configure IP Cache|",
+      "[OPTRACE]|39843|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558875450|END|Configure IP Cache|",
+      "[OPTRACE]|39843|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587558875451|START|synth_design|",
+      "[OPTRACE]|39843|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_2_0_synth_1/pfm_dynamic_accessMemory_0_2_0.tcl|vivado_synth|1587559017151|END|synth_design|",
+      "[OPTRACE]|39844|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559017354|START|Write IP Cache|",
+      "[OPTRACE]|39844|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559020874|END|Write IP Cache|",
+      "[OPTRACE]|39844|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559020875|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|39844|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559022941|END|write_checkpoint|",
+      "[OPTRACE]|39844|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559022941|START|synth_report|REPORT",
+      "[OPTRACE]|39844|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559023240|END|synth_report|",
+      "[OPTRACE]|39844|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559024324|END|pfm_dynamic_accessMemory_0_1_0_synth_1|",
+      "[OPTRACE]|39844|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558868454|START|pfm_dynamic_accessMemory_0_1_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|39844|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558868457|START|Creating in-memory project|",
+      "[OPTRACE]|39844|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558875195|END|Creating in-memory project|",
+      "[OPTRACE]|39844|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558875196|START|Adding files|",
+      "[OPTRACE]|39844|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558875448|END|Adding files|",
+      "[OPTRACE]|39844|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558875449|START|Configure IP Cache|",
+      "[OPTRACE]|39844|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558875450|END|Configure IP Cache|",
+      "[OPTRACE]|39844|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587558875451|START|synth_design|",
+      "[OPTRACE]|39844|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_accessMemory_0_1_0_synth_1/pfm_dynamic_accessMemory_0_1_0.tcl|vivado_synth|1587559017354|END|synth_design|",
+      "[OPTRACE]|40908|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559280707|START|Write IP Cache|",
+      "[OPTRACE]|40908|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559282975|END|Write IP Cache|",
+      "[OPTRACE]|40908|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559282977|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|40908|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559284105|END|write_checkpoint|",
+      "[OPTRACE]|40908|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559284105|START|synth_report|REPORT",
+      "[OPTRACE]|40908|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559284357|END|synth_report|",
+      "[OPTRACE]|40908|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559285110|END|pfm_dynamic_memory_subsystem_0_synth_1|",
+      "[OPTRACE]|40908|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559167155|START|pfm_dynamic_memory_subsystem_0_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|40908|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559167158|START|Creating in-memory project|",
+      "[OPTRACE]|40908|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559173569|END|Creating in-memory project|",
+      "[OPTRACE]|40908|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559173569|START|Adding files|",
+      "[OPTRACE]|40908|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559182736|END|Adding files|",
+      "[OPTRACE]|40908|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559182757|START|Configure IP Cache|",
+      "[OPTRACE]|40908|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559183228|END|Configure IP Cache|",
+      "[OPTRACE]|40908|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559183230|START|synth_design|",
+      "[OPTRACE]|40908|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_memory_subsystem_0_synth_1/pfm_dynamic_memory_subsystem_0.tcl|vivado_synth|1587559280707|END|synth_design|",
+      "[OPTRACE]|41465|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559449191|START|synth_report|REPORT",
+      "[OPTRACE]|41465|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559449191|END|synth_report|",
+      "[OPTRACE]|41465|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559450576|END|my_rm_synth_1|",
+      "[OPTRACE]|41465|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559302765|START|my_rm_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|41465|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559302767|START|Creating in-memory project|",
+      "[OPTRACE]|41465|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559309154|END|Creating in-memory project|",
+      "[OPTRACE]|41465|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559309154|START|Adding files|",
+      "[OPTRACE]|41465|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559321453|END|Adding files|",
+      "[OPTRACE]|41465|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559321471|START|synth_design|",
+      "[OPTRACE]|41465|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559447271|END|synth_design|",
+      "[OPTRACE]|41465|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559447330|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|41465|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/pfm_dynamic.tcl|vivado_synth|1587559449190|END|write_checkpoint|",
+      "[OPTRACE]|43880|100|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224159|END|write_bitstream_misc|",
+      "[OPTRACE]|43880|101|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224160|END|Phase: Write Bitstream|",
+      "[OPTRACE]|43880|102|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224160|END|Implementation|",
+      "[OPTRACE]|43880|10|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559491831|START|read constraints: implementation|",
+      "[OPTRACE]|43880|11|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559491836|END|read constraints: implementation|",
+      "[OPTRACE]|43880|12|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559491836|END|add files|",
+      "[OPTRACE]|43880|13|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559491836|START|link_design|",
+      "[OPTRACE]|43880|14|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559948126|END|link_design|",
+      "[OPTRACE]|43880|15|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559948126|START|gray box cells|",
+      "[OPTRACE]|43880|16|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559948126|END|gray box cells|",
+      "[OPTRACE]|43880|17|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559948126|START|Design Initialization: post hook|",
+      "[OPTRACE]|43880|18|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559968365|END|Design Initialization: post hook|",
+      "[OPTRACE]|43880|19|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559968365|START|init_design_reports|REPORT",
+      "[OPTRACE]|43880|1|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559470784|START|Implementation|ROLLUP_1",
+      "[OPTRACE]|43880|20|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560048219|END|init_design_reports|",
+      "[OPTRACE]|43880|21|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560048220|START|init_design_write_hwdef|",
+      "[OPTRACE]|43880|22|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560051563|END|init_design_write_hwdef|",
+      "[OPTRACE]|43880|23|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560051565|END|Phase: Init Design|",
+      "[OPTRACE]|43880|24|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560051566|START|Phase: Opt Design|ROLLUP_AUTO",
+      "[OPTRACE]|43880|25|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560051568|START|Opt Design: pre hook|",
+      "[OPTRACE]|43880|26|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560081693|END|Opt Design: pre hook|",
+      "[OPTRACE]|43880|27|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560081693|START|read constraints: opt_design|",
+      "[OPTRACE]|43880|28|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560081693|END|read constraints: opt_design|",
+      "[OPTRACE]|43880|29|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560081693|START|opt_design|",
+      "[OPTRACE]|43880|2|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559470785|START|Phase: Init Design|ROLLUP_AUTO",
+      "[OPTRACE]|43880|30|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560613812|END|opt_design|",
+      "[OPTRACE]|43880|31|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560613813|START|read constraints: opt_design_post|",
+      "[OPTRACE]|43880|32|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560613813|END|read constraints: opt_design_post|",
+      "[OPTRACE]|43880|33|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560613813|START|Opt Design: post hook|",
+      "[OPTRACE]|43880|34|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560786741|END|Opt Design: post hook|",
+      "[OPTRACE]|43880|35|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560786741|START|Opt Design: write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|43880|36|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914660|END|Opt Design: write_checkpoint|",
+      "[OPTRACE]|43880|37|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914660|START|opt_design_reports|REPORT",
+      "[OPTRACE]|43880|38|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914660|END|opt_design_reports|",
+      "[OPTRACE]|43880|39|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914662|END|Phase: Opt Design|",
+      "[OPTRACE]|43880|3|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559470787|START|Design Initialization: pre hook|",
+      "[OPTRACE]|43880|40|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914662|START|Phase: Place Design|ROLLUP_AUTO",
+      "[OPTRACE]|43880|41|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914665|START|Place Design: pre hook|",
+      "[OPTRACE]|43880|42|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914686|END|Place Design: pre hook|",
+      "[OPTRACE]|43880|43|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914686|START|read constraints: place_design|",
+      "[OPTRACE]|43880|44|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914686|END|read constraints: place_design|",
+      "[OPTRACE]|43880|45|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914687|START|implement_debug_core|",
+      "[OPTRACE]|43880|46|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914687|END|implement_debug_core|",
+      "[OPTRACE]|43880|47|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587560914687|START|place_design|",
+      "[OPTRACE]|43880|48|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562567323|END|place_design|",
+      "[OPTRACE]|43880|49|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562567323|START|read constraints: place_design_post|",
+      "[OPTRACE]|43880|4|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559470805|END|Design Initialization: pre hook|",
+      "[OPTRACE]|43880|50|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562567323|END|read constraints: place_design_post|",
+      "[OPTRACE]|43880|51|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562567323|START|Place Design: post hook|",
+      "[OPTRACE]|43880|52|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562590854|END|Place Design: post hook|",
+      "[OPTRACE]|43880|53|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562590854|START|Place Design: write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|43880|54|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562714095|END|Place Design: write_checkpoint|",
+      "[OPTRACE]|43880|55|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562714095|START|place_design_reports|REPORT",
+      "[OPTRACE]|43880|56|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562785568|END|place_design_reports|",
+      "[OPTRACE]|43880|57|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562785570|END|Phase: Place Design|",
+      "[OPTRACE]|43880|58|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562785571|START|Phase: Physical Opt Design|ROLLUP_AUTO",
+      "[OPTRACE]|43880|59|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562785573|START|read constraints: phys_opt_design|",
+      "[OPTRACE]|43880|5|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559470806|START|create in-memory project|",
+      "[OPTRACE]|43880|60|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562785573|END|read constraints: phys_opt_design|",
+      "[OPTRACE]|43880|61|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587562785573|START|phys_opt_design|",
+      "[OPTRACE]|43880|62|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563019015|END|phys_opt_design|",
+      "[OPTRACE]|43880|63|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563019015|START|read constraints: phys_opt_design_post|",
+      "[OPTRACE]|43880|64|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563019015|END|read constraints: phys_opt_design_post|",
+      "[OPTRACE]|43880|65|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563019015|START|Post-Place Phys Opt Design: write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|43880|66|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140899|END|Post-Place Phys Opt Design: write_checkpoint|",
+      "[OPTRACE]|43880|67|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140900|START|phys_opt_design_report|REPORT",
+      "[OPTRACE]|43880|68|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140900|END|phys_opt_design_report|",
+      "[OPTRACE]|43880|69|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140902|END|Phase: Physical Opt Design|ROLLUP_AUTO",
+      "[OPTRACE]|43880|6|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559472485|END|create in-memory project|",
+      "[OPTRACE]|43880|70|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140902|START|Phase: Route Design|ROLLUP_AUTO",
+      "[OPTRACE]|43880|71|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140905|START|read constraints: route_design|",
+      "[OPTRACE]|43880|72|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140906|END|read constraints: route_design|",
+      "[OPTRACE]|43880|73|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587563140906|START|route_design|",
+      "[OPTRACE]|43880|74|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565050803|END|route_design|",
+      "[OPTRACE]|43880|75|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565050803|START|read constraints: route_design_post|",
+      "[OPTRACE]|43880|76|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565050803|END|read constraints: route_design_post|",
+      "[OPTRACE]|43880|77|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565050803|START|Route Design: post hook|",
+      "[OPTRACE]|43880|78|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565228900|END|Route Design: post hook|",
+      "[OPTRACE]|43880|79|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565228900|START|Route Design: write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|43880|7|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559472486|START|set parameters|",
+      "[OPTRACE]|43880|80|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565354720|END|Route Design: write_checkpoint|",
+      "[OPTRACE]|43880|81|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565354721|START|route_design_reports|REPORT",
+      "[OPTRACE]|43880|82|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653119|END|route_design_reports|",
+      "[OPTRACE]|43880|83|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653120|START|route_design_misc|",
+      "[OPTRACE]|43880|84|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653122|START|route_design_write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|43880|85|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653122|END|route_design_write_checkpoint|",
+      "[OPTRACE]|43880|86|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653124|END|route_design_misc|",
+      "[OPTRACE]|43880|87|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653124|END|Phase: Route Design|",
+      "[OPTRACE]|43880|88|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653124|START|Phase: Write Bitstream|ROLLUP_AUTO",
+      "[OPTRACE]|43880|89|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653125|START|write bitstream setup|",
+      "[OPTRACE]|43880|8|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559477790|END|set parameters|",
+      "[OPTRACE]|43880|90|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653127|START|read constraints: write_bitstream|",
+      "[OPTRACE]|43880|91|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653127|END|read constraints: write_bitstream|",
+      "[OPTRACE]|43880|92|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653133|END|write bitstream setup|",
+      "[OPTRACE]|43880|93|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587565653133|START|write_bitstream|",
+      "[OPTRACE]|43880|94|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224130|END|write_bitstream|",
+      "[OPTRACE]|43880|95|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224131|START|write_bitstream_misc|",
+      "[OPTRACE]|43880|96|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224131|START|read constraints: write_bitstream_post|",
+      "[OPTRACE]|43880|97|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224132|END|read constraints: write_bitstream_post|",
+      "[OPTRACE]|43880|98|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224132|START|Write Bitstream: post hook|",
+      "[OPTRACE]|43880|99|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587566224135|END|Write Bitstream: post hook|",
+      "[OPTRACE]|43880|9|/home/marimeyer/repos/frandom/cmake-build-ddr3/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper.tcl|vivado_impl|1587559477790|START|add files|"
+      ];
+
+  var legendData = [
+  { "title": "Report Generation",
+    "color": "#b9783f"
+  }, {
+    "title": "Write Checkpoint",
+    "color": "#cd82ad"
+  },
+  {
+    "title": "Incomplete Data",
+    "color": "#cc4748"
+  } ];
+
+  // -- Convert Raw data into something we can use ---------------------------
+  console.log("Convert log data (%s entries) to Javascript 'JSON' objects...", csvData.length);
+  var jsonData = csvArrayToJSON(header, csvData, "|");
+
+  // -- Clean up the JSON objects --------------------------------------------
+  for (var i = 0; i < jsonData.length; i++) {
+    jsonData[i].Action = jsonData[i].Action.toUpperCase();
+    jsonData[i].Tags = jsonData[i].Tags.toUpperCase();
+    jsonData[i].Tags = jsonData[i].Tags.trim();
+    jsonData[i].TimeStampMSec = parseInt(jsonData[i].TimeStampMSec, 10);
+    jsonData[i].pid = parseInt(jsonData[i].pid, 10);
+  }
+
+  // -- Sort JSON array ------------------------------------------------------
+  console.log("Sorting JSON objects (%s objects) according to timestamps...", jsonData.length);
+  jsonData.sort(compareByTimeStamp);
+
+  // Record the PID grouping order
+  var pidOrder = new Map();
+  for (var i = 0; i < jsonData.length; i++) {
+    if (pidOrder.has(jsonData[i].pid) == false) {
+      pidOrder.set(jsonData[i].pid, i);    // Simple ordering (lower is first)
+    }
+  }
+
+  // -- Create secondary data array for the chart data array -----------------
+  console.log("Preparing graph data...");
+
+  // Task limits
+  var m_startTS = 0;      // Earliest Timestamp
+  var m_endTS = 0;        // Latest Timestamp
+
+  if (jsonData.length > 0) {
+    m_startTS = jsonData[0].TimeStampMSec;
+    m_endTS = jsonData[jsonData.length - 1].TimeStampMSec;
+  }
+
+
+  var chartData = [ ];   // Empty JSON array
+
+
+  populateChartData();
+  tableCreate( chartData );
+
+  filterChartEntries();
+
+  // -- Search for "holes"
+  // -- Sort by common PID
+  // -- Create groupings by process
+
+  console.log("done");
+
+  var chart = AmCharts.makeChart("chartdiv", {
+    "type": "gantt",
+    "theme": "light",
+    "titles": [
+    { "text": "OPTrace", "size": 15}],
+    "marginRight": 70,
+    "period": "fff",                                     // X-Axis
+    "balloonDateFormat": "JJ:NN:SS",
+    "columnWidth": 0.5,                                 // Bar thickness
+    "valueAxis": {
+      "type": "numeric",
+      "title": "Time [HH:MM::SS]",
+      "duration": "ss",
+      "durationUnits": { DD: 'd. ', hh: ':', mm: ':', ss: '' },
+    },
+    "brightnessStep": 10,
+    "graph": {
+      "fillAlphas": 1,
+      "labelFunction": barLabelCallBack,
+      "labelText": " ",
+      "labelPosition": "right",
+      "balloonFunction": ballonLabelCallBack,
+      "balloonText": "<p align='left'> Task: [[task]]<br/>Start:[[start]]<br/>End:[[end]]<br/>Duration:[[duration]]</p>",
+      "bulletField": "bullet",
+      "bulletSize": 8
+    },
+    "rotate": true,
+    "categoryField": "category",
+    "segmentsField": "segments",
+    "colorField": "color",
+    "startDate": "2015-01-01 00:00:00",
+    "startField": "start",
+    "endField": "end",
+    "durationField": "duration",
+    "dataProvider": chartData,
+    "valueScrollbar": {
+      "autoGridCount": true
+    },
+    "chartScrollbar": {
+      "enable": true
+    },
+    "chartCursor": {
+      "cursorColor": "#55bb76",
+      "valueBalloonsEnabled": false,
+      "cursorAlpha": 0.1,
+      "valueLineAlpha": 0.5,
+      "valueLineBalloonEnabled": true,
+      "valueLineEnabled": true,
+      "zoomable": true,
+      "valueZoomable": true,
+      "fullWidth": true
+    },
+    "legend": {
+      "data": legendData,
+    },
+    "export": {
+      "enabled": true
+    }
+  });
+
+  // =========================================================================
+  // Call back methods
+  // =========================================================================
+function ballonLabelCallBack( _graphDataItem )
+{
+  var start = _graphDataItem.values.open;
+  var end = _graphDataItem.values.value;
+  var duration = end - start;
+
+  var result = "<p align='left'>Task: " + _graphDataItem.category + "<br/>Start: " + secondsToHHMMSS(start) + "<br/>End: " + secondsToHHMMSS( end ) + "<br/>Duration: " + secondsToHHMMSS( duration ) + "</p>";
+  return result;
+}
+
+
+function barLabelCallBack( _graphDataItem )
+{
+   var duration = _graphDataItem.values.value - _graphDataItem.values.open;
+
+   return secondsToHHMMSS( duration);
+}
+
+
+function userInputFormCallback()
+{
+  // Second filter
+  m_secondFilter = document.getElementById("userDurationFilterSecInput").value;
+  console.log("Setting second filter to: " + m_secondFilter + " seconds");
+
+  // Group PID Sort
+  m_groupPidSort = document.getElementById("userGroupPidSortSelected").checked;
+  console.log("Group PID filter is set to: " + m_groupPidSort);
+
+  // Rollup filter
+  m_showRollup = document.getElementById("userRollupSelected").checked;
+  console.log("Rollup filter is set to: " + m_showRollup);
+
+  // Individual filter
+  m_showIndividualEntry = document.getElementById("userIndividualEntrySelected").checked;
+  console.log("Individual filter is set to: " + m_showIndividualEntry);
+
+  // Checkpoint Report Entries filter
+  m_showCheckpointEntry = document.getElementById("userCheckpointEntrySelected").checked;
+  console.log("Checkpoint Entry filter is set to: " + m_showCheckpointEntry);
+
+  // Checkpoint Report Entries filter
+  m_showReportEntry = document.getElementById("userReportEntrySelected").checked;
+  console.log("Report Entry filter is set to: " + m_showReportEntry);
+
+  populateChartData();
+  filterChartEntries()
+  chart.dataProvider = chartData;
+  chart.validateData();
+}
+
+  // =========================================================================
+  // Utilities
+  // =========================================================================
+
+
+function populateChartData()
+{
+  chartData = [ ];
+  if (m_groupPidSort == false) {
+    jsonData.sort(compareByTimeStamp);
+  } else {
+    jsonData.sort(compareByGroupTimeStamp);
+  }
+
+  for (var i = 0; i < jsonData.length; i++) {
+    var timestamp = parseInt(jsonData[0].TimeStampMSec, 10);
+
+    if (m_startTS > timestamp) m_startTS = timestamp;
+    if (m_endTS < timestamp) m_endTS = timestamp;
+
+    for (var i = 0; i < jsonData.length; i++) {
+      switch (jsonData[i].Action) {
+      case "START":
+        var categoryEntry = { };
+        categoryEntry["category"] = jsonData[i].Task;
+        categoryEntry["pid"] = jsonData[i].pid;
+
+        var segmentEntry = { };
+        // Normalize entry and convert to seconds
+        segmentEntry["start"] = (jsonData[i].TimeStampMSec - m_startTS) / 1000;
+        segmentEntry["color"] = getTaskBarColor(jsonData[i].Tags)
+        segmentEntry["task"] = jsonData[i].Task;
+        segmentEntry["tags"] = jsonData[i].Tags;
+        segmentEntry["duration"] = -1;
+
+        categoryEntry["segments"] = [ ];
+        categoryEntry["segments"].push(segmentEntry);
+        chartData.push(categoryEntry);
+        break;
+
+      case "END":
+        var catagory = findCatagory(jsonData[i].pid, jsonData[i].Task, chartData);
+        if (catagory != null) {
+          var segmentsEntry = catagory.segments[0];
+          segmentsEntry["end"] = (jsonData[i].TimeStampMSec - m_startTS) / 1000;
+          segmentsEntry["duration"] = segmentsEntry.end - segmentsEntry.start;
+        } else {
+          console.log("Null entry found: pid:%s, Task: %s", jsonData[i].pid, jsonData[i].Task);
+        }
+
+        break;
+
+      default:
+        console.log("Default");
+        break;
+      }
+    }
+  }
+}
+
+function filterChartEntries()
+{
+  for(var i = chartData.length - 1; i >= 0; i--) {
+    var segment = chartData[i].segments[0];
+
+    // -- Remove entries less than 1 seconds
+    if ( segment["duration"] == -1) {
+      segment["bullet"] = "xError";
+      segment["color"] = "#cc4748";
+      segment["duration"] = ((m_endTS - m_startTS) / 1000) - segment["start"];
+    } else if (segment["duration"] <  m_secondFilter) {
+      chartData.splice(i, 1);
+      continue;
+    }
+  
+
+    // Filter by tags
+    var bHasRollup = false;
+    var bHasCheckpoint = false;
+    var bHasReport = false;
+
+    var tags = segment["tags"];
+    console.log("Tag: " + tags);
+    if (tags.search(/ROLLUP_/i) != -1) { bHasRollup = true; }
+    if (tags.search(/CHECKPOINT/i) != -1) { bHasCheckpoint = true; }
+    if (tags.search(/REPORT/i) != -1) { bHasReport = true; }
+
+    var bRemoveEntry = false;
+
+    // Remove rollups
+    if ((m_showRollup == false) && (bHasRollup == true)) {
+      bRemoveEntry = true;
+    }
+    
+    // Remove checkpoints    
+    if ((m_showCheckpointEntry == false) && (bHasCheckpoint == true)) {
+      bRemoveEntry = true;
+    }
+
+    // Remove reports
+    if ((m_showReportEntry == false) && (bHasReport == true)) {
+      bRemoveEntry = true;
+    }
+
+    // Remove individual entry
+    if (((m_showIndividualEntry == false) && 
+         ((bHasRollup == false) &&
+          (bHasCheckpoint == false) &&
+          (bHasReport == false)))) {
+      bRemoveEntry = true;
+    }
+
+    if (bRemoveEntry == true) {
+      chartData.splice(i, 1);
+      continue;
+    }
+  }
+
+  console.log("ChartData.length: " + chartData.length);
+}
+
+
+function getTaskBarColor( _tags )
+{
+  if (_tags == null)
+    return "#8dc49f";
+
+  if (_tags.search(/ROLLUP_AUTO/i) != -1){ return "#0099ff"; }
+  if (_tags.search(/ROLLUP_0/i) != -1)   { return "#006699"; }
+  if (_tags.search(/ROLLUP_1/i) != -1)   { return "#009933"; }
+  if (_tags.search(/ROLLUP_2/i) != -1)   { return "#66ccff"; }
+  if (_tags.search(/REPORT/i) != -1)     { return "#b9783f"; }
+  if (_tags.search(/CHECKPOINT/i) != -1) { return "#cd82ad"; }
+
+  return "#8dc49f"
+}
+
+
+function tableCreate( _chartData ){
+    var myTableDiv = document.getElementById("myDynamicTable");
+
+
+    for ( var i = 0; i < _chartData.length; i++) {
+      var tr = myTableDiv.insertRow();
+
+      var td_task = tr.insertCell();
+      td_task.appendChild(document.createTextNode( _chartData[i].category ));
+
+      var segmentEntry = _chartData[i].segments;
+      var td_start = tr.insertCell();
+      td_start.appendChild(document.createTextNode( secondsToHHMMSS(segmentEntry[0].start) ));
+
+      var td_duration = tr.insertCell();
+      td_duration.appendChild(document.createTextNode( secondsToHHMMSS(segmentEntry[0].duration) ));
+
+    }
+}
+
+function secondsToHHMMSS( _seconds )
+{
+  var hours = Math.floor(_seconds / 3600);
+  var minutes = Math.floor(_seconds % 3600 / 60);
+  var seconds = Math.floor(_seconds % 3600 % 60);
+
+  var result = hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds; 
+
+  return result;
+}
+
+
+  function findCatagory(_pid, _category, _catagoryArray) {
+    for (var i = (_catagoryArray.length - 1); i >= 0; i--) {
+      if (_pid == _catagoryArray[i].pid) {
+        if (_catagoryArray[i].category == _category) {
+          return  _catagoryArray[i];
+        }
+      }
+    }
+    return null;
+  }
+
+
+  // Compares the timestamps between to JSON objects
+  function compareByTimeStamp(_a, _b) {
+    if (_a.TimeStampMSec < _b.TimeStampMSec) return -1;
+    if (_a.TimeStampMSec > _b.TimeStampMSec) return 1;
+
+    if (_a.pid == _b.pid) {
+      if ((_a.Action == "START") && (_b.Action == "END")) return -1;
+      if ((_a.Action == "END") && (_b.Action == "START")) return 1;
+
+      if(_a.Entry < _b.Entry) return -1;
+      if(_a.Entry > _b.Entry) return 1;
+    }
+
+    return 0;
+  }
+
+
+  // Compares the timestamps between to JSON objects
+  function compareByGroupTimeStamp(_a, _b) {
+    if (pidOrder.get(_a.pid) < pidOrder.get(_b.pid)) return -1;
+
+    if (pidOrder.get(_a.pid) > pidOrder.get(_b.pid)) return 1;
+
+    return compareByTimeStamp(_a, _b);
+  }
+
+
+  // Return array of string values, or NULL if CSV string not well formed.
+  function CSVtoArray(_text, _sep) {
+    // Regex expressions
+    var re_valid_default = /^\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*(?:,\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*)*$/;
+    var re_value_default = /(?!\s*$)\s*(?:'([^'\\]*(?:\\[\S\s][^'\\]*)*)'|"([^"\\]*(?:\\[\S\s][^"\\]*)*)"|([^,'"\s\\]*(?:\s+[^,'"\s\\]+)*))\s*(?:,|$)/g;
+    var re_special_default = /,\s*$/;
+
+    // Algorithm:
+    //   1) Convert regex expression to a string.
+    //   2) Remove leading regex escape character (e.g., '\')
+    //   3) Remove training regex escape character(s) (e.g., '\' or "\g")
+    //   4) Replace the comma (',') character witht he new delimiter character
+    //   5) Build the regex command
+
+    // Check delimiter, if special insert escapes
+    if (_sep == "|") _sep = "\\|";
+
+    var re_valid = new RegExp(re_valid_default.toString().substr(1).slice(0, -1).replace(/,/g, _sep));
+    var re_value = new RegExp(re_value_default.toString().substr(1).slice(0, -2).replace(/,/g, _sep), 'g');
+    var re_special = new RegExp(re_special_default.toString().substr(1).slice(0, -1).replace(/,/g, _sep));
+
+    // Validate the input string to determine if it is well formed
+    if (!re_valid.test(_text)) return null;
+
+    var a = [ ];                     // Initialize array to receive values.
+    _text.replace(re_value,           // "Walk" the string using replace with callback.
+                  function(m0, m1, m2, m3) {
+                      // Remove backslash from \' in single quoted values.
+                      if      (m1 !== undefined) a.push(m1.replace(/\\'/g, "'"));
+                      // Remove backslash from \" in double quoted values.
+                      else if (m2 !== undefined) a.push(m2.replace(/\\"/g, '"'));
+                      else if (m3 !== undefined) a.push(m3);
+                      return ''; // Return empty string.
+                  });
+
+    // Handle special case of empty last value.
+    if (re_special.test(_text)) a.push('');
+
+    return a;
+  };
+
+
+  // Converts the given CSV array & header into a JSON array
+  function csvArrayToJSON(_header, _csvArray, _sep) {
+    var result = [ ];
+    var headers = CSVtoArray(_header, _sep);
+
+    for (var i = 0; i < _csvArray.length; i++) {
+
+      var obj = { };
+      var currentline = CSVtoArray(_csvArray[i], _sep);
+
+      for (var j = 0; j < headers.length; j++) {
+        obj[headers[j]] = currentline[j];
+      }
+
+      result.push(obj);
+
+    }
+
+    return result; //JavaScript object
+  }
+
+
+</script>
+</body>
+
+</html>
+

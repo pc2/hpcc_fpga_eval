@@ -1,0 +1,624 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"accessMemory_0"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":10
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":72
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"update_val"
+              , "Start Cycle":"6"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":11
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":77
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"local_address"
+              , "Start Cycle":"6"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":13
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":87
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"loaded_data"
+              , "Start Cycle":"484"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":14
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":99
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"loaded_data"
+              , "Start Cycle":"8"
+              , "Latency":"6"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":15
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":99
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"update_val"
+              , "Start Cycle":"8"
+              , "Latency":"6"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":16
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":99
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"64 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"local_address"
+              , "Start Cycle":"8"
+              , "Latency":"6"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":22
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":23
+              , "name":"local_address"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":60
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":24
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":60
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":25
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":26
+                      , "name":"W"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n1 read ports/bank\n1 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"1"
+                      , "Number of write ports per bank":"1"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"8192B requested\n32768B implemented"
+                    }
+                  ]
+                  , "Requested size":"8192 bytes"
+                  , "Implemented size":"32768 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"64 bits"
+                  , "Bank depth":"1024 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"58"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"memsys"
+              , "id":27
+              , "name":"loaded_data"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":61
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":28
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":61
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":29
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":30
+                      , "name":"W"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n1 read ports/bank\n1 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"1"
+                      , "Number of write ports per bank":"1"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"8192B requested\n32768B implemented"
+                    }
+                  ]
+                  , "Requested size":"8192 bytes"
+                  , "Implemented size":"32768 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"64 bits"
+                  , "Bank depth":"1024 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"58"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"memsys"
+              , "id":31
+              , "name":"update_val"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":62
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":32
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":62
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":33
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":34
+                      , "name":"W"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n1 read ports/bank\n1 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"1"
+                      , "Number of write ports per bank":"1"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"8192B requested\n32768B implemented"
+                    }
+                  ]
+                  , "Requested size":"8192 bytes"
+                  , "Implemented size":"32768 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"64 bits"
+                  , "Bank depth":"1024 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"58"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":25
+      , "to":16
+    }
+    , {
+      "from":11
+      , "to":26
+    }
+    , {
+      "from":29
+      , "to":14
+    }
+    , {
+      "from":13
+      , "to":30
+    }
+    , {
+      "from":33
+      , "to":15
+    }
+    , {
+      "from":10
+      , "to":34
+    }
+  ]
+}

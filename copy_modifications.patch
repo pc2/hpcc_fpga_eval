@@ -1,0 +1,433 @@
+From 12dbb5b62ea0d90c3255f168275f5cbf7936a4c6 Mon Sep 17 00:00:00 2001
+From: Marius Meyer <marius.meyer@uni-paderborn.de>
+Date: Wed, 22 Apr 2020 20:01:30 +0200
+Subject: [PATCH] Add modification to use two bank copy kernel
+
+---
+ STREAM/CMakeLists.txt                         |  12 +-
+ STREAM/settings/settings.compile.xilinx.ini   |   4 +-
+ ...gs.link.xilinx.stream_kernels_multi.16.ini |  55 +++++
+ STREAM/src/device/CMakeLists.txt              |   2 +-
+ STREAM/src/device/stream_kernels_multi.cl     |  41 ++++
+ STREAM/src/host/execution_default.cpp         | 198 +-----------------
+ 6 files changed, 109 insertions(+), 203 deletions(-)
+ create mode 100644 STREAM/settings/settings.link.xilinx.stream_kernels_multi.16.ini
+ create mode 100644 STREAM/src/device/stream_kernels_multi.cl
+
+diff --git a/STREAM/CMakeLists.txt b/STREAM/CMakeLists.txt
+index d093b73..7cd11d0 100755
+--- a/STREAM/CMakeLists.txt
++++ b/STREAM/CMakeLists.txt
+@@ -9,21 +9,21 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+ endif()
+ 
+ set(DEFAULT_REPETITIONS 10 CACHE STRING "Default number of repetitions")
+-set(DEFAULT_ARRAY_LENGTH 134217728 CACHE STRING "Default size of the data arrays")
++set(DEFAULT_ARRAY_LENGTH 268435456 CACHE STRING "Default size of the data arrays")
+ set(DATA_TYPE float CACHE STRING "Data type used for host and device")
+ set(VECTOR_COUNT 16 CACHE STRING "If greater than 1 will use OpenCL vector types in the kernels. e.g. float2")
+ set(DEFAULT_DEVICE -1 CACHE STRING "Index of the default device to use")
+ set(DEFAULT_PLATFORM -1 CACHE STRING "Index of the default platform to use")
+ set(GLOBAL_MEM_UNROLL 1 CACHE STRING "Unrolling factor that is used for all loops in the kernels")
+ set(FPGA_BOARD_NAME p520_hpc_sg280l CACHE STRING "Name of the target FPGA board")
+-set(NUM_REPLICATIONS 4 CACHE STRING "Number of times the kernels will be replicated")
+-set(DEVICE_BUFFER_SIZE 512 CACHE STRING "Buffer size in number of values that is used within the single kernel implementation.")
++set(NUM_REPLICATIONS 65535 CACHE STRING "Number of times the kernels will be replicated")
++set(DEVICE_BUFFER_SIZE 1 CACHE STRING "Buffer size in number of values that is used within the single kernel implementation.")
+ set(INNER_LOOP_BUFFERS ON CACHE BOOL "Put the local memory buffers inside the outer loop in the kernel code")
+-set(USE_SVM No CACHE BOOL "Use SVM pointers instead of creating buffers on the board and transferring the data there before execution.")
+-set(XILINX_GENERATE_LINK_SETTINGS Yes CACHE BOOL "Generate the link settings depending on the number of replications for the kernels")
+-set(XILINX_LINK_SETTINGS_FILE "${CMAKE_SOURCE_DIR}/settings/settings.link.xilinx.stream_kernels.ddr.ini" CACHE STRING "The link settings file that should be used when generating is disabled")
++set(XILINX_GENERATE_LINK_SETTINGS No CACHE BOOL "Generate the link settings depending on the number of replications for the kernels")
++set(XILINX_LINK_SETTINGS_FILE "${CMAKE_SOURCE_DIR}/settings/settings.link.xilinx.stream_kernels_multi.16.ini" CACHE STRING "The link settings file that should be used when generating is disabled")
+ set(XILINX_COMPILE_FLAGS "-j 40" CACHE STRING "Additional compile flags for the v++ compiler")
+ set(XILINX_COMPILE_SETTINGS "${CMAKE_SOURCE_DIR}/settings/settings.compile.xilinx.ini" CACHE STRING "Compile settings file for the v++ compiler")
++set(REORDER_KERNELS No CACHE BOOL "Reorder buffer usage for testing")
+ separate_arguments(XILINX_COMPILE_FLAGS)
+ 
+ set(HOST_DATA_TYPE cl_${DATA_TYPE})
+diff --git a/STREAM/settings/settings.compile.xilinx.ini b/STREAM/settings/settings.compile.xilinx.ini
+index 8297020..7e52533 100644
+--- a/STREAM/settings/settings.compile.xilinx.ini
++++ b/STREAM/settings/settings.compile.xilinx.ini
+@@ -1,4 +1,4 @@
+ kernel_frequency=450
+ 
+-#[hls]
+-#max_memory_ports=all
++[hls]
++max_memory_ports=all
+diff --git a/STREAM/settings/settings.link.xilinx.stream_kernels_multi.16.ini b/STREAM/settings/settings.link.xilinx.stream_kernels_multi.16.ini
+new file mode 100644
+index 0000000..a63cd02
+--- /dev/null
++++ b/STREAM/settings/settings.link.xilinx.stream_kernels_multi.16.ini
+@@ -0,0 +1,55 @@
++[connectivity]
++nk=calc_0:16
++
++# slrs
++slr=calc_0_1:SLR0
++slr=calc_0_2:SLR1
++slr=calc_0_3:SLR2
++slr=calc_0_4:SLR0
++slr=calc_0_5:SLR1
++slr=calc_0_6:SLR2
++slr=calc_0_7:SLR0
++slr=calc_0_8:SLR1
++slr=calc_0_9:SLR2
++slr=calc_0_10:SLR0
++slr=calc_0_11:SLR1
++slr=calc_0_12:SLR2
++slr=calc_0_13:SLR0
++slr=calc_0_14:SLR1
++slr=calc_0_15:SLR2
++slr=calc_0_16:SLR0
++
++# matrix ports
++sp=calc_0_1.m_axi_gmem0:HBM[0]
++sp=calc_0_1.m_axi_gmem1:HBM[1]
++sp=calc_0_2.m_axi_gmem0:HBM[2]
++sp=calc_0_2.m_axi_gmem1:HBM[3]
++sp=calc_0_3.m_axi_gmem0:HBM[4]
++sp=calc_0_3.m_axi_gmem1:HBM[5]
++sp=calc_0_4.m_axi_gmem0:HBM[6]
++sp=calc_0_4.m_axi_gmem1:HBM[7]
++sp=calc_0_5.m_axi_gmem0:HBM[8]
++sp=calc_0_5.m_axi_gmem1:HBM[9]
++sp=calc_0_6.m_axi_gmem0:HBM[10]
++sp=calc_0_6.m_axi_gmem1:HBM[11]
++sp=calc_0_7.m_axi_gmem0:HBM[12]
++sp=calc_0_7.m_axi_gmem1:HBM[13]
++sp=calc_0_8.m_axi_gmem0:HBM[14]
++sp=calc_0_8.m_axi_gmem1:HBM[15]
++sp=calc_0_9.m_axi_gmem0:HBM[16]
++sp=calc_0_9.m_axi_gmem1:HBM[17]
++sp=calc_0_10.m_axi_gmem0:HBM[18]
++sp=calc_0_10.m_axi_gmem1:HBM[19]
++sp=calc_0_11.m_axi_gmem0:HBM[20]
++sp=calc_0_11.m_axi_gmem1:HBM[21]
++sp=calc_0_12.m_axi_gmem0:HBM[22]
++sp=calc_0_12.m_axi_gmem1:HBM[23]
++sp=calc_0_13.m_axi_gmem0:HBM[24]
++sp=calc_0_13.m_axi_gmem1:HBM[25]
++sp=calc_0_14.m_axi_gmem0:HBM[26]
++sp=calc_0_14.m_axi_gmem1:HBM[27]
++sp=calc_0_15.m_axi_gmem0:HBM[28]
++sp=calc_0_15.m_axi_gmem1:HBM[29]
++sp=calc_0_16.m_axi_gmem0:HBM[30]
++sp=calc_0_16.m_axi_gmem1:HBM[31]
++
+diff --git a/STREAM/src/device/CMakeLists.txt b/STREAM/src/device/CMakeLists.txt
+index 7ae6be8..fff2339 100644
+--- a/STREAM/src/device/CMakeLists.txt
++++ b/STREAM/src/device/CMakeLists.txt
+@@ -119,6 +119,6 @@ if (INTELFPGAOPENCL_FOUND)
+ endif()
+ 
+ if (VITIS_FOUND)
+-    generate_kernel_targets_xilinx(stream_kernels stream_kernels_single)
++    generate_kernel_targets_xilinx(stream_kernels stream_kernels_single  stream_kernels_multi)
+     add_test(NAME test_emulation_xilinx COMMAND STREAM_FPGA_xilinx -f stream_kernels_emulate.xclbin)
+ endif()
+diff --git a/STREAM/src/device/stream_kernels_multi.cl b/STREAM/src/device/stream_kernels_multi.cl
+new file mode 100644
+index 0000000..0834ae3
+--- /dev/null
++++ b/STREAM/src/device/stream_kernels_multi.cl
+@@ -0,0 +1,41 @@
++/*
++STREAM kernels a single kernel combining all operations.
++ They can be selected using the operation_type switch.
++
++KERNEL_NUMBER will be replaced by the build script with the ID of the current replication.
++ That means the kernels will be named copy_0, copy_1, ... up to the number of given replications.
++*/
++#include "parameters.h"
++
++__kernel
++__attribute__((uses_global_work_offset(0)))
++void calc_KERNEL_NUMBER(__global const DEVICE_ARRAY_DATA_TYPE *restrict in1,
++       //   __global const DEVICE_ARRAY_DATA_TYPE *restrict in2,
++          __global DEVICE_ARRAY_DATA_TYPE *restrict out,
++          const DEVICE_SCALAR_DATA_TYPE scalar,
++          const uint array_size,
++          const uint operation_type) {
++#ifndef INNER_LOOP_BUFFERS
++        DEVICE_ARRAY_DATA_TYPE buffer1[BUFFER_SIZE];
++#endif
++    uint number_elements = array_size / VECTOR_COUNT;
++    for(uint i = 0;i<number_elements;i += BUFFER_SIZE){
++#ifdef INNER_LOOP_BUFFERS
++        DEVICE_ARRAY_DATA_TYPE buffer1[BUFFER_SIZE];
++#endif
++        // optionally load second array into buffer for add and triad
++/*        if (operation_type == ADD_KERNEL_TYPE || operation_type == TRIAD_KERNEL_TYPE) {
++            __attribute__((opencl_unroll_hint(UNROLL_COUNT)))
++            for (uint k = 0;k<BUFFER_SIZE;k++) {
++                buffer1[k] = in2[i + k];
++            }
++        }
++	*/
++        // Calculate result and write back to output array depending on chosen operation type
++        __attribute__((opencl_unroll_hint(UNROLL_COUNT)))
++        for (uint k = 0;k<BUFFER_SIZE;k++) {
++            out[i + k] = scalar * in1[i + k]; // + ((operation_type == ADD_KERNEL_TYPE || operation_type == TRIAD_KERNEL_TYPE) ? buffer1[k] : 0.0f);
++                   
++	}
++    }
++}
+diff --git a/STREAM/src/host/execution_default.cpp b/STREAM/src/host/execution_default.cpp
+index c336bd8..a9cd2ba 100644
+--- a/STREAM/src/host/execution_default.cpp
++++ b/STREAM/src/host/execution_default.cpp
+@@ -122,39 +122,6 @@ namespace bm_execution {
+         //
+         std::chrono::time_point<std::chrono::high_resolution_clock> startExecution, endExecution;
+         std::chrono::duration<double> duration;
+-        // Time checking with test kernel
+-        for (int i=0; i<config->replications; i++) {
+-            ASSERT_CL(command_queues[i].enqueueWriteBuffer(Buffers_A[i], CL_FALSE, 0, sizeof(HOST_DATA_TYPE)*data_per_kernel, &A[data_per_kernel*i]));
+-        }
+-        for (int i=0; i<config->replications; i++) {
+-            ASSERT_CL(command_queues[i].finish());
+-        }
+-        startExecution = std::chrono::high_resolution_clock::now();
+-        for (int i=0; i<config->replications; i++) {
+-            ASSERT_CL(command_queues[i].enqueueTask(test_kernels[i]));
+-        }
+-        for (int i=0; i<config->replications; i++) {
+-            ASSERT_CL(command_queues[i].finish());
+-        }
+-        endExecution = std::chrono::high_resolution_clock::now();
+-        duration = std::chrono::duration_cast<std::chrono::duration<double>>
+-                (endExecution - startExecution);
+-        std::cout << "Each test below will take on the order of " << duration.count() * 1.0e6 << " microseconds." << std::endl;
+-
+-        std::cout << HLINE;
+-
+-        std::cout << "WARNING -- The above is only a rough guideline." << std::endl;
+-        std::cout << "For best results, please be sure you know the" << std::endl;
+-        std::cout << "precision of your system timer." << std::endl;
+-        std::cout << HLINE;
+-
+-        for (int i=0; i<config->replications; i++) {
+-            ASSERT_CL(command_queues[i].enqueueReadBuffer(Buffers_A[i], CL_FALSE, 0, sizeof(HOST_DATA_TYPE)*data_per_kernel, &A[data_per_kernel*i]));
+-        }
+-        for (int i=0; i<config->replications; i++) {
+-            ASSERT_CL(command_queues[i].finish());
+-        }
+-
+ 
+         //
+         // Do actual benchmark measurements
+@@ -186,9 +153,6 @@ namespace bm_execution {
+                     command_queues[i].enqueueWriteBuffer(Buffers_A[i], CL_FALSE, 0,
+                                                          sizeof(HOST_DATA_TYPE) * data_per_kernel,
+                                                          &A[data_per_kernel * i]);
+-                    command_queues[i].enqueueWriteBuffer(Buffers_B[i], CL_FALSE, 0,
+-                                                         sizeof(HOST_DATA_TYPE) * data_per_kernel,
+-                                                         &B[data_per_kernel * i]);
+                     command_queues[i].enqueueWriteBuffer(Buffers_C[i], CL_FALSE, 0,
+                                                          sizeof(HOST_DATA_TYPE) * data_per_kernel,
+                                                          &C[data_per_kernel * i]);
+@@ -221,58 +185,9 @@ namespace bm_execution {
+                     duration = std::chrono::duration_cast<std::chrono::duration<double>>
+                             (endExecution - startExecution);
+                     timingMap[COPY_KEY].push_back(duration.count());
+-
+-                    startExecution = std::chrono::high_resolution_clock::now();
+-                }
+-#pragma omp for nowait
+-                for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].enqueueTask(scale_kernels[i]);
+-                }
+-#pragma omp for
+-                for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].finish();
+-                }
+-#pragma omp single
+-                {
+-                    endExecution = std::chrono::high_resolution_clock::now();
+-                    duration = std::chrono::duration_cast<std::chrono::duration<double>>
+-                            (endExecution - startExecution);
+                     timingMap[SCALE_KEY].push_back(duration.count());
+-
+-                    startExecution = std::chrono::high_resolution_clock::now();
+-                }
+-#pragma omp for nowait
+-                for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].enqueueTask(add_kernels[i]);
+-                }
+-#pragma omp for
+-                for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].finish();
+-                }
+-#pragma omp single
+-                {
+-                    endExecution = std::chrono::high_resolution_clock::now();
+-                    duration = std::chrono::duration_cast<std::chrono::duration<double>>
+-                            (endExecution - startExecution);
+                     timingMap[ADD_KEY].push_back(duration.count());
+-
+-                    startExecution = std::chrono::high_resolution_clock::now();
+-                }
+-#pragma omp for nowait
+-                for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].enqueueTask(triad_kernels[i]);
+-                }
+-#pragma omp for
+-                for (int i = 0; i < config->replications; i++) {
+-                    command_queues[i].finish();
+-                }
+-#pragma omp single
+-                {
+-                    endExecution = std::chrono::high_resolution_clock::now();
+-                    duration = std::chrono::duration_cast<std::chrono::duration<double>>
+-                            (endExecution - startExecution);
+                     timingMap[TRIAD_KEY].push_back(duration.count());
+-
+                     startExecution = std::chrono::high_resolution_clock::now();
+                 }
+ #pragma omp for nowait
+@@ -291,9 +206,6 @@ namespace bm_execution {
+                     command_queues[i].enqueueReadBuffer(Buffers_A[i], CL_FALSE, 0,
+                                                         sizeof(HOST_DATA_TYPE) * data_per_kernel,
+                                                         &A[data_per_kernel * i]);
+-                    command_queues[i].enqueueReadBuffer(Buffers_B[i], CL_FALSE, 0,
+-                                                        sizeof(HOST_DATA_TYPE) * data_per_kernel,
+-                                                        &B[data_per_kernel * i]);
+                     command_queues[i].enqueueReadBuffer(Buffers_C[i], CL_FALSE, 0,
+                                                         sizeof(HOST_DATA_TYPE) * data_per_kernel,
+                                                         &C[data_per_kernel * i]);
+@@ -441,31 +353,6 @@ namespace bm_execution {
+             HOST_DATA_TYPE scalar = 3.0;
+             HOST_DATA_TYPE test_scalar = 2.0E0;
+             //prepare kernels
+-#ifdef USE_SVM
+-            err = clSetKernelArgSVMPointer(testkernel(), 0,
+-                                        reinterpret_cast<void*>(A));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 1,
+-                                        reinterpret_cast<void*>(A));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 2,
+-                                        reinterpret_cast<void*>(A));
+-            ASSERT_CL(err);
+-#else
+-            err = testkernel.setArg(0, Buffers_A[i]);
+-            ASSERT_CL(err);
+-            err = testkernel.setArg(1, Buffers_A[i]);
+-            ASSERT_CL(err);
+-            err = testkernel.setArg(2, Buffers_A[i]);
+-            ASSERT_CL(err);
+-#endif
+-            err = testkernel.setArg(3, test_scalar);
+-            ASSERT_CL(err);
+-            err = testkernel.setArg(4, data_per_kernel);
+-            ASSERT_CL(err);
+-            err = testkernel.setArg(5, SCALE_KERNEL_TYPE);
+-            ASSERT_CL(err);
+-
+             //set arguments of copy kernel
+ #ifdef USE_SVM
+             err = clSetKernelArgSVMPointer(testkernel(), 0,
+@@ -480,91 +367,14 @@ namespace bm_execution {
+ #else
+             err = copykernel.setArg(0, Buffers_A[i]);
+             ASSERT_CL(err);
+-            err = copykernel.setArg(1, Buffers_A[i]);
+-            ASSERT_CL(err);
+-            err = copykernel.setArg(2, Buffers_C[i]);
+-            ASSERT_CL(err);
+-#endif
+-            err = copykernel.setArg(3, 1.0f);
+-            ASSERT_CL(err);
+-            err = copykernel.setArg(4, data_per_kernel);
+-            ASSERT_CL(err);
+-            err = copykernel.setArg(5, COPY_KERNEL_TYPE);
+-            ASSERT_CL(err);
+-            //set arguments of scale kernel
+-#ifdef USE_SVM
+-            err = clSetKernelArgSVMPointer(testkernel(), 0,
+-                                        reinterpret_cast<void*>(C));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 1,
+-                                        reinterpret_cast<void*>(C));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 2,
+-                                        reinterpret_cast<void*>(B));
+-            ASSERT_CL(err);
+-#else
+-            err = scalekernel.setArg(0, Buffers_C[i]);
+-            ASSERT_CL(err);
+-            err = scalekernel.setArg(1, Buffers_C[i]);
+-            ASSERT_CL(err);
+-            err = scalekernel.setArg(2, Buffers_B[i]);
+-            ASSERT_CL(err);
+-#endif
+-            err = scalekernel.setArg(3, scalar);
+-            ASSERT_CL(err);
+-            err = scalekernel.setArg(4, data_per_kernel);
+-            ASSERT_CL(err);
+-            err = scalekernel.setArg(5, SCALE_KERNEL_TYPE);
+-            ASSERT_CL(err);
+-            //set arguments of add kernel
+-#ifdef USE_SVM
+-            err = clSetKernelArgSVMPointer(testkernel(), 0,
+-                                        reinterpret_cast<void*>(A));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 1,
+-                                        reinterpret_cast<void*>(B));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 2,
+-                                        reinterpret_cast<void*>(C));
+-            ASSERT_CL(err);
+-#else
+-            err = addkernel.setArg(0, Buffers_A[i]);
+-            ASSERT_CL(err);
+-            err = addkernel.setArg(1, Buffers_B[i]);
+-            ASSERT_CL(err);
+-            err = addkernel.setArg(2, Buffers_C[i]);
+-            ASSERT_CL(err);
+-#endif
+-            err = addkernel.setArg(3, 1.0f);
+-            ASSERT_CL(err);
+-            err = addkernel.setArg(4, data_per_kernel);
+-            ASSERT_CL(err);
+-            err = addkernel.setArg(5, ADD_KERNEL_TYPE);
+-            ASSERT_CL(err);
+-            //set arguments of triad kernel
+-#ifdef USE_SVM
+-            err = clSetKernelArgSVMPointer(testkernel(), 0,
+-                                        reinterpret_cast<void*>(C));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 1,
+-                                        reinterpret_cast<void*>(B));
+-            ASSERT_CL(err);
+-            err = clSetKernelArgSVMPointer(testkernel(), 2,
+-                                        reinterpret_cast<void*>(A));
+-            ASSERT_CL(err);
+-#else
+-            err = triadkernel.setArg(0, Buffers_C[i]);
+-            ASSERT_CL(err);
+-            err = triadkernel.setArg(1, Buffers_B[i]);
+-            ASSERT_CL(err);
+-            err = triadkernel.setArg(2, Buffers_A[i]);
++            err = copykernel.setArg(1, Buffers_C[i]);
+             ASSERT_CL(err);
+ #endif
+-            err = triadkernel.setArg(3, scalar);
++            err = copykernel.setArg(2, 1.0f);
+             ASSERT_CL(err);
+-            err = triadkernel.setArg(4, data_per_kernel);
++            err = copykernel.setArg(3, data_per_kernel);
+             ASSERT_CL(err);
+-            err = triadkernel.setArg(5, TRIAD_KERNEL_TYPE);
++            err = copykernel.setArg(4, COPY_KERNEL_TYPE);
+             ASSERT_CL(err);
+ 
+             command_queues.push_back(cl::CommandQueue(config->context));
+-- 
+2.21.0 (Apple Git-122)
+

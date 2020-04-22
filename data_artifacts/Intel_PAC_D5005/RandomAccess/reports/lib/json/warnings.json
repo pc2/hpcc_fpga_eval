@@ -1,0 +1,6 @@
+{"rows":[
+{"debug":[[{"filename":"/scratch/pc2-mitarbeiter/mariusme/fpga-0011/pac/global_mem_svm/frandom/cmake-build-syn-i/src/device/replicated_random_access_kernels_single.cl"
+,"line":57}]]
+,"details":["/scratch/pc2-mitarbeiter/mariusme/fpga-0011/pac/global_mem_svm/frandom/cmake-build-syn-i/src/device/replicated_random_access_kernels_single.cl:57:14: warning: expected safelen or array value with '#pragma ivdep' - ignored"]
+,"name":"expected safelen or array value with '#pragma ivdep' - ignored"}
+]}

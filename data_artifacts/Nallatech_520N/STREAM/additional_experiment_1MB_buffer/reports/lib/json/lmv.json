@@ -1,0 +1,1792 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"calc_0"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":13
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":29
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":15
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":35
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":16
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":35
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":17
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":41
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":25
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":26
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":24
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":27
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":24
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":29
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":33
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+                , {
+                  "type":"bank"
+                  , "id":28
+                  , "name":"Bank 1"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":24
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":31
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":35
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"1048576B requested\n4194304B implemented"
+                    }
+                  ]
+                  , "Requested size":"1048576 bytes"
+                  , "Implemented size":"4194304 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"22"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":30
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":32
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":34
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":36
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":38
+      , "name":"calc_1"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":49
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":75
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":51
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":81
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":52
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":81
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":53
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":87
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":61
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":62
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":70
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":63
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":70
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":65
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":69
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+                , {
+                  "type":"bank"
+                  , "id":64
+                  , "name":"Bank 1"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":70
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":67
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":71
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"1048576B requested\n4194304B implemented"
+                    }
+                  ]
+                  , "Requested size":"1048576 bytes"
+                  , "Implemented size":"4194304 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"68"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":66
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":68
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":70
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":72
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":73
+      , "name":"calc_2"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":84
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":121
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":86
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":127
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":87
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":127
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":88
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":133
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":96
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":97
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":116
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":98
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":100
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":104
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+                , {
+                  "type":"bank"
+                  , "id":99
+                  , "name":"Bank 1"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":102
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":106
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"1048576B requested\n4194304B implemented"
+                    }
+                  ]
+                  , "Requested size":"1048576 bytes"
+                  , "Implemented size":"4194304 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"114"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":101
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":103
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":105
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":107
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":108
+      , "name":"calc_3"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":119
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":167
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":121
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":173
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":122
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":173
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"buffer1"
+              , "Start Cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":123
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":179
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"buffer1"
+              , "Start Cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":131
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":132
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":162
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":133
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":162
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":135
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":139
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+                , {
+                  "type":"bank"
+                  , "id":134
+                  , "name":"Bank 1"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":162
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":137
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":141
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"4"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"1048576B requested\n4194304B implemented"
+                    }
+                  ]
+                  , "Requested size":"1048576 bytes"
+                  , "Implemented size":"4194304 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"160"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":136
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":138
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":140
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":142
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":13
+      , "to":30
+    }
+    , {
+      "from":30
+      , "to":15
+    }
+    , {
+      "from":30
+      , "to":29
+    }
+    , {
+      "from":29
+      , "to":30
+    }
+    , {
+      "from":13
+      , "to":32
+    }
+    , {
+      "from":32
+      , "to":15
+    }
+    , {
+      "from":32
+      , "to":31
+    }
+    , {
+      "from":31
+      , "to":32
+    }
+    , {
+      "from":16
+      , "to":34
+    }
+    , {
+      "from":34
+      , "to":17
+    }
+    , {
+      "from":34
+      , "to":33
+    }
+    , {
+      "from":33
+      , "to":34
+    }
+    , {
+      "from":16
+      , "to":36
+    }
+    , {
+      "from":36
+      , "to":17
+    }
+    , {
+      "from":36
+      , "to":35
+    }
+    , {
+      "from":35
+      , "to":36
+    }
+    , {
+      "from":49
+      , "to":66
+    }
+    , {
+      "from":66
+      , "to":51
+    }
+    , {
+      "from":66
+      , "to":65
+    }
+    , {
+      "from":65
+      , "to":66
+    }
+    , {
+      "from":49
+      , "to":68
+    }
+    , {
+      "from":68
+      , "to":51
+    }
+    , {
+      "from":68
+      , "to":67
+    }
+    , {
+      "from":67
+      , "to":68
+    }
+    , {
+      "from":52
+      , "to":70
+    }
+    , {
+      "from":70
+      , "to":53
+    }
+    , {
+      "from":70
+      , "to":69
+    }
+    , {
+      "from":69
+      , "to":70
+    }
+    , {
+      "from":52
+      , "to":72
+    }
+    , {
+      "from":72
+      , "to":53
+    }
+    , {
+      "from":72
+      , "to":71
+    }
+    , {
+      "from":71
+      , "to":72
+    }
+    , {
+      "from":84
+      , "to":101
+    }
+    , {
+      "from":101
+      , "to":86
+    }
+    , {
+      "from":101
+      , "to":100
+    }
+    , {
+      "from":100
+      , "to":101
+    }
+    , {
+      "from":84
+      , "to":103
+    }
+    , {
+      "from":103
+      , "to":86
+    }
+    , {
+      "from":103
+      , "to":102
+    }
+    , {
+      "from":102
+      , "to":103
+    }
+    , {
+      "from":105
+      , "to":88
+    }
+    , {
+      "from":87
+      , "to":105
+    }
+    , {
+      "from":105
+      , "to":104
+    }
+    , {
+      "from":104
+      , "to":105
+    }
+    , {
+      "from":107
+      , "to":88
+    }
+    , {
+      "from":87
+      , "to":107
+    }
+    , {
+      "from":107
+      , "to":106
+    }
+    , {
+      "from":106
+      , "to":107
+    }
+    , {
+      "from":119
+      , "to":136
+    }
+    , {
+      "from":136
+      , "to":121
+    }
+    , {
+      "from":136
+      , "to":135
+    }
+    , {
+      "from":135
+      , "to":136
+    }
+    , {
+      "from":119
+      , "to":138
+    }
+    , {
+      "from":138
+      , "to":121
+    }
+    , {
+      "from":138
+      , "to":137
+    }
+    , {
+      "from":137
+      , "to":138
+    }
+    , {
+      "from":122
+      , "to":140
+    }
+    , {
+      "from":140
+      , "to":123
+    }
+    , {
+      "from":140
+      , "to":139
+    }
+    , {
+      "from":139
+      , "to":140
+    }
+    , {
+      "from":122
+      , "to":142
+    }
+    , {
+      "from":142
+      , "to":123
+    }
+    , {
+      "from":142
+      , "to":141
+    }
+    , {
+      "from":141
+      , "to":142
+    }
+  ]
+}

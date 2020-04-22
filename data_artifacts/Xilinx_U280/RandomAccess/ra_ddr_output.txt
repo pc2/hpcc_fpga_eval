@@ -1,0 +1,30 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Xilinx
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Xilinx
+Device Name:   xilinx_u280_xdma_201920_3
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:random_access_kernels_single.xclbin
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the random access benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.0.2
+
+-------------------------------------------------------------
+Summary:
+Kernel Replications: 2
+Repetitions:         10
+Total data size:     4.29497e+09 Byte
+Kernel file:         random_access_kernels_single.xclbin
+Device:              xilinx_u280_xdma_201920_3
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+         best         mean        GUOPS        error
+  5.32609e+01  5.34245e+01  4.03201e-02  1.06281e-02

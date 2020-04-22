@@ -1,0 +1,31 @@
+
+*** Running vivado
+    with args -log pfm_dynamic_calc_0_8_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfm_dynamic_calc_0_8_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source pfm_dynamic_calc_0_8_0.tcl -notrace
+[OPTRACE]|74694|1|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889319790|START|pfm_dynamic_calc_0_8_0_synth_1|ROLLUP_AUTO
+[OPTRACE]|74694|2|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889319791|START|Creating in-memory project|
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_calc_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:Monitor_AXI_Master:1.0'. The one found in IP location '/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo/iprepo/monitor_axi_master_v1_0' will take precedence over the same IP in location /opt/Xilinx/Vitis/2019.2/data/ip/xilinx/monitor_axi_master_v1_0
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:interface:sdsoc_trace:2.0'. The one found in location '/opt/Xilinx/Vitis/2019.2/data/ip/xilinx/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2019.2/data/ip/interfaces/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml'
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1692.246 ; gain = 184.773 ; free physical = 281924 ; free virtual = 417927
+[OPTRACE]|74694|3|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889329457|END|Creating in-memory project|
+[OPTRACE]|74694|4|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889329458|START|Adding files|
+[OPTRACE]|74694|5|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889329751|END|Adding files|
+[OPTRACE]|74694|6|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889329753|START|Configure IP Cache|
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP pfm_dynamic_calc_0_8_0, cache-ID = 8c348f11eabc895b.
+[OPTRACE]|74694|7|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889333965|END|Configure IP Cache|
+[OPTRACE]|74694|8|/home/marimeyer/repos/stream_fpga/cmake-build-multi/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_calc_0_8_0_synth_1/pfm_dynamic_calc_0_8_0.tcl|vivado_synth|1586889334015|END|pfm_dynamic_calc_0_8_0_synth_1|
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 14 20:35:34 2020...

@@ -1,0 +1,68 @@
+From 15f826c1e1456ae277a40a51766f6b060a548761 Mon Sep 17 00:00:00 2001
+From: Marius Meyer <marius.meyer@uni-paderborn.de>
+Date: Wed, 22 Apr 2020 21:49:36 +0200
+Subject: [PATCH 1/2] Change Buffer init order to show performance drop for ADD
+
+---
+ STREAM/src/host/main.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/STREAM/src/host/main.cpp b/STREAM/src/host/main.cpp
+index 2d9395a..a90a096 100644
+--- a/STREAM/src/host/main.cpp
++++ b/STREAM/src/host/main.cpp
+@@ -36,13 +36,13 @@ main(int argc, char *argv[]) {
+     HOST_DATA_TYPE *A, *B, *C;
+ #ifdef INTEL_FPGA
+ #ifdef USE_SVM
+-    A = reinterpret_cast<HOST_DATA_TYPE*>(
++    C = reinterpret_cast<HOST_DATA_TYPE*>(
+                             clSVMAlloc(context(), 0 ,
+                             programSettings->streamArraySize * sizeof(HOST_DATA_TYPE), 1024));
+     B = reinterpret_cast<HOST_DATA_TYPE*>(
+                             clSVMAlloc(context(), 0 ,
+                             programSettings->streamArraySize * sizeof(HOST_DATA_TYPE), 1024));
+-    C = reinterpret_cast<HOST_DATA_TYPE*>(
++    A = reinterpret_cast<HOST_DATA_TYPE*>(
+                             clSVMAlloc(context(), 0 ,
+                             programSettings->streamArraySize * sizeof(HOST_DATA_TYPE), 1024));
+ #else
+-- 
+2.21.0 (Apple Git-122)
+
+
+From fe9c7f9117cf7c2607d194c5097fc10f735c6544 Mon Sep 17 00:00:00 2001
+From: Marius Meyer <marius.meyer@uni-paderborn.de>
+Date: Wed, 22 Apr 2020 21:51:50 +0200
+Subject: [PATCH 2/2] dgdsfg
+
+---
+ STREAM/src/host/main.cpp | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/STREAM/src/host/main.cpp b/STREAM/src/host/main.cpp
+index a90a096..7635f45 100644
+--- a/STREAM/src/host/main.cpp
++++ b/STREAM/src/host/main.cpp
+@@ -36,13 +36,16 @@ main(int argc, char *argv[]) {
+     HOST_DATA_TYPE *A, *B, *C;
+ #ifdef INTEL_FPGA
+ #ifdef USE_SVM
+-    C = reinterpret_cast<HOST_DATA_TYPE*>(
++    A = reinterpret_cast<HOST_DATA_TYPE*>(
+                             clSVMAlloc(context(), 0 ,
+                             programSettings->streamArraySize * sizeof(HOST_DATA_TYPE), 1024));
+     B = reinterpret_cast<HOST_DATA_TYPE*>(
+                             clSVMAlloc(context(), 0 ,
+                             programSettings->streamArraySize * sizeof(HOST_DATA_TYPE), 1024));
+-    A = reinterpret_cast<HOST_DATA_TYPE*>(
++    HOST_DATA_TYPE* dummy = reinterpret_cast<HOST_DATA_TYPE*>(
++                            clSVMAlloc(context(), 0 ,
++                            programSettings->streamArraySize * sizeof(HOST_DATA_TYPE), 1024));
++    C = reinterpret_cast<HOST_DATA_TYPE*>(
+                             clSVMAlloc(context(), 0 ,
+                             programSettings->streamArraySize * sizeof(HOST_DATA_TYPE), 1024));
+ #else
+-- 
+2.21.0 (Apple Git-122)
+

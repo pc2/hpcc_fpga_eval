@@ -1,0 +1,33 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   Initialized BSP
+Initialized BSP
+pac_s10_dc : Intel PAC Platform (pac_e600000)
+-------------------------------------------------------------
+Initialized BSP
+-------------------------------------------------------------
+FPGA Setup:frandom/cmake-build-syn-i/bin/random_access_kernels_single.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the random access benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.0.2.1
+
+-------------------------------------------------------------
+Summary:
+Kernel Replications: 1
+Repetitions:         1
+Total data size:     4.29497e+09 Byte
+Kernel file:         frandom/cmake-build-syn-i/bin/random_access_kernels_single.aocx
+Device:              pac_s10_dc : Intel PAC Platform (pac_e600000)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+         best         mean        GUOPS        error
+  4.57546e+03  4.57546e+03  4.69348e-04  1.06281e-02

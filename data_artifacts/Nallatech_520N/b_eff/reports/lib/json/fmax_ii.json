@@ -1,0 +1,398 @@
+{
+  "basicblocks":
+  {
+    "send.B0":
+    {
+      "name":"send.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":12
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "send.B1":
+    {
+      "name":"send.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":19
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":"82"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "send.B2":
+    {
+      "name":"send.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "send.B3":
+    {
+      "name":"send.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "send.B4":
+    {
+      "name":"send.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":"83"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "send.B5":
+    {
+      "name":"send.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "send.B6":
+    {
+      "name":"send.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":10
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":"89"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "recv.B0":
+    {
+      "name":"recv.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":12
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "recv.B1":
+    {
+      "name":"recv.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":19
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":"123"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "recv.B2":
+    {
+      "name":"recv.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "recv.B3":
+    {
+      "name":"recv.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":10
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "recv.B4":
+    {
+      "name":"recv.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":"124"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "recv.B5":
+    {
+      "name":"recv.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "recv.B6":
+    {
+      "name":"recv.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":11
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":"128"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+  , "functions":
+  {
+    "send":
+    {
+      "debug":
+      [
+        {
+          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+          , "line":72
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "send__no_loop":
+        [
+          "send.B0"
+          , "send.B2"
+        ]
+        , "send.B1":
+        [
+          "send.B1"
+          , "send.B3"
+          , "send.B4"
+          , "send.B6"
+          , "send.B5"
+        ]
+        , "send.B4":
+        [
+          "send.B4"
+        ]
+        , "send.B6":
+        [
+          "send.B6"
+        ]
+      }
+    }
+    , "recv":
+    {
+      "debug":
+      [
+        {
+          "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+          , "line":111
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "recv__no_loop":
+        [
+          "recv.B0"
+          , "recv.B2"
+        ]
+        , "recv.B1":
+        [
+          "recv.B1"
+          , "recv.B3"
+          , "recv.B4"
+          , "recv.B6"
+          , "recv.B5"
+        ]
+        , "recv.B4":
+        [
+          "recv.B4"
+        ]
+        , "recv.B6":
+        [
+          "recv.B6"
+        ]
+      }
+    }
+  }
+}

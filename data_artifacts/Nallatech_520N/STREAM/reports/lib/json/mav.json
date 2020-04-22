@@ -1,0 +1,2920 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"calc_0"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":3
+          , "name":"calc_0.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"35"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":4
+          , "name":"calc_0.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":5
+          , "name":"calc_0.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"52"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":6
+          , "name":"calc_0.B3"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":7
+          , "name":"calc_0.B4"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":12
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":29
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":13
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":29
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"589"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":19
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":28
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"20"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":20
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"620"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"620"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":8
+          , "name":"calc_0.B5"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":14
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":35
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":15
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":35
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"521"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":16
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":35
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"588"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":21
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":34
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"22"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":22
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"619"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"619"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":9
+          , "name":"calc_0.B6"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":10
+          , "name":"calc_0.B7"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":11
+          , "name":"calc_0.B8"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":17
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":41
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"42"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":18
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":41
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"73"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":23
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":40
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"24"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":24
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"137"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"137"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":25
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":26
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":24
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"524288B requested\n2097152B implemented"
+                    }
+                  ]
+                  , "Requested size":"524288 bytes"
+                  , "Implemented size":"2097152 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"4096 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_stream_kernels_single.cl"
+                          , "line":"22"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":38
+      , "name":"calc_1"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":39
+          , "name":"calc_1.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"35"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":40
+          , "name":"calc_1.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":41
+          , "name":"calc_1.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"52"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":42
+          , "name":"calc_1.B3"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":43
+          , "name":"calc_1.B4"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":48
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":49
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"589"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":55
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":74
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"56"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":56
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"620"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"620"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":44
+          , "name":"calc_1.B5"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":50
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":81
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":51
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":81
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"521"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":52
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":81
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"588"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":57
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":80
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"58"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":58
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"619"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"619"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":45
+          , "name":"calc_1.B6"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":46
+          , "name":"calc_1.B7"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":47
+          , "name":"calc_1.B8"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":53
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":87
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"42"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":54
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":87
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"73"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":59
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":86
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"60"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":60
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"137"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"137"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":61
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":62
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":70
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"524288B requested\n2097152B implemented"
+                    }
+                  ]
+                  , "Requested size":"524288 bytes"
+                  , "Implemented size":"2097152 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"4096 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_stream_kernels_single.cl"
+                          , "line":"68"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":73
+      , "name":"calc_2"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":74
+          , "name":"calc_2.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"35"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":75
+          , "name":"calc_2.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":76
+          , "name":"calc_2.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"52"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":77
+          , "name":"calc_2.B3"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":78
+          , "name":"calc_2.B4"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":83
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":121
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":84
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":121
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"589"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":90
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":120
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"91"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":91
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"620"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"620"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":79
+          , "name":"calc_2.B5"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":85
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":127
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":86
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":127
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"521"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":87
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":127
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"588"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":92
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":126
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"93"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":93
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"619"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"619"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":80
+          , "name":"calc_2.B6"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":81
+          , "name":"calc_2.B7"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":82
+          , "name":"calc_2.B8"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":88
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":133
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"42"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":89
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":133
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"73"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":94
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":132
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"95"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":95
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"137"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"137"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":96
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":97
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":116
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"524288B requested\n2097152B implemented"
+                    }
+                  ]
+                  , "Requested size":"524288 bytes"
+                  , "Implemented size":"2097152 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"4096 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_stream_kernels_single.cl"
+                          , "line":"114"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":108
+      , "name":"calc_3"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":109
+          , "name":"calc_3.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"35"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":110
+          , "name":"calc_3.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":111
+          , "name":"calc_3.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"52"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":112
+          , "name":"calc_3.B3"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":113
+          , "name":"calc_3.B4"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":118
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":167
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":119
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":167
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"589"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":125
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":166
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"126"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":126
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"620"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"620"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":114
+          , "name":"calc_3.B5"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":120
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":173
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"40"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":121
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":173
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"521"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":122
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":173
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Stores to":"buffer1"
+                  , "Start Cycle":"588"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":127
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":172
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"128"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":128
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"619"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"619"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":115
+          , "name":"calc_3.B6"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":116
+          , "name":"calc_3.B7"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":117
+          , "name":"calc_3.B8"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":123
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":179
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Pipelined"
+                  , "Stall-free":"No"
+                  , "Loads from":"buffer1"
+                  , "Start Cycle":"42"
+                  , "Latency":"31"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":124
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":179
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"73"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":129
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":178
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"130"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":130
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"137"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"137"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":131
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":132
+              , "name":"buffer1"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_stream_kernels_single.cl"
+                    , "line":162
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"524288B requested\n2097152B implemented"
+                    }
+                  ]
+                  , "Requested size":"524288 bytes"
+                  , "Implemented size":"2097152 bytes"
+                  , "Number of banks":"2"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"4096 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_stream_kernels_single.cl"
+                          , "line":"160"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"memtype"
+      , "id":1
+      , "name":"Global Memory"
+      , "children":
+      [
+        {
+          "type":"memsys"
+          , "id":37
+          , "name":"DDR"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Number of banks":"4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":13
+      , "to":26
+    }
+    , {
+      "from":26
+      , "to":15
+    }
+    , {
+      "from":16
+      , "to":26
+    }
+    , {
+      "from":26
+      , "to":17
+    }
+    , {
+      "from":10
+      , "to":4
+    }
+    , {
+      "from":3
+      , "to":5
+    }
+    , {
+      "from":20
+      , "to":6
+    }
+    , {
+      "from":5
+      , "to":19
+    }
+    , {
+      "from":12
+      , "to":20
+    }
+    , {
+      "from":13
+      , "to":20
+    }
+    , {
+      "from":6
+      , "to":21
+    }
+    , {
+      "from":14
+      , "to":22
+    }
+    , {
+      "from":15
+      , "to":22
+    }
+    , {
+      "from":16
+      , "to":22
+    }
+    , {
+      "from":22
+      , "to":9
+    }
+    , {
+      "from":24
+      , "to":10
+    }
+    , {
+      "from":9
+      , "to":23
+    }
+    , {
+      "from":17
+      , "to":24
+    }
+    , {
+      "from":18
+      , "to":24
+    }
+    , {
+      "from":19
+      , "to":12
+    }
+    , {
+      "from":12
+      , "to":13
+    }
+    , {
+      "from":21
+      , "to":14
+    }
+    , {
+      "from":21
+      , "to":15
+    }
+    , {
+      "from":14
+      , "to":16
+    }
+    , {
+      "from":15
+      , "to":16
+    }
+    , {
+      "from":23
+      , "to":17
+    }
+    , {
+      "from":17
+      , "to":18
+    }
+    , {
+      "from":37
+      , "to":14
+    }
+    , {
+      "from":37
+      , "to":12
+    }
+    , {
+      "from":18
+      , "to":37
+    }
+    , {
+      "from":49
+      , "to":62
+    }
+    , {
+      "from":62
+      , "to":51
+    }
+    , {
+      "from":52
+      , "to":62
+    }
+    , {
+      "from":62
+      , "to":53
+    }
+    , {
+      "from":46
+      , "to":40
+    }
+    , {
+      "from":39
+      , "to":41
+    }
+    , {
+      "from":56
+      , "to":42
+    }
+    , {
+      "from":41
+      , "to":55
+    }
+    , {
+      "from":48
+      , "to":56
+    }
+    , {
+      "from":49
+      , "to":56
+    }
+    , {
+      "from":42
+      , "to":57
+    }
+    , {
+      "from":50
+      , "to":58
+    }
+    , {
+      "from":51
+      , "to":58
+    }
+    , {
+      "from":52
+      , "to":58
+    }
+    , {
+      "from":58
+      , "to":45
+    }
+    , {
+      "from":60
+      , "to":46
+    }
+    , {
+      "from":45
+      , "to":59
+    }
+    , {
+      "from":53
+      , "to":60
+    }
+    , {
+      "from":54
+      , "to":60
+    }
+    , {
+      "from":55
+      , "to":48
+    }
+    , {
+      "from":48
+      , "to":49
+    }
+    , {
+      "from":57
+      , "to":50
+    }
+    , {
+      "from":57
+      , "to":51
+    }
+    , {
+      "from":50
+      , "to":52
+    }
+    , {
+      "from":51
+      , "to":52
+    }
+    , {
+      "from":59
+      , "to":53
+    }
+    , {
+      "from":53
+      , "to":54
+    }
+    , {
+      "from":37
+      , "to":48
+    }
+    , {
+      "from":37
+      , "to":50
+    }
+    , {
+      "from":54
+      , "to":37
+    }
+    , {
+      "from":84
+      , "to":97
+    }
+    , {
+      "from":97
+      , "to":86
+    }
+    , {
+      "from":87
+      , "to":97
+    }
+    , {
+      "from":97
+      , "to":88
+    }
+    , {
+      "from":81
+      , "to":75
+    }
+    , {
+      "from":74
+      , "to":76
+    }
+    , {
+      "from":91
+      , "to":77
+    }
+    , {
+      "from":76
+      , "to":90
+    }
+    , {
+      "from":83
+      , "to":91
+    }
+    , {
+      "from":84
+      , "to":91
+    }
+    , {
+      "from":77
+      , "to":92
+    }
+    , {
+      "from":85
+      , "to":93
+    }
+    , {
+      "from":86
+      , "to":93
+    }
+    , {
+      "from":87
+      , "to":93
+    }
+    , {
+      "from":93
+      , "to":80
+    }
+    , {
+      "from":95
+      , "to":81
+    }
+    , {
+      "from":80
+      , "to":94
+    }
+    , {
+      "from":88
+      , "to":95
+    }
+    , {
+      "from":89
+      , "to":95
+    }
+    , {
+      "from":90
+      , "to":83
+    }
+    , {
+      "from":83
+      , "to":84
+    }
+    , {
+      "from":92
+      , "to":85
+    }
+    , {
+      "from":92
+      , "to":86
+    }
+    , {
+      "from":85
+      , "to":87
+    }
+    , {
+      "from":86
+      , "to":87
+    }
+    , {
+      "from":94
+      , "to":88
+    }
+    , {
+      "from":88
+      , "to":89
+    }
+    , {
+      "from":37
+      , "to":83
+    }
+    , {
+      "from":89
+      , "to":37
+    }
+    , {
+      "from":37
+      , "to":85
+    }
+    , {
+      "from":119
+      , "to":132
+    }
+    , {
+      "from":132
+      , "to":121
+    }
+    , {
+      "from":122
+      , "to":132
+    }
+    , {
+      "from":132
+      , "to":123
+    }
+    , {
+      "from":116
+      , "to":110
+    }
+    , {
+      "from":109
+      , "to":111
+    }
+    , {
+      "from":126
+      , "to":112
+    }
+    , {
+      "from":111
+      , "to":125
+    }
+    , {
+      "from":118
+      , "to":126
+    }
+    , {
+      "from":119
+      , "to":126
+    }
+    , {
+      "from":112
+      , "to":127
+    }
+    , {
+      "from":120
+      , "to":128
+    }
+    , {
+      "from":121
+      , "to":128
+    }
+    , {
+      "from":122
+      , "to":128
+    }
+    , {
+      "from":128
+      , "to":115
+    }
+    , {
+      "from":130
+      , "to":116
+    }
+    , {
+      "from":115
+      , "to":129
+    }
+    , {
+      "from":123
+      , "to":130
+    }
+    , {
+      "from":124
+      , "to":130
+    }
+    , {
+      "from":125
+      , "to":118
+    }
+    , {
+      "from":118
+      , "to":119
+    }
+    , {
+      "from":127
+      , "to":120
+    }
+    , {
+      "from":127
+      , "to":121
+    }
+    , {
+      "from":120
+      , "to":122
+    }
+    , {
+      "from":121
+      , "to":122
+    }
+    , {
+      "from":129
+      , "to":123
+    }
+    , {
+      "from":123
+      , "to":124
+    }
+    , {
+      "from":124
+      , "to":37
+    }
+    , {
+      "from":37
+      , "to":118
+    }
+    , {
+      "from":37
+      , "to":120
+    }
+  ]
+}

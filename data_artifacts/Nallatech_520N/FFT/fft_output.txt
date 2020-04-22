@@ -1,0 +1,38 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+Multiple devices have been found. Select the platform by typing a number:
+0) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+1) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie1)
+Enter device id [0-1]:-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../cmake-build/bin/fft1d_float_8.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the FFT benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: "1.0"
+-------------------------------------------------------------
+Summary:
+FFT Size:            4096
+Data Size:           5000 * FFT Size * sizeof(cl_float) = 8.19200e+07 Byte
+Repetitions:         10
+Kernel file:         ../cmake-build/bin/fft1d_float_8.aocx
+Device:              p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+   res. error    mach. eps
+  3.17324e-01  1.19209e-07
+
+                       avg         best
+   Time in s:  2.10655e-06  2.10390e-06
+      GFLOPS:  1.16664e+02  1.16812e+02

@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"classes":["info-table"],"data":["stream_kernels_single"],"name":"Project Name"},
+{"data":["Stratix 10, 1SX280HN2F43E2VG, dcp_bsp:pac_s10_dc"],"name":"Target Family, Device, Board"},
+{"data":["19.4.0 Build 64"],"name":"AOC Version"},
+{"data":["18.1.2 Build 277 Pro"],"name":"Quartus Version"},
+{"data":["aoc /scratch/pc2-mitarbeiter/mariusme/fpga-0011/pac/global_mem_svm/stream_fpga/cmake-build-syn-nobuffer/src/device/replicated_stream_kernels_single.cl -I/scratch/pc2-mitarbeiter/mariusme/fpga-0011/pac/global_mem_svm/stream_fpga/cmake-build-syn-nobuffer/src/device/../common -fpc -fp-relaxed -board=pac_s10_dc -o /scratch/pc2-mitarbeiter/mariusme/fpga-0011/pac/global_mem_svm/stream_fpga/cmake-build-syn-nobuffer/bin/stream_kernels_single.aocx"],"name":"Command"},
+{"data":["Wed Apr 15 16:37:53 2020"],"name":"Reports Generated At"}
+]}

@@ -1,0 +1,193 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units", "Hyper-Optimized Handshaking"]
+    , "children":
+    [
+      {
+        "name":"gemm"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "Off"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+          , {
+            "type":"text"
+            , "text":"Hyper-optimized handshaking disabled due to loop orchestration compiler optimization being disabled in loop gemm.B1."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/gemm_cannon.cl"
+              , "line":171
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"gemm"
+        , "data":
+        [30990, 118519, 1160, 726, 624]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/gemm_cannon.cl"
+              , "line":171
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [16956, 19160, 0, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [455240, 910480, 2627, 1047, 0]
+      }
+      , {
+        "name":"System description ROM"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2, 71, 2, 0, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [503188, 1048230, 3789, 1773, 624]
+        , "data_percent":
+        [26.9627, 28.084, 32.3266, 30.7812]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [1866240, 3732480, 11721, 5760, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+      {
+        "name":"Load uses a Burst-coalesced non-aligned LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Use Dynamic Profiler to determine performance impact of this LSU."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/gemm_cannon.cl"
+              , "line":203
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced non-aligned LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Use Dynamic Profiler to determine performance impact of this LSU."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/gemm_cannon.cl"
+              , "line":205
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced non-aligned LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Use Dynamic Profiler to determine performance impact of this LSU."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/gemm_cannon.cl"
+              , "line":226
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Store uses a Burst-coalesced non-aligned LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Use Dynamic Profiler to determine performance impact of this LSU."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/gemm_cannon.cl"
+              , "line":226
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [23.3911, 12.0271, 12.0584, 5.32378, 0]
+  , "total":
+  [224374, 450079, 624, 0, 4]
+  , "name":"Kernel System"
+  , "max_resources":
+  [1866240, 3732480, 11721, 5760, 93312]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [220164, 440329, 572, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [2338, 4125, 0, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 1 global load and 1 global store."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 1 global load and 1 global store."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#hnj1476724450050"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [2, 71, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes. The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"accessMemory_0"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.251661, 0.104488, 0.148802, 0.426585, 0]
+      , "total_kernel_resources":
+      [1870, 5554, 50, 0, 4]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Coalesced Private Variables: \n - 'ran' (replicated_random_access_kernels_single.cl:47)\n - 'update_val' (replicated_random_access_kernels_single.cl:62)"
+          , "type":"resource"
+          , "data":
+          [40, 128, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":47
+              }
+            ]
+            , [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":62
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 64"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 64 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (replicated_random_access_kernels_single.cl:58)"
+          , "type":"resource"
+          , "data":
+          [8, 130, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"replicated_random_access_kernels_single.cl"
+                , "line":58
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 65"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 65 width"
+            }
+          ]
+        }
+        , {
+          "name":"accessMemory_0.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 320, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 193, 0, 0, 0]
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:58"
+                  , "type":"resource"
+                  , "data":
+                  [0, 66, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":58
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:73"
+                  , "type":"resource"
+                  , "data":
+                  [0, 61, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":73
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [10, 9, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"replicated_random_access_kernels_single.cl:58"
+                  , "type":"resource"
+                  , "data":
+                  [249, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":58
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [88, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"65-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [65, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:73"
+                  , "type":"resource"
+                  , "data":
+                  [61, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":73
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [61, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"accessMemory_0.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [150, 459, 9, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [150, 459, 9, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [81, 9, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"replicated_random_access_kernels_single.cl:47"
+                  , "type":"resource"
+                  , "data":
+                  [65, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":47
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:58"
+                  , "type":"resource"
+                  , "data":
+                  [16, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":58
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [122, 214, 6, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"replicated_random_access_kernels_single.cl:47"
+                  , "type":"resource"
+                  , "data":
+                  [52, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":47
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"65-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [52, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:58"
+                  , "type":"resource"
+                  , "data":
+                  [88, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":58
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"65-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [65, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"65-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [22, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:71"
+                  , "type":"resource"
+                  , "data":
+                  [63, 63, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":71
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [63, 63, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:73"
+                  , "type":"resource"
+                  , "data":
+                  [62, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":73
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [62, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:87"
+                  , "type":"resource"
+                  , "data":
+                  [453, 1985, 16, 0, 4]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":87
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [453, 1985, 16, 0, 4]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"replicated_random_access_kernels_single.cl:99"
+                  , "type":"resource"
+                  , "data":
+                  [430, 2236, 18, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"replicated_random_access_kernels_single.cl"
+                        , "line":99
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [64, 64, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [366, 2172, 18, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

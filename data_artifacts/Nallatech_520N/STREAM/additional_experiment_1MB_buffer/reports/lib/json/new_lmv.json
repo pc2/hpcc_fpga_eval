@@ -1,0 +1,2540 @@
+{
+  "nodes":
+  [
+    {
+      "name":"calc_0"
+      , "id":961355704
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":1
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"buffer1"
+              , "id":2
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"24"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"8 megabits"
+                  , "Implemented size":"4 megabytes = 4 private copies x  requested size"
+                  , "Number of banks":"2"
+                  , "Bank width (word size)":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Implemented bank depth":"32768 words = 4 private copies x bank depth"
+                  , "Memory layout information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"22"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                  , "Additional information":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":24
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":3
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"22"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":24
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":4
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"22"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":24
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":5
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":7
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"22"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+                , {
+                  "name":"Bank 1"
+                  , "id":9
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"22"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":24
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":10
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"22"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":24
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":11
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":13
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"22"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":961611968
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":35
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":961635488
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":41
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":961522656
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":29
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":961622432
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":35
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ARB"
+          , "id":6
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":8
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":12
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":14
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+      ]
+    }
+    , {
+      "name":"calc_1"
+      , "id":961406632
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":15
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"buffer1"
+              , "id":16
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"70"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"8 megabits"
+                  , "Implemented size":"4 megabytes = 4 private copies x  requested size"
+                  , "Number of banks":"2"
+                  , "Bank width (word size)":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Implemented bank depth":"32768 words = 4 private copies x bank depth"
+                  , "Memory layout information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"68"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                  , "Additional information":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":70
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":17
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"68"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":70
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":18
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"68"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":70
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":19
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":21
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"68"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+                , {
+                  "name":"Bank 1"
+                  , "id":23
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"68"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":70
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":24
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"68"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":70
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":25
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":27
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"68"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":961762080
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":81
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":961784560
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":87
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":961743744
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":75
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":961772544
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":81
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ARB"
+          , "id":20
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":22
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":26
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":28
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+      ]
+    }
+    , {
+      "name":"calc_2"
+      , "id":961402472
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":29
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"buffer1"
+              , "id":30
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"116"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"8 megabits"
+                  , "Implemented size":"4 megabytes = 4 private copies x  requested size"
+                  , "Number of banks":"2"
+                  , "Bank width (word size)":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Implemented bank depth":"32768 words = 4 private copies x bank depth"
+                  , "Memory layout information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"114"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                  , "Additional information":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":116
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":31
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"114"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":32
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"114"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":116
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":33
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":35
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"114"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+                , {
+                  "name":"Bank 1"
+                  , "id":37
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"114"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":38
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"114"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":116
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":39
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":41
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"114"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":961908432
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":127
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":961584688
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":133
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":961892144
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":121
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":961918896
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":127
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ARB"
+          , "id":34
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":36
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":40
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":42
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+      ]
+    }
+    , {
+      "name":"calc_3"
+      , "id":961421256
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":43
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"buffer1"
+              , "id":44
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"162"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"8 megabits"
+                  , "Implemented size":"4 megabytes = 4 private copies x  requested size"
+                  , "Number of banks":"2"
+                  , "Bank width (word size)":"512 bits"
+                  , "Bank depth":"8192 words"
+                  , "Implemented bank depth":"32768 words = 4 private copies x bank depth"
+                  , "Memory layout information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                          , "line":"160"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>b<sub>6</sub></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                  , "Additional information":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                    , "line":162
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":45
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"160"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":162
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":46
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"160"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":162
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":47
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":49
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"160"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>0</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>0</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+                , {
+                  "name":"Bank 1"
+                  , "id":51
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Bank width":"512 bits"
+                      , "Implemented bank depth":"32768 words"
+                      , "Implemented bank size":"2 megabytes =  bank width x implemented bank depth"
+                      , "Number of active ports":"2"
+                      , "Number of shared (RW) ports":"2"
+                      , "Memory layout information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                          , "links":
+                          [
+                            {
+                              "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                              , "line":"160"
+                            }
+                          ]
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                        , "line":162
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":52
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"2 megabytes (32768 words deep x 512 bits wide)"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"0"
+                          , "Number of shared (RW) ports":"2"
+                          , "Memory layout information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                              , "links":
+                              [
+                                {
+                                  "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                  , "line":"160"
+                                }
+                              ]
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                            , "line":162
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"RW"
+                          , "id":53
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"RW"
+                          , "id":55
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":4
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"512 bits"
+                            , "Depth per copy":"8192 words"
+                            , "Number of private copies":"4"
+                            , "Memory layout information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:\n  Variable 'buffer1' occupies memory words [0-16383] and has 1 array element per memory word."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 4 private copies were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                                , "links":
+                                [
+                                  {
+                                    "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                                    , "line":"160"
+                                  }
+                                ]
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bank bit</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>1</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr><tr><td>Private copy 3: </td><td>1</td><td>1</td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>1</td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":962049024
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"202"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":173
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":962071504
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Loads from":"buffer1"
+              , "Start cycle":"13"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":179
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":962028640
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":167
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":962059488
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"512 bits"
+              , "Stall-free":"No"
+              , "Type":"Local-pipelined"
+              , "Stores to":"buffer1"
+              , "Start cycle":"243"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/mariusme/stream_16k/stream_fpga/cmake-build/src/device/replicated_stream_kernels_single.cl"
+                , "line":173
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ARB"
+          , "id":48
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":50
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":54
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+        , {
+          "name":"ARB"
+          , "id":56
+          , "details":
+          [
+            {
+              "type":"table"
+            }
+          ]
+          , "type":"arb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":5
+      , "to":6
+    }
+    , {
+      "from":6
+      , "to":5
+    }
+    , {
+      "from":6
+      , "to":961611968
+    }
+    , {
+      "from":961522656
+      , "to":6
+    }
+    , {
+      "from":7
+      , "to":8
+    }
+    , {
+      "from":8
+      , "to":7
+    }
+    , {
+      "from":8
+      , "to":961635488
+    }
+    , {
+      "from":961622432
+      , "to":8
+    }
+    , {
+      "from":11
+      , "to":12
+    }
+    , {
+      "from":12
+      , "to":11
+    }
+    , {
+      "from":12
+      , "to":961611968
+    }
+    , {
+      "from":961522656
+      , "to":12
+    }
+    , {
+      "from":13
+      , "to":14
+    }
+    , {
+      "from":14
+      , "to":13
+    }
+    , {
+      "from":14
+      , "to":961635488
+    }
+    , {
+      "from":961622432
+      , "to":14
+    }
+    , {
+      "from":19
+      , "to":20
+    }
+    , {
+      "from":20
+      , "to":19
+    }
+    , {
+      "from":20
+      , "to":961762080
+    }
+    , {
+      "from":961743744
+      , "to":20
+    }
+    , {
+      "from":21
+      , "to":22
+    }
+    , {
+      "from":22
+      , "to":21
+    }
+    , {
+      "from":22
+      , "to":961784560
+    }
+    , {
+      "from":961772544
+      , "to":22
+    }
+    , {
+      "from":25
+      , "to":26
+    }
+    , {
+      "from":26
+      , "to":25
+    }
+    , {
+      "from":26
+      , "to":961762080
+    }
+    , {
+      "from":961743744
+      , "to":26
+    }
+    , {
+      "from":27
+      , "to":28
+    }
+    , {
+      "from":28
+      , "to":27
+    }
+    , {
+      "from":28
+      , "to":961784560
+    }
+    , {
+      "from":961772544
+      , "to":28
+    }
+    , {
+      "from":33
+      , "to":34
+    }
+    , {
+      "from":34
+      , "to":33
+    }
+    , {
+      "from":34
+      , "to":961908432
+    }
+    , {
+      "from":961892144
+      , "to":34
+    }
+    , {
+      "from":35
+      , "to":36
+    }
+    , {
+      "from":36
+      , "to":35
+    }
+    , {
+      "from":36
+      , "to":961584688
+    }
+    , {
+      "from":961918896
+      , "to":36
+    }
+    , {
+      "from":39
+      , "to":40
+    }
+    , {
+      "from":40
+      , "to":39
+    }
+    , {
+      "from":40
+      , "to":961908432
+    }
+    , {
+      "from":961892144
+      , "to":40
+    }
+    , {
+      "from":41
+      , "to":42
+    }
+    , {
+      "from":42
+      , "to":41
+    }
+    , {
+      "from":42
+      , "to":961584688
+    }
+    , {
+      "from":961918896
+      , "to":42
+    }
+    , {
+      "from":47
+      , "to":48
+    }
+    , {
+      "from":48
+      , "to":47
+    }
+    , {
+      "from":48
+      , "to":962049024
+    }
+    , {
+      "from":962028640
+      , "to":48
+    }
+    , {
+      "from":49
+      , "to":50
+    }
+    , {
+      "from":50
+      , "to":49
+    }
+    , {
+      "from":50
+      , "to":962071504
+    }
+    , {
+      "from":962059488
+      , "to":50
+    }
+    , {
+      "from":53
+      , "to":54
+    }
+    , {
+      "from":54
+      , "to":53
+    }
+    , {
+      "from":54
+      , "to":962049024
+    }
+    , {
+      "from":962028640
+      , "to":54
+    }
+    , {
+      "from":55
+      , "to":56
+    }
+    , {
+      "from":56
+      , "to":55
+    }
+    , {
+      "from":56
+      , "to":962071504
+    }
+    , {
+      "from":962059488
+      , "to":56
+    }
+  ]
+}

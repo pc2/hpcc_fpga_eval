@@ -1,0 +1,38 @@
+ srun -p fpga --constraint=19.2.0_hpc ./fgemm -f gemm_cannon.aocx -m 4096 -i -n 10                                                                                                                                                                      [20-02-05 13:13:49]
+srun: SPANK_FPGALINKENABLED=NO
+srun: SPANK_COLLECTORS=normal
+srun: SPANK_RECOMMENDATIONS=off
+srun: job 438744 queued and waiting for resources
+srun: job 438744 has been allocated resources
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+Multiple devices have been found. Select the platform by typing a number:
+0) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+1) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie1)
+0
+Enter device id [0-1]:-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:gemm_cannon.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Summary:
+Kernel Repetitions:  10
+Total matrix size:   4096
+Memory Interleaving: 0
+Kernel file:         gemm_cannon.aocx
+Device:              p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+         best         mean       GFLOPS
+  4.27375e-01  4.27384e-01  3.21589e+02

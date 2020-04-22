@@ -1,0 +1,4107 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [50.7662, 26.2671, 26.0448, 23.6328, 18.1771]
+  , "total":
+  [485868, 972116, 2770, 1047, 217]
+  , "name":"Kernel System"
+  , "max_resources":
+  [1866240, 3732480, 11721, 5760, 93312]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [469340, 938680, 2768, 1047, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [2, 71, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes. The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"Pipe and channel resources"
+      , "type":"group"
+      , "children":
+      [
+        {
+          "name":"communication_bw520n.cl:52 (ch_out_1)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":52
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"communication_bw520n.cl:53 (ch_out_2)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":53
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"communication_bw520n.cl:54 (ch_in_1)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":54
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"communication_bw520n.cl:55 (ch_in_2)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":55
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"communication_bw520n.cl:57 (ch_out_3)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":57
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"communication_bw520n.cl:58 (ch_out_4)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":58
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"communication_bw520n.cl:59 (ch_in_3)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":59
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"communication_bw520n.cl:60 (ch_in_4)"
+          , "type":"resource"
+          , "data":
+          [2, 257, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":60
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel is implemented 256 bits wide by 0 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"256b wide by 0 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#qah1476410829821"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"recv"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [1.20959, 0.717218, 0.550626, 0, 0]
+      , "total_kernel_resources":
+      [10685, 20552, 0, 0, 135]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Coalesced Private Variables: \n - 'send_part1' (communication_bw520n.cl:114)\n - 'recv_part1' (communication_bw520n.cl:116)"
+          , "type":"resource"
+          , "data":
+          [1216, 2464, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":114
+              }
+            ]
+            , [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":116
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"32 registers of width 8"
+            }
+            , {
+              "type":"text"
+              , "text":"32 registers of width 8 and depth 4"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n32 regs, 8 width,\n32 regs, 8 width by 4 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Coalesced Private Variables: \n - 'send_part2' (communication_bw520n.cl:115)\n - 'recv_part2' (communication_bw520n.cl:117)"
+          , "type":"resource"
+          , "data":
+          [1216, 2464, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":115
+              }
+            ]
+            , [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":117
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"32 registers of width 8"
+            }
+            , {
+              "type":"text"
+              , "text":"32 registers of width 8 and depth 4"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n32 regs, 8 width,\n32 regs, 8 width by 4 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (communication_bw520n.cl:123)"
+          , "type":"resource"
+          , "data":
+          [8, 66, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":123
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 33 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'k' (communication_bw520n.cl:124)"
+          , "type":"resource"
+          , "data":
+          [8, 66, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":124
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 33 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'k' (communication_bw520n.cl:128)"
+          , "type":"resource"
+          , "data":
+          [8, 66, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":128
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 33 width"
+            }
+          ]
+        }
+        , {
+          "name":"recv.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 225, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 151, 0, 0, 0]
+                }
+                , {
+                  "name":"communication_bw520n.cl:120"
+                  , "type":"resource"
+                  , "data":
+                  [0, 8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":120
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:123"
+                  , "type":"resource"
+                  , "data":
+                  [0, 66, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":123
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [7, 2, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:111"
+                  , "type":"resource"
+                  , "data":
+                  [7, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":111
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [8, 7, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:113"
+                  , "type":"resource"
+                  , "data":
+                  [33, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":113
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:123"
+                  , "type":"resource"
+                  , "data":
+                  [257, 35, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":123
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [81, 3, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [46, 32, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [66, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:124"
+                  , "type":"resource"
+                  , "data":
+                  [9, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":124
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [9, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"recv.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [38, 554, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [38, 554, 0, 0, 1]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [673, 584.999, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:114"
+                  , "type":"resource"
+                  , "data":
+                  [59.5, 51, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":114
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:115"
+                  , "type":"resource"
+                  , "data":
+                  [57.6667, 51.9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":115
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:116"
+                  , "type":"resource"
+                  , "data":
+                  [39.5, 33, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:117"
+                  , "type":"resource"
+                  , "data":
+                  [31.6667, 28.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":117
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:120"
+                  , "type":"resource"
+                  , "data":
+                  [176.667, 153.9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":120
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:121"
+                  , "type":"resource"
+                  , "data":
+                  [57.6667, 51.9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":121
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:123"
+                  , "type":"resource"
+                  , "data":
+                  [16, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":123
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:125"
+                  , "type":"resource"
+                  , "data":
+                  [59.5, 51, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":125
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:126"
+                  , "type":"resource"
+                  , "data":
+                  [57.6667, 51.9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":126
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:134"
+                  , "type":"resource"
+                  , "data":
+                  [59.5, 51, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":134
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:135"
+                  , "type":"resource"
+                  , "data":
+                  [57.6667, 51.9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":135
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [276, 528, 0, 0, 27]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:114"
+                  , "type":"resource"
+                  , "data":
+                  [44.1667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":114
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.5, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [39.6667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:115"
+                  , "type":"resource"
+                  , "data":
+                  [40.3667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":115
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [40.3667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:116"
+                  , "type":"resource"
+                  , "data":
+                  [30.1667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.5, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":22
+                      , "data":
+                      [25.6667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:117"
+                  , "type":"resource"
+                  , "data":
+                  [22.1667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":117
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":19
+                      , "data":
+                      [22.1667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:120"
+                  , "type":"resource"
+                  , "data":
+                  [128.7, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":120
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [9, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [119.7, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:121"
+                  , "type":"resource"
+                  , "data":
+                  [40.3667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":121
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [40.3667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:123"
+                  , "type":"resource"
+                  , "data":
+                  [45, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":123
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:125"
+                  , "type":"resource"
+                  , "data":
+                  [44.1667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":125
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.5, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [39.6667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:126"
+                  , "type":"resource"
+                  , "data":
+                  [40.3667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":126
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [40.3667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:134"
+                  , "type":"resource"
+                  , "data":
+                  [44.1667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":134
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.5, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [39.6667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:135"
+                  , "type":"resource"
+                  , "data":
+                  [40.3667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":135
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [40.3667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"recv.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 8, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:138"
+                  , "type":"resource"
+                  , "data":
+                  [5, 8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":138
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"recv.B3"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1587, 4150, 0, 0, 2]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1587, 4150, 0, 0, 2]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [256, 0, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:114"
+                  , "type":"resource"
+                  , "data":
+                  [20, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":114
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:115"
+                  , "type":"resource"
+                  , "data":
+                  [17.3333, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":115
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:116"
+                  , "type":"resource"
+                  , "data":
+                  [54, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:117"
+                  , "type":"resource"
+                  , "data":
+                  [55.3333, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":117
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:125"
+                  , "type":"resource"
+                  , "data":
+                  [54, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":125
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:126"
+                  , "type":"resource"
+                  , "data":
+                  [55.3333, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":126
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [535, 1043, 0, 0, 52]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:114"
+                  , "type":"resource"
+                  , "data":
+                  [35, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":114
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":15
+                      , "data":
+                      [35, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:115"
+                  , "type":"resource"
+                  , "data":
+                  [30.3333, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":115
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":13
+                      , "data":
+                      [30.3333, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:116"
+                  , "type":"resource"
+                  , "data":
+                  [94.5, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [94.5, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:117"
+                  , "type":"resource"
+                  , "data":
+                  [96.8333, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":117
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [96.8333, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:125"
+                  , "type":"resource"
+                  , "data":
+                  [94.5, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":125
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [94.5, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:126"
+                  , "type":"resource"
+                  , "data":
+                  [96.8333, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":126
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [96.8333, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"recv.B4"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [516, 2582, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [516, 2582, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [1019.99, 1042, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:114"
+                  , "type":"resource"
+                  , "data":
+                  [85, 90.6666, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":114
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:115"
+                  , "type":"resource"
+                  , "data":
+                  [86.5, 92.2667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":115
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:116"
+                  , "type":"resource"
+                  , "data":
+                  [55, 58.6667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:117"
+                  , "type":"resource"
+                  , "data":
+                  [47.5, 50.6667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":117
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:120"
+                  , "type":"resource"
+                  , "data":
+                  [256.5, 273.6, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":120
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:121"
+                  , "type":"resource"
+                  , "data":
+                  [86.5, 92.2667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":121
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:123"
+                  , "type":"resource"
+                  , "data":
+                  [27, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":123
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:124"
+                  , "type":"resource"
+                  , "data":
+                  [33, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":124
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:125"
+                  , "type":"resource"
+                  , "data":
+                  [85, 90.6666, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":125
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:126"
+                  , "type":"resource"
+                  , "data":
+                  [86.5, 92.2667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":126
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:134"
+                  , "type":"resource"
+                  , "data":
+                  [85, 90.6666, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":134
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:135"
+                  , "type":"resource"
+                  , "data":
+                  [86.5, 92.2667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":135
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [273, 526, 0, 0, 26]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:124"
+                  , "type":"resource"
+                  , "data":
+                  [73, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":124
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:125"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":125
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:126"
+                  , "type":"resource"
+                  , "data":
+                  [2, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":126
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"recv.B6"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [514, 2062, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [514, 2062, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [826, 1548, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:123"
+                  , "type":"resource"
+                  , "data":
+                  [9, 3, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":123
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:128"
+                  , "type":"resource"
+                  , "data":
+                  [33, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":128
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:129"
+                  , "type":"resource"
+                  , "data":
+                  [392, 768, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":129
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:130"
+                  , "type":"resource"
+                  , "data":
+                  [392, 768, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":130
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [271, 524, 0, 0, 26]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:128"
+                  , "type":"resource"
+                  , "data":
+                  [73, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":128
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:129"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":129
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:130"
+                  , "type":"resource"
+                  , "data":
+                  [4, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":130
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"send"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.653822, 0.400002, 0.2882, 0, 0]
+      , "total_kernel_resources":
+      [5825, 10757, 0, 0, 82]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Coalesced Private Variables: \n - 'send_part1' (communication_bw520n.cl:75)\n - 'recv_part1' (communication_bw520n.cl:87)"
+          , "type":"resource"
+          , "data":
+          [960, 1952, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":75
+              }
+            ]
+            , [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":87
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"32 registers of width 8 and depth 4"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n32 regs, 8 width by 4 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Coalesced Private Variables: \n - 'send_part2' (communication_bw520n.cl:76)\n - 'recv_part2' (communication_bw520n.cl:88)"
+          , "type":"resource"
+          , "data":
+          [960, 1952, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":76
+              }
+            ]
+            , [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":88
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"32 registers of width 8 and depth 4"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n32 regs, 8 width by 4 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (communication_bw520n.cl:82)"
+          , "type":"resource"
+          , "data":
+          [8, 66, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":82
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 33 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'k' (communication_bw520n.cl:83)"
+          , "type":"resource"
+          , "data":
+          [8, 66, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":83
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 33 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'k' (communication_bw520n.cl:89)"
+          , "type":"resource"
+          , "data":
+          [8, 66, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                , "line":89
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 33 width"
+            }
+          ]
+        }
+        , {
+          "name":"send.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 225, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 151, 0, 0, 0]
+                }
+                , {
+                  "name":"communication_bw520n.cl:79"
+                  , "type":"resource"
+                  , "data":
+                  [0, 8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":79
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:82"
+                  , "type":"resource"
+                  , "data":
+                  [0, 66, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [7, 2, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:72"
+                  , "type":"resource"
+                  , "data":
+                  [7, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":72
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [8, 7, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:74"
+                  , "type":"resource"
+                  , "data":
+                  [33, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":74
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:82"
+                  , "type":"resource"
+                  , "data":
+                  [257, 35, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [81, 3, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [46, 32, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [66, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:83"
+                  , "type":"resource"
+                  , "data":
+                  [9, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":83
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [9, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"send.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [31, 547, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [31, 547, 0, 0, 1]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [673, 584.999, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:75"
+                  , "type":"resource"
+                  , "data":
+                  [19.4, 14.4, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":75
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:76"
+                  , "type":"resource"
+                  , "data":
+                  [23.6667, 21.3, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":76
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:79"
+                  , "type":"resource"
+                  , "data":
+                  [62.4667, 50.1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":79
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:80"
+                  , "type":"resource"
+                  , "data":
+                  [23.6667, 21.3, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:82"
+                  , "type":"resource"
+                  , "data":
+                  [16, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:84"
+                  , "type":"resource"
+                  , "data":
+                  [240, 216, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":84
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:85"
+                  , "type":"resource"
+                  , "data":
+                  [200, 180, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":85
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:88"
+                  , "type":"resource"
+                  , "data":
+                  [1.66667, 1.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":88
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:91"
+                  , "type":"resource"
+                  , "data":
+                  [7.66667, 6.9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:95"
+                  , "type":"resource"
+                  , "data":
+                  [38.8, 28.8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":95
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:96"
+                  , "type":"resource"
+                  , "data":
+                  [39.6667, 35.7, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":96
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [276, 528, 0, 0, 27]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:75"
+                  , "type":"resource"
+                  , "data":
+                  [16.6, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":75
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [5.4, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [11.2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:76"
+                  , "type":"resource"
+                  , "data":
+                  [16.5667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":76
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":12
+                      , "data":
+                      [16.5667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:79"
+                  , "type":"resource"
+                  , "data":
+                  [49.7667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":79
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [10.8, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":28
+                      , "data":
+                      [38.9667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:80"
+                  , "type":"resource"
+                  , "data":
+                  [16.5667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":12
+                      , "data":
+                      [16.5667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:82"
+                  , "type":"resource"
+                  , "data":
+                  [45, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:84"
+                  , "type":"resource"
+                  , "data":
+                  [168, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":84
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":24
+                      , "data":
+                      [168, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:85"
+                  , "type":"resource"
+                  , "data":
+                  [140, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":85
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":20
+                      , "data":
+                      [140, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:88"
+                  , "type":"resource"
+                  , "data":
+                  [1.16667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":88
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.16667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:91"
+                  , "type":"resource"
+                  , "data":
+                  [5.36667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [5.36667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:95"
+                  , "type":"resource"
+                  , "data":
+                  [33.2, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":95
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [10.8, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [22.4, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:96"
+                  , "type":"resource"
+                  , "data":
+                  [27.7667, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":96
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Select"
+                      , "type":"resource"
+                      , "count":20
+                      , "data":
+                      [27.7667, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"send.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 8, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:99"
+                  , "type":"resource"
+                  , "data":
+                  [5, 8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":99
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"send.B4"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [773, 2580, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [773, 2580, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [515, 1037, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:82"
+                  , "type":"resource"
+                  , "data":
+                  [18, 4, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:83"
+                  , "type":"resource"
+                  , "data":
+                  [33, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":83
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:84"
+                  , "type":"resource"
+                  , "data":
+                  [232, 512, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":84
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:85"
+                  , "type":"resource"
+                  , "data":
+                  [232, 512, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":85
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [272, 525, 0, 0, 26]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:83"
+                  , "type":"resource"
+                  , "data":
+                  [73, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":83
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:84"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":84
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:85"
+                  , "type":"resource"
+                  , "data":
+                  [4, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":85
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"send.B5"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [5, 5, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5, 5, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [270, 524, 0, 0, 26]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"send.B6"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [3, 15, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3, 15, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [51, 13, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:82"
+                  , "type":"resource"
+                  , "data":
+                  [18, 4, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"communication_bw520n.cl:89"
+                  , "type":"resource"
+                  , "data":
+                  [33, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":89
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [16, 13, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"communication_bw520n.cl:89"
+                  , "type":"resource"
+                  , "data":
+                  [73, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":89
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:90"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":90
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"communication_bw520n.cl:91"
+                  , "type":"resource"
+                  , "data":
+                  [2, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/scratch/pc2-mitarbeiter/mariusme/synth2/fnet/src/device/communication_bw520n.cl"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

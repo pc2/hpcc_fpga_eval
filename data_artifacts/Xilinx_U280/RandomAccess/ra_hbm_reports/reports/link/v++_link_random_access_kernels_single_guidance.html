@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Design Guidance Report</title>
+<link rel="stylesheet" href="file:///opt/Xilinx/Vitis/2019.2/data/rulecheck/rulecheck.css">
+<script type="text/javascript" src="file:///opt/Xilinx/Vitis/2019.2/data/rulecheck/rulecheck.js"></script>
+</head><body>
+<center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
+<tr><td><b>Copyright</b></td><td>Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.</td></tr>
+<tr><td><b>Tool Version</b></td><td>xrcserver v.2019.2 (lin64) Build 0 </td></tr>
+<tr><td><b>Date</b></td><td>Thu Apr  2 00:23:25 2020</td></tr>
+<tr><td><b>Host</b></td><td>alveo0 running 64-bit Ubuntu 18.04.3 LTS</td></tr>
+<tr><td><b>Command</b></td><td>v++  --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo </td></tr>
+</table></center><br>
+<table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
+<tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
+<tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
+<tr><td><a href="#CONFIG FILE DETAILS">3 CONFIG FILE DETAILS</a></tr></td>
+<tr><td><a href="#PERFORMANCE CHECKS MET">4 PERFORMANCE CHECKS MET</a></tr></td>
+</table>
+<a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
+<pre>Violations found: 2
+</pre>
+<pre>Rule Specs Violated: 2
+</pre>
+<pre>Rules Met: 2
+</pre>
+<pre>Rule Specs Met: 2
+</pre>
+<a name="VIOLATION DETAILS"></a><h1>2 VIOLATION DETAILS</h1>
+<table border="1">
+<caption>Items that may require attention</caption>
+<tr class="ns-sort">
+<th align="left">Id</th>
+<th align="left">Name</th>
+<th align="left">Severity</th>
+<th align="left" width="170">Full Name</th>
+<th align="left">Categories</th>
+<th align="left" width="350">Details</th>
+<th align="left" width="380">Resolution</th>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">AUTO-FREQ-SCALING-04</td>
+<td align="left">warning</td>
+<td align="left">Auto frequency scaling - Kernel timing failure</td>
+<td align="left">Accelerator.random_access_kernels_single.Performance</td>
+<td align="left">One or more timing paths failed timing requirements. The kernel clock clkwiz_kernel_clk_out1 has an original frequency equal to 450 MHz. The frequency has been automatically changed to 404.6 MHz to enable proper functionality. The clock Id is 0.</td>
+<td align="left">The automatic frequency scaling feature allows user kernels to operate in hardware, even if at a lower frequency than intended. <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?t=vitis+guidance;v=2019.2;d=AUTO-FREQ-SCALING-04.html">This page</a> describes how to examine timing path violations.</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">AUTO-FREQ-SCALING-08</td>
+<td align="left">advisory</td>
+<td align="left">Auto frequency scaling - Higher frequency possible</td>
+<td align="left">Accelerator.random_access_kernels_single.Performance</td>
+<td align="left">For clock clk_out1_pfm_top_clkwiz_hbm_aclk_0, the auto scaled frequency 450.6 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 450.0 MHz.</td>
+<td align="left">The automatic frequency scaling feature allows user kernels to operate in hardware, even if at a lower frequency than intended. In this case the clock may in fact be able to run at a higher frequency than specified. You may want to consider <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?t=vitis+guidance;v=2019.2;d=AUTO-FREQ-SCALING-08.html">setting</a> the clock frequency higher for better performance. The '--kernel_frequency' option is one way to control the frequency specification.</td>
+</tr>
+</table>
+<br>
+<a name="CONFIG FILE DETAILS"></a><h1>3 CONFIG FILE DETAILS</h1>
+<pre>Config files found: 2
+</pre>
+<table border="1">
+<caption>Details of the config files</caption>
+<tr>
+<th align="left">File name</th>
+<th align="left">Contents</th>
+</tr>
+<tr>
+<td align="left">/home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini
+</td>
+<td align="left">kernel_frequency=450
+
+#[hls]
+#max_memory_ports=all
+
+</td>
+</tr>
+<tr>
+<td align="left">/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini
+</td>
+<td align="left">[connectivity]
+nk=accessMemory_0:32
+slr=accessMemory_0_1:SLR0
+slr=accessMemory_0_2:SLR1
+slr=accessMemory_0_3:SLR2
+slr=accessMemory_0_4:SLR0
+slr=accessMemory_0_5:SLR1
+slr=accessMemory_0_6:SLR2
+slr=accessMemory_0_7:SLR0
+slr=accessMemory_0_8:SLR1
+slr=accessMemory_0_9:SLR2
+slr=accessMemory_0_10:SLR0
+slr=accessMemory_0_11:SLR1
+slr=accessMemory_0_12:SLR2
+slr=accessMemory_0_13:SLR0
+slr=accessMemory_0_14:SLR1
+slr=accessMemory_0_15:SLR2
+slr=accessMemory_0_16:SLR0
+slr=accessMemory_0_17:SLR1
+slr=accessMemory_0_18:SLR2
+slr=accessMemory_0_19:SLR0
+slr=accessMemory_0_20:SLR1
+slr=accessMemory_0_21:SLR2
+slr=accessMemory_0_22:SLR0
+slr=accessMemory_0_23:SLR1
+slr=accessMemory_0_24:SLR2
+slr=accessMemory_0_25:SLR0
+slr=accessMemory_0_26:SLR1
+slr=accessMemory_0_27:SLR2
+slr=accessMemory_0_28:SLR0
+slr=accessMemory_0_29:SLR1
+slr=accessMemory_0_30:SLR2
+slr=accessMemory_0_31:SLR0
+slr=accessMemory_0_32:SLR1
+
+sp=accessMemory_0_1.m_axi_gmem:HBM[0]
+sp=accessMemory_0_2.m_axi_gmem:HBM[1]
+sp=accessMemory_0_3.m_axi_gmem:HBM[2]
+sp=accessMemory_0_4.m_axi_gmem:HBM[3]
+sp=accessMemory_0_5.m_axi_gmem:HBM[4]
+sp=accessMemory_0_6.m_axi_gmem:HBM[5]
+sp=accessMemory_0_7.m_axi_gmem:HBM[6]
+sp=accessMemory_0_8.m_axi_gmem:HBM[7]
+sp=accessMemory_0_9.m_axi_gmem:HBM[8]
+sp=accessMemory_0_10.m_axi_gmem:HBM[9]
+sp=accessMemory_0_11.m_axi_gmem:HBM[10]
+sp=accessMemory_0_12.m_axi_gmem:HBM[11]
+sp=accessMemory_0_13.m_axi_gmem:HBM[12]
+sp=accessMemory_0_14.m_axi_gmem:HBM[13]
+sp=accessMemory_0_15.m_axi_gmem:HBM[14]
+sp=accessMemory_0_16.m_axi_gmem:HBM[15]
+sp=accessMemory_0_17.m_axi_gmem:HBM[16]
+sp=accessMemory_0_18.m_axi_gmem:HBM[17]
+sp=accessMemory_0_19.m_axi_gmem:HBM[18]
+sp=accessMemory_0_20.m_axi_gmem:HBM[19]
+sp=accessMemory_0_21.m_axi_gmem:HBM[20]
+sp=accessMemory_0_22.m_axi_gmem:HBM[21]
+sp=accessMemory_0_23.m_axi_gmem:HBM[22]
+sp=accessMemory_0_24.m_axi_gmem:HBM[23]
+sp=accessMemory_0_25.m_axi_gmem:HBM[24]
+sp=accessMemory_0_26.m_axi_gmem:HBM[25]
+sp=accessMemory_0_27.m_axi_gmem:HBM[26]
+sp=accessMemory_0_28.m_axi_gmem:HBM[27]
+sp=accessMemory_0_29.m_axi_gmem:HBM[28]
+sp=accessMemory_0_30.m_axi_gmem:HBM[29]
+sp=accessMemory_0_31.m_axi_gmem:HBM[30]
+sp=accessMemory_0_32.m_axi_gmem:HBM[31]
+
+
+</td>
+</tr>
+</table>
+<br>
+<a name="PERFORMANCE CHECKS MET"></a><h1>4 PERFORMANCE CHECKS MET</h1>
+<table border="1">
+<caption>Items that offer design performance insight</caption>
+<tr class="ns-sort">
+<th align="left">Id</th>
+<th align="left">Name</th>
+<th align="left" width="170">Full Name</th>
+<th align="left">Categories</th>
+<th align="left">Actual</th>
+<th align="left">Threshold</th>
+<th align="left" width="350">Details</th>
+<th align="left" width="320">Rule Description</th>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">SYSLINK-1</td>
+<td align="left">system_link Top Level BD Creation</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Created top level block diagram design dr.bd.tcl</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">PLATFORM-CLOCK-DOMAINS-01</td>
+<td align="left">Runtime controllable clock domains - Achieved clock frequency (MHz)</td>
+<td align="left">Accelerator.System.Performance</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): 
+Kernel: clkwiz_kernel_clk_out1 = 404.6 MHz 
+Kernel: clkwiz_kernel2_clk_out1 = 500 MHz 
+System: clk_out1_pfm_top_clkwiz_hbm_aclk_0 = 450.0 MHz 
+Scalable clock clkwiz_kernel_clk_out1 (Id = 0) is used for hls kernels. This design has 32 hls kernel(s).
+Scalable clock clkwiz_kernel2_clk_out1 (Id = 1) is used for rtl kernels. This design has 0 rtl kernel(s).</td>
+<td align="left"><html> Kernel clocks (and system clocks for some platforms) are scalable; they can preserve functionality at the cost of performance by running at a lower frequency than requested. To be scalable, a clock must be driven by an MMCM where the control registers for the MMCM can be set by the runtime over AXI4-Lite. This item shows the final runtime controlled frequencies for the scalable clocks.</html></td>
+</tr>
+</table>
+<br>
+</body></html>

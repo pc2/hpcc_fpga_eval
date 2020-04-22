@@ -1,0 +1,440 @@
+{
+  "nodes":
+  [
+    {
+      "name":"calc_1"
+      , "id":1435176968
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"calc_1.B7"
+          , "id":1435440960
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_1.B0"
+          , "id":1435428752
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 8"
+              , "id":1452090256
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_1.B4"
+          , "id":1435440720
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 10"
+              , "id":1466580544
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 11"
+              , "id":1466509312
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_1.B3"
+          , "id":1435440640
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_1.B2"
+          , "id":1435440560
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 9"
+              , "id":1440703568
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_1.B8"
+          , "id":1435441040
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 15"
+              , "id":1469402976
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 14"
+              , "id":1468968560
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_1.B1"
+          , "id":1435440480
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_1.B6"
+          , "id":1435440880
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_1.B5"
+          , "id":1435440800
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 13"
+              , "id":1468428816
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 12"
+              , "id":1467851184
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"calc_0"
+      , "id":1435168280
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"calc_0.B3"
+          , "id":1435233904
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_0.B6"
+          , "id":1435163232
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_0.B5"
+          , "id":1435163152
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":1442855328
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 5"
+              , "id":1443443216
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_0.B1"
+          , "id":1435233744
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_0.B4"
+          , "id":1435163072
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":1442152000
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 2"
+              , "id":1441689568
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_0.B7"
+          , "id":1435163312
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_0.B0"
+          , "id":1435287376
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":1440924400
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_0.B8"
+          , "id":1435163392
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 6"
+              , "id":1443989472
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 7"
+              , "id":1444426768
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_0.B2"
+          , "id":1435233824
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":1441247936
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"calc_2"
+      , "id":1435195928
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"calc_2.B5"
+          , "id":1435444384
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 20"
+              , "id":1491849744
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 21"
+              , "id":1492427360
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_2.B3"
+          , "id":1435444224
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_2.B7"
+          , "id":1435444544
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_2.B1"
+          , "id":1435444064
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_2.B2"
+          , "id":1435444144
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 17"
+              , "id":1476718848
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_2.B8"
+          , "id":1435444624
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 22"
+              , "id":1492967104
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 23"
+              , "id":1493401520
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_2.B6"
+          , "id":1435444464
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_2.B4"
+          , "id":1435444304
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 19"
+              , "id":1490509056
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 18"
+              , "id":1479573280
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_2.B0"
+          , "id":1435570864
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 16"
+              , "id":1479594240
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"calc_3"
+      , "id":1435201080
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"calc_3.B4"
+          , "id":1435728848
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 27"
+              , "id":1514852912
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 26"
+              , "id":1453925792
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_3.B5"
+          , "id":1435728928
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 28"
+              , "id":1515859744
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 29"
+              , "id":1516437184
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_3.B6"
+          , "id":1435729008
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_3.B7"
+          , "id":1435729088
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_3.B8"
+          , "id":1435729168
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 31"
+              , "id":1517411344
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 30"
+              , "id":1516976912
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_3.B2"
+          , "id":1435727824
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 25"
+              , "id":1502602512
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_3.B1"
+          , "id":1435727424
+          , "type":"bb"
+        }
+        , {
+          "name":"calc_3.B0"
+          , "id":1435715808
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 24"
+              , "id":1499164208
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"calc_3.B3"
+          , "id":1435728768
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

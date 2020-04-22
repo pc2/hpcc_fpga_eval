@@ -1,0 +1,52 @@
+{
+  "nodes":
+  [
+    {
+      "name":"accessMemory_0"
+      , "id":1435006776
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"accessMemory_0.B0"
+          , "id":1435193328
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":1437977696
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"accessMemory_0.B2"
+          , "id":1435192928
+          , "type":"bb"
+        }
+        , {
+          "name":"accessMemory_0.B1"
+          , "id":1435193408
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":1438542752
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 1"
+              , "id":1438148560
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

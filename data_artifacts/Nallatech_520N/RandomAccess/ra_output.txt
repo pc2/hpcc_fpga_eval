@@ -1,0 +1,32 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:random_access_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the random access benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.0.2
+
+-------------------------------------------------------------
+Summary:
+Kernel Replications: 4
+Repetitions:         10
+Total data size:     4.29497e+09 Byte
+Kernel file:         random_access_kernels_single.aocx
+Device:              p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+         best         mean        GUOPS        error
+  8.76549e+00  8.76566e+00  2.44993e-01  9.94317e-03

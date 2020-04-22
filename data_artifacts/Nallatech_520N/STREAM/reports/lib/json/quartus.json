@@ -1,0 +1,28 @@
+{
+"quartusFitClockSummary":
+{
+  "name":"Quartus Fit Clock Summary"
+  ,"columns":["", "Kernel fmax"]  ,"children":[
+  {
+    "name":"Frequency (MHz)","data":["Kernel fmax": 316.67]
+  }
+]}
+,"quartusFitResourceUsageSummary":
+{
+  "name":"Quartus Fit Resource Utilization Summary"
+  ,"columns":["", "ALMs", "FFs", "RAMs", "DSPs", "MLABs"]  ,"children":[
+  {"name":"Full design (all kernels)","data":["ALMs": 74584.4 ,"FFs": 210869 ,"RAMs": 3708 ,"DSPs": 128 ,"MLABs": 1168  ]
+  }
+,
+  {"name":"calc_0","data":["ALMs": 18663.6 ,"FFs": 53443 ,"RAMs": 927 ,"DSPs": 32 ,"MLABs": 292]
+  }
+,
+  {"name":"calc_1","data":["ALMs": 18654.2 ,"FFs": 52789 ,"RAMs": 927 ,"DSPs": 32 ,"MLABs": 292]
+  }
+,
+  {"name":"calc_2","data":["ALMs": 18619.1 ,"FFs": 52097 ,"RAMs": 927 ,"DSPs": 32 ,"MLABs": 292]
+  }
+,
+  {"name":"calc_3","data":["ALMs": 18647.5 ,"FFs": 52540 ,"RAMs": 927 ,"DSPs": 32 ,"MLABs": 292]
+  }
+]}}

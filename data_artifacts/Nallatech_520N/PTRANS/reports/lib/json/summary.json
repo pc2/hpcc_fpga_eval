@@ -1,0 +1,174 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units", "Hyper-Optimized Handshaking"]
+    , "children":
+    [
+      {
+        "name":"transpose"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Max global work dimension: 0"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/transpose_optimized.cl"
+              , "line":27
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"transpose"
+        , "data":
+        [24848, 26363, 2161, 19, 17]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/transpose_optimized.cl"
+              , "line":27
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [11489, 16177, 0, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [455240, 910480, 2627, 1047, 0]
+      }
+      , {
+        "name":"System description ROM"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2, 71, 2, 0, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [491579, 953091, 4790, 1066, 17]
+        , "data_percent":
+        [26.3406, 25.5351, 40.8668, 18.5069]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [1866240, 3732480, 11721, 5760, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+      {
+        "name":"Load uses a Burst-coalesced non-aligned LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Use Dynamic Profiler to determine performance impact of this LSU."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/transpose_optimized.cl"
+              , "line":53
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced non-aligned LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Use Dynamic Profiler to determine performance impact of this LSU."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/transpose_optimized.cl"
+              , "line":96
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Store uses a Burst-coalesced non-aligned LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Use Dynamic Profiler to determine performance impact of this LSU."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"src/device/transpose_optimized.cl"
+              , "line":94
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

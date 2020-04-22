@@ -1,0 +1,95 @@
+{
+  "basicblocks":
+  {
+    "calc_0.B0":
+    {
+      "name":"calc_0.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":35
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "calc_0.B1":
+    {
+      "name":"calc_0.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":654
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"replicated_stream_kernels_single.cl"
+                , "line":"22"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "calc_0.B2":
+    {
+      "name":"calc_0.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+  }
+  , "functions":
+  {
+    "calc_0":
+    {
+      "debug":
+      [
+        {
+          "filename":"replicated_stream_kernels_single.cl"
+          , "line":12
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "calc_0__no_loop":
+        [
+          "calc_0.B0"
+          , "calc_0.B2"
+        ]
+        , "calc_0.B1":
+        [
+          "calc_0.B1"
+        ]
+      }
+    }
+  }
+}

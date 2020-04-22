@@ -1,0 +1,492 @@
+{
+  "nodes":
+  [
+    {
+      "name":"accessMemory_0"
+      , "id":1435002152
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":1
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"local_address"
+              , "id":2
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"60"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":60
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"loaded_data"
+              , "id":3
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"61"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":61
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"update_val"
+              , "id":4
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"62"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":62
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"accessMemory_1"
+      , "id":1435015816
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":5
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"local_address"
+              , "id":6
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"168"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":168
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"loaded_data"
+              , "id":7
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"169"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":169
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"update_val"
+              , "id":8
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"170"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":170
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"accessMemory_2"
+      , "id":1435158856
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":9
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"local_address"
+              , "id":10
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"276"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":276
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"loaded_data"
+              , "id":11
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"277"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":277
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"update_val"
+              , "id":12
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"278"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":278
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"accessMemory_3"
+      , "id":1435160792
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":13
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"local_address"
+              , "id":14
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"384"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":384
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"loaded_data"
+              , "id":15
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"385"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":385
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+            , {
+              "name":"update_val"
+              , "id":16
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"replicated_random_access_kernels_single.cl"
+                          , "line":"386"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Additional information":"This variable is carried through the pipeline in registers (rather than being stored in RAM)"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"replicated_random_access_kernels_single.cl"
+                    , "line":386
+                  }
+                ]
+              ]
+              , "type":"reg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

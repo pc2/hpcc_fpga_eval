@@ -1,0 +1,87 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../cmake-build/bin/communication_bw520n.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the effective bandwidth benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: "1.1"
+-------------------------------------------------------------
+Summary:
+Repetitions:         10
+Kernel file:         ../cmake-build/bin/communication_bw520n.aocx
+Device:              p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+Measure for 1 Byte
+MMD INFO : Enabling SmartVID (fix) polling
+Measure for 2 Byte
+Measure for 4 Byte
+Measure for 8 Byte
+Measure for 16 Byte
+Measure for 32 Byte
+Measure for 64 Byte
+Measure for 128 Byte
+Measure for 256 Byte
+Measure for 512 Byte
+Measure for 1024 Byte
+Measure for 2048 Byte
+Measure for 4096 Byte
+Measure for 16384 Byte
+Measure for 32768 Byte
+Measure for 65536 Byte
+Measure for 131072 Byte
+Measure for 262144 Byte
+Measure for 524288 Byte
+Measure for 1048576 Byte
+Measure for 2097152 Byte
+Collect results over MPI...................... done!
+        MSize      looplength        transfer             B/s
+            1           32768     4.19396e-02     1.25010e+07
+            2           32768     4.19406e-02     2.50015e+07
+            4           32768     4.19393e-02     5.00045e+07
+            8           32768     4.19416e-02     1.00003e+08
+           16           32768     4.19398e-02     2.00015e+08
+           32           16384     2.09858e-02     3.99729e+08
+           64           10922     1.39975e-02     7.99007e+08
+          128            6553     8.46176e-03     1.58602e+09
+          256            3640     4.81859e-03     3.09415e+09
+          512            1927     2.66789e-03     5.91703e+09
+         1024             992     1.49214e-03     1.08924e+10
+         2048             504     8.78804e-04     1.87927e+10
+         4096             254     5.63216e-04     2.95555e+10
+        16384              63     3.18641e-04     5.18297e+10
+        32768              32     2.81416e-04     5.96171e+10
+        65536              32     4.90605e-04     6.83940e+10
+       131072              32     9.13563e-04     7.34584e+10
+       262144              32     1.76001e-03     7.62596e+10
+       524288              32     3.45184e-03     7.77659e+10
+      1048576              32     6.83359e-03     7.85636e+10
+      2097152              32     1.35975e-02     7.89664e+10
+
+b_eff = 3.02990e+10 B/s

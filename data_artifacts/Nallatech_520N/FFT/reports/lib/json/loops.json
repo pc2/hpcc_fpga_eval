@@ -1,0 +1,423 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Speculated iterations", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: fetch"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"src/device/fft1d_float_8.cl"
+            , "line":143
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"ND-Range"
+        }
+        , {
+          "type":"text"
+          , "text":"ND-Range"
+        }
+        , {
+          "type":"text"
+          , "text":"Fmax bottlenck block: None"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#ipp1476408832230"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Fully unrolled loop"
+          , "data":
+          ["n/a", "n/a", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"src/device/fft1d_float_8.cl"
+                , "line":162
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"Unrolled by #pragma unroll"
+            }
+            , {
+              "type":"text"
+              , "text":"Unrolled by #pragma unroll"
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+        , {
+          "name":"Fully unrolled loop"
+          , "data":
+          ["n/a", "n/a", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"src/device/fft1d_float_8.cl"
+                , "line":169
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"Unrolled by #pragma unroll"
+            }
+            , {
+              "type":"text"
+              , "text":"Unrolled by #pragma unroll"
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"Fully unrolled loop"
+              , "data":
+              ["n/a", "n/a", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"src/device/fft1d_float_8.cl"
+                    , "line":74
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Kernel: fft1d"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"src/device/fft1d_float_8.cl"
+            , "line":186
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Fmax bottlenck block: None"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#ipp1476408832230"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"fft1d.B2"
+          , "data":
+          ["Yes", "~1", "4"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"src/device/fft1d_float_8.cl"
+                , "line":208
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":" "
+            }
+            , {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: enabled."
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instructions:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"223"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"224"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"225"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"226"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"227"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"228"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"229"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Channel Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"230"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Store Operation (%L, %L, %L, %L, %L, %L, %L, %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"247"
+                    }
+                    , {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"248"
+                    }
+                    , {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"249"
+                    }
+                    , {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"250"
+                    }
+                    , {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"251"
+                    }
+                    , {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"252"
+                    }
+                    , {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"253"
+                    }
+                    , {
+                      "filename":"src/device/fft1d_float_8.cl"
+                      , "line":"254"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Maximum concurrent iterations: Capacity of loop"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Use the %L viewer to estimate capacity"
+                  , "links":
+                  [
+                    {
+                      "view":"Fmax II Report"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Loops in a Single Work-Item Kernel"
+                  , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#wfa1476380079940"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"Fully unrolled loop"
+              , "data":
+              ["n/a", "n/a", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"src/device/fft_8.cl"
+                    , "line":296
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+            , {
+              "name":"Fully unrolled loop"
+              , "data":
+              ["n/a", "n/a", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"src/device/fft_8.cl"
+                    , "line":337
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/replicated_random_access_kernels_single_xilinx.cl:40:16: warning: unknown attribute 'max_global_work_dim' ignored [-Wunknown-attributes]
+__attribute__((max_global_work_dim(0)))
+               ^
+1 warning generated.

@@ -1,0 +1,38 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+Multiple devices have been found. Select the platform by typing a number:
+0) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+1) p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie1)
+0
+Enter device id [0-1]:-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:cmake-syn-build/bin/lu_blocked_pvt.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.0.0
+-------------------------------------------------------------
+Summary:
+Matrix Size:         4096
+Block Size:          32
+Data Type            cl_float
+Repetitions:         10
+Kernel file:         cmake-syn-build/bin/lu_blocked_pvt.aocx
+Device:              p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+  norm. resid        resid       machep       x[0]-1     x[n-1]-1
+    5.96278e+02    3.00744e-01    1.19209e-07   -6.87420e-03   -7.60549e-03
+           best           mean         GFLOPS
+    6.09764e+00    6.09771e+00    7.51323e+00

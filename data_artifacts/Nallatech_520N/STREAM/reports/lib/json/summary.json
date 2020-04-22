@@ -1,0 +1,267 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units", "Hyper-Optimized Handshaking"]
+    , "children":
+    [
+      {
+        "name":"calc_0"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":12
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_1"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":58
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_2"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":104
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_3"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":150
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"calc_0"
+        , "data":
+        [8063, 20420, 1141, 32, 178]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":12
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_1"
+        , "data":
+        [8063, 20420, 1141, 32, 178]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":58
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_2"
+        , "data":
+        [8063, 20420, 1141, 32, 178]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":104
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"calc_3"
+        , "data":
+        [8063, 20420, 1141, 32, 178]
+        , "debug":
+        [
+          [
+            {
+              "filename":"replicated_stream_kernels_single.cl"
+              , "line":150
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Kernel Subtotal"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [32252, 81680, 4564, 128, 712]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [19004, 23256, 0, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [455240, 910480, 2627, 1047, 0]
+      }
+      , {
+        "name":"System description ROM"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2, 71, 2, 0, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [506498, 1015487, 7193, 1175, 712]
+        , "data_percent":
+        [27.14, 27.2068, 61.3685, 20.3993]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [1866240, 3732480, 11721, 5760, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

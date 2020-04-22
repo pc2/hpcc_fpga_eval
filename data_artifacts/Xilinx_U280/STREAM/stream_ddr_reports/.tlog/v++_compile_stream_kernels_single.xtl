@@ -1,0 +1,375 @@
+<ENTRY>
+{
+ "session": {
+  "name": "v++_compile_stream_kernels_single",
+  "pid": "0",
+  "uuid": "6a926aa3-c704-4734-9b54-7edcd327f7d0",
+  "description": "",
+  "timestamp": "0",
+  "outputFiles": [
+   {
+    "type": "JSON",
+    "mode": "CLIENT_ONLY",
+    "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/.tlog/v++_compile_stream_kernels_single.xtl",
+    "continuous": true
+   },
+   {
+    "type": "JSON",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/bin/tmp_compile/stream_kernels_single.xo.compile_summary",
+    "continuous": true
+   },
+   {
+    "type": "BINARY_PROTOBUF",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/bin/tmp_compile/stream_kernels_single.xo.compile_summary.pb",
+    "continuous": true
+   }
+  ]
+ },
+ "thisFile": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/.tlog/v++_compile_stream_kernels_single.xtl",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr  1 09:32:19 2020",
+ "timestampMillis": "1585726339320",
+ "buildStep": {
+  "cmdId": "3d92de72-87fa-46d0-b215-6bb9c9197a6c",
+  "name": "v++",
+  "logFile": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/stream_kernels_single.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --config /home/marimeyer/repos/stream_fpga/settings/settings.compile.xilinx.ddr.ini -t hw -I/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -c -j 40 -o /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/bin/tmp_compile/stream_kernels_single.xo /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl ",
+  "args": [
+   "--config",
+   "/home/marimeyer/repos/stream_fpga/settings/settings.compile.xilinx.ddr.ini",
+   "-t",
+   "hw",
+   "-I/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/../common",
+   "--platform",
+   "xilinx_u280_xdma_201920_3",
+   "-R2",
+   "-c",
+   "-j",
+   "40",
+   "-o",
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/bin/tmp_compile/stream_kernels_single.xo",
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/marimeyer/repos/stream_fpga/settings/settings.compile.xilinx.ddr.ini",
+    "content": "kernel_frequency=300\n\n[hls]\nmax_memory_ports=all\n#memory_port_data_width=512\n"
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:32:19 2020",
+ "timestampMillis": "1585726339321",
+ "status": {
+  "cmdId": "3d92de72-87fa-46d0-b215-6bb9c9197a6c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Apr  1 09:32:27 2020",
+ "timestampMillis": "1585726347310",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_xdma_201920_3.xpfm",
+  "hardwareDsa": "xilinx_u280_xdma_201920_3.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "calc_0",
+     "file": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/bin/tmp_compile/stream_kernels_single.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl"
+    ],
+    "cuNames": []
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 09:32:27 2020",
+ "timestampMillis": "1585726347326",
+ "buildStep": {
+  "cmdId": "18d94d84-8bc5-4817-8aa2-e4cb949cf5f9",
+  "name": "clang",
+  "logFile": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/calc_0_clang.log",
+  "commandLine": "/opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=calc_0.clc.00.yml -fhls -mllvm -hls-bitcode-version=3.1 -mllvm -hls-top-function-name=calc_0 -D__SYNTHESIS__ -fno-exceptions -D__llvm__ -Wall /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -mllvm -xcl-xmlinfo=/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/kernel.xml -Xclang -mlink-opencl-bitcode -Xclang /opt/Xilinx/Vivado/2019.2/lnx64/lib/libspir64-39-hls.bc -mllvm -xcl-kernel-max-mem-ports -include /opt/Xilinx/Vivado/2019.2/bin/../include/clc.h -include /opt/Xilinx/Vivado/2019.2/bin/../include/etc/autopilot_ssdm_op.h -cl-kernel-arg-info -std=CL1.2 -fgnu89-inline -D__openclc -target spir64-unknown-unknown  -I /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/common -g -o /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/calc_0.clc.00.bc",
+  "args": [
+   "-fsave-optimization-record",
+   "-foptimization-record-file=calc_0.clc.00.yml",
+   "-fhls",
+   "-mllvm",
+   "-hls-bitcode-version=3.1",
+   "-mllvm",
+   "-hls-top-function-name=calc_0",
+   "-D__SYNTHESIS__",
+   "-fno-exceptions",
+   "-D__llvm__",
+   "-Wall",
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl",
+   "-fno-math-errno",
+   "-c",
+   "-emit-llvm",
+   "-mllvm",
+   "-disable-llvm-optzns",
+   "-mllvm",
+   "-xcl-xmlinfo=/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/kernel.xml",
+   "-Xclang",
+   "-mlink-opencl-bitcode",
+   "-Xclang",
+   "/opt/Xilinx/Vivado/2019.2/lnx64/lib/libspir64-39-hls.bc",
+   "-mllvm",
+   "-xcl-kernel-max-mem-ports",
+   "-include",
+   "/opt/Xilinx/Vivado/2019.2/bin/../include/clc.h",
+   "-include",
+   "/opt/Xilinx/Vivado/2019.2/bin/../include/etc/autopilot_ssdm_op.h",
+   "-cl-kernel-arg-info",
+   "-std=CL1.2",
+   "-fgnu89-inline",
+   "-D__openclc",
+   "-target",
+   "spir64-unknown-unknown",
+   "",
+   "-I",
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/common",
+   "-g",
+   "-o",
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/calc_0.clc.00.bc"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:32:27 2020",
+ "timestampMillis": "1585726347328",
+ "status": {
+  "cmdId": "18d94d84-8bc5-4817-8aa2-e4cb949cf5f9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:32:28 2020",
+ "timestampMillis": "1585726348343",
+ "status": {
+  "cmdId": "18d94d84-8bc5-4817-8aa2-e4cb949cf5f9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 09:32:28 2020",
+ "timestampMillis": "1585726348347",
+ "buildStep": {
+  "cmdId": "df89d4e7-8a53-41d0-b23d-40234469096b",
+  "name": "xclkernelinfohash",
+  "logFile": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/calc_0_kernelinfohash.log",
+  "commandLine": "/opt/Xilinx/Vitis/2019.2/bin/../runtime/bin/xclkernelinfohash_new /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/kernel.xml",
+  "args": [
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/replicated_stream_kernels_single_xilinx.cl",
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/kernel.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:32:28 2020",
+ "timestampMillis": "1585726348349",
+ "status": {
+  "cmdId": "df89d4e7-8a53-41d0-b23d-40234469096b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:32:29 2020",
+ "timestampMillis": "1585726349357",
+ "status": {
+  "cmdId": "df89d4e7-8a53-41d0-b23d-40234469096b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 09:32:29 2020",
+ "timestampMillis": "1585726349368",
+ "buildStep": {
+  "cmdId": "9f6afed9-78b7-426e-8170-8cbc5628b2af",
+  "name": "vivado_hls",
+  "logFile": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/vivado_hls.log",
+  "commandLine": "vivado_hls -f /home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0.tcl -messageDb vivado_hls.pb",
+  "args": [
+   "vivado_hls",
+   "-f",
+   "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0.tcl",
+   "-messageDb",
+   "vivado_hls.pb"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:32:29 2020",
+ "timestampMillis": "1585726349370",
+ "status": {
+  "cmdId": "9f6afed9-78b7-426e-8170-8cbc5628b2af",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:33:11 2020",
+ "timestampMillis": "1585726391475",
+ "status": {
+  "cmdId": "9f6afed9-78b7-426e-8170-8cbc5628b2af",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 09:33:11 2020",
+ "timestampMillis": "1585726391682",
+ "report": {
+  "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/solution/.autopilot/db/calc_0.design.xml",
+  "name": "calc_0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 09:33:11 2020",
+ "timestampMillis": "1585726391684",
+ "report": {
+  "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/solution/.autopilot/db/.message_syn.xml",
+  "name": "calc_0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 09:33:11 2020",
+ "timestampMillis": "1585726391700",
+ "report": {
+  "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/reports/stream_kernels_single/hls_reports/calc_0_csynth.rpt",
+  "name": "calc_0",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 09:33:11 2020",
+ "timestampMillis": "1585726391701",
+ "report": {
+  "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/stream_kernels_single/calc_0/calc_0/solution/syn/report/calc_0_csynth.xml",
+  "name": "calc_0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 09:33:11 2020",
+ "timestampMillis": "1585726391714",
+ "report": {
+  "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/reports/stream_kernels_single/system_estimate_stream_kernels_single.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 09:33:12 2020",
+ "timestampMillis": "1585726392243",
+ "report": {
+  "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/reports/stream_kernels_single/v++_compile_stream_kernels_single_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 09:33:12 2020",
+ "timestampMillis": "1585726392244",
+ "report": {
+  "path": "/home/marimeyer/repos/stream_fpga/cmake-build-ddr-halfedmem/src/device/_x/v++_compile_stream_kernels_single_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 09:33:12 2020",
+ "timestampMillis": "1585726392249",
+ "status": {
+  "cmdId": "3d92de72-87fa-46d0-b215-6bb9c9197a6c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

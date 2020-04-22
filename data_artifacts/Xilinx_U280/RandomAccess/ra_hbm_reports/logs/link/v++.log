@@ -1,0 +1,390 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link
+	Log files: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin.link_summary, at Wed Apr  1 19:12:17 2020
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Wed Apr  1 19:12:17 2020
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link/v++_link_random_access_kernels_single_guidance.html', at Wed Apr  1 19:12:18 2020
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [19:12:25] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int --temp_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link
+INFO: [SYSTEM_LINK 82-76] Reading emulation BD and HPFM information
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Wed Apr  1 19:12:32 2020
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo
+INFO: [KernelCheck 83-118] 'accessMemory_0' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'data' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'm' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'data_chunk' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'kernel_number' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [19:12:32] build_xd_ip_db started: /opt/Xilinx/Vitis/2019.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_accessMemory_0_1_0,accessMemory_0 -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [19:12:38] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 67030 ; free virtual = 199101
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [19:12:38] cfgen started: /opt/Xilinx/Vitis/2019.2/bin/cfgen  -nk accessMemory_0:32 -slr accessMemory_0_1:SLR0 -slr accessMemory_0_2:SLR1 -slr accessMemory_0_3:SLR2 -slr accessMemory_0_4:SLR0 -slr accessMemory_0_5:SLR1 -slr accessMemory_0_6:SLR2 -slr accessMemory_0_7:SLR0 -slr accessMemory_0_8:SLR1 -slr accessMemory_0_9:SLR2 -slr accessMemory_0_10:SLR0 -slr accessMemory_0_11:SLR1 -slr accessMemory_0_12:SLR2 -slr accessMemory_0_13:SLR0 -slr accessMemory_0_14:SLR1 -slr accessMemory_0_15:SLR2 -slr accessMemory_0_16:SLR0 -slr accessMemory_0_17:SLR1 -slr accessMemory_0_18:SLR2 -slr accessMemory_0_19:SLR0 -slr accessMemory_0_20:SLR1 -slr accessMemory_0_21:SLR2 -slr accessMemory_0_22:SLR0 -slr accessMemory_0_23:SLR1 -slr accessMemory_0_24:SLR2 -slr accessMemory_0_25:SLR0 -slr accessMemory_0_26:SLR1 -slr accessMemory_0_27:SLR2 -slr accessMemory_0_28:SLR0 -slr accessMemory_0_29:SLR1 -slr accessMemory_0_30:SLR2 -slr accessMemory_0_31:SLR0 -slr accessMemory_0_32:SLR1 -sp accessMemory_0_1.m_axi_gmem:HBM[0] -sp accessMemory_0_2.m_axi_gmem:HBM[1] -sp accessMemory_0_3.m_axi_gmem:HBM[2] -sp accessMemory_0_4.m_axi_gmem:HBM[3] -sp accessMemory_0_5.m_axi_gmem:HBM[4] -sp accessMemory_0_6.m_axi_gmem:HBM[5] -sp accessMemory_0_7.m_axi_gmem:HBM[6] -sp accessMemory_0_8.m_axi_gmem:HBM[7] -sp accessMemory_0_9.m_axi_gmem:HBM[8] -sp accessMemory_0_10.m_axi_gmem:HBM[9] -sp accessMemory_0_11.m_axi_gmem:HBM[10] -sp accessMemory_0_12.m_axi_gmem:HBM[11] -sp accessMemory_0_13.m_axi_gmem:HBM[12] -sp accessMemory_0_14.m_axi_gmem:HBM[13] -sp accessMemory_0_15.m_axi_gmem:HBM[14] -sp accessMemory_0_16.m_axi_gmem:HBM[15] -sp accessMemory_0_17.m_axi_gmem:HBM[16] -sp accessMemory_0_18.m_axi_gmem:HBM[17] -sp accessMemory_0_19.m_axi_gmem:HBM[18] -sp accessMemory_0_20.m_axi_gmem:HBM[19] -sp accessMemory_0_21.m_axi_gmem:HBM[20] -sp accessMemory_0_22.m_axi_gmem:HBM[21] -sp accessMemory_0_23.m_axi_gmem:HBM[22] -sp accessMemory_0_24.m_axi_gmem:HBM[23] -sp accessMemory_0_25.m_axi_gmem:HBM[24] -sp accessMemory_0_26.m_axi_gmem:HBM[25] -sp accessMemory_0_27.m_axi_gmem:HBM[26] -sp accessMemory_0_28.m_axi_gmem:HBM[27] -sp accessMemory_0_29.m_axi_gmem:HBM[28] -sp accessMemory_0_30.m_axi_gmem:HBM[29] -sp accessMemory_0_31.m_axi_gmem:HBM[30] -sp accessMemory_0_32.m_axi_gmem:HBM[31] -dmclkid 0 -r /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: accessMemory_0, num: 32  {accessMemory_0_1 accessMemory_0_2 accessMemory_0_3 accessMemory_0_4 accessMemory_0_5 accessMemory_0_6 accessMemory_0_7 accessMemory_0_8 accessMemory_0_9 accessMemory_0_10 accessMemory_0_11 accessMemory_0_12 accessMemory_0_13 accessMemory_0_14 accessMemory_0_15 accessMemory_0_16 accessMemory_0_17 accessMemory_0_18 accessMemory_0_19 accessMemory_0_20 accessMemory_0_21 accessMemory_0_22 accessMemory_0_23 accessMemory_0_24 accessMemory_0_25 accessMemory_0_26 accessMemory_0_27 accessMemory_0_28 accessMemory_0_29 accessMemory_0_30 accessMemory_0_31 accessMemory_0_32}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_1, k_port: m_axi_gmem, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_2, k_port: m_axi_gmem, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_3, k_port: m_axi_gmem, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_4, k_port: m_axi_gmem, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_5, k_port: m_axi_gmem, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_6, k_port: m_axi_gmem, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_7, k_port: m_axi_gmem, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_8, k_port: m_axi_gmem, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_9, k_port: m_axi_gmem, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_10, k_port: m_axi_gmem, sptag: HBM[9]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_11, k_port: m_axi_gmem, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_12, k_port: m_axi_gmem, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_13, k_port: m_axi_gmem, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_14, k_port: m_axi_gmem, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_15, k_port: m_axi_gmem, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_16, k_port: m_axi_gmem, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_17, k_port: m_axi_gmem, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_18, k_port: m_axi_gmem, sptag: HBM[17]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_19, k_port: m_axi_gmem, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_20, k_port: m_axi_gmem, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_21, k_port: m_axi_gmem, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_22, k_port: m_axi_gmem, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_23, k_port: m_axi_gmem, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_24, k_port: m_axi_gmem, sptag: HBM[23]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_25, k_port: m_axi_gmem, sptag: HBM[24]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_26, k_port: m_axi_gmem, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_27, k_port: m_axi_gmem, sptag: HBM[26]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_28, k_port: m_axi_gmem, sptag: HBM[27]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_29, k_port: m_axi_gmem, sptag: HBM[28]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_30, k_port: m_axi_gmem, sptag: HBM[29]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_31, k_port: m_axi_gmem, sptag: HBM[30]
+INFO: [CFGEN 83-0]   kernel: accessMemory_0_32, k_port: m_axi_gmem, sptag: HBM[31]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: accessMemory_0_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_10, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_11, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_12, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_13, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_14, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_15, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_16, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_17, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_18, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_19, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_2, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_20, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_21, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_22, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_23, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_24, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_25, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_26, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_27, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_28, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_29, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_3, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_30, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_31, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_32, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_4, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_5, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_6, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: accessMemory_0_7, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: accessMemory_0_8, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: accessMemory_0_9, SLR: SLR2
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_1.data to HBM[0] for directive accessMemory_0_1.m_axi_gmem:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_2.data to HBM[1] for directive accessMemory_0_2.m_axi_gmem:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_3.data to HBM[2] for directive accessMemory_0_3.m_axi_gmem:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_4.data to HBM[3] for directive accessMemory_0_4.m_axi_gmem:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_5.data to HBM[4] for directive accessMemory_0_5.m_axi_gmem:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_6.data to HBM[5] for directive accessMemory_0_6.m_axi_gmem:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_7.data to HBM[6] for directive accessMemory_0_7.m_axi_gmem:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_8.data to HBM[7] for directive accessMemory_0_8.m_axi_gmem:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_9.data to HBM[8] for directive accessMemory_0_9.m_axi_gmem:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_10.data to HBM[9] for directive accessMemory_0_10.m_axi_gmem:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_11.data to HBM[10] for directive accessMemory_0_11.m_axi_gmem:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_12.data to HBM[11] for directive accessMemory_0_12.m_axi_gmem:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_13.data to HBM[12] for directive accessMemory_0_13.m_axi_gmem:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_14.data to HBM[13] for directive accessMemory_0_14.m_axi_gmem:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_15.data to HBM[14] for directive accessMemory_0_15.m_axi_gmem:HBM[14]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_16.data to HBM[15] for directive accessMemory_0_16.m_axi_gmem:HBM[15]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_17.data to HBM[16] for directive accessMemory_0_17.m_axi_gmem:HBM[16]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_18.data to HBM[17] for directive accessMemory_0_18.m_axi_gmem:HBM[17]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_19.data to HBM[18] for directive accessMemory_0_19.m_axi_gmem:HBM[18]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_20.data to HBM[19] for directive accessMemory_0_20.m_axi_gmem:HBM[19]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_21.data to HBM[20] for directive accessMemory_0_21.m_axi_gmem:HBM[20]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_22.data to HBM[21] for directive accessMemory_0_22.m_axi_gmem:HBM[21]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_23.data to HBM[22] for directive accessMemory_0_23.m_axi_gmem:HBM[22]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_24.data to HBM[23] for directive accessMemory_0_24.m_axi_gmem:HBM[23]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_25.data to HBM[24] for directive accessMemory_0_25.m_axi_gmem:HBM[24]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_26.data to HBM[25] for directive accessMemory_0_26.m_axi_gmem:HBM[25]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_27.data to HBM[26] for directive accessMemory_0_27.m_axi_gmem:HBM[26]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_28.data to HBM[27] for directive accessMemory_0_28.m_axi_gmem:HBM[27]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_29.data to HBM[28] for directive accessMemory_0_29.m_axi_gmem:HBM[28]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_30.data to HBM[29] for directive accessMemory_0_30.m_axi_gmem:HBM[29]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_31.data to HBM[30] for directive accessMemory_0_31.m_axi_gmem:HBM[30]
+INFO: [CFGEN 83-2228] Creating mapping for argument accessMemory_0_32.data to HBM[31] for directive accessMemory_0_32.m_axi_gmem:HBM[31]
+INFO: [SYSTEM_LINK 82-37] [19:12:44] cfgen finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 66819 ; free virtual = 198890
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [19:12:44] cf2bd started: /opt/Xilinx/Vitis/2019.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/_sysl/.xsd --temp_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link --output_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [19:12:57] cf2bd finished successfully
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 67218 ; free virtual = 199297
+INFO: [v++ 60-1441] [19:12:57] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 679.332 ; gain = 0.000 ; free physical = 67554 ; free virtual = 199317
+INFO: [v++ 60-1443] [19:12:57] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/sdsl.dat -rtd /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/cf2sw.rtd -xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.xml -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [19:13:09] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 679.332 ; gain = 0.000 ; free physical = 67484 ; free virtual = 199246
+INFO: [v++ 60-1443] [19:13:09] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram --rtdJsonFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/cf2sw.rtd --diagramJsonFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --config /home/marimeyer/repos/frandom/settings/settings.compile.xilinx.ini -t hw -I/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/../common --platform xilinx_u280_xdma_201920_3 -R2 -l --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/settings/settings.link.xilinx.random_access_kernels_single.ini -j 40 -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/tmp_compile/random_access_kernels_single.xo  --generatedByXclbinName random_access_kernels_single --kernelInfoDataFileName /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link
+INFO: [v++ 60-839] Read in kernel information from file '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat'.
+INFO: [v++ 60-1441] [19:13:10] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 679.332 ; gain = 0.000 ; free physical = 67549 ; free virtual = 199311
+INFO: [v++ 60-1443] [19:13:10] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u280_xdma_201920_3 -j 40 --kernel_frequency 450 --output_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int --log_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/logs/link --report_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link --config /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/vplConfig.ini -k /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link --no-info --tlog_dir /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/.tlog/v++_link_random_access_kernels_single --iprepo /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_accessMemory_0_1_0 --messageDb /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link/vpl.pb /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link
+
+****** vpl v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/vivado/vpl/.local/hw_platform
+[19:14:17] Run vpl: Step create_project: Started
+Creating Vivado project.
+[19:14:19] Run vpl: Step create_project: Completed
+[19:14:19] Run vpl: Step create_bd: Started
+[19:15:46] Run vpl: Step create_bd: RUNNING...
+[19:17:12] Run vpl: Step create_bd: RUNNING...
+[19:18:35] Run vpl: Step create_bd: RUNNING...
+[19:20:01] Run vpl: Step create_bd: RUNNING...
+[19:21:24] Run vpl: Step create_bd: RUNNING...
+[19:22:49] Run vpl: Step create_bd: RUNNING...
+[19:22:57] Run vpl: Step create_bd: Completed
+[19:22:57] Run vpl: Step update_bd: Started
+[19:23:36] Run vpl: Step update_bd: Completed
+[19:23:36] Run vpl: Step generate_target: Started
+[19:24:57] Run vpl: Step generate_target: RUNNING...
+[19:26:18] Run vpl: Step generate_target: RUNNING...
+[19:27:38] Run vpl: Step generate_target: RUNNING...
+[19:29:02] Run vpl: Step generate_target: RUNNING...
+[19:30:26] Run vpl: Step generate_target: RUNNING...
+[19:31:06] Run vpl: Step generate_target: Completed
+[19:31:06] Run vpl: Step config_hw_runs: Started
+[19:31:26] Run vpl: Step config_hw_runs: Completed
+[19:31:26] Run vpl: Step synth: Started
+[19:32:04] Block-level synthesis in progress, 0 of 71 jobs complete, 40 jobs running.
+[19:32:46] Block-level synthesis in progress, 0 of 71 jobs complete, 40 jobs running.
+[19:33:31] Block-level synthesis in progress, 0 of 71 jobs complete, 40 jobs running.
+[19:34:36] Block-level synthesis in progress, 1 of 71 jobs complete, 39 jobs running.
+[19:35:23] Block-level synthesis in progress, 7 of 71 jobs complete, 34 jobs running.
+[19:36:00] Block-level synthesis in progress, 53 of 71 jobs complete, 3 jobs running.
+[19:36:49] Block-level synthesis in progress, 58 of 71 jobs complete, 3 jobs running.
+[19:37:32] Block-level synthesis in progress, 59 of 71 jobs complete, 2 jobs running.
+[19:38:13] Block-level synthesis in progress, 69 of 71 jobs complete, 1 job running.
+[19:38:54] Block-level synthesis in progress, 70 of 71 jobs complete, 0 jobs running.
+[19:39:34] Block-level synthesis in progress, 70 of 71 jobs complete, 1 job running.
+[19:40:17] Block-level synthesis in progress, 70 of 71 jobs complete, 1 job running.
+[19:40:56] Block-level synthesis in progress, 70 of 71 jobs complete, 1 job running.
+[19:41:39] Block-level synthesis in progress, 71 of 71 jobs complete, 0 jobs running.
+[19:42:17] Block-level synthesis in progress, 71 of 71 jobs complete, 0 jobs running.
+[19:42:57] Top-level synthesis in progress.
+[19:43:37] Top-level synthesis in progress.
+[19:44:17] Top-level synthesis in progress.
+[19:44:58] Run vpl: Step synth: Completed
+[19:44:58] Run vpl: Step impl: Started
+[20:04:23] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 51m 10s 
+
+[20:04:23] Starting logic optimization..
+[20:05:41] Phase 1 Retarget
+[20:05:41] Phase 2 Constant propagation
+[20:06:16] Phase 3 Sweep
+[20:08:12] Phase 4 BUFG optimization
+[20:08:12] Phase 5 Shift Register Optimization
+[20:08:47] Phase 6 Post Processing Netlist
+[20:18:56] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 14m 32s 
+
+[20:18:56] Starting logic placement..
+[20:20:10] Phase 1 Placer Initialization
+[20:20:10] Phase 1.1 Placer Initialization Netlist Sorting
+[20:23:15] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[20:24:29] Phase 1.3 Build Placer Netlist Model
+[20:27:34] Phase 1.4 Constrain Clocks/Macros
+[20:27:34] Phase 2 Global Placement
+[20:27:34] Phase 2.1 Floorplanning
+[20:33:28] Phase 2.2 Global Placement Core
+[20:46:19] Phase 2.2.1 Physical Synthesis In Placer
+[20:52:08] Phase 3 Detail Placement
+[20:52:08] Phase 3.1 Commit Multi Column Macros
+[20:52:49] Phase 3.2 Commit Most Macros & LUTRAMs
+[20:53:26] Phase 3.3 Area Swap Optimization
+[20:54:08] Phase 3.4 Pipeline Register Optimization
+[20:54:08] Phase 3.5 IO Cut Optimizer
+[20:54:08] Phase 3.6 Fast Optimization
+[20:54:45] Phase 3.7 Small Shape DP
+[20:54:45] Phase 3.7.1 Small Shape Clustering
+[20:56:03] Phase 3.7.2 Flow Legalize Slice Clusters
+[20:56:03] Phase 3.7.3 Slice Area Swap
+[20:57:21] Phase 3.7.4 Commit Slice Clusters
+[20:58:06] Phase 3.8 Place Remaining
+[20:58:06] Phase 3.9 Re-assign LUT pins
+[20:58:43] Phase 3.10 Pipeline Register Optimization
+[20:59:22] Phase 3.11 Fast Optimization
+[21:00:43] Phase 4 Post Placement Optimization and Clean-Up
+[21:00:43] Phase 4.1 Post Commit Optimization
+[21:02:09] Phase 4.1.1 Post Placement Optimization
+[21:02:09] Phase 4.1.1.1 BUFG Insertion
+[21:03:31] Phase 4.1.1.2 BUFG Replication
+[21:08:22] Phase 4.1.1.3 Replication
+[21:09:07] Phase 4.2 Post Placement Cleanup
+[21:10:28] Phase 4.3 Placer Reporting
+[21:10:28] Phase 4.4 Final Placement Cleanup
+[21:34:40] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 15m 44s 
+
+[21:34:40] Starting logic routing..
+[21:35:57] Phase 1 Build RT Design
+[21:39:54] Phase 2 Router Initialization
+[21:39:54] Phase 2.1 Fix Topology Constraints
+[21:41:27] Phase 2.2 Pre Route Cleanup
+[21:41:27] Phase 2.3 Global Clock Net Routing
+[21:42:40] Phase 2.4 Update Timing
+[21:45:15] Phase 2.5 Update Timing for Bus Skew
+[21:45:15] Phase 2.5.1 Update Timing
+[21:47:06] Phase 3 Initial Routing
+[21:47:06] Phase 3.1 Global Routing
+[21:49:39] Phase 4 Rip-up And Reroute
+[21:49:39] Phase 4.1 Global Iteration 0
+[22:16:00] Phase 4.2 Global Iteration 1
+[22:25:33] Phase 4.3 Global Iteration 2
+[22:33:55] Phase 4.4 Global Iteration 3
+[22:42:08] Phase 4.5 Global Iteration 4
+[22:56:53] Phase 4.6 Global Iteration 5
+[23:11:00] Phase 4.7 Global Iteration 6
+[23:13:36] Phase 5 Delay and Skew Optimization
+[23:13:36] Phase 5.1 Delay CleanUp
+[23:13:36] Phase 5.1.1 Update Timing
+[23:15:28] Phase 5.1.2 Update Timing
+[23:16:45] Phase 5.2 Clock Skew Optimization
+[23:17:26] Phase 6 Post Hold Fix
+[23:17:26] Phase 6.1 Hold Fix Iter
+[23:17:26] Phase 6.1.1 Update Timing
+[23:18:43] Phase 6.1.2 Lut RouteThru Assignment for hold
+[23:19:18] Phase 6.2 Additional Hold Fix
+[23:21:51] Phase 7 Leaf Clock Prog Delay Opt
+[23:26:22] Phase 7.1 Delay CleanUp
+[23:26:22] Phase 7.1.1 Update Timing
+[23:26:57] Phase 7.1.2 Update Timing
+[23:28:54] Phase 7.2 Hold Fix Iter
+[23:28:54] Phase 7.2.1 Update Timing
+[23:30:11] Phase 7.2.2 Lut RouteThru Assignment for hold
+[23:30:46] Phase 7.3 Additional Hold Fix
+[23:33:21] Phase 7.4 Global Iteration for Hold
+[23:33:21] Phase 7.4.1 Update Timing
+[23:35:58] Phase 8 Route finalize
+[23:36:38] Phase 9 Verifying routed nets
+[23:36:38] Phase 10 Depositing Routes
+[23:37:56] Phase 11 Post Router Timing
+[23:39:12] Phase 12 Physical Synthesis in Router
+[23:39:12] Phase 12.1 Physical Synthesis Initialization
+[23:41:05] Phase 12.2 Critical Path Optimization
+[23:42:23] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 02h 07m 42s 
+
+[23:42:23] Starting bitstream generation..
+[00:13:38] Creating bitmap...
+[00:21:57] Writing bitstream ./pfm_top_i_dynamic_region_my_rm_partial.bit...
+[00:21:57] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 39m 34s 
+[00:22:37] Run vpl: Step impl: Completed
+[00:22:49] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [00:22:59] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:13:09 ; elapsed = 05:09:49 . Memory (MB): peak = 679.332 ; gain = 0.000 ; free physical = 330627 ; free virtual = 448157
+INFO: [v++ 60-1443] [00:22:59] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link
+INFO: [v++ 60-991] clock name 'clkwiz_kernel_clk_out1' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clkwiz_kernel2_clk_out1' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' (clock ID '') is being mapped to clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: clk_out1_pfm_top_clkwiz_hbm_aclk_0 = 450, Kernel (DATA) clock: clkwiz_kernel_clk_out1 = 404, Kernel (KERNEL) clock: clkwiz_kernel2_clk_out1 = 500
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/address_map.xml -sdsl /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/sdsl.dat -xclbin /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/xclbin_orig.xml -rtd /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd -o /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xml
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [00:23:13] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 679.332 ; gain = 0.000 ; free physical = 330641 ; free virtual = 448147
+INFO: [v++ 60-1443] [00:23:13] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.rtd --append-section :JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_xml.rtd --add-section BUILD_METADATA:JSON:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xml --add-section SYSTEM_METADATA:RAW:/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json --output /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link
+XRT Build Version: 2.3.1301
+       Build Date: 2019-10-24 20:05:16
+          Hash ID: 192e706aea53163a04c574f9b3fe9ed76b6ca471
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 67384811 bytes
+Format : RAW
+File   : '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 4074 bytes
+Format : JSON
+File   : '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 17414 bytes
+Format : RAW
+File   : '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 39584 bytes
+Format : RAW
+File   : '/home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (67475591 bytes) to the output file: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [00:23:14] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.93 . Memory (MB): peak = 679.332 ; gain = 0.000 ; free physical = 330577 ; free virtual = 448146
+INFO: [v++ 60-1443] [00:23:14] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --info /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin.info --input /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/int/random_access_kernels_single.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [00:23:14] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.51 . Memory (MB): peak = 679.332 ; gain = 0.000 ; free physical = 330577 ; free virtual = 448147
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link/system_estimate_random_access_kernels_single.xtxt
+INFO: [v++ 60-586] Created /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.ltx
+INFO: [v++ 60-586] Created /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/bin/random_access_kernels_single.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link/v++_link_random_access_kernels_single_guidance.html
+	Timing Report: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link/imp/xilinx_u280_xdma_201920_3_bb_locked_timing_summary_routed.rpt
+	Utilizations Report: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/reports/link/imp/kernel_util_routed.rpt
+	Vivado Log: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/logs/link/vivado.log
+	Steps Log File: /home/marimeyer/repos/frandom/cmake-build-hbm-single-loop/src/device/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-791] Total elapsed time: 5h 11m 9s

@@ -44,3 +44,20 @@ The host option -r was used in both cases to specify the number of used kernels 
 
 To produce the STREAM kernel with a low frequency of 280MHz we also used the unmodified benchmark code.
 We used the same configuration options that are given for STREAM in the paper and only increased the buffer size by increasing DEVICE_BUFFER_SIZE to 2^14.
+
+## Evaluation Updates
+
+#### Resolve U280 performance issue
+
+The reason for the performance drop was, that the used embedded scheduler (ERT) on the card just supports 16 running jobs.
+The issue can be resolved by disabling the ERT scheduler when executing the benchmarks.
+This can be by creating a file named `xrt.ini` with the following content in the execution directory:
+
+    [Runtime]
+    ert=false
+    kds=true
+
+More information on that can be found in the [XRT documentation](https://github.com/Xilinx/XRT/blob/master/src/runtime_src/doc/toc/debug-faq.rst#xrt-scheduling-options).
+Disabling the scheduler resolved the issue for STREAM and RandomAccess.
+The new measurement results can be found in the execution artifacts of each benchmark in the folder `ERT_scheduler_disabled`.
+The same bitstreams were used for this experiment, so the synthesis report stay the same.

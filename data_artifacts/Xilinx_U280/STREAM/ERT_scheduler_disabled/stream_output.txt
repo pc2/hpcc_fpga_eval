@@ -1,0 +1,43 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Xilinx^@
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Xilinx^@
+Device Name:   xilinx_u280_xdma_201920_3^@
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:stream_kernels_single_hbm_bigbuffer.xclbin
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.1.3
+-------------------------------------------------------------
+Summary:
+Array Size:          2.14748e+09 Byte
+Data Type            cl_float
+Repetitions:         10
+Kernel replications: 32
+Kernel type:         Single
+Kernel file:         stream_kernels_single_hbm_bigbuffer.xclbin
+Device:              xilinx_u280_xdma_201920_3^@
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+Each test below will take on the order of 6.01280e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-06 on all three arrays
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    3.77421e+05    1.80904e-02    1.70697e-02    1.88920e-02
+           Copy    3.65802e+05    4.67692e-02    1.17412e-02    3.36638e-01
+       PCI read    6.66226e+03    1.04909e+00    9.67007e-01    1.15273e+00
+      PCI write    6.03488e+03    1.31738e+00    1.06754e+00    1.89163e+00
+          Scale    3.74033e+05    4.38499e-02    1.14829e-02    3.20164e-01
+          Triad    3.78877e+05    1.75644e-02    1.70041e-02    1.87054e-02

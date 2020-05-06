@@ -1,6 +1,6 @@
 # Experiment Description
 
-For the main evaluation we built all benchmarks of the suite using the code provided in the HPCC FPGA repository.
+For the main evaluation we built all benchmarks of the suite using the code provided in the HPCC FPGA repository in the [inital version](https://github.com/pc2/HPCC_FPGA/tree/1d8dead9d00a359e0116f0fd2c56206dcbf10d05).
 Therefore, we used CMake together with the configuration options specified in the paper to configure the kernel code for each tested board.
 Note, that it might be necessary to modify additional build parameters for some of the boards, which are:
 

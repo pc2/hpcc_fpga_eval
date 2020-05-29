@@ -1,0 +1,43 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   Initialized BSP
+Initialized BSP
+pac_s10_dc : Intel PAC Platform (pac_e500000)
+-------------------------------------------------------------
+Initialized BSP
+-------------------------------------------------------------
+FPGA Setup:/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/gemm_cannon.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the GEMM benchmark proposed in the HPCC benchmark adapted for FPGA
+Version: 0.2.2
+
+Summary:
+Kernel File                   /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/gemm_cannon.aocx
+Matrix Size                   4096
+Repetitions                   10
+Device                        pac_s10_dc : Intel PAC Platform (pac_e500000)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 4.84399e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 5.68878e+00 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep
+    2.39471e-07    2.86102e-05    1.19209e-07
+           best           mean         GFLOPS
+    5.68495e-01    5.68658e-01    2.41759e+02
+Validation Time: 3.89921e+00 s

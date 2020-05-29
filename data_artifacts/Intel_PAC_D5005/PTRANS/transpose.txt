@@ -1,0 +1,44 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   Initialized BSP
+Initialized BSP
+pac_s10_dc : Intel PAC Platform (pac_e500000)
+-------------------------------------------------------------
+Initialized BSP
+-------------------------------------------------------------
+FPGA Setup:/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/transpose_optimized.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the matrix transposition benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 1.1.1
+
+Summary:
+Block Size                    512
+Kernel File                   /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/transpose_optimized.aocx
+Matrix Size                   8192
+Repetitions                   10
+Device                        pac_s10_dc : Intel PAC Platform (pac_e500000)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 1.10389e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 2.42265e+00 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Maximum error: 7.62939e-06
+             trans          calc    calc FLOPS   total FLOPS
+avg:   9.91930e-06   2.41935e-01   2.77384e+08   2.77373e+08
+best:  7.14200e-06   2.39520e-01   2.80180e+08   2.80172e+08
+Validation Time: 3.58450e+00 s

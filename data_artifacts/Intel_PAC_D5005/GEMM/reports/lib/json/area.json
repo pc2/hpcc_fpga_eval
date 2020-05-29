@@ -1,0 +1,3569 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [28.8229, 14.443, 15.1472, 14.8537, 12.6042]
+  , "total":
+  [257061, 565366, 1741, 726, 624]
+  , "name":"Kernel System"
+  , "max_resources":
+  [1866240, 3732480, 11721, 5760, 93312]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [220164, 440329, 572, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [5904, 6443, 0, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 3 global loads and 1 global store. Reduce number of global loads and stores to simplify global interconnect."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 3 global loads and 1 global store."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#hnj1476724450050"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [2, 71, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes. The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"gemm"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [5.4543, 2.32934, 3.17545, 9.95649, 12.6042]
+      , "total_kernel_resources":
+      [30991, 118523, 1167, 726, 624]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"The following loop is nested at depth greater than 3. Reducing the depth of this nested loop will save area:"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"%L with depth 4"
+              , "links":
+              [
+                {
+                  "filename":"copied_gemm_cannon_intel.cl"
+                  , "line":"139"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\n1 loop nested 3 levels deep or more."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1463, 1467, 0, 0, 6]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'diagonal_block' (copied_gemm_cannon_intel.cl:190)"
+          , "type":"resource"
+          , "data":
+          [16, 130, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"copied_gemm_cannon_intel.cl"
+                , "line":190
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width,\n1 reg, 33 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'k' (copied_gemm_cannon_intel.cl:139)"
+          , "type":"resource"
+          , "data":
+          [31, 111, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"copied_gemm_cannon_intel.cl"
+                , "line":139
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 6 and depth 1"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 6 width by 1 depth,\n1 reg, 32 width by 1 depth"
+            }
+          ]
+        }
+        , {
+          "name":"copied_gemm_cannon_intel.cl:187 (c_block)"
+          , "type":"resource"
+          , "data":
+          [0, 0, 128, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"copied_gemm_cannon_intel.cl"
+                , "line":187
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Private memory":"Stall-Free"
+              , "Requested size":"262144 bytes"
+              , "Implemented size":"262144 bytes"
+              , "Number of banks":"64 (banked on bits 2, 3, 4, 5, 6, 7)"
+              , "Bank width":"32 bits"
+              , "Bank depth":"1024 words"
+              , "Total replication":"1"
+              , "Additional information":
+              [
+                {
+                  "type":"text"
+                  , "text":"Requested size 262144 bytes, implemented size 262144 bytes, stall-free, 80 reads and 64 writes. "
+                }
+                , {
+                  "type":"text"
+                  , "text":"Banked on bits 2, 3, 4, 5, 6, 7 into 64 separate banks."
+                }
+                , {
+                  "type":"text"
+                  , "text":"Reducing accesses to exactly one read and one write for all on-chip memory systems may increase overall system performance."
+                }
+                , {
+                  "type":"text"
+                  , "text":"Private memory implemented in on-chip block RAM."
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information."
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Local Memory"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Stall-Free,\n262144B requested,\n262144B implemented."
+            }
+          ]
+        }
+        , {
+          "name":"copied_gemm_cannon_intel.cl:191 (a_block)"
+          , "type":"resource"
+          , "data":
+          [0, 0, 448, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"copied_gemm_cannon_intel.cl"
+                , "line":191
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Private memory":"Stall-Free with Replication"
+              , "Requested size":"262144 bytes"
+              , "Implemented size":"1048576 bytes"
+              , "Number of banks":"64 (banked on bits 3, 4, 5, 6, 7, 8)"
+              , "Bank width":"64 bits"
+              , "Bank depth":"512 words"
+              , "Total replication":"4"
+              , "Additional information":
+              [
+                {
+                  "type":"text"
+                  , "text":"Requested size 262144 bytes, implemented size 1048576 bytes, replicated 4 times total, stall-free, 32 reads and 8 writes. "
+                }
+                , {
+                  "type":"text"
+                  , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"copied_gemm_cannon_intel.cl"
+                      , "line":"190"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                }
+                , {
+                  "type":"text"
+                  , "text":"Banked on bits 3, 4, 5, 6, 7, 8 into 64 separate banks."
+                }
+                , {
+                  "type":"text"
+                  , "text":"Private memory implemented in on-chip block RAM."
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information."
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Local Memory"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Stall-Free with Replication,\n262144B requested,\n1048576B implemented."
+            }
+          ]
+        }
+        , {
+          "name":"copied_gemm_cannon_intel.cl:193 (b_block)"
+          , "type":"resource"
+          , "data":
+          [0, 0, 448, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"copied_gemm_cannon_intel.cl"
+                , "line":193
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Private memory":"Stall-Free with Replication"
+              , "Requested size":"262144 bytes"
+              , "Implemented size":"1048576 bytes"
+              , "Number of banks":"64 (banked on bits 3, 4, 5, 6, 7, 8)"
+              , "Bank width":"64 bits"
+              , "Bank depth":"512 words"
+              , "Total replication":"4"
+              , "Additional information":
+              [
+                {
+                  "type":"text"
+                  , "text":"Requested size 262144 bytes, implemented size 1048576 bytes, replicated 4 times total, stall-free, 32 reads and 8 writes. "
+                }
+                , {
+                  "type":"text"
+                  , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"copied_gemm_cannon_intel.cl"
+                      , "line":"190"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                }
+                , {
+                  "type":"text"
+                  , "text":"Banked on bits 3, 4, 5, 6, 7, 8 into 64 separate banks."
+                }
+                , {
+                  "type":"text"
+                  , "text":"Private memory implemented in on-chip block RAM."
+                }
+              ]
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information."
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Local Memory"
+                      , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#chn1469549457114"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Stall-Free with Replication,\n262144B requested,\n1048576B implemented."
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 142, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 84, 0, 0, 0]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:179"
+                  , "type":"resource"
+                  , "data":
+                  [0, 24, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":179
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:184"
+                  , "type":"resource"
+                  , "data":
+                  [0, 34, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":184
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [7, 2, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [7, 2, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [9, 7, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:184"
+                  , "type":"resource"
+                  , "data":
+                  [120, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":184
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [43, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [12, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 97, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 33, 0, 0, 0]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:184"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":184
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:186"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":186
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [8, 6, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:184"
+                  , "type":"resource"
+                  , "data":
+                  [16, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":184
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:186"
+                  , "type":"resource"
+                  , "data":
+                  [16, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":186
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B10"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [57, 71, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:187"
+                  , "type":"resource"
+                  , "data":
+                  [15, 26, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":187
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:191"
+                  , "type":"resource"
+                  , "data":
+                  [15, 26, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":191
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:148"
+                  , "type":"resource"
+                  , "data":
+                  [27, 19, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":148
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B11"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [223, 8244, 5, 0, 38]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [223, 8244, 5, 0, 38]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [88, 165, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:222"
+                  , "type":"resource"
+                  , "data":
+                  [53, 91, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":222
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:224"
+                  , "type":"resource"
+                  , "data":
+                  [35, 74, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":224
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [412, 791, 0, 0, 39]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:222"
+                  , "type":"resource"
+                  , "data":
+                  [82, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":222
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [26, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [9, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:224"
+                  , "type":"resource"
+                  , "data":
+                  [59, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":224
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"5-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [5, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"5-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"5-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:226"
+                  , "type":"resource"
+                  , "data":
+                  [5711, 9699, 35, 17.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":226
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [55, 46, 0, 1.5, 0]
+                    }
+                    , {
+                      "name":"Hardened Floating-Point Multiply-Add"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [0, 0, 0, 16, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2463, 3759, 18, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Burst-coalesced non-aligned LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced non-aligned LSU.  Use Dynamic Profiler to determine performance impact of this LSU."
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3129, 5894, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Burst-coalesced non-aligned LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced non-aligned LSU.  Use Dynamic Profiler to determine performance impact of this LSU."
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:227"
+                  , "type":"resource"
+                  , "data":
+                  [416, 656, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":227
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [416, 656, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free read from memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"copied_gemm_cannon_intel.cl"
+                              , "line":"187"
+                            }
+                          ]
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Load-Store Units"
+                              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B12"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 164, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 100, 0, 0, 0]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:184"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":184
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:186"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":186
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [10, 8, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:184"
+                  , "type":"resource"
+                  , "data":
+                  [94, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":184
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [26, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:186"
+                  , "type":"resource"
+                  , "data":
+                  [83, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":186
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 8, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:232"
+                  , "type":"resource"
+                  , "data":
+                  [5, 8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":232
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B3"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 24, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:226"
+                  , "type":"resource"
+                  , "data":
+                  [0, 24, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":226
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [8, 6, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:226"
+                  , "type":"resource"
+                  , "data":
+                  [32, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":226
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B4"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [51, 238, 0, 0, 2]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [51, 238, 0, 0, 2]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [72, 31, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:187"
+                  , "type":"resource"
+                  , "data":
+                  [12, 11, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":187
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:190"
+                  , "type":"resource"
+                  , "data":
+                  [49, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":190
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:191"
+                  , "type":"resource"
+                  , "data":
+                  [11, 11, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":191
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [47, 75, 0, 0, 4]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:190"
+                  , "type":"resource"
+                  , "data":
+                  [104, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":190
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:205"
+                  , "type":"resource"
+                  , "data":
+                  [87, 46, 0, 1.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":205
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [55, 46, 0, 1.5, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B5"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [442, 9938, 4, 0, 58]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [442, 9906, 4, 0, 58]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:203"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":203
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [237, 372, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:187"
+                  , "type":"resource"
+                  , "data":
+                  [16, 20, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":187
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:190"
+                  , "type":"resource"
+                  , "data":
+                  [83, 103, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":190
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:191"
+                  , "type":"resource"
+                  , "data":
+                  [16, 20, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":191
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:197"
+                  , "type":"resource"
+                  , "data":
+                  [53, 91, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":197
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:198"
+                  , "type":"resource"
+                  , "data":
+                  [35, 74, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":198
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:205"
+                  , "type":"resource"
+                  , "data":
+                  [34, 64, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":205
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [217, 398, 0, 0, 20]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:197"
+                  , "type":"resource"
+                  , "data":
+                  [81, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":197
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [26, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [9, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:198"
+                  , "type":"resource"
+                  , "data":
+                  [59, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":198
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"5-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [5, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"5-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"5-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:203"
+                  , "type":"resource"
+                  , "data":
+                  [2582, 3805, 18, 1.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":203
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [55, 46, 0, 1.5, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2463, 3759, 18, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Burst-coalesced non-aligned LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced non-aligned LSU.  Use Dynamic Profiler to determine performance impact of this LSU."
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:204"
+                  , "type":"resource"
+                  , "data":
+                  [87, 46, 0, 1.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":204
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [55, 46, 0, 1.5, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:205"
+                  , "type":"resource"
+                  , "data":
+                  [2495, 3759, 18, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":205
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2463, 3759, 18, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Burst-coalesced non-aligned LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced non-aligned LSU.  Use Dynamic Profiler to determine performance impact of this LSU."
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:206"
+                  , "type":"resource"
+                  , "data":
+                  [32, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":206
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:212"
+                  , "type":"resource"
+                  , "data":
+                  [272, 192, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":212
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [272, 192, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free write to memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"copied_gemm_cannon_intel.cl"
+                              , "line":"191"
+                            }
+                          ]
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Load-Store Units"
+                              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:213"
+                  , "type":"resource"
+                  , "data":
+                  [272, 192, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":213
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [272, 192, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free write to memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"copied_gemm_cannon_intel.cl"
+                              , "line":"193"
+                            }
+                          ]
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Load-Store Units"
+                              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B6"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [81, 162, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [81, 162, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [8, 2, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:148"
+                  , "type":"resource"
+                  , "data":
+                  [8, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":148
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B7"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [145, 729, 0, 0, 10]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [145, 729, 0, 0, 10]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [832, 613, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [118, 256, 0, 0, 0]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:190"
+                  , "type":"resource"
+                  , "data":
+                  [52, 68, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":190
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:127"
+                  , "type":"resource"
+                  , "data":
+                  [51, 85, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":127
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:129"
+                  , "type":"resource"
+                  , "data":
+                  [35, 76, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":129
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:148"
+                  , "type":"resource"
+                  , "data":
+                  [576, 128, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":148
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [337, 525, 0, 0, 26]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:127"
+                  , "type":"resource"
+                  , "data":
+                  [75, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":127
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [26, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [6, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [5, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:129"
+                  , "type":"resource"
+                  , "data":
+                  [60, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":129
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [6, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B8"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [938, 35976, 0, 0, 385]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [938, 35976, 0, 0, 385]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [74, 72, 0, 0, 4]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:184"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":184
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218"
+                  , "type":"resource"
+                  , "data":
+                  [11, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:148"
+                  , "type":"resource"
+                  , "data":
+                  [5504, 4160, 0, 128, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":148
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [1664, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Hardened Floating-point Add"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [0, 0, 0, 64, 0]
+                    }
+                    , {
+                      "name":"Hardened Floating-point Multiply"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [0, 0, 0, 64, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [1664, 2624, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free read from memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"copied_gemm_cannon_intel.cl"
+                              , "line":"187"
+                            }
+                          ]
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Load-Store Units"
+                              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [2176, 1536, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free write to memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"copied_gemm_cannon_intel.cl"
+                              , "line":"187"
+                            }
+                          ]
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Load-Store Units"
+                              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gemm.B9"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [2059, 23065, 0, 0, 28]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [2059, 23065, 0, 0, 28]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [703, 1042, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [82, 394, 0, 0, 0]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:190"
+                  , "type":"resource"
+                  , "data":
+                  [41, 111, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":190
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:127"
+                  , "type":"resource"
+                  , "data":
+                  [33, 106, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":127
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:129"
+                  , "type":"resource"
+                  , "data":
+                  [25, 101, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":129
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:130"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":130
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:139"
+                  , "type":"resource"
+                  , "data":
+                  [8, 7, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":139
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:148"
+                  , "type":"resource"
+                  , "data":
+                  [513, 323, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":148
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [1330, 2512, 63, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:139"
+                  , "type":"resource"
+                  , "data":
+                  [41, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":139
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [6, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:140 > \ncopied_gemm_cannon_intel.cl:71"
+                  , "type":"resource"
+                  , "data":
+                  [1344, 2336, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":140
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":71
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [1344, 2336, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free read from memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"copied_gemm_cannon_intel.cl"
+                              , "line":"191"
+                            }
+                          ]
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Load-Store Units"
+                              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:140 > \ncopied_gemm_cannon_intel.cl:72"
+                  , "type":"resource"
+                  , "data":
+                  [1344, 2336, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":140
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":72
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":32
+                      , "data":
+                      [1344, 2336, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stall-free read from memory declared on %L."
+                          , "links":
+                          [
+                            {
+                              "filename":"copied_gemm_cannon_intel.cl"
+                              , "line":"193"
+                            }
+                          ]
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Load-Store Units"
+                              , "link":"https://www.intel.com/content/www/us/en/programmable/documentation/mwh1391807516407.html#yeo1491314105959"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:140 > \ncopied_gemm_cannon_intel.cl:89"
+                  , "type":"resource"
+                  , "data":
+                  [0, 2048, 0, 288, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":140
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":89
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Hardened Dot Product of Size 8"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [0, 2048, 0, 256, 0]
+                    }
+                    , {
+                      "name":"Hardened Floating-Point Accumulator"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [0, 0, 0, 32, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"copied_gemm_cannon_intel.cl:218 > copied_gemm_cannon_intel.cl:140 > \ncopied_gemm_cannon_intel.cl:100"
+                  , "type":"resource"
+                  , "data":
+                  [0, 2048, 0, 288, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":218
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":140
+                      }
+                      , {
+                        "filename":"copied_gemm_cannon_intel.cl"
+                        , "line":100
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Hardened Dot Product of Size 8"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [0, 2048, 0, 256, 0]
+                    }
+                    , {
+                      "name":"Hardened Floating-Point Accumulator"
+                      , "type":"resource"
+                      , "count":64
+                      , "data":
+                      [0, 0, 0, 32, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

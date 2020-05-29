@@ -10,21 +10,28 @@ Platform Name: Xilinx
 Device Name:   xilinx_u280_xdma_201920_3
 -------------------------------------------------------------
 -------------------------------------------------------------
-FPGA Setup:random_access_kernels_single_hbm.xclbin
+FPGA Setup:random_access_kernels_single.xclbin
 Prepared FPGA successfully for global Execution!
 -------------------------------------------------------------
 Implementation of the random access benchmark proposed in the HPCC benchmark suite for FPGA.
-Version: 2.0.2
+Version: 2.0.3
+
+Summary:
+Array Size                    536870912 (4.29497e+09 Byte )
+Kernel File                   random_access_kernels_single.xclbin
+Kernel Replications           32
+Repetitions                   10
+Device                        xilinx_u280_xdma_201920_3
 
 -------------------------------------------------------------
-Summary:
-Kernel Replications: 32
-Repetitions:         10
-Total data size:     4.29497e+09 Byte
-Kernel file:         random_access_kernels_single_hbm.xclbin
-Device:              xilinx_u280_xdma_201920_3
+Start benchmark using the given configuration. Generating data...
 -------------------------------------------------------------
-Start benchmark using the given configuration.
 -------------------------------------------------------------
-         best         mean        GUOPS        error
-  1.67626e+01  1.68036e+01  1.28112e-01  9.99061e+01
+Execute benchmark kernel...
+-------------------------------------------------------------
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Error: 1.06281e-02%
+           best           mean          GUOPS
+    1.67631e+01    1.68038e+01    1.28108e-01

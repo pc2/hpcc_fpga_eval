@@ -1,0 +1,6 @@
+{"rows":[
+{"debug":[[{"filename":"/scratch/pc2-mitarbeiter/mariusme/synth/HPCC_FPGA/build/synth-pacsvm/PTRANS/src/device/copied_transpose_optimized_intel.cl"
+,"line":40}]]
+,"details":["/scratch/pc2-mitarbeiter/mariusme/synth/HPCC_FPGA/build/synth-pacsvm/PTRANS/src/device/copied_transpose_optimized_intel.cl:40:117: warning: unknown attribute 'xcl_array_partition' ignored"]
+,"name":"unknown attribute 'xcl_array_partition' ignored"}
+]}

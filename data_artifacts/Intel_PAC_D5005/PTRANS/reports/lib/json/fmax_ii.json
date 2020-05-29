@@ -1,0 +1,203 @@
+{
+  "basicblocks":
+  {
+    "transpose.B0":
+    {
+      "name":"transpose.B0"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":35
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "transpose.B1":
+    {
+      "name":"transpose.B1"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":52
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"copied_transpose_optimized_intel.cl"
+                , "line":"36"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "transpose.B2":
+    {
+      "name":"transpose.B2"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":0
+      , "loop_location":
+      {
+      }
+    }
+    , "transpose.B3":
+    {
+      "name":"transpose.B3"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+    , "transpose.B4":
+    {
+      "name":"transpose.B4"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":597
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"copied_transpose_optimized_intel.cl"
+                , "line":"44"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "transpose.B5":
+    {
+      "name":"transpose.B5"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":661
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"Yes"
+      , "is_single_block_loop":"Yes"
+      , "loop_layer":2
+      , "loop_location":
+      {
+        "details":
+        [
+          {
+            "type":"text"
+            , "text":"Loop:  (%L)"
+            , "links":
+            [
+              {
+                "filename":"copied_transpose_optimized_intel.cl"
+                , "line":"71"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    , "transpose.B6":
+    {
+      "name":"transpose.B6"
+      , "target_fmax":"Not specified"
+      , "target_ii":"Not specified"
+      , "achieved_fmax":"480.0"
+      , "achieved_ii":1
+      , "latency":0
+      , "max_interleaving":1
+      , "is_fmax_bottleneck":"No"
+      , "is_loop_header":"No"
+      , "is_single_block_loop":"No"
+      , "loop_layer":1
+      , "loop_location":
+      {
+      }
+    }
+  }
+  , "functions":
+  {
+    "transpose":
+    {
+      "debug":
+      [
+        {
+          "filename":"copied_transpose_optimized_intel.cl"
+          , "line":27
+        }
+      ]
+      , "loop_hierachy":
+      {
+        "transpose__no_loop":
+        [
+          "transpose.B0"
+          , "transpose.B2"
+        ]
+        , "transpose.B1":
+        [
+          "transpose.B1"
+          , "transpose.B3"
+          , "transpose.B4"
+          , "transpose.B5"
+          , "transpose.B6"
+        ]
+        , "transpose.B4":
+        [
+          "transpose.B4"
+        ]
+        , "transpose.B5":
+        [
+          "transpose.B5"
+        ]
+      }
+    }
+  }
+}

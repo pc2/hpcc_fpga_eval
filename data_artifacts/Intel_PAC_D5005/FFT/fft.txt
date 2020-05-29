@@ -1,0 +1,46 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   Initialized BSP
+Initialized BSP
+pac_s10_dc : Intel PAC Platform (pac_e500000)
+-------------------------------------------------------------
+Initialized BSP
+-------------------------------------------------------------
+FPGA Setup:/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/fft1d_float_8.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the FFT benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 1.0.2
+
+Summary:
+Batch Size                    5000
+FFT Size                      4096
+Kernel File                   /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/fft1d_float_8.aocx
+Repetitions                   10
+Device                        pac_s10_dc : Intel PAC Platform (pac_e500000)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 5.00187e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 2.06410e-01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+     res. error      mach. eps
+    3.17324e-01    1.19209e-07
+
+                           avg           best
+     Time in s:    4.07596e-06    4.06342e-06
+        GFLOPS:    6.02950e+01    6.04811e+01
+Validation Time: 4.33111e+01 s

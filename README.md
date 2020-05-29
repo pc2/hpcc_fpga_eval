@@ -49,15 +49,29 @@ We used the same configuration options that are given for STREAM in the paper an
 
 #### Resolve U280 performance issue
 
-The reason for the performance drop was, that the used embedded scheduler (ERT) on the card just supports 16 running jobs.
-The issue can be resolved by disabling the ERT scheduler when executing the benchmarks.
+The reason for the performance drop was, that the used schedulers ERT or KDS seem to support just 16 running jobs.
+The issue can be resolved by disabling the ERT and KDS scheduler when executing the benchmarks.
+This will lead to a fallback to the legacy scheduler.
 This can be by creating a file named `xrt.ini` with the following content in the execution directory:
 
     [Runtime]
     ert=false
-    kds=true
+    kds=false
 
 More information on that can be found in the [XRT documentation](https://github.com/Xilinx/XRT/blob/master/src/runtime_src/doc/toc/debug-faq.rst#xrt-scheduling-options).
 Disabling the scheduler resolved the issue for STREAM and RandomAccess.
 The new measurement results can be found in the execution artifacts of each benchmark in the folder `ERT_scheduler_disabled`.
 The same bitstreams were used for this experiment, so the synthesis report stay the same.
+
+#### Power Measurements
+
+The power measurements where done for the STREAM benchmark on all four devices.
+The benchmark output, the raw measured data in CSV format, and the measurement script are given for each device in the folder `STREAM/power_measurements`.
+Stream was executed the same way as in the default run, but the number of repetitions was increased to 100 with the flag `-n 100`.
+For the power measurements, the benchmark was executed with the wrapper bash script that is also contained in the same folder.
+
+    ./u280.xbutildump.sh ./STREAM_FPGA_xilinx -f ...
+
+The raw data in the CSV files was used to calculate the average power in Watts.
+The STREAM benchmark on CPU was compiled with the Makefile located in `STREAM CPU`.
+Power measurement where done during execution using turbostat.

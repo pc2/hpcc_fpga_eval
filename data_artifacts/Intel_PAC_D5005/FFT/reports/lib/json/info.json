@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"classes":["info-table"],"data":["fft1d_float_8"],"name":"Project Name"},
+{"data":["Stratix 10, 1SX280HN2F43E2VG, dcp_bsp:pac_s10_dc"],"name":"Target Family, Device, Board"},
+{"data":["19.4.0 Build 64"],"name":"AOC Version"},
+{"data":["18.1.2 Build 277 Pro"],"name":"Quartus Version"},
+{"data":["aoc /scratch/pc2-mitarbeiter/mariusme/synth/HPCC_FPGA/build/synth-pacsvm/FFT/src/device/copied_fft1d_float_8_intel.cl -DINTEL_FPGA -I/scratch/pc2-mitarbeiter/mariusme/synth/HPCC_FPGA/build/synth-pacsvm/FFT/src/device/../common -I/scratch/pc2-mitarbeiter/mariusme/synth/HPCC_FPGA/FFT/src/device -fpc -fp-relaxed -board=pac_s10_dc -o /scratch/pc2-mitarbeiter/mariusme/synth/HPCC_FPGA/build/synth-pacsvm/FFT/bin/fft1d_float_8.aocx"],"name":"Command"},
+{"data":["Wed May 27 09:35:14 2020"],"name":"Reports Generated At"}
+]}

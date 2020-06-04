@@ -64,11 +64,14 @@ The new measurement results can be found in the execution artifacts of each benc
 The same bitstreams were used for this experiment, so the synthesis report stay the same.
 
 
-#### Measurements for the remaining benchmarks on the PAC D5005 Board
+#### Measurements for the remaining benchmarks on the PAC D5005 and U280 Board
 
 The remaining benchmarks where executed on the PAC D5005 board.
 The [latest version](https://github.com/pc2/HPCC_FPGA/tree/b3f515600ab4f2e4fb0f33e45c26545697e761d9) was used to synthesize the benchmarks.
 The flag `USE_SVM` has to be set to compile the host codes with SVM support.
+
+For the PTRANS benchmark, the same version of the repository was used.
+The GEMM benchmark needed some additions that are given in the patch file `gemm_xilinx.patch`.
 
 
 #### Power Measurements

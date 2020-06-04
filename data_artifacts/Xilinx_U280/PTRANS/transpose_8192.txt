@@ -1,0 +1,32 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Xilinx^@
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Xilinx^@
+Device Name:   xilinx_u280_xdma_201920_3^@
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:transpose_optimized.xclbin
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the matrix transposition benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 1.1
+
+-------------------------------------------------------------
+Summary:
+Repetitions:         10
+Matrix Size:         8192
+Memory Interleaving: Yes
+Kernel file:         transpose_optimized.xclbin
+Device:              xilinx_u280_xdma_201920_3^@
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+             trans          calc    calc FLOPS   total FLOPS
+avg:   2.48015e-01   1.46606e-01   4.57750e+08   1.70059e+08
+best:  2.19274e-01   1.40021e-01   4.79279e+08   1.86780e+08
+Maximum error: 3.81470e-06

@@ -1,0 +1,156 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'marimeyer' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Tue May 12 11:26:14 CEST 2020
+INFO: [HLS 200-10] On os Ubuntu 18.04.3 LTS
+INFO: [HLS 200-10] In directory '/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/_x/transpose_optimized/transpose'
+Sourcing Tcl script 'transpose.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/_x/transpose_optimized/transpose/transpose'.
+INFO: [HLS 200-10] Adding design file '/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/_x/transpose_optimized/transpose/transpose/solution'.
+INFO: [HLS 200-10] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -pipeline_loops=64
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -name_max_length=80
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -enable_dsp_full_reg=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_interface -m_axi_addr64=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [HLS 200-10] Starting synthesis with clang3.9 flow ...
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl' ... 
+WARNING: [HLS 200-651] Found issues in source files:
+clang: warning: argument unused during compilation: '--gcc-toolchain=/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0' [-Wunused-command-line-argument]
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:25:16: warning: unknown attribute 'max_global_work_dim' ignored [-Wunknown-attributes]
+__attribute__((max_global_work_dim(0)))
+               ^
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:35:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:43:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:70:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+4 warnings generated.
+
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:52:21)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:61:21)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:81:21)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:91:21)
+INFO: [HLS 214-115] Burst read of length 32 and bit width 512 has been inferred on port 'gmem0' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:45:17)
+INFO: [HLS 214-115] Burst read of length 32 and bit width 512 has been inferred on port 'gmem1' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:72:13)
+INFO: [HLS 214-115] Burst write of length 32 and bit width 512 has been inferred on port 'gmem2' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:72:13)
+WARNING: [HLS 200-651] Found issues in source files:
+clang: warning: argument unused during compilation: '-I /home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/common' [-Wunused-command-line-argument]
+
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 901.844 ; gain = 461.105 ; free physical = 264483 ; free virtual = 454961
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 901.844 ; gain = 461.105 ; free physical = 264483 ; free virtual = 454961
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 901.844 ; gain = 461.105 ; free physical = 264440 ; free virtual = 454919
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 901.844 ; gain = 461.105 ; free physical = 264440 ; free virtual = 454919
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:45) in function 'transpose' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.2.1' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:72) in function 'transpose' automatically.
+INFO: [XFORM 203-101] Partitioning array 'a_block' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:40) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'a_block' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:40) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'transpose' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:27)...25 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 901.844 ; gain = 461.105 ; free physical = 264407 ; free virtual = 454886
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1.1' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:44:13) in function 'transpose' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1.2' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:71:9) in function 'transpose' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:37:9) in function 'transpose' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:36:5) in function 'transpose'.
+INFO: [HLS 200-472] Inferring partial write operation for 'a_block[0][0]' (/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:63:72)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 901.844 ; gain = 461.105 ; free physical = 264373 ; free virtual = 454853
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'transpose' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'transpose' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=bound) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.2.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 79.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.83 seconds; current allocated memory: 130.439 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.08 seconds; current allocated memory: 137.783 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'transpose' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'transpose/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'transpose/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'transpose/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'transpose/A' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'transpose/B' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'transpose/A_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'transpose/number_of_blocks' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'transpose' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'A', 'B', 'A_out' and 'number_of_blocks' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'transpose' is 8297 from HDL expression: ((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state167))
+INFO: [RTGEN 206-100] Generating core module 'transpose_fadd_32ns_32ns_32_7_full_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'transpose_mul_32ns_32ns_64_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'transpose_mul_32s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'transpose_mul_mul_10ns_23s_23_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'transpose_mul_mul_23s_10ns_23_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'transpose_mux_1632_32_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'transpose'.
+INFO: [HLS 200-111]  Elapsed time: 2.6 seconds; current allocated memory: 152.416 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.02 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'transpose_transpose_mul_32ns_32ns_64_4_1_Mul4S_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'transpose_transpose_mul_32s_32s_32_4_1_Mul4S_1'
+INFO: [RTMG 210-278] Implementing memory 'transpose_transpose_a_block_0_0_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 973.848 ; gain = 533.109 ; free physical = 264184 ; free virtual = 454714
+INFO: [VHDL 208-304] Generating VHDL RTL for transpose with prefix transpose_.
+INFO: [VLOG 209-307] Generating Verilog RTL for transpose with prefix transpose_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'transpose_transpose_ap_fadd_5_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'transpose_transpose_ap_fadd_5_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'transpose_transpose_ap_fadd_5_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue May 12 11:27:01 2020...
+HLS completed successfully
+INFO: [HLS 200-112] Total elapsed time: 52.98 seconds; peak allocated memory: 152.416 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Tue May 12 11:27:07 2020...

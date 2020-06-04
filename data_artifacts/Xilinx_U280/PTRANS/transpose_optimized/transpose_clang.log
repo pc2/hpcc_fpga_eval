@@ -1,0 +1,13 @@
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:25:16: warning: unknown attribute 'max_global_work_dim' ignored [-Wunknown-attributes]
+__attribute__((max_global_work_dim(0)))
+               ^
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:35:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:43:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/home/marimeyer/repos/HPCC_FPGA/build/trans-burst/src/device/copied_transpose_optimized_xilinx.cl:70:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+4 warnings generated.

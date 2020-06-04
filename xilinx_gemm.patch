@@ -1,0 +1,481 @@
+diff --git a/GEMM/CHANGELOG b/GEMM/CHANGELOG
+index ab54624..2dc7569 100644
+--- a/GEMM/CHANGELOG
++++ b/GEMM/CHANGELOG
+@@ -2,6 +2,16 @@
+ 
+ This file contains all changes made to the source code for each release.
+ 
++## 0.2.3
++
++#### Added:
++- Optimize Kernel for Xilinx
++
++#### Changed:
++- Fix bugs in host code, add tests
++- Add new block size parameter -b to host code
++- Change -m to number of blocks instead of values
++
+ ## 0.2.2
+ 
+ #### Changed:
+diff --git a/GEMM/CMakeLists.txt b/GEMM/CMakeLists.txt
+index 9af84c0..ee9bf2c 100755
+--- a/GEMM/CMakeLists.txt
++++ b/GEMM/CMakeLists.txt
+@@ -1,8 +1,8 @@
+ cmake_minimum_required(VERSION 3.1)
+-project(GEMM VERSION 0.2.2 )
++project(GEMM VERSION 0.2.3 )
+ 
+ set(KERNEL_NAME gemm CACHE STRING "Name of the OpenCL kernel")
+-set(DEFAULT_MATRIX_SIZE 4096 CACHE STRING "Default size of the used matrices")
++set(DEFAULT_MATRIX_SIZE 8 CACHE STRING "Default size of the used matrices")
+ set(BLOCK_SIZE 512 CACHE STRING "Block size used in the FPGA kernel")
+ set(GEMM_BLOCK 8 CACHE STRING "Block size used in the FPGA kernel for the cannon algorithm")
+ set(GLOBAL_MEM_UNROLL 16 CACHE STRING "Unrolling factor used to stream data")
+diff --git a/GEMM/Readme.md b/GEMM/Readme.md
+index 957f369..5f5a48c 100755
+--- a/GEMM/Readme.md
++++ b/GEMM/Readme.md
+@@ -76,20 +76,22 @@ For more information on available input parameters run
+     
+     Implementation of the GEMM benchmark proposed in the HPCC benchmark adapted for FPGA
+     Usage:
+-      ./GEMM_intel [OPTION...]
+-    
+-      -f, --file arg        Kernel file name
+-      -n, arg               Number of repetitions (default: 10)
+-      -m, arg               Matrix size (default: 4096)
+-          --kernel arg      Name of the kernel (default: gemm)
+-      -i, --nointerleaving  Disable memory interleaving
+-          --device arg      Index of the device that has to be used. If not given
+-                            you will be asked which device to use if there are
+-                            multiple devices available. (default: -1)
+-          --platform arg    Index of the platform that has to be used. If not
+-                            given you will be asked which platform to use if there
+-                            are multiple platforms available. (default: -1)
+-      -h, --help            Print this help
++    ./GEMM_intel [OPTION...]
++
++    -f, --file arg      Kernel file name
++    -n, arg             Number of repetitions (default: 10)
++    -i,                 Use memory Interleaving
++        --device arg    Index of the device that has to be used. If not given
++                        you will be asked which device to use if there are
++                        multiple devices available. (default: -1)
++        --platform arg  Index of the platform that has to be used. If not given
++                        you will be asked which platform to use if there are
++                        multiple platforms available. (default: -1)
++    -h, --help          Print this help
++    -m, arg             Matrix size in number of blocks in a single dimension
++                        (default: 8)
++    -b, arg             Block size in number of values in one dimension
++                        (default: 256)
+     
+ To execute the unit and integration tests run
+ 
+diff --git a/GEMM/settings/settings.compile.xilinx.gemm_cannon.hbm.ini b/GEMM/settings/settings.compile.xilinx.gemm_cannon.hbm.ini
+new file mode 100644
+index 0000000..7e52533
+--- /dev/null
++++ b/GEMM/settings/settings.compile.xilinx.gemm_cannon.hbm.ini
+@@ -0,0 +1,4 @@
++kernel_frequency=450
++
++[hls]
++max_memory_ports=all
+diff --git a/GEMM/settings/settings.link.xilinx.gemm_cannon.ini b/GEMM/settings/settings.link.xilinx.gemm_cannon.ddr.ini
+similarity index 51%
+rename from GEMM/settings/settings.link.xilinx.gemm_cannon.ini
+rename to GEMM/settings/settings.link.xilinx.gemm_cannon.ddr.ini
+index 0f5ab79..5ac7c75 100644
+--- a/GEMM/settings/settings.link.xilinx.gemm_cannon.ini
++++ b/GEMM/settings/settings.link.xilinx.gemm_cannon.ddr.ini
+@@ -6,5 +6,6 @@ slr=gemm_1:SLR0
+ 
+ # matrix ports
+ sp=gemm_1.m_axi_gmem0:DDR[0]
+-sp=gemm_1.m_axi_gmem1:DDR[0]
+-sp=gemm_1.m_axi_gmem2:DDR[1]
++sp=gemm_1.m_axi_gmem1:DDR[1]
++sp=gemm_1.m_axi_gmem2:DDR[0]
++sp=gemm_1.m_axi_gmem3:DDR[1]
+diff --git a/GEMM/settings/settings.link.xilinx.gemm_cannon.hbm.ini b/GEMM/settings/settings.link.xilinx.gemm_cannon.hbm.ini
+new file mode 100644
+index 0000000..bbb51f6
+--- /dev/null
++++ b/GEMM/settings/settings.link.xilinx.gemm_cannon.hbm.ini
+@@ -0,0 +1,11 @@
++[connectivity]
++nk=gemm:1
++
++# slrs
++slr=gemm_1:SLR0
++
++# matrix ports
++sp=gemm_1.m_axi_gmem0:HBM[0]
++sp=gemm_1.m_axi_gmem1:HBM[1]
++sp=gemm_1.m_axi_gmem2:HBM[2]
++sp=gemm_1.m_axi_gmem3:HBM[3]
+diff --git a/GEMM/src/device/CMakeLists.txt b/GEMM/src/device/CMakeLists.txt
+index 0fc640a..bb7c973 100644
+--- a/GEMM/src/device/CMakeLists.txt
++++ b/GEMM/src/device/CMakeLists.txt
+@@ -4,16 +4,16 @@ include(${CMAKE_SOURCE_DIR}/../cmake/kernelTargets.cmake)
+ 
+ if (INTELFPGAOPENCL_FOUND)
+     generate_kernel_targets_intel(gemm_cannon)
+-    add_test(NAME test_emulation_intel COMMAND ./GEMM_intel -f gemm_cannon_emulate.aocx -n 1 -m ${BLOCK_SIZE}
++    add_test(NAME test_emulation_intel COMMAND ./GEMM_intel -f gemm_cannon_emulate.aocx -n 1 -m 1
+         WORKING_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
+-    add_test(NAME test_output_parsing_intel COMMAND ${CMAKE_SOURCE_DIR}/../scripts/evaluation/execute_and_parse.sh ./GEMM_intel -f gemm_cannon_emulate.aocx -n 1 -m ${BLOCK_SIZE} 
++    add_test(NAME test_output_parsing_intel COMMAND ${CMAKE_SOURCE_DIR}/../scripts/evaluation/execute_and_parse.sh ./GEMM_intel -f gemm_cannon_emulate.aocx -n 1 -m 1 
+         WORKING_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
+ endif()
+ 
+ if (Vitis_FOUND)
+     generate_kernel_targets_xilinx(gemm_cannon)
+-    add_test(NAME test_emulation_xilinx COMMAND ./GEMM_xilinx -f gemm_cannon_emulate.xclbin -n 1 -m ${BLOCK_SIZE}
++    add_test(NAME test_emulation_xilinx COMMAND ./GEMM_xilinx -f gemm_cannon_emulate.xclbin -n 1 -m 1
+         WORKING_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
+-    add_test(NAME test_output_parsing_xilinx COMMAND ${CMAKE_SOURCE_DIR}/../scripts/evaluation/execute_and_parse.sh ./GEMM_xilinx -f gemm_cannon_emulate.xclbin -n 1 -m ${BLOCK_SIZE} 
++    add_test(NAME test_output_parsing_xilinx COMMAND ${CMAKE_SOURCE_DIR}/../scripts/evaluation/execute_and_parse.sh ./GEMM_xilinx -f gemm_cannon_emulate.xclbin -n 1 -m 1 
+         WORKING_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
+ endif()
+diff --git a/GEMM/src/device/gemm_cannon.cl b/GEMM/src/device/gemm_cannon.cl
+index 9095ace..c230c40 100644
+--- a/GEMM/src/device/gemm_cannon.cl
++++ b/GEMM/src/device/gemm_cannon.cl
+@@ -49,104 +49,83 @@ store_block(DEVICE_DATA_TYPE a_block[BLOCK_SIZE][BLOCK_SIZE],
+ /**
+ Calculate for the Level 2 block:
+ 
+-c = c +  a * b
++do_acc true:  c = c + a * b
++do_acc false: c = a * b
+ 
+ where a,b,c are matrices of size GEMM_BLOCK.
+ Calculation itself is fully unrolled.
+  */
+ void register_gemm(const DEVICE_DATA_TYPE a[GEMM_BLOCK][GEMM_BLOCK],
+                     const DEVICE_DATA_TYPE b[GEMM_BLOCK][GEMM_BLOCK],
+-                    DEVICE_DATA_TYPE c_out[GEMM_BLOCK][GEMM_BLOCK]) {
++                    DEVICE_DATA_TYPE c_out[GEMM_BLOCK][GEMM_BLOCK],
++                    const bool do_acc) {
+ 
+-    DEVICE_DATA_TYPE a_block[GEMM_BLOCK][GEMM_BLOCK + 1];
+-    DEVICE_DATA_TYPE b_block[GEMM_BLOCK + 1][GEMM_BLOCK];
+-    DEVICE_DATA_TYPE c_block[GEMM_BLOCK][GEMM_BLOCK];
++    DEVICE_DATA_TYPE a_block[GEMM_BLOCK][GEMM_BLOCK]; // automatically in regs
++    DEVICE_DATA_TYPE b_block[GEMM_BLOCK][GEMM_BLOCK]; // automatically in regs
++    DEVICE_DATA_TYPE c_block[GEMM_BLOCK][GEMM_BLOCK]; // automatically in regs
+ 
+-    // Load block of matrix A and B and init C and reorder values
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
++    // Load block of matrix A and B from BRAM to registers
++    __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+     for (int y=0; y<GEMM_BLOCK; y++) {
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
++        __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+         for (int x=0; x<GEMM_BLOCK; x++) {
+-            int k = (x + y) % GEMM_BLOCK;
+-            a_block[y][x] = a[y][k];
+-            b_block[y][x] = b[k][x];
+-            c_block[y][x] = 0;
++            a_block[y][x] = a[y][x];
++            b_block[y][x] = b[y][x];
+         }
+     }
+ 
+     // Calculate result for 8x8 matrix
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-    for (int i=0;i<GEMM_BLOCK; i++) {
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-        for (int x=0; x<GEMM_BLOCK;x++) {
+-            a_block[x][GEMM_BLOCK] = a_block[x][0];
+-            b_block[GEMM_BLOCK][x] = b_block[0][x];
+-        }
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-        for(int y=0; y < GEMM_BLOCK; y++) {
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-            for (int x=0; x<GEMM_BLOCK;x++) {
+-                c_block[y][x] += a_block[y][x] * b_block[y][x];
+-                a_block[y][x] = a_block[y][x + 1];
+-                b_block[y][x] = b_block[y + 1][x];
++    __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
++    for (int y=0; y<GEMM_BLOCK; y++) {
++        __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
++        for (int x=0; x<GEMM_BLOCK; x++) {
++            float sum = do_acc ? c_out[y][x] : 0.f;
++            __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
++            for (int i=0; i<GEMM_BLOCK; i++) {
++                sum += a_block[y][i] * b_block[i][x];
+             }
++            c_block[y][x] = sum;
+         }
+     }
+ 
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
++    // Write back to BRAM and accumulate
++    __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+     for(int y=0; y < GEMM_BLOCK; y++) {
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-        for (int x=0; x<GEMM_BLOCK;x++) {
+-            c_out[y][x] += c_block[y][x];
++        __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
++        for (int x=0; x<GEMM_BLOCK; x++) {
++            c_out[y][x] = c_block[y][x];
+         }
+     }
+ }
+ 
+ 
+ /**
+-GEMM for the Level 1 Block
++GEMM for the Level 1 Block (from BRAM to BRAM)
+ 
+-
+-@param left_block Most left block that was modified by C2 before
+-@param top_block Most upper block that was modified by C3 before
+-@param current_block_in Current input block
+-@param current_block_out Block to write the output to
++@param a_block input block from A matrix
++@param b_block input block from B matrix
++@param c_block result block to fill (each block will be passed in multiple times)
++@param do_acc: accumulate into c_block (if false, reset to 0 at first write)
+ */
+ void
+ local_gemm(const DEVICE_DATA_TYPE a_block[BLOCK_SIZE / GEMM_BLOCK][BLOCK_SIZE / GEMM_BLOCK]
+                                         [GEMM_BLOCK][GEMM_BLOCK],
+            const DEVICE_DATA_TYPE b_block[BLOCK_SIZE / GEMM_BLOCK][BLOCK_SIZE / GEMM_BLOCK]
+                                             [GEMM_BLOCK][GEMM_BLOCK],
+-           DEVICE_DATA_TYPE c_block_out[BLOCK_SIZE / GEMM_BLOCK][BLOCK_SIZE / GEMM_BLOCK]
++           DEVICE_DATA_TYPE c_block[BLOCK_SIZE / GEMM_BLOCK][BLOCK_SIZE / GEMM_BLOCK]
+                                         [GEMM_BLOCK][GEMM_BLOCK],
+-           DEVICE_DATA_TYPE alpha,
+-           const bool first_block) {
+-
+-#pragma loop_coalesce 2
+-    // For each column in top block
+-    for (int i = 0; i < BLOCK_SIZE / GEMM_BLOCK; i++) {
+-        // For each element below it in current block
+-        for (int j = 0; j < BLOCK_SIZE / GEMM_BLOCK; j++) {
+-            DEVICE_DATA_TYPE   tmp_small_block_out[GEMM_BLOCK][GEMM_BLOCK];
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-            for (int ii = 0; ii < GEMM_BLOCK; ii++) {
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-                for (int jj = 0; jj < GEMM_BLOCK; jj++) {
+-                    tmp_small_block_out[ii][jj] = 0;
+-                }
+-            }
+-            // For each diagonal element in left block
+-            for (int k=0; k < BLOCK_SIZE / GEMM_BLOCK; k++) {
++           const bool do_acc) {
++
++    #pragma loop_coalesce 3
++    // For each diagonal element in left block
++    for (int k=0; k < BLOCK_SIZE / GEMM_BLOCK; k++) {
++        // For each column in top block
++        for (int i = 0; i < BLOCK_SIZE / GEMM_BLOCK; i++) {
++            // For each element below it in current block
++            for (int j = 0; j < BLOCK_SIZE / GEMM_BLOCK; j++) {
++                // accumulate when requested from outside OR when working on following ks
+                 register_gemm(a_block[i][k], b_block[k][j],
+-                               tmp_small_block_out);
+-            }
+-
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-            for (int ii = 0; ii < GEMM_BLOCK; ii++) {
+-__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-                for (int jj = 0; jj < GEMM_BLOCK; jj++) {
+-                    c_block_out[i][j][ii][jj] = first_block ? c_block_out[i][j][ii][jj] + alpha * tmp_small_block_out[ii][jj] : alpha * tmp_small_block_out[ii][jj];
+-                }
++                    c_block[i][j], do_acc | (k>0));
+             }
+         }
+     }
+@@ -156,7 +135,7 @@ __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+ /**
+ Two level blocked GEMM kernel
+ 
+-calculates C_OUT = alpha * C + beta * A.dot(B)
++calculates C_OUT = alpha * A.dot(B) + beta * C
+ 
+ @param a The data array representing the whole matrix a in global memory
+ @param b The data array representing the whole matrix b in global memory
+@@ -174,9 +153,9 @@ void gemm(__global const DEVICE_DATA_TYPE* restrict a,
+           __global DEVICE_DATA_TYPE* restrict c_out,
+           const DEVICE_DATA_TYPE alpha,
+           const DEVICE_DATA_TYPE beta,
+-          const uint size) {
++          const uint a_size) {
+ 
+-    const unsigned a_size = size / BLOCK_SIZE;
++    const unsigned size = a_size * BLOCK_SIZE;
+ 
+     // Level 1 Matrix Multiplication
+ #pragma loop_coalesce 2
+@@ -185,14 +164,15 @@ void gemm(__global const DEVICE_DATA_TYPE* restrict a,
+ #pragma disable_loop_pipelining
+         for (int y_block = 0; y_block < a_size; y_block++) {
+             DEVICE_DATA_TYPE c_block[BLOCK_SIZE / GEMM_BLOCK][BLOCK_SIZE / GEMM_BLOCK]
+-            [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK)));
++            [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+ 
+             for (int diagonal_block=0; diagonal_block < a_size; diagonal_block++) {
+                 DEVICE_DATA_TYPE a_block[BLOCK_SIZE / GEMM_BLOCK][BLOCK_SIZE / GEMM_BLOCK]
+-                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK)));
++                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                 DEVICE_DATA_TYPE b_block[BLOCK_SIZE / GEMM_BLOCK][BLOCK_SIZE / GEMM_BLOCK]
+-                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK)));
++                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                 // Load all needed level 1 blocks
++
+ #pragma loop_coalesce 2
+                 for (int i = 0; i < BLOCK_SIZE ; i++) {
+                     for (int j = 0; j < BLOCK_SIZE / GLOBAL_MEM_UNROLL; j++) {
+@@ -215,16 +195,24 @@ __attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+                         }
+                     }
+                 }
+-                local_gemm(a_block, b_block, c_block, alpha, diagonal_block);
++
++                local_gemm(a_block, b_block, c_block, diagonal_block);
+             }
+ 
+ #pragma loop_coalesce
+             for (int i = 0; i < BLOCK_SIZE; i++) {
++                for (int j = 0; j < BLOCK_SIZE/GLOBAL_MEM_UNROLL; j++) {
++                    DEVICE_DATA_TYPE c_reorder_buffer[GLOBAL_MEM_UNROLL];
+ __attribute__((opencl_unroll_hint(GLOBAL_MEM_UNROLL)))
+-                for (int j = 0; j < BLOCK_SIZE; j++) {
+-                    c_out[(y_block * size + x_block) * BLOCK_SIZE + j
+-                          + i * size] = beta * c[(y_block * size + x_block) * BLOCK_SIZE + j + i * size] +
+-                                  c_block[i/GEMM_BLOCK][j/GEMM_BLOCK][i & (GEMM_BLOCK - 1)][j & (GEMM_BLOCK - 1)];
++                    for (int u = 0; u < GLOBAL_MEM_UNROLL; u++) {
++                        c_reorder_buffer[u] = c[(y_block * size + x_block) * BLOCK_SIZE + j * GLOBAL_MEM_UNROLL + i * size + u];
++                    }
++__attribute__((opencl_unroll_hint(GLOBAL_MEM_UNROLL)))
++                    for (int u = 0; u < GLOBAL_MEM_UNROLL; u++) {
++                        c_out[(y_block * size + x_block) * BLOCK_SIZE + j * GLOBAL_MEM_UNROLL + u
++                                + i * size] = beta * c_reorder_buffer[u] +
++                                alpha * c_block[i/GEMM_BLOCK][(j * GLOBAL_MEM_UNROLL + u)/GEMM_BLOCK][i & (GEMM_BLOCK - 1)][(j * GLOBAL_MEM_UNROLL + u) & (GEMM_BLOCK - 1)];
++                    }
+                 }
+             }
+         }
+diff --git a/GEMM/src/host/execution_cannon.cpp b/GEMM/src/host/execution_cannon.cpp
+index e615430..1057cc2 100644
+--- a/GEMM/src/host/execution_cannon.cpp
++++ b/GEMM/src/host/execution_cannon.cpp
+@@ -102,7 +102,7 @@ calculate(hpcc_base::ExecutionSettings<gemm::GEMMProgramSettings> const& config,
+     ASSERT_CL(err);
+     err = gemmkernel.setArg(5, beta);
+     ASSERT_CL(err);
+-    err = gemmkernel.setArg(6, config.programSettings->matrixSize);
++    err = gemmkernel.setArg(6, config.programSettings->matrixSize / config.programSettings->blockSize);
+     ASSERT_CL(err);
+ 
+     /* --- Execute actual benchmark kernels --- */
+diff --git a/GEMM/src/host/gemm_benchmark.cpp b/GEMM/src/host/gemm_benchmark.cpp
+index beb7005..3e371e4 100644
+--- a/GEMM/src/host/gemm_benchmark.cpp
++++ b/GEMM/src/host/gemm_benchmark.cpp
+@@ -35,7 +35,7 @@ SOFTWARE.
+ #include "parameters.h"
+ 
+ gemm::GEMMProgramSettings::GEMMProgramSettings(cxxopts::ParseResult &results) : hpcc_base::BaseSettings(results),
+-    matrixSize(results["m"].as<uint>()) {
++    matrixSize(results["b"].as<uint>() * results["m"].as<uint>()), blockSize(results["b"].as<uint>()) {
+ 
+ }
+ 
+@@ -91,8 +91,10 @@ gemm::GEMMBenchmark::GEMMBenchmark() {}
+ void
+ gemm::GEMMBenchmark::addAdditionalParseOptions(cxxopts::Options &options) {
+     options.add_options()
+-            ("m", "Matrix size",
+-             cxxopts::value<cl_uint>()->default_value(std::to_string(DEFAULT_MATRIX_SIZE)));
++            ("m", "Matrix size in number of blocks in a single dimension",
++             cxxopts::value<cl_uint>()->default_value(std::to_string(DEFAULT_MATRIX_SIZE)))
++            ("b", "Block size in number of values in one dimension",
++             cxxopts::value<cl_uint>()->default_value(std::to_string(BLOCK_SIZE)));
+ }
+ 
+ std::unique_ptr<gemm::GEMMExecutionTimings>
+diff --git a/GEMM/src/host/gemm_benchmark.hpp b/GEMM/src/host/gemm_benchmark.hpp
+index 1a632e3..a088ba1 100644
+--- a/GEMM/src/host/gemm_benchmark.hpp
++++ b/GEMM/src/host/gemm_benchmark.hpp
+@@ -52,11 +52,17 @@ class GEMMProgramSettings : public hpcc_base::BaseSettings {
+ 
+ public:
+     /**
+-     * @brief The size of the whole matrix
++     * @brief The size of the whole matrix in one dimension
+      * 
+      */
+     uint matrixSize;
+ 
++    /**
++     * @brief The size of a block in one dimension
++     * 
++     */
++    uint blockSize;
++
+     /**
+      * @brief Construct a new GEMM Program Settings object
+      * 
+diff --git a/GEMM/tests/test_kernel_functionality_and_host_integration.cpp b/GEMM/tests/test_kernel_functionality_and_host_integration.cpp
+index 515eab3..3279f98 100755
+--- a/GEMM/tests/test_kernel_functionality_and_host_integration.cpp
++++ b/GEMM/tests/test_kernel_functionality_and_host_integration.cpp
+@@ -35,6 +35,23 @@ struct GEMMKernelTest : testing::Test, testing::WithParamInterface<unsigned> {
+     }
+ };
+ 
++/**
++ * Tests if C will be multiplied by beta
++ */
++TEST_P(GEMMKernelTest, FPGACorrectNumberOfRepetitionsIs1) {
++    bm->getExecutionSettings().programSettings->numRepetitions = 1;
++    auto result = bm->executeKernel(*data);
++    EXPECT_EQ(result->timings.size(), 1);
++}
++
++/**
++ * Tests if C will be multiplied by beta
++ */
++TEST_P(GEMMKernelTest, FPGACorrectNumberOfRepetitionsIs3) {
++    bm->getExecutionSettings().programSettings->numRepetitions = 3;
++    auto result = bm->executeKernel(*data);
++    EXPECT_EQ(result->timings.size(), 3);
++}
+ 
+ /**
+  * Tests if C will be multiplied by beta
+@@ -103,8 +120,8 @@ TEST_P(GEMMKernelTest, FPGACorrectAmulB) {
+     for (int i = 0; i < matrix_size; i++) {
+         for (int j = 0; j < matrix_size; j++) {
+             data->C[i * matrix_size + j] = 0.0;
+-            data->A[i * matrix_size + j] = j;
+-            data->B[i * matrix_size + j] = i;
++            data->A[i * matrix_size + j] = j % 10;
++            data->B[i * matrix_size + j] = i % 10;
+         }
+     }
+     data->alpha = 1.0;
+diff --git a/README.md b/README.md
+index f10b59b..0974659 100755
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ [![GitHub license](https://img.shields.io/github/license/pc2/HPCC_FPGA.svg)](https://github.com/pc2/HPCC_FPGA/blob/master/LICENSE)
+ [![arXiv](http://img.shields.io/badge/cs.DC-arXiv%3A2004.11059-4FC1F2.svg)](https://arxiv.org/abs/2004.11059)
+-[![GitHub release](https://img.shields.io/github/release/pc2/HPCC_FPGA.svg)](https://GitHub.com/pc2/HPCC_FPGA/releases/)
++[![GitHub release](https://img.shields.io/github/release/pc2/HPCC_FPGA.svg)](https://github.com/pc2/HPCC_FPGA/releases/)
+ 
+ HPCC FPGA is an OpenCL-based FPGA benchmark suite with focus on high performance computing.
+ It is based on the benchmarks of the well-established CPU benchmark suite [HPCC](https://icl.utk.edu/hpcc/).

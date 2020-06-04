@@ -1,0 +1,49 @@
+-------------------------------------------------------------
+XRT build version: 2.5.309
+Build hash: 9a03790c11f066a5597b133db737cf4683ad84c8
+Build date: 2020-02-24 02:54:37
+Git branch: 2019.2_PU2
+PID: 179813
+UID: 18577
+[Mon Jun  1 17:59:32 2020]
+HOST: fpga-0011
+EXE: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/test/LINPACK/bin/Linpack_intel
+[XRT] ERROR: XILINX_XRT must be set
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   Initialized BSP
+Initialized BSP
+pac_s10_dc : Intel PAC Platform (pac_e500000)
+-------------------------------------------------------------
+Initialized BSP
+-------------------------------------------------------------
+FPGA Setup:/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/lu_blocked_pvt.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.0.2
+
+Summary:
+Kernel File                   /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/lu_blocked_pvt.aocx
+Matrix Size                   1024
+Repetitions                   10
+Device                        pac_s10_dc : Intel PAC Platform (pac_e500000)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 4.33011e-01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 1.35124e+00 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep       x[0]-1     x[n-1]-1
+    1.43910e+05    1.47297e+03    1.19209e-07    1.70473e+01    2.90731e+00
+           best           mean         GFLOPS
+    8.79841e-02    8.83157e-02    8.13588e+00
+Validation Time: 4.43974e-01 s

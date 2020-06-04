@@ -1,0 +1,30 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/bin/xilinx_reports/gemm_cannon
+	Log files: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/bin/xilinx_tmp_compile/gemm_cannon
+INFO: [v++ 60-1548] Creating build summary session with primary output /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/bin/xilinx_tmp_compile/gemm_cannon.xo.compile_summary, at Tue Jun  2 16:34:11 2020
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Jun  2 16:34:11 2020
+INFO: [v++ 60-1315] Creating rulecheck session with output '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/bin/xilinx_reports/gemm_cannon/v++_compile_gemm_cannon_guidance.html', at Tue Jun  2 16:34:12 2020
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-242] Creating kernel: 'gemm'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 250 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: gemm Log file: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/_x/gemm_cannon/gemm/vivado_hls.log :
+INFO: [v++ 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.1.1'.
+WARNING: [v++ 204-69] Unable to schedule bus read on port 'gmem0' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:183) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 88.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.1.2'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 64.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.2.1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 82.
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 342.47 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/bin/xilinx_reports/gemm_cannon/system_estimate_gemm_cannon.xtxt
+WARNING: [v++ 17-1525] IP definition with the same IP name already exists in XO container. Will overwrite the existing IP definition.
+INFO: [v++ 60-586] Created /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/bin/xilinx_tmp_compile/gemm_cannon.xo
+INFO: [v++ 60-791] Total elapsed time: 0h 5m 56s

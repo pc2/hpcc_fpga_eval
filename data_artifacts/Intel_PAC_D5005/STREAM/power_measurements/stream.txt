@@ -1,0 +1,56 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   Initialized BSP
+Initialized BSP
+pac_s10_dc : Intel PAC Platform (pac_e500000)
+-------------------------------------------------------------
+Initialized BSP
+-------------------------------------------------------------
+FPGA Setup:/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/stream_kernels_single.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.1.5
+
+Summary:
+Array Size                    1073741824 (4.29497e+09 Byte )
+Data Type                     cl_float
+Kernel File                   /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/synth/stream_kernels_single.aocx
+Kernel Replications           1
+Kernel Type                   Single
+Repetitions                   1
+Device                        pac_s10_dc : Intel PAC Platform (pac_e500000)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 1.14126e+02 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Each test below will take on the order of 3.70730e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Execution Time: 2.91964e+00 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-06 on all three arrays
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    1.51007e+04    8.53268e-01    8.53268e-01    8.53268e-01
+           Copy    2.04328e+04    4.20399e-01    4.20399e-01    4.20399e-01
+       PCI read    6.11151e+08    2.10830e-05    2.10830e-05    2.10830e-05
+      PCI write    2.84686e+09    4.52600e-06    4.52600e-06    4.52600e-06
+          Scale    2.04326e+04    4.20403e-01    4.20403e-01    4.20403e-01
+          Triad    1.51163e+04    8.52384e-01    8.52384e-01    8.52384e-01
+Validation Time: 5.11662e+01 s

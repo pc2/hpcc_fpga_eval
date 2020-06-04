@@ -1,0 +1,208 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+  **** SW Build 2700185 on Thu Oct 24 18:45:48 MDT 2019
+  **** IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /cm/shared/opt/Xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/cm/shared/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mariusme' on host 'fpga-0011.cm.cluster' (Linux_x86_64 version 3.10.0-957.27.2.el7.x86_64) on Tue Jun 02 16:34:25 CEST 2020
+INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
+INFO: [HLS 200-10] In directory '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/_x/gemm_cannon/gemm'
+WARNING: [HLS 200-40] Environment variable 'CPLUS_INCLUDE_PATH' is set to /cm/shared/opt/intel/20.0.0/clck/2019.6/include.
+Sourcing Tcl script 'gemm.tcl'
+INFO: [HLS 200-10] Creating and opening project '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/_x/gemm_cannon/gemm/gemm'.
+INFO: [HLS 200-10] Adding design file '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl' to the project
+INFO: [HLS 200-10] Creating and opening solution '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/_x/gemm_cannon/gemm/gemm/solution'.
+INFO: [HLS 200-10] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -pipeline_loops=64
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -name_max_length=80
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -enable_dsp_full_reg=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_interface -m_axi_addr64=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.08ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.08ns.
+INFO: [HLS 200-10] Starting synthesis with clang3.9 flow ...
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl' ... 
+WARNING: [HLS 200-651] Found issues in source files:
+clang: warning: argument unused during compilation: '--gcc-toolchain=/cm/shared/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0' [-Wunused-command-line-argument]
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:119:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+    #pragma loop_coalesce 3
+            ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:148:16: warning: unknown attribute 'uses_global_work_offset' ignored [-Wunknown-attributes]
+__attribute__((uses_global_work_offset(0)))
+               ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:161:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:162:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma disable_loop_pipelining
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:164:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma disable_loop_pipelining
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:167:52: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+            [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                                                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:171:80: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                                                                               ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:173:80: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                                                                               ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:176:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:202:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce
+        ^
+10 warnings generated.
+
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:95:9)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:93:5)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:84:13)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:81:9)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:79:5)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:71:9)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:69:5)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:182:25)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:191:29)
+INFO: [HLS 214-129] Unrolled all 2 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:189:25)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:207:21)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:211:21)
+INFO: [HLS 214-131] Inlining function 'register_gemm' into 'local_gemm' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:127:17)
+INFO: [HLS 214-131] Inlining function 'local_gemm' into 'gemm' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:199:17)
+INFO: [HLS 214-115] Burst read of length 16 and bit width 512 has been inferred on port 'gmem0' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:178:21)
+INFO: [HLS 214-115] Burst read of length 16 and bit width 512 has been inferred on port 'gmem1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:178:21)
+INFO: [HLS 214-115] Burst read of length 16 and bit width 512 has been inferred on port 'gmem2' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:204:17)
+INFO: [HLS 214-115] Burst write of length 16 and bit width 512 has been inferred on port 'gmem3' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:204:17)
+WARNING: [HLS 200-651] Found issues in source files:
+clang: warning: argument unused during compilation: '-I /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/common' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/GEMM/src/device' [-Wunused-command-line-argument]
+
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1032.957 ; gain = 526.211 ; free physical = 124760 ; free virtual = 183770
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1032.957 ; gain = 526.211 ; free physical = 124760 ; free virtual = 183770
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1032.957 ; gain = 526.211 ; free physical = 124752 ; free virtual = 183764
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1032.957 ; gain = 526.211 ; free physical = 124752 ; free virtual = 183764
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:177) in function 'gemm' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.2.1.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:125) in function 'gemm' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.2.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:204) in function 'gemm' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:177) in function 'gemm' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:178) in function 'gemm' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'c_block.64' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:166) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'a_block.128' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:170) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'b_block.128' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:172) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'c_block.64' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:166) in dimension 4 completely.
+INFO: [XFORM 203-101] Partitioning array 'a_block.128' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:170) in dimension 4 completely.
+INFO: [XFORM 203-101] Partitioning array 'b_block.128' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:172) in dimension 4 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:125:22) in function 'gemm'... converting 129 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1162.961 ; gain = 656.215 ; free physical = 124700 ; free virtual = 183712
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.2.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:123:9) in function 'gemm'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.2' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:121:5) in function 'gemm'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:169:13) in function 'gemm' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1.2' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:203:13) in function 'gemm' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:165:9) in function 'gemm' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:163:5) in function 'gemm'.
+INFO: [HLS 200-472] Inferring partial write operation for 'c_block[0][0]' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:96:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'a_block[0][0]' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:192:123)
+INFO: [HLS 200-472] Inferring partial write operation for 'b_block[0][0]' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:193:123)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1162.961 ; gain = 656.215 ; free physical = 124658 ; free virtual = 183670
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gemm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=bound347) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1.1'.
+WARNING: [SCHED 204-69] Unable to schedule bus read on port 'gmem0' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:183) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 88.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1.2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 64.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.2.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 82.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 77.75 seconds; current allocated memory: 254.658 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 36.29 seconds; current allocated memory: 306.553 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/a' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/b' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/c' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/c_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/alpha' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/beta' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gemm/a_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gemm' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'a', 'b', 'c', 'c_out', 'alpha', 'beta' and 'a_size' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'gemm' is 42725 from HDL expression: (1'b0 == ap_block_pp1_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'gemm_fadd_32ns_32ns_32_7_full_dsp_1': 512 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gemm_fmul_32ns_32ns_32_4_max_dsp_1': 512 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gemm_mul_32ns_32ns_64_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gemm_mul_32s_32s_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gemm_mul_mul_9ns_24s_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gemm_mux_83_32_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm'.
+INFO: [HLS 200-111]  Elapsed time: 61.37 seconds; current allocated memory: 374.760 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 342.47 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'gemm_gemm_mul_32ns_32ns_64_4_1_Mul4S_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'gemm_gemm_mul_32s_32s_32_4_1_Mul4S_1'
+INFO: [RTMG 210-278] Implementing memory 'gemm_gemm_c_block_0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'gemm_gemm_a_block_0_0_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:03:21 ; elapsed = 00:03:53 . Memory (MB): peak = 1482.973 ; gain = 976.227 ; free physical = 124101 ; free virtual = 183325
+INFO: [VHDL 208-304] Generating VHDL RTL for gemm with prefix gemm_.
+INFO: [VLOG 209-307] Generating Verilog RTL for gemm with prefix gemm_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2700185 on Thu Oct 24 18:45:48 MDT 2019
+  **** IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cm/shared/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'gemm_gemm_ap_fadd_5_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1674.246 ; gain = 93.203 ; free physical = 123761 ; free virtual = 182996
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gemm_gemm_ap_fadd_5_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gemm_gemm_ap_fadd_5_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'gemm_gemm_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gemm_gemm_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gemm_gemm_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cm/shared/opt/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  2 16:39:59 2020...
+HLS completed successfully
+INFO: [HLS 200-112] Total elapsed time: 338.7 seconds; peak allocated memory: 374.760 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Tue Jun  2 16:40:03 2020...

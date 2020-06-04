@@ -1,0 +1,45 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:/scratch/pc2-mitarbeiter/mariusme/get-benchmark-results/stream/stream_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.1.1
+-------------------------------------------------------------
+Summary:
+Array Size:          8.58993e+09 Byte
+Data Type            cl_float
+Repetitions:         100
+Kernel replications: 4
+Kernel type:         Single
+Kernel file:         /scratch/pc2-mitarbeiter/mariusme/get-benchmark-results/stream/stream_kernels_single.aocx
+Device:              p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+Start benchmark using the given configuration.
+-------------------------------------------------------------
+Each test below will take on the order of 2.48614e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-06 on all three arrays
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    7.00760e+04    3.69784e-01    3.67741e-01    3.73806e-01
+           Copy    6.90931e+04    2.48658e-01    2.48648e-01    2.48674e-01
+       PCI read    6.39835e+03    4.03995e+00    4.02757e+00    4.05979e+00
+      PCI write    6.30469e+03    4.10032e+00    4.08740e+00    4.11444e+00
+          Scale    6.90954e+04    2.48649e-01    2.48640e-01    2.48657e-01
+          Triad    7.00180e+04    3.69835e-01    3.68045e-01    3.76901e-01

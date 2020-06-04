@@ -1,0 +1,31 @@
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:119:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+    #pragma loop_coalesce 3
+            ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:148:16: warning: unknown attribute 'uses_global_work_offset' ignored [-Wunknown-attributes]
+__attribute__((uses_global_work_offset(0)))
+               ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:161:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:162:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma disable_loop_pipelining
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:164:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma disable_loop_pipelining
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:167:52: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+            [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                                                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:171:80: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                                                                               ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:173:80: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+                                        [GEMM_BLOCK][GEMM_BLOCK]  __attribute((numbanks(GEMM_BLOCK * GEMM_BLOCK),xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+                                                                               ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:176:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce 2
+        ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/u280/synth/GEMM_DDR/src/device/copied_gemm_cannon_xilinx.cl:202:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma loop_coalesce
+        ^
+10 warnings generated.

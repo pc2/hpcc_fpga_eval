@@ -63,6 +63,14 @@ Disabling the scheduler resolved the issue for STREAM and RandomAccess.
 The new measurement results can be found in the execution artifacts of each benchmark in the folder `ERT_scheduler_disabled`.
 The same bitstreams were used for this experiment, so the synthesis report stay the same.
 
+
+#### Measurements for the remaining benchmarks on the PAC D5005 Board
+
+The remaining benchmarks where executed on the PAC D5005 board.
+The [latest version](https://github.com/pc2/HPCC_FPGA/tree/b3f515600ab4f2e4fb0f33e45c26545697e761d9) was used to synthesize the benchmarks.
+The flag `USE_SVM` has to be set to compile the host codes with SVM support.
+
+
 #### Power Measurements
 
 The power measurements where done for the STREAM benchmark on all four devices.
@@ -74,4 +82,4 @@ For the power measurements, the benchmark was executed with the wrapper bash scr
 
 The raw data in the CSV files was used to calculate the average power in Watts.
 The STREAM benchmark on CPU was compiled with the Makefile located in `STREAM CPU`.
-Power measurement where done during execution using turbostat.
+Power measurement where done during execution using PCM Power.

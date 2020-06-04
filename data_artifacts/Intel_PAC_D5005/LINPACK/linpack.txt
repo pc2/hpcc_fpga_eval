@@ -1,8 +1,13 @@
 -------------------------------------------------------------
-General setup:
-C++ high resolution clock is used.
-The clock precision seems to be 1.00000e+01ns
--------------------------------------------------------------
+Build hash: 9a03790c11f066a5597b133db737cf4683ad84c8
+Build date: 2020-02-24 02:54:37
+Git branch: 2019.2_PU2
+PID: 176253
+UID: 18577
+[Mon Jun  1 17:52:14 2020]
+HOST: fpga-0011
+EXE: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme/devel/HPCC_FPGA/build/test/LINPACK/bin/Linpack_intel
+[XRT] ERROR: XILINX_XRT must be set
 Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
 -------------------------------------------------------------
 Selection summary:
@@ -28,16 +33,16 @@ Device                        pac_s10_dc : Intel PAC Platform (pac_e500000)
 -------------------------------------------------------------
 Start benchmark using the given configuration. Generating data...
 -------------------------------------------------------------
-Generation Time: 1.47858e+00 s
+Generation Time: 8.83534e+00 s
 -------------------------------------------------------------
 Execute benchmark kernel...
 -------------------------------------------------------------
-Execution Time: 1.36510e+02 s
+Execution Time: 1.42166e+02 s
 -------------------------------------------------------------
 Validate output...
 -------------------------------------------------------------
   norm. resid        resid       machep       x[0]-1     x[n-1]-1
-            nan            nan    1.19209e-07            nan            nan
+    6.54650e+04    2.01578e+04    1.19209e-07    1.93058e+00   -9.99034e-01
            best           mean         GFLOPS
-    1.32326e+01    1.36209e+01    3.46212e+00
-Validation Time: 1.39543e+00 s
+    1.32232e+01    1.34530e+01    3.46459e+00
+Validation Time: 7.71011e+00 s

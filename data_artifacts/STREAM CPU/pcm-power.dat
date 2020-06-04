@@ -1,0 +1,1689 @@
+
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2080384; Consumed Joules: 126.98; Watts: 127.23; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2409622; Consumed DRAM Joules: 36.87; DRAM Watts: 36.94
+S1; Consumed energy units: 2170292; Consumed Joules: 132.46; Watts: 132.73; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2330472; Consumed DRAM Joules: 35.66; DRAM Watts: 35.73
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2097976; Consumed Joules: 128.05; Watts: 128.31; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2616819; Consumed DRAM Joules: 40.04; DRAM Watts: 40.12
+S1; Consumed energy units: 2180477; Consumed Joules: 133.09; Watts: 133.35; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2529889; Consumed DRAM Joules: 38.71; DRAM Watts: 38.78
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111496; Consumed Joules: 128.88; Watts: 129.13; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2679431; Consumed DRAM Joules: 41.00; DRAM Watts: 41.08
+S1; Consumed energy units: 2191045; Consumed Joules: 133.73; Watts: 134.00; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2580410; Consumed DRAM Joules: 39.48; DRAM Watts: 39.56
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2086766; Consumed Joules: 127.37; Watts: 127.62; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2523583; Consumed DRAM Joules: 38.61; DRAM Watts: 38.69
+S1; Consumed energy units: 2176271; Consumed Joules: 132.83; Watts: 133.10; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2435544; Consumed DRAM Joules: 37.26; DRAM Watts: 37.34
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110038; Consumed Joules: 128.79; Watts: 128.92; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2681747; Consumed DRAM Joules: 41.03; DRAM Watts: 41.07
+S1; Consumed energy units: 2190538; Consumed Joules: 133.70; Watts: 133.83; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2583885; Consumed DRAM Joules: 39.53; DRAM Watts: 39.57
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2095700; Consumed Joules: 127.91; Watts: 128.17; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2568614; Consumed DRAM Joules: 39.30; DRAM Watts: 39.38
+S1; Consumed energy units: 2179452; Consumed Joules: 133.02; Watts: 133.29; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2481295; Consumed DRAM Joules: 37.96; DRAM Watts: 38.04
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108245; Consumed Joules: 128.68; Watts: 128.81; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2688383; Consumed DRAM Joules: 41.13; DRAM Watts: 41.17
+S1; Consumed energy units: 2189069; Consumed Joules: 133.61; Watts: 133.74; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2592630; Consumed DRAM Joules: 39.67; DRAM Watts: 39.71
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108836; Consumed Joules: 128.71; Watts: 128.97; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2687325; Consumed DRAM Joules: 41.12; DRAM Watts: 41.20
+S1; Consumed energy units: 2190278; Consumed Joules: 133.68; Watts: 133.95; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2595219; Consumed DRAM Joules: 39.71; DRAM Watts: 39.79
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2077445; Consumed Joules: 126.80; Watts: 127.05; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2447118; Consumed DRAM Joules: 37.44; DRAM Watts: 37.52
+S1; Consumed energy units: 2166148; Consumed Joules: 132.21; Watts: 132.48; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2373554; Consumed DRAM Joules: 36.32; DRAM Watts: 36.39
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108806; Consumed Joules: 128.71; Watts: 128.84; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2671744; Consumed DRAM Joules: 40.88; DRAM Watts: 40.92
+S1; Consumed energy units: 2188930; Consumed Joules: 133.60; Watts: 133.74; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2577083; Consumed DRAM Joules: 39.43; DRAM Watts: 39.47
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2105990; Consumed Joules: 128.54; Watts: 128.80; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2659956; Consumed DRAM Joules: 40.70; DRAM Watts: 40.78
+S1; Consumed energy units: 2188171; Consumed Joules: 133.56; Watts: 133.82; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2568286; Consumed DRAM Joules: 39.29; DRAM Watts: 39.37
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2069072; Consumed Joules: 126.29; Watts: 126.54; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2373536; Consumed DRAM Joules: 36.32; DRAM Watts: 36.39
+S1; Consumed energy units: 2162312; Consumed Joules: 131.98; Watts: 132.24; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2302964; Consumed DRAM Joules: 35.24; DRAM Watts: 35.31
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2115123; Consumed Joules: 129.10; Watts: 129.23; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2681021; Consumed DRAM Joules: 41.02; DRAM Watts: 41.06
+S1; Consumed energy units: 2194912; Consumed Joules: 133.97; Watts: 134.10; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2589439; Consumed DRAM Joules: 39.62; DRAM Watts: 39.66
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2085055; Consumed Joules: 127.26; Watts: 127.52; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2496336; Consumed DRAM Joules: 38.19; DRAM Watts: 38.27
+S1; Consumed energy units: 2171095; Consumed Joules: 132.51; Watts: 132.78; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2416848; Consumed DRAM Joules: 36.98; DRAM Watts: 37.05
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109259; Consumed Joules: 128.74; Watts: 129.00; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2682070; Consumed DRAM Joules: 41.04; DRAM Watts: 41.12
+S1; Consumed energy units: 2194891; Consumed Joules: 133.97; Watts: 134.23; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2591831; Consumed DRAM Joules: 39.66; DRAM Watts: 39.73
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2094761; Consumed Joules: 127.85; Watts: 127.98; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2564405; Consumed DRAM Joules: 39.24; DRAM Watts: 39.27
+S1; Consumed energy units: 2180632; Consumed Joules: 133.10; Watts: 133.23; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2480191; Consumed DRAM Joules: 37.95; DRAM Watts: 37.98
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111716; Consumed Joules: 128.89; Watts: 129.15; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2693143; Consumed DRAM Joules: 41.21; DRAM Watts: 41.29
+S1; Consumed energy units: 2192052; Consumed Joules: 133.79; Watts: 134.06; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2596580; Consumed DRAM Joules: 39.73; DRAM Watts: 39.81
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109196; Consumed Joules: 128.74; Watts: 128.86; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2690730; Consumed DRAM Joules: 41.17; DRAM Watts: 41.21
+S1; Consumed energy units: 2192729; Consumed Joules: 133.83; Watts: 133.97; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2599131; Consumed DRAM Joules: 39.77; DRAM Watts: 39.81
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2094704; Consumed Joules: 127.85; Watts: 128.11; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2571756; Consumed DRAM Joules: 39.35; DRAM Watts: 39.43
+S1; Consumed energy units: 2178306; Consumed Joules: 132.95; Watts: 133.22; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2481385; Consumed DRAM Joules: 37.97; DRAM Watts: 38.04
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2094742; Consumed Joules: 127.85; Watts: 128.11; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2575979; Consumed DRAM Joules: 39.41; DRAM Watts: 39.49
+S1; Consumed energy units: 2179263; Consumed Joules: 133.01; Watts: 133.28; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2493529; Consumed DRAM Joules: 38.15; DRAM Watts: 38.23
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109450; Consumed Joules: 128.75; Watts: 128.88; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2671696; Consumed DRAM Joules: 40.88; DRAM Watts: 40.92
+S1; Consumed energy units: 2192467; Consumed Joules: 133.82; Watts: 133.95; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2578180; Consumed DRAM Joules: 39.45; DRAM Watts: 39.49
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2067525; Consumed Joules: 126.19; Watts: 126.44; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2347467; Consumed DRAM Joules: 35.92; DRAM Watts: 35.99
+S1; Consumed energy units: 2158750; Consumed Joules: 131.76; Watts: 132.02; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2276909; Consumed DRAM Joules: 34.84; DRAM Watts: 34.91
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111850; Consumed Joules: 128.90; Watts: 129.03; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2674866; Consumed DRAM Joules: 40.93; DRAM Watts: 40.97
+S1; Consumed energy units: 2198306; Consumed Joules: 134.17; Watts: 134.31; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2591212; Consumed DRAM Joules: 39.65; DRAM Watts: 39.69
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2089336; Consumed Joules: 127.52; Watts: 127.78; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2492389; Consumed DRAM Joules: 38.13; DRAM Watts: 38.21
+S1; Consumed energy units: 2177816; Consumed Joules: 132.92; Watts: 133.19; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2418448; Consumed DRAM Joules: 37.00; DRAM Watts: 37.08
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108256; Consumed Joules: 128.68; Watts: 128.94; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2677681; Consumed DRAM Joules: 40.97; DRAM Watts: 41.05
+S1; Consumed energy units: 2191051; Consumed Joules: 133.73; Watts: 134.00; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2592004; Consumed DRAM Joules: 39.66; DRAM Watts: 39.74
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2095430; Consumed Joules: 127.89; Watts: 128.02; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2560009; Consumed DRAM Joules: 39.17; DRAM Watts: 39.21
+S1; Consumed energy units: 2183439; Consumed Joules: 133.27; Watts: 133.40; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2477926; Consumed DRAM Joules: 37.91; DRAM Watts: 37.95
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110091; Consumed Joules: 128.79; Watts: 129.05; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2687687; Consumed DRAM Joules: 41.12; DRAM Watts: 41.20
+S1; Consumed energy units: 2194921; Consumed Joules: 133.97; Watts: 134.24; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2602477; Consumed DRAM Joules: 39.82; DRAM Watts: 39.90
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107141; Consumed Joules: 128.61; Watts: 128.74; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2658815; Consumed DRAM Joules: 40.68; DRAM Watts: 40.72
+S1; Consumed energy units: 2189386; Consumed Joules: 133.63; Watts: 133.76; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2577803; Consumed DRAM Joules: 39.44; DRAM Watts: 39.48
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2088290; Consumed Joules: 127.46; Watts: 127.71; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2509253; Consumed DRAM Joules: 38.39; DRAM Watts: 38.47
+S1; Consumed energy units: 2177705; Consumed Joules: 132.92; Watts: 133.18; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2435934; Consumed DRAM Joules: 37.27; DRAM Watts: 37.34
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111980; Consumed Joules: 128.91; Watts: 129.16; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2670944; Consumed DRAM Joules: 40.87; DRAM Watts: 40.95
+S1; Consumed energy units: 2194327; Consumed Joules: 133.93; Watts: 134.20; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2582343; Consumed DRAM Joules: 39.51; DRAM Watts: 39.59
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2064572; Consumed Joules: 126.01; Watts: 126.14; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2329728; Consumed DRAM Joules: 35.64; DRAM Watts: 35.68
+S1; Consumed energy units: 2158206; Consumed Joules: 131.73; Watts: 131.86; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2261517; Consumed DRAM Joules: 34.60; DRAM Watts: 34.64
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108055; Consumed Joules: 128.67; Watts: 128.92; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2681297; Consumed DRAM Joules: 41.02; DRAM Watts: 41.11
+S1; Consumed energy units: 2193019; Consumed Joules: 133.85; Watts: 134.12; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2592198; Consumed DRAM Joules: 39.66; DRAM Watts: 39.74
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2091130; Consumed Joules: 127.63; Watts: 127.89; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2517438; Consumed DRAM Joules: 38.52; DRAM Watts: 38.59
+S1; Consumed energy units: 2185358; Consumed Joules: 133.38; Watts: 133.65; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2446262; Consumed DRAM Joules: 37.43; DRAM Watts: 37.50
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107170; Consumed Joules: 128.61; Watts: 128.74; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2680280; Consumed DRAM Joules: 41.01; DRAM Watts: 41.05
+S1; Consumed energy units: 2192884; Consumed Joules: 133.84; Watts: 133.98; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2599413; Consumed DRAM Joules: 39.77; DRAM Watts: 39.81
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2098038; Consumed Joules: 128.05; Watts: 128.31; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2607161; Consumed DRAM Joules: 39.89; DRAM Watts: 39.97
+S1; Consumed energy units: 2186737; Consumed Joules: 133.47; Watts: 133.74; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2524350; Consumed DRAM Joules: 38.62; DRAM Watts: 38.70
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2104261; Consumed Joules: 128.43; Watts: 128.69; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2645074; Consumed DRAM Joules: 40.47; DRAM Watts: 40.55
+S1; Consumed energy units: 2189035; Consumed Joules: 133.61; Watts: 133.88; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2561766; Consumed DRAM Joules: 39.20; DRAM Watts: 39.27
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107518; Consumed Joules: 128.63; Watts: 128.76; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2684525; Consumed DRAM Joules: 41.07; DRAM Watts: 41.11
+S1; Consumed energy units: 2193671; Consumed Joules: 133.89; Watts: 134.03; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2601170; Consumed DRAM Joules: 39.80; DRAM Watts: 39.84
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106547; Consumed Joules: 128.57; Watts: 128.83; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2679827; Consumed DRAM Joules: 41.00; DRAM Watts: 41.08
+S1; Consumed energy units: 2195655; Consumed Joules: 134.01; Watts: 134.28; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 2604934; Consumed DRAM Joules: 39.86; DRAM Watts: 39.94
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2080980; Consumed Joules: 127.01; Watts: 127.14; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2492820; Consumed DRAM Joules: 38.14; DRAM Watts: 38.18
+S1; Consumed energy units: 2179355; Consumed Joules: 133.02; Watts: 133.15; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2429652; Consumed DRAM Joules: 37.17; DRAM Watts: 37.21
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2103836; Consumed Joules: 128.41; Watts: 128.67; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2669426; Consumed DRAM Joules: 40.84; DRAM Watts: 40.92
+S1; Consumed energy units: 2192418; Consumed Joules: 133.81; Watts: 134.08; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2585965; Consumed DRAM Joules: 39.57; DRAM Watts: 39.64
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2064574; Consumed Joules: 126.01; Watts: 126.26; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2338973; Consumed DRAM Joules: 35.79; DRAM Watts: 35.86
+S1; Consumed energy units: 2159905; Consumed Joules: 131.83; Watts: 132.09; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2273310; Consumed DRAM Joules: 34.78; DRAM Watts: 34.85
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107187; Consumed Joules: 128.61; Watts: 128.74; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2676678; Consumed DRAM Joules: 40.95; DRAM Watts: 40.99
+S1; Consumed energy units: 2196525; Consumed Joules: 134.07; Watts: 134.20; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2593633; Consumed DRAM Joules: 39.68; DRAM Watts: 39.72
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2102001; Consumed Joules: 128.30; Watts: 128.55; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2597885; Consumed DRAM Joules: 39.75; DRAM Watts: 39.83
+S1; Consumed energy units: 2193337; Consumed Joules: 133.87; Watts: 134.14; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2510130; Consumed DRAM Joules: 38.40; DRAM Watts: 38.48
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2101063; Consumed Joules: 128.24; Watts: 128.37; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2647556; Consumed DRAM Joules: 40.51; DRAM Watts: 40.55
+S1; Consumed energy units: 2189732; Consumed Joules: 133.65; Watts: 133.78; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2561982; Consumed DRAM Joules: 39.20; DRAM Watts: 39.24
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110634; Consumed Joules: 128.82; Watts: 129.08; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2678900; Consumed DRAM Joules: 40.99; DRAM Watts: 41.07
+S1; Consumed energy units: 2198213; Consumed Joules: 134.17; Watts: 134.44; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2593563; Consumed DRAM Joules: 39.68; DRAM Watts: 39.76
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2092458; Consumed Joules: 127.71; Watts: 127.84; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2558697; Consumed DRAM Joules: 39.15; DRAM Watts: 39.19
+S1; Consumed energy units: 2182502; Consumed Joules: 133.21; Watts: 133.34; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2479412; Consumed DRAM Joules: 37.94; DRAM Watts: 37.97
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108377; Consumed Joules: 128.69; Watts: 128.94; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2684010; Consumed DRAM Joules: 41.07; DRAM Watts: 41.15
+S1; Consumed energy units: 2193168; Consumed Joules: 133.86; Watts: 134.13; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2598510; Consumed DRAM Joules: 39.76; DRAM Watts: 39.84
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108141; Consumed Joules: 128.67; Watts: 128.93; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2684989; Consumed DRAM Joules: 41.08; DRAM Watts: 41.16
+S1; Consumed energy units: 2192988; Consumed Joules: 133.85; Watts: 134.12; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2598673; Consumed DRAM Joules: 39.76; DRAM Watts: 39.84
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2079758; Consumed Joules: 126.94; Watts: 127.07; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2468160; Consumed DRAM Joules: 37.76; DRAM Watts: 37.80
+S1; Consumed energy units: 2173240; Consumed Joules: 132.64; Watts: 132.78; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2400360; Consumed DRAM Joules: 36.73; DRAM Watts: 36.76
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107195; Consumed Joules: 128.61; Watts: 128.87; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2674587; Consumed DRAM Joules: 40.92; DRAM Watts: 41.00
+S1; Consumed energy units: 2192798; Consumed Joules: 133.84; Watts: 134.11; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2589134; Consumed DRAM Joules: 39.61; DRAM Watts: 39.69
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2070364; Consumed Joules: 126.36; Watts: 126.49; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2362357; Consumed DRAM Joules: 36.14; DRAM Watts: 36.18
+S1; Consumed energy units: 2164641; Consumed Joules: 132.12; Watts: 132.25; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2296171; Consumed DRAM Joules: 35.13; DRAM Watts: 35.17
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2105951; Consumed Joules: 128.54; Watts: 128.79; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2654559; Consumed DRAM Joules: 40.61; DRAM Watts: 40.70
+S1; Consumed energy units: 2190645; Consumed Joules: 133.71; Watts: 133.97; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2574443; Consumed DRAM Joules: 39.39; DRAM Watts: 39.47
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2112086; Consumed Joules: 128.91; Watts: 129.17; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2669522; Consumed DRAM Joules: 40.84; DRAM Watts: 40.93
+S1; Consumed energy units: 2198432; Consumed Joules: 134.18; Watts: 134.45; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2589669; Consumed DRAM Joules: 39.62; DRAM Watts: 39.70
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2087129; Consumed Joules: 127.39; Watts: 127.64; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2512551; Consumed DRAM Joules: 38.44; DRAM Watts: 38.52
+S1; Consumed energy units: 2177660; Consumed Joules: 132.91; Watts: 133.18; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2442672; Consumed DRAM Joules: 37.37; DRAM Watts: 37.45
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106763; Consumed Joules: 128.59; Watts: 128.84; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2674959; Consumed DRAM Joules: 40.93; DRAM Watts: 41.01
+S1; Consumed energy units: 2194027; Consumed Joules: 133.91; Watts: 134.18; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2593150; Consumed DRAM Joules: 39.68; DRAM Watts: 39.75
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2093197; Consumed Joules: 127.76; Watts: 127.89; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2557850; Consumed DRAM Joules: 39.14; DRAM Watts: 39.17
+S1; Consumed energy units: 2183850; Consumed Joules: 133.29; Watts: 133.43; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2480421; Consumed DRAM Joules: 37.95; DRAM Watts: 37.99
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109690; Consumed Joules: 128.77; Watts: 129.02; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2683061; Consumed DRAM Joules: 41.05; DRAM Watts: 41.13
+S1; Consumed energy units: 2193320; Consumed Joules: 133.87; Watts: 134.14; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2595884; Consumed DRAM Joules: 39.72; DRAM Watts: 39.80
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108468; Consumed Joules: 128.69; Watts: 128.95; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2676396; Consumed DRAM Joules: 40.95; DRAM Watts: 41.03
+S1; Consumed energy units: 2191290; Consumed Joules: 133.75; Watts: 134.01; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2589568; Consumed DRAM Joules: 39.62; DRAM Watts: 39.70
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2074480; Consumed Joules: 126.62; Watts: 126.74; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2438555; Consumed DRAM Joules: 37.31; DRAM Watts: 37.35
+S1; Consumed energy units: 2168722; Consumed Joules: 132.37; Watts: 132.50; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2368602; Consumed DRAM Joules: 36.24; DRAM Watts: 36.28
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2104571; Consumed Joules: 128.45; Watts: 128.71; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2652233; Consumed DRAM Joules: 40.58; DRAM Watts: 40.66
+S1; Consumed energy units: 2191389; Consumed Joules: 133.75; Watts: 134.02; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2565458; Consumed DRAM Joules: 39.25; DRAM Watts: 39.33
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2097671; Consumed Joules: 128.03; Watts: 128.29; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2596652; Consumed DRAM Joules: 39.73; DRAM Watts: 39.81
+S1; Consumed energy units: 2188965; Consumed Joules: 133.60; Watts: 133.87; Thermal headroom below TjMax: 29
+S1; Consumed DRAM energy units: 2511660; Consumed DRAM Joules: 38.43; DRAM Watts: 38.51
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2072118; Consumed Joules: 126.47; Watts: 126.60; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2402011; Consumed DRAM Joules: 36.75; DRAM Watts: 36.79
+S1; Consumed energy units: 2167206; Consumed Joules: 132.28; Watts: 132.41; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2330118; Consumed DRAM Joules: 35.65; DRAM Watts: 35.69
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2113807; Consumed Joules: 129.02; Watts: 129.28; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2682933; Consumed DRAM Joules: 41.05; DRAM Watts: 41.13
+S1; Consumed energy units: 2203068; Consumed Joules: 134.46; Watts: 134.73; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2593954; Consumed DRAM Joules: 39.69; DRAM Watts: 39.77
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2086191; Consumed Joules: 127.33; Watts: 127.59; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2508326; Consumed DRAM Joules: 38.38; DRAM Watts: 38.45
+S1; Consumed energy units: 2178783; Consumed Joules: 132.98; Watts: 133.25; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2430629; Consumed DRAM Joules: 37.19; DRAM Watts: 37.26
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107573; Consumed Joules: 128.64; Watts: 128.76; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 2677854; Consumed DRAM Joules: 40.97; DRAM Watts: 41.01
+S1; Consumed energy units: 2194239; Consumed Joules: 133.93; Watts: 134.06; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2589143; Consumed DRAM Joules: 39.61; DRAM Watts: 39.65
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2095546; Consumed Joules: 127.90; Watts: 128.16; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2563888; Consumed DRAM Joules: 39.23; DRAM Watts: 39.31
+S1; Consumed energy units: 2185621; Consumed Joules: 133.40; Watts: 133.67; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2483235; Consumed DRAM Joules: 37.99; DRAM Watts: 38.07
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107821; Consumed Joules: 128.65; Watts: 128.78; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2682649; Consumed DRAM Joules: 41.04; DRAM Watts: 41.09
+S1; Consumed energy units: 2193655; Consumed Joules: 133.89; Watts: 134.02; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2597315; Consumed DRAM Joules: 39.74; DRAM Watts: 39.78
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106613; Consumed Joules: 128.58; Watts: 128.84; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2682814; Consumed DRAM Joules: 41.05; DRAM Watts: 41.13
+S1; Consumed energy units: 2194070; Consumed Joules: 133.92; Watts: 134.18; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2600103; Consumed DRAM Joules: 39.78; DRAM Watts: 39.86
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2084843; Consumed Joules: 127.25; Watts: 127.50; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2511825; Consumed DRAM Joules: 38.43; DRAM Watts: 38.51
+S1; Consumed energy units: 2177075; Consumed Joules: 132.88; Watts: 133.14; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2437378; Consumed DRAM Joules: 37.29; DRAM Watts: 37.37
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2098038; Consumed Joules: 128.05; Watts: 128.18; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2615001; Consumed DRAM Joules: 40.01; DRAM Watts: 40.05
+S1; Consumed energy units: 2187391; Consumed Joules: 133.51; Watts: 133.64; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2533260; Consumed DRAM Joules: 38.76; DRAM Watts: 38.80
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108350; Consumed Joules: 128.68; Watts: 128.81; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2669413; Consumed DRAM Joules: 40.84; DRAM Watts: 40.88
+S1; Consumed energy units: 2196818; Consumed Joules: 134.08; Watts: 134.22; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2586062; Consumed DRAM Joules: 39.57; DRAM Watts: 39.61
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2076973; Consumed Joules: 126.77; Watts: 127.02; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2457846; Consumed DRAM Joules: 37.61; DRAM Watts: 37.68
+S1; Consumed energy units: 2175105; Consumed Joules: 132.76; Watts: 133.02; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2388858; Consumed DRAM Joules: 36.55; DRAM Watts: 36.62
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108335; Consumed Joules: 128.68; Watts: 128.94; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2674630; Consumed DRAM Joules: 40.92; DRAM Watts: 41.00
+S1; Consumed energy units: 2196517; Consumed Joules: 134.06; Watts: 134.33; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2587696; Consumed DRAM Joules: 39.59; DRAM Watts: 39.67
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2085487; Consumed Joules: 127.29; Watts: 127.42; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2490909; Consumed DRAM Joules: 38.11; DRAM Watts: 38.15
+S1; Consumed energy units: 2179517; Consumed Joules: 133.03; Watts: 133.16; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2417443; Consumed DRAM Joules: 36.99; DRAM Watts: 37.02
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106147; Consumed Joules: 128.55; Watts: 128.81; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2678695; Consumed DRAM Joules: 40.98; DRAM Watts: 41.07
+S1; Consumed energy units: 2194507; Consumed Joules: 133.94; Watts: 134.21; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2593090; Consumed DRAM Joules: 39.67; DRAM Watts: 39.75
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2103721; Consumed Joules: 128.40; Watts: 128.53; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2635568; Consumed DRAM Joules: 40.32; DRAM Watts: 40.36
+S1; Consumed energy units: 2196359; Consumed Joules: 134.06; Watts: 134.19; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2555605; Consumed DRAM Joules: 39.10; DRAM Watts: 39.14
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2105614; Consumed Joules: 128.52; Watts: 128.77; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2676634; Consumed DRAM Joules: 40.95; DRAM Watts: 41.03
+S1; Consumed energy units: 2193966; Consumed Joules: 133.91; Watts: 134.18; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2601091; Consumed DRAM Joules: 39.80; DRAM Watts: 39.88
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106902; Consumed Joules: 128.60; Watts: 128.85; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2676679; Consumed DRAM Joules: 40.95; DRAM Watts: 41.04
+S1; Consumed energy units: 2194740; Consumed Joules: 133.96; Watts: 134.22; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2597695; Consumed DRAM Joules: 39.74; DRAM Watts: 39.82
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2096312; Consumed Joules: 127.95; Watts: 128.08; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2594940; Consumed DRAM Joules: 39.70; DRAM Watts: 39.74
+S1; Consumed energy units: 2189338; Consumed Joules: 133.63; Watts: 133.76; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2521985; Consumed DRAM Joules: 38.59; DRAM Watts: 38.62
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2088750; Consumed Joules: 127.49; Watts: 127.74; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2545057; Consumed DRAM Joules: 38.94; DRAM Watts: 39.02
+S1; Consumed energy units: 2180957; Consumed Joules: 133.12; Watts: 133.38; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2475253; Consumed DRAM Joules: 37.87; DRAM Watts: 37.95
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106592; Consumed Joules: 128.58; Watts: 128.83; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2664957; Consumed DRAM Joules: 40.77; DRAM Watts: 40.86
+S1; Consumed energy units: 2196995; Consumed Joules: 134.09; Watts: 134.36; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2588142; Consumed DRAM Joules: 39.60; DRAM Watts: 39.68
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2065277; Consumed Joules: 126.05; Watts: 126.18; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2347729; Consumed DRAM Joules: 35.92; DRAM Watts: 35.96
+S1; Consumed energy units: 2163447; Consumed Joules: 132.05; Watts: 132.18; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2287196; Consumed DRAM Joules: 34.99; DRAM Watts: 35.03
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111339; Consumed Joules: 128.87; Watts: 129.12; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2678075; Consumed DRAM Joules: 40.97; DRAM Watts: 41.06
+S1; Consumed energy units: 2199821; Consumed Joules: 134.27; Watts: 134.54; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2594122; Consumed DRAM Joules: 39.69; DRAM Watts: 39.77
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2085434; Consumed Joules: 127.28; Watts: 127.41; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2482935; Consumed DRAM Joules: 37.99; DRAM Watts: 38.03
+S1; Consumed energy units: 2179392; Consumed Joules: 133.02; Watts: 133.15; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2415153; Consumed DRAM Joules: 36.95; DRAM Watts: 36.99
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2100130; Consumed Joules: 128.18; Watts: 128.44; Thermal headroom below TjMax: 35
+S0; Consumed DRAM energy units: 2574454; Consumed DRAM Joules: 39.39; DRAM Watts: 39.47
+S1; Consumed energy units: 2192274; Consumed Joules: 133.81; Watts: 134.07; Thermal headroom below TjMax: 32
+S1; Consumed DRAM energy units: 2500097; Consumed DRAM Joules: 38.25; DRAM Watts: 38.33
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2056527; Consumed Joules: 125.52; Watts: 125.52; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2124701; Consumed DRAM Joules: 32.51; DRAM Watts: 32.51
+S1; Consumed energy units: 2148690; Consumed Joules: 131.15; Watts: 131.15; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2060198; Consumed DRAM Joules: 31.52; DRAM Watts: 31.52
+----------------------------------------------------------------------------------------------
+Time elapsed: 1001 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2072381; Consumed Joules: 126.49; Watts: 126.36; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2341652; Consumed DRAM Joules: 35.83; DRAM Watts: 35.79
+S1; Consumed energy units: 2163347; Consumed Joules: 132.04; Watts: 131.91; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2270050; Consumed DRAM Joules: 34.73; DRAM Watts: 34.70
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2071091; Consumed Joules: 126.41; Watts: 126.41; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2325551; Consumed DRAM Joules: 35.58; DRAM Watts: 35.58
+S1; Consumed energy units: 2168093; Consumed Joules: 132.33; Watts: 132.33; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2262404; Consumed DRAM Joules: 34.61; DRAM Watts: 34.61
+----------------------------------------------------------------------------------------------
+Time elapsed: 1002 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2073716; Consumed Joules: 126.57; Watts: 126.32; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2291158; Consumed DRAM Joules: 35.05; DRAM Watts: 34.98
+S1; Consumed energy units: 2155782; Consumed Joules: 131.58; Watts: 131.32; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2217960; Consumed DRAM Joules: 33.93; DRAM Watts: 33.87
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2089037; Consumed Joules: 127.50; Watts: 127.76; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2531209; Consumed DRAM Joules: 38.73; DRAM Watts: 38.81
+S1; Consumed energy units: 2182294; Consumed Joules: 133.20; Watts: 133.46; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2458279; Consumed DRAM Joules: 37.61; DRAM Watts: 37.69
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106514; Consumed Joules: 128.57; Watts: 128.83; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2656397; Consumed DRAM Joules: 40.64; DRAM Watts: 40.72
+S1; Consumed energy units: 2196150; Consumed Joules: 134.04; Watts: 134.31; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2575822; Consumed DRAM Joules: 39.41; DRAM Watts: 39.49
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2071864; Consumed Joules: 126.46; Watts: 126.58; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2373522; Consumed DRAM Joules: 36.31; DRAM Watts: 36.35
+S1; Consumed energy units: 2168704; Consumed Joules: 132.37; Watts: 132.50; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2301896; Consumed DRAM Joules: 35.22; DRAM Watts: 35.25
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108499; Consumed Joules: 128.69; Watts: 128.95; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2668008; Consumed DRAM Joules: 40.82; DRAM Watts: 40.90
+S1; Consumed energy units: 2197581; Consumed Joules: 134.13; Watts: 134.40; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2584355; Consumed DRAM Joules: 39.54; DRAM Watts: 39.62
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2089708; Consumed Joules: 127.55; Watts: 127.80; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2499990; Consumed DRAM Joules: 38.25; DRAM Watts: 38.33
+S1; Consumed energy units: 2185456; Consumed Joules: 133.39; Watts: 133.66; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2427430; Consumed DRAM Joules: 37.14; DRAM Watts: 37.21
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106898; Consumed Joules: 128.59; Watts: 128.72; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2667509; Consumed DRAM Joules: 40.81; DRAM Watts: 40.85
+S1; Consumed energy units: 2196055; Consumed Joules: 134.04; Watts: 134.17; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2587887; Consumed DRAM Joules: 39.59; DRAM Watts: 39.63
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2094293; Consumed Joules: 127.83; Watts: 128.08; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2549835; Consumed DRAM Joules: 39.01; DRAM Watts: 39.09
+S1; Consumed energy units: 2185749; Consumed Joules: 133.41; Watts: 133.67; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2466517; Consumed DRAM Joules: 37.74; DRAM Watts: 37.81
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107950; Consumed Joules: 128.66; Watts: 128.92; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2675379; Consumed DRAM Joules: 40.93; DRAM Watts: 41.02
+S1; Consumed energy units: 2190264; Consumed Joules: 133.68; Watts: 133.95; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2570615; Consumed DRAM Joules: 39.33; DRAM Watts: 39.41
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107478; Consumed Joules: 128.63; Watts: 128.76; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2679027; Consumed DRAM Joules: 40.99; DRAM Watts: 41.03
+S1; Consumed energy units: 2189361; Consumed Joules: 133.63; Watts: 133.76; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2571803; Consumed DRAM Joules: 39.35; DRAM Watts: 39.39
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2082178; Consumed Joules: 127.09; Watts: 127.34; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2477546; Consumed DRAM Joules: 37.91; DRAM Watts: 37.98
+S1; Consumed energy units: 2171044; Consumed Joules: 132.51; Watts: 132.78; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2385571; Consumed DRAM Joules: 36.50; DRAM Watts: 36.57
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2104774; Consumed Joules: 128.47; Watts: 128.59; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2663424; Consumed DRAM Joules: 40.75; DRAM Watts: 40.79
+S1; Consumed energy units: 2191094; Consumed Joules: 133.73; Watts: 133.87; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2558177; Consumed DRAM Joules: 39.14; DRAM Watts: 39.18
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2066805; Consumed Joules: 126.15; Watts: 126.40; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2343492; Consumed DRAM Joules: 35.86; DRAM Watts: 35.93
+S1; Consumed energy units: 2164706; Consumed Joules: 132.12; Watts: 132.39; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2263481; Consumed DRAM Joules: 34.63; DRAM Watts: 34.70
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109793; Consumed Joules: 128.77; Watts: 128.90; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2668416; Consumed DRAM Joules: 40.83; DRAM Watts: 40.87
+S1; Consumed energy units: 2194031; Consumed Joules: 133.91; Watts: 134.05; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2565013; Consumed DRAM Joules: 39.24; DRAM Watts: 39.28
+----------------------------------------------------------------------------------------------
+Time elapsed: 997 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2096291; Consumed Joules: 127.95; Watts: 128.33; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2561055; Consumed DRAM Joules: 39.18; DRAM Watts: 39.30
+S1; Consumed energy units: 2184840; Consumed Joules: 133.35; Watts: 133.75; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2461576; Consumed DRAM Joules: 37.66; DRAM Watts: 37.78
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2102435; Consumed Joules: 128.32; Watts: 128.58; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2620371; Consumed DRAM Joules: 40.09; DRAM Watts: 40.17
+S1; Consumed energy units: 2188782; Consumed Joules: 133.59; Watts: 133.86; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2520523; Consumed DRAM Joules: 38.56; DRAM Watts: 38.64
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107861; Consumed Joules: 128.65; Watts: 128.78; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2670939; Consumed DRAM Joules: 40.87; DRAM Watts: 40.91
+S1; Consumed energy units: 2191951; Consumed Joules: 133.79; Watts: 133.92; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2568786; Consumed DRAM Joules: 39.30; DRAM Watts: 39.34
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2093821; Consumed Joules: 127.80; Watts: 128.05; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2563286; Consumed DRAM Joules: 39.22; DRAM Watts: 39.30
+S1; Consumed energy units: 2179847; Consumed Joules: 133.05; Watts: 133.31; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2461964; Consumed DRAM Joules: 37.67; DRAM Watts: 37.74
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108396; Consumed Joules: 128.69; Watts: 128.82; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2679383; Consumed DRAM Joules: 40.99; DRAM Watts: 41.04
+S1; Consumed energy units: 2192210; Consumed Joules: 133.80; Watts: 133.94; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2578993; Consumed DRAM Joules: 39.46; DRAM Watts: 39.50
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106193; Consumed Joules: 128.55; Watts: 128.81; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2677755; Consumed DRAM Joules: 40.97; DRAM Watts: 41.05
+S1; Consumed energy units: 2193015; Consumed Joules: 133.85; Watts: 134.12; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2579608; Consumed DRAM Joules: 39.47; DRAM Watts: 39.55
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2078557; Consumed Joules: 126.87; Watts: 127.12; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2464565; Consumed DRAM Joules: 37.71; DRAM Watts: 37.78
+S1; Consumed energy units: 2172445; Consumed Joules: 132.60; Watts: 132.86; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2379691; Consumed DRAM Joules: 36.41; DRAM Watts: 36.48
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2105933; Consumed Joules: 128.54; Watts: 128.66; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2663870; Consumed DRAM Joules: 40.76; DRAM Watts: 40.80
+S1; Consumed energy units: 2190336; Consumed Joules: 133.69; Watts: 133.82; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2560352; Consumed DRAM Joules: 39.17; DRAM Watts: 39.21
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2074618; Consumed Joules: 126.62; Watts: 126.88; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2400119; Consumed DRAM Joules: 36.72; DRAM Watts: 36.80
+S1; Consumed energy units: 2169241; Consumed Joules: 132.40; Watts: 132.67; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2317510; Consumed DRAM Joules: 35.46; DRAM Watts: 35.53
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2097620; Consumed Joules: 128.03; Watts: 128.16; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2602412; Consumed DRAM Joules: 39.82; DRAM Watts: 39.86
+S1; Consumed energy units: 2183195; Consumed Joules: 133.25; Watts: 133.39; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2507913; Consumed DRAM Joules: 38.37; DRAM Watts: 38.41
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2114650; Consumed Joules: 129.07; Watts: 129.33; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2668823; Consumed DRAM Joules: 40.83; DRAM Watts: 40.91
+S1; Consumed energy units: 2197864; Consumed Joules: 134.15; Watts: 134.42; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2567602; Consumed DRAM Joules: 39.28; DRAM Watts: 39.36
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2086097; Consumed Joules: 127.33; Watts: 127.45; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2495403; Consumed DRAM Joules: 38.18; DRAM Watts: 38.22
+S1; Consumed energy units: 2173597; Consumed Joules: 132.67; Watts: 132.80; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2399092; Consumed DRAM Joules: 36.71; DRAM Watts: 36.74
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109138; Consumed Joules: 128.73; Watts: 128.99; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2670201; Consumed DRAM Joules: 40.85; DRAM Watts: 40.94
+S1; Consumed energy units: 2192138; Consumed Joules: 133.80; Watts: 134.07; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2568862; Consumed DRAM Joules: 39.30; DRAM Watts: 39.38
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2093153; Consumed Joules: 127.76; Watts: 128.01; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2557848; Consumed DRAM Joules: 39.14; DRAM Watts: 39.21
+S1; Consumed energy units: 2181913; Consumed Joules: 133.17; Watts: 133.44; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2468343; Consumed DRAM Joules: 37.77; DRAM Watts: 37.84
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109914; Consumed Joules: 128.78; Watts: 128.91; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2677728; Consumed DRAM Joules: 40.97; DRAM Watts: 41.01
+S1; Consumed energy units: 2189630; Consumed Joules: 133.64; Watts: 133.78; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2579098; Consumed DRAM Joules: 39.46; DRAM Watts: 39.50
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2104951; Consumed Joules: 128.48; Watts: 128.73; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2646332; Consumed DRAM Joules: 40.49; DRAM Watts: 40.57
+S1; Consumed energy units: 2187948; Consumed Joules: 133.54; Watts: 133.81; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2548238; Consumed DRAM Joules: 38.99; DRAM Watts: 39.07
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2085281; Consumed Joules: 127.28; Watts: 127.40; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2478250; Consumed DRAM Joules: 37.92; DRAM Watts: 37.96
+S1; Consumed energy units: 2168781; Consumed Joules: 132.37; Watts: 132.50; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2384990; Consumed DRAM Joules: 36.49; DRAM Watts: 36.53
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107854; Consumed Joules: 128.65; Watts: 128.91; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2664036; Consumed DRAM Joules: 40.76; DRAM Watts: 40.84
+S1; Consumed energy units: 2188446; Consumed Joules: 133.57; Watts: 133.84; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2560631; Consumed DRAM Joules: 39.18; DRAM Watts: 39.26
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2112306; Consumed Joules: 128.92; Watts: 129.18; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2674183; Consumed DRAM Joules: 40.91; DRAM Watts: 41.00
+S1; Consumed energy units: 2194469; Consumed Joules: 133.94; Watts: 134.21; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2569706; Consumed DRAM Joules: 39.32; DRAM Watts: 39.40
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2068994; Consumed Joules: 126.28; Watts: 126.53; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2355289; Consumed DRAM Joules: 36.04; DRAM Watts: 36.11
+S1; Consumed energy units: 2161007; Consumed Joules: 131.90; Watts: 132.16; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2264340; Consumed DRAM Joules: 34.64; DRAM Watts: 34.71
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2114569; Consumed Joules: 129.06; Watts: 129.19; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2667619; Consumed DRAM Joules: 40.81; DRAM Watts: 40.86
+S1; Consumed energy units: 2197615; Consumed Joules: 134.13; Watts: 134.27; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2567366; Consumed DRAM Joules: 39.28; DRAM Watts: 39.32
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2087984; Consumed Joules: 127.44; Watts: 127.70; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2497638; Consumed DRAM Joules: 38.21; DRAM Watts: 38.29
+S1; Consumed energy units: 2177743; Consumed Joules: 132.92; Watts: 133.19; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2407220; Consumed DRAM Joules: 36.83; DRAM Watts: 36.90
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109442; Consumed Joules: 128.75; Watts: 128.88; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2671301; Consumed DRAM Joules: 40.87; DRAM Watts: 40.91
+S1; Consumed energy units: 2193819; Consumed Joules: 133.90; Watts: 134.03; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2575010; Consumed DRAM Joules: 39.40; DRAM Watts: 39.44
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2104293; Consumed Joules: 128.44; Watts: 128.69; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2606299; Consumed DRAM Joules: 39.88; DRAM Watts: 39.96
+S1; Consumed energy units: 2189234; Consumed Joules: 133.62; Watts: 133.89; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2504661; Consumed DRAM Joules: 38.32; DRAM Watts: 38.40
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108499; Consumed Joules: 128.69; Watts: 128.82; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2671694; Consumed DRAM Joules: 40.88; DRAM Watts: 40.92
+S1; Consumed energy units: 2194557; Consumed Joules: 133.95; Watts: 134.08; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2576839; Consumed DRAM Joules: 39.43; DRAM Watts: 39.47
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107200; Consumed Joules: 128.61; Watts: 128.87; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2670689; Consumed DRAM Joules: 40.86; DRAM Watts: 40.94
+S1; Consumed energy units: 2193416; Consumed Joules: 133.88; Watts: 134.14; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2573914; Consumed DRAM Joules: 39.38; DRAM Watts: 39.46
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2098031; Consumed Joules: 128.05; Watts: 128.18; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2561212; Consumed DRAM Joules: 39.19; DRAM Watts: 39.23
+S1; Consumed energy units: 2181041; Consumed Joules: 133.12; Watts: 133.25; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2463319; Consumed DRAM Joules: 37.69; DRAM Watts: 37.73
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2095578; Consumed Joules: 127.90; Watts: 128.16; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2567796; Consumed DRAM Joules: 39.29; DRAM Watts: 39.37
+S1; Consumed energy units: 2180800; Consumed Joules: 133.11; Watts: 133.37; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2471087; Consumed DRAM Joules: 37.81; DRAM Watts: 37.88
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110660; Consumed Joules: 128.82; Watts: 129.08; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2660496; Consumed DRAM Joules: 40.71; DRAM Watts: 40.79
+S1; Consumed energy units: 2194131; Consumed Joules: 133.92; Watts: 134.19; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2555527; Consumed DRAM Joules: 39.10; DRAM Watts: 39.18
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2078679; Consumed Joules: 126.87; Watts: 127.00; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2429860; Consumed DRAM Joules: 37.18; DRAM Watts: 37.21
+S1; Consumed energy units: 2176780; Consumed Joules: 132.86; Watts: 132.99; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2353896; Consumed DRAM Joules: 36.01; DRAM Watts: 36.05
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111527; Consumed Joules: 128.88; Watts: 129.14; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2667627; Consumed DRAM Joules: 40.81; DRAM Watts: 40.90
+S1; Consumed energy units: 2198080; Consumed Joules: 134.16; Watts: 134.43; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2573394; Consumed DRAM Joules: 39.37; DRAM Watts: 39.45
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2091018; Consumed Joules: 127.63; Watts: 127.88; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2500260; Consumed DRAM Joules: 38.25; DRAM Watts: 38.33
+S1; Consumed energy units: 2183192; Consumed Joules: 133.25; Watts: 133.52; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2416382; Consumed DRAM Joules: 36.97; DRAM Watts: 37.04
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109231; Consumed Joules: 128.74; Watts: 128.87; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2665055; Consumed DRAM Joules: 40.78; DRAM Watts: 40.82
+S1; Consumed energy units: 2191814; Consumed Joules: 133.78; Watts: 133.91; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2568709; Consumed DRAM Joules: 39.30; DRAM Watts: 39.34
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2104709; Consumed Joules: 128.46; Watts: 128.72; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2611929; Consumed DRAM Joules: 39.96; DRAM Watts: 40.04
+S1; Consumed energy units: 2190765; Consumed Joules: 133.71; Watts: 133.98; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2512244; Consumed DRAM Joules: 38.44; DRAM Watts: 38.51
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110398; Consumed Joules: 128.81; Watts: 128.94; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2670692; Consumed DRAM Joules: 40.86; DRAM Watts: 40.90
+S1; Consumed energy units: 2195611; Consumed Joules: 134.01; Watts: 134.14; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2577005; Consumed DRAM Joules: 39.43; DRAM Watts: 39.47
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2102983; Consumed Joules: 128.36; Watts: 128.61; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2619195; Consumed DRAM Joules: 40.07; DRAM Watts: 40.15
+S1; Consumed energy units: 2186366; Consumed Joules: 133.45; Watts: 133.71; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2518478; Consumed DRAM Joules: 38.53; DRAM Watts: 38.61
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2092287; Consumed Joules: 127.70; Watts: 127.83; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2507124; Consumed DRAM Joules: 38.36; DRAM Watts: 38.40
+S1; Consumed energy units: 2174813; Consumed Joules: 132.74; Watts: 132.87; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2410272; Consumed DRAM Joules: 36.88; DRAM Watts: 36.91
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107647; Consumed Joules: 128.64; Watts: 128.90; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2663078; Consumed DRAM Joules: 40.75; DRAM Watts: 40.83
+S1; Consumed energy units: 2193172; Consumed Joules: 133.86; Watts: 134.13; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2553725; Consumed DRAM Joules: 39.07; DRAM Watts: 39.15
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2067639; Consumed Joules: 126.20; Watts: 126.45; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2335416; Consumed DRAM Joules: 35.73; DRAM Watts: 35.80
+S1; Consumed energy units: 2162605; Consumed Joules: 131.99; Watts: 132.26; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2247639; Consumed DRAM Joules: 34.39; DRAM Watts: 34.46
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109165; Consumed Joules: 128.73; Watts: 128.86; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2668783; Consumed DRAM Joules: 40.83; DRAM Watts: 40.87
+S1; Consumed energy units: 2193017; Consumed Joules: 133.85; Watts: 133.99; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2563367; Consumed DRAM Joules: 39.22; DRAM Watts: 39.26
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2091756; Consumed Joules: 127.67; Watts: 127.93; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2513797; Consumed DRAM Joules: 38.46; DRAM Watts: 38.54
+S1; Consumed energy units: 2184099; Consumed Joules: 133.31; Watts: 133.57; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2422087; Consumed DRAM Joules: 37.06; DRAM Watts: 37.13
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110982; Consumed Joules: 128.84; Watts: 129.10; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2680379; Consumed DRAM Joules: 41.01; DRAM Watts: 41.09
+S1; Consumed energy units: 2191843; Consumed Joules: 133.78; Watts: 134.05; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2570289; Consumed DRAM Joules: 39.33; DRAM Watts: 39.40
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110398; Consumed Joules: 128.81; Watts: 128.94; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2672587; Consumed DRAM Joules: 40.89; DRAM Watts: 40.93
+S1; Consumed energy units: 2193775; Consumed Joules: 133.90; Watts: 134.03; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2566567; Consumed DRAM Joules: 39.27; DRAM Watts: 39.31
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2093261; Consumed Joules: 127.76; Watts: 128.02; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2561125; Consumed DRAM Joules: 39.19; DRAM Watts: 39.26
+S1; Consumed energy units: 2180923; Consumed Joules: 133.11; Watts: 133.38; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2459890; Consumed DRAM Joules: 37.64; DRAM Watts: 37.71
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108695; Consumed Joules: 128.70; Watts: 128.96; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2679970; Consumed DRAM Joules: 41.00; DRAM Watts: 41.09
+S1; Consumed energy units: 2195447; Consumed Joules: 134.00; Watts: 134.27; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2570020; Consumed DRAM Joules: 39.32; DRAM Watts: 39.40
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110799; Consumed Joules: 128.83; Watts: 128.96; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2677663; Consumed DRAM Joules: 40.97; DRAM Watts: 41.01
+S1; Consumed energy units: 2192427; Consumed Joules: 133.82; Watts: 133.95; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2566827; Consumed DRAM Joules: 39.27; DRAM Watts: 39.31
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2084691; Consumed Joules: 127.24; Watts: 127.49; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2492646; Consumed DRAM Joules: 38.14; DRAM Watts: 38.21
+S1; Consumed energy units: 2176127; Consumed Joules: 132.82; Watts: 133.09; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2396713; Consumed DRAM Joules: 36.67; DRAM Watts: 36.74
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108628; Consumed Joules: 128.70; Watts: 128.83; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2667301; Consumed DRAM Joules: 40.81; DRAM Watts: 40.85
+S1; Consumed energy units: 2191252; Consumed Joules: 133.74; Watts: 133.88; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2551309; Consumed DRAM Joules: 39.04; DRAM Watts: 39.07
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2065931; Consumed Joules: 126.09; Watts: 126.35; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2333895; Consumed DRAM Joules: 35.71; DRAM Watts: 35.78
+S1; Consumed energy units: 2162117; Consumed Joules: 131.97; Watts: 132.23; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2245174; Consumed DRAM Joules: 34.35; DRAM Watts: 34.42
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108705; Consumed Joules: 128.71; Watts: 128.83; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2672551; Consumed DRAM Joules: 40.89; DRAM Watts: 40.93
+S1; Consumed energy units: 2194626; Consumed Joules: 133.95; Watts: 134.08; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2567929; Consumed DRAM Joules: 39.29; DRAM Watts: 39.33
+----------------------------------------------------------------------------------------------
+Time elapsed: 997 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2094294; Consumed Joules: 127.83; Watts: 128.21; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2528902; Consumed DRAM Joules: 38.69; DRAM Watts: 38.81
+S1; Consumed energy units: 2184463; Consumed Joules: 133.33; Watts: 133.73; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2434515; Consumed DRAM Joules: 37.25; DRAM Watts: 37.36
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109029; Consumed Joules: 128.72; Watts: 128.98; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2678542; Consumed DRAM Joules: 40.98; DRAM Watts: 41.06
+S1; Consumed energy units: 2192012; Consumed Joules: 133.79; Watts: 134.06; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2565499; Consumed DRAM Joules: 39.25; DRAM Watts: 39.33
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110872; Consumed Joules: 128.84; Watts: 128.97; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2678774; Consumed DRAM Joules: 40.99; DRAM Watts: 41.03
+S1; Consumed energy units: 2191503; Consumed Joules: 133.76; Watts: 133.89; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2567765; Consumed DRAM Joules: 39.29; DRAM Watts: 39.33
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2091999; Consumed Joules: 127.69; Watts: 127.94; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2556873; Consumed DRAM Joules: 39.12; DRAM Watts: 39.20
+S1; Consumed energy units: 2181296; Consumed Joules: 133.14; Watts: 133.40; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2458133; Consumed DRAM Joules: 37.61; DRAM Watts: 37.68
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108106; Consumed Joules: 128.67; Watts: 128.80; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2677741; Consumed DRAM Joules: 40.97; DRAM Watts: 41.01
+S1; Consumed energy units: 2191640; Consumed Joules: 133.77; Watts: 133.90; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2570740; Consumed DRAM Joules: 39.33; DRAM Watts: 39.37
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109695; Consumed Joules: 128.77; Watts: 129.02; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2682152; Consumed DRAM Joules: 41.04; DRAM Watts: 41.12
+S1; Consumed energy units: 2190620; Consumed Joules: 133.70; Watts: 133.97; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2571076; Consumed DRAM Joules: 39.34; DRAM Watts: 39.42
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2079786; Consumed Joules: 126.94; Watts: 127.07; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2467425; Consumed DRAM Joules: 37.75; DRAM Watts: 37.79
+S1; Consumed energy units: 2172508; Consumed Joules: 132.60; Watts: 132.73; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2375468; Consumed DRAM Joules: 36.34; DRAM Watts: 36.38
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106821; Consumed Joules: 128.59; Watts: 128.85; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2665161; Consumed DRAM Joules: 40.78; DRAM Watts: 40.86
+S1; Consumed energy units: 2192520; Consumed Joules: 133.82; Watts: 134.09; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2557359; Consumed DRAM Joules: 39.13; DRAM Watts: 39.21
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2085861; Consumed Joules: 127.31; Watts: 127.57; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2507502; Consumed DRAM Joules: 38.36; DRAM Watts: 38.44
+S1; Consumed energy units: 2181367; Consumed Joules: 133.14; Watts: 133.41; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2409872; Consumed DRAM Joules: 36.87; DRAM Watts: 36.94
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106251; Consumed Joules: 128.56; Watts: 128.68; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2659283; Consumed DRAM Joules: 40.69; DRAM Watts: 40.73
+S1; Consumed energy units: 2191589; Consumed Joules: 133.76; Watts: 133.90; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2546755; Consumed DRAM Joules: 38.97; DRAM Watts: 39.00
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2112819; Consumed Joules: 128.96; Watts: 129.21; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2681911; Consumed DRAM Joules: 41.03; DRAM Watts: 41.12
+S1; Consumed energy units: 2188090; Consumed Joules: 133.55; Watts: 133.82; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2440684; Consumed DRAM Joules: 37.34; DRAM Watts: 37.42
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2088010; Consumed Joules: 127.44; Watts: 127.57; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2525221; Consumed DRAM Joules: 38.64; DRAM Watts: 38.67
+S1; Consumed energy units: 2160215; Consumed Joules: 131.85; Watts: 131.98; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2285899; Consumed DRAM Joules: 34.97; DRAM Watts: 35.01
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109461; Consumed Joules: 128.75; Watts: 129.01; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2694686; Consumed DRAM Joules: 41.23; DRAM Watts: 41.31
+S1; Consumed energy units: 2179660; Consumed Joules: 133.04; Watts: 133.30; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2440017; Consumed DRAM Joules: 37.33; DRAM Watts: 37.41
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2096446; Consumed Joules: 127.96; Watts: 128.08; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2586346; Consumed DRAM Joules: 39.57; DRAM Watts: 39.61
+S1; Consumed energy units: 2168681; Consumed Joules: 132.37; Watts: 132.50; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2341697; Consumed DRAM Joules: 35.83; DRAM Watts: 35.86
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107982; Consumed Joules: 128.66; Watts: 128.92; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2698538; Consumed DRAM Joules: 41.29; DRAM Watts: 41.37
+S1; Consumed energy units: 2178391; Consumed Joules: 132.96; Watts: 133.22; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2442948; Consumed DRAM Joules: 37.38; DRAM Watts: 37.45
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106616; Consumed Joules: 128.58; Watts: 128.84; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2697672; Consumed DRAM Joules: 41.27; DRAM Watts: 41.36
+S1; Consumed energy units: 2174334; Consumed Joules: 132.71; Watts: 132.98; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2438186; Consumed DRAM Joules: 37.30; DRAM Watts: 37.38
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2085547; Consumed Joules: 127.29; Watts: 127.42; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2489296; Consumed DRAM Joules: 38.09; DRAM Watts: 38.12
+S1; Consumed energy units: 2156975; Consumed Joules: 131.65; Watts: 131.78; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2254232; Consumed DRAM Joules: 34.49; DRAM Watts: 34.52
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2104893; Consumed Joules: 128.47; Watts: 128.73; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2683036; Consumed DRAM Joules: 41.05; DRAM Watts: 41.13
+S1; Consumed energy units: 2173987; Consumed Joules: 132.69; Watts: 132.96; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2432181; Consumed DRAM Joules: 37.21; DRAM Watts: 37.29
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2094436; Consumed Joules: 127.83; Watts: 128.09; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2533549; Consumed DRAM Joules: 38.76; DRAM Watts: 38.84
+S1; Consumed energy units: 2183154; Consumed Joules: 133.25; Watts: 133.52; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2438147; Consumed DRAM Joules: 37.30; DRAM Watts: 37.38
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2093575; Consumed Joules: 127.78; Watts: 127.91; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2545150; Consumed DRAM Joules: 38.94; DRAM Watts: 38.98
+S1; Consumed energy units: 2182475; Consumed Joules: 133.21; Watts: 133.34; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2458006; Consumed DRAM Joules: 37.61; DRAM Watts: 37.65
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2112234; Consumed Joules: 128.92; Watts: 129.18; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2668479; Consumed DRAM Joules: 40.83; DRAM Watts: 40.91
+S1; Consumed energy units: 2198077; Consumed Joules: 134.16; Watts: 134.43; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2568764; Consumed DRAM Joules: 39.30; DRAM Watts: 39.38
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2086665; Consumed Joules: 127.36; Watts: 127.62; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2490236; Consumed DRAM Joules: 38.10; DRAM Watts: 38.18
+S1; Consumed energy units: 2178154; Consumed Joules: 132.94; Watts: 133.21; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2401802; Consumed DRAM Joules: 36.75; DRAM Watts: 36.82
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109301; Consumed Joules: 128.74; Watts: 128.87; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2668981; Consumed DRAM Joules: 40.84; DRAM Watts: 40.88
+S1; Consumed energy units: 2195188; Consumed Joules: 133.98; Watts: 134.12; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2568017; Consumed DRAM Joules: 39.29; DRAM Watts: 39.33
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2100483; Consumed Joules: 128.20; Watts: 128.46; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2602344; Consumed DRAM Joules: 39.82; DRAM Watts: 39.90
+S1; Consumed energy units: 2189624; Consumed Joules: 133.64; Watts: 133.91; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2503064; Consumed DRAM Joules: 38.30; DRAM Watts: 38.37
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111473; Consumed Joules: 128.87; Watts: 129.00; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2679776; Consumed DRAM Joules: 41.00; DRAM Watts: 41.04
+S1; Consumed energy units: 2197704; Consumed Joules: 134.14; Watts: 134.27; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2578473; Consumed DRAM Joules: 39.45; DRAM Watts: 39.49
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2106447; Consumed Joules: 128.57; Watts: 128.82; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2667160; Consumed DRAM Joules: 40.81; DRAM Watts: 40.89
+S1; Consumed energy units: 2193067; Consumed Joules: 133.85; Watts: 134.12; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2569967; Consumed DRAM Joules: 39.32; DRAM Watts: 39.40
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2089958; Consumed Joules: 127.56; Watts: 127.82; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2538879; Consumed DRAM Joules: 38.84; DRAM Watts: 38.92
+S1; Consumed energy units: 2171149; Consumed Joules: 132.52; Watts: 132.78; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2364542; Consumed DRAM Joules: 36.18; DRAM Watts: 36.25
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2097540; Consumed Joules: 128.02; Watts: 128.15; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2611461; Consumed DRAM Joules: 39.96; DRAM Watts: 40.00
+S1; Consumed energy units: 2176103; Consumed Joules: 132.82; Watts: 132.95; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2412692; Consumed DRAM Joules: 36.91; DRAM Watts: 36.95
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107811; Consumed Joules: 128.65; Watts: 128.91; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2677381; Consumed DRAM Joules: 40.96; DRAM Watts: 41.05
+S1; Consumed energy units: 2187331; Consumed Joules: 133.50; Watts: 133.77; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2469231; Consumed DRAM Joules: 37.78; DRAM Watts: 37.85
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2071144; Consumed Joules: 126.41; Watts: 126.54; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2410060; Consumed DRAM Joules: 36.87; DRAM Watts: 36.91
+S1; Consumed energy units: 2163299; Consumed Joules: 132.04; Watts: 132.17; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2235326; Consumed DRAM Joules: 34.20; DRAM Watts: 34.23
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111886; Consumed Joules: 128.90; Watts: 129.16; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2688339; Consumed DRAM Joules: 41.13; DRAM Watts: 41.21
+S1; Consumed energy units: 2190226; Consumed Joules: 133.68; Watts: 133.95; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2477238; Consumed DRAM Joules: 37.90; DRAM Watts: 37.98
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2087830; Consumed Joules: 127.43; Watts: 127.69; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2495784; Consumed DRAM Joules: 38.19; DRAM Watts: 38.26
+S1; Consumed energy units: 2171562; Consumed Joules: 132.54; Watts: 132.81; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2303147; Consumed DRAM Joules: 35.24; DRAM Watts: 35.31
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108246; Consumed Joules: 128.68; Watts: 128.81; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2693807; Consumed DRAM Joules: 41.22; DRAM Watts: 41.26
+S1; Consumed energy units: 2183728; Consumed Joules: 133.28; Watts: 133.42; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2475334; Consumed DRAM Joules: 37.87; DRAM Watts: 37.91
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2102316; Consumed Joules: 128.32; Watts: 128.57; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2634320; Consumed DRAM Joules: 40.31; DRAM Watts: 40.39
+S1; Consumed energy units: 2183831; Consumed Joules: 133.29; Watts: 133.56; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2426463; Consumed DRAM Joules: 37.12; DRAM Watts: 37.20
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2110351; Consumed Joules: 128.81; Watts: 128.93; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2688758; Consumed DRAM Joules: 41.14; DRAM Watts: 41.18
+S1; Consumed energy units: 2184868; Consumed Joules: 133.35; Watts: 133.49; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2489530; Consumed DRAM Joules: 38.09; DRAM Watts: 38.13
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2112492; Consumed Joules: 128.94; Watts: 129.19; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2689189; Consumed DRAM Joules: 41.14; DRAM Watts: 41.23
+S1; Consumed energy units: 2191006; Consumed Joules: 133.73; Watts: 134.00; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2544863; Consumed DRAM Joules: 38.94; DRAM Watts: 39.01
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2101697; Consumed Joules: 128.28; Watts: 128.53; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2599109; Consumed DRAM Joules: 39.77; DRAM Watts: 39.85
+S1; Consumed energy units: 2181831; Consumed Joules: 133.17; Watts: 133.44; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2461984; Consumed DRAM Joules: 37.67; DRAM Watts: 37.74
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2096808; Consumed Joules: 127.98; Watts: 128.24; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2560034; Consumed DRAM Joules: 39.17; DRAM Watts: 39.25
+S1; Consumed energy units: 2180690; Consumed Joules: 133.10; Watts: 133.37; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2431001; Consumed DRAM Joules: 37.19; DRAM Watts: 37.27
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111485; Consumed Joules: 128.87; Watts: 129.00; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2671965; Consumed DRAM Joules: 40.88; DRAM Watts: 40.92
+S1; Consumed energy units: 2194232; Consumed Joules: 133.93; Watts: 134.06; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2534102; Consumed DRAM Joules: 38.77; DRAM Watts: 38.81
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2083761; Consumed Joules: 127.18; Watts: 127.44; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2471149; Consumed DRAM Joules: 37.81; DRAM Watts: 37.88
+S1; Consumed energy units: 2179198; Consumed Joules: 133.01; Watts: 133.27; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2352991; Consumed DRAM Joules: 36.00; DRAM Watts: 36.07
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2113691; Consumed Joules: 129.01; Watts: 129.27; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2683551; Consumed DRAM Joules: 41.06; DRAM Watts: 41.14
+S1; Consumed energy units: 2196408; Consumed Joules: 134.06; Watts: 134.33; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2542861; Consumed DRAM Joules: 38.91; DRAM Watts: 38.98
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2090367; Consumed Joules: 127.59; Watts: 127.71; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2493230; Consumed DRAM Joules: 38.15; DRAM Watts: 38.18
+S1; Consumed energy units: 2178598; Consumed Joules: 132.97; Watts: 133.10; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2366485; Consumed DRAM Joules: 36.21; DRAM Watts: 36.24
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111143; Consumed Joules: 128.85; Watts: 129.11; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2686908; Consumed DRAM Joules: 41.11; DRAM Watts: 41.19
+S1; Consumed energy units: 2193609; Consumed Joules: 133.89; Watts: 134.16; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2541908; Consumed DRAM Joules: 38.89; DRAM Watts: 38.97
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107274; Consumed Joules: 128.62; Watts: 128.75; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2653191; Consumed DRAM Joules: 40.59; DRAM Watts: 40.63
+S1; Consumed energy units: 2186644; Consumed Joules: 133.46; Watts: 133.60; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2449952; Consumed DRAM Joules: 37.48; DRAM Watts: 37.52
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2111111; Consumed Joules: 128.85; Watts: 129.11; Thermal headroom below TjMax: 36
+S0; Consumed DRAM energy units: 2704667; Consumed DRAM Joules: 41.38; DRAM Watts: 41.46
+S1; Consumed energy units: 2178933; Consumed Joules: 132.99; Watts: 133.26; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2441662; Consumed DRAM Joules: 37.36; DRAM Watts: 37.43
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2108000; Consumed Joules: 128.66; Watts: 128.79; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2703957; Consumed DRAM Joules: 41.37; DRAM Watts: 41.41
+S1; Consumed energy units: 2181604; Consumed Joules: 133.15; Watts: 133.29; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2445623; Consumed DRAM Joules: 37.42; DRAM Watts: 37.46
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2088726; Consumed Joules: 127.49; Watts: 127.74; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2557113; Consumed DRAM Joules: 39.12; DRAM Watts: 39.20
+S1; Consumed energy units: 2176321; Consumed Joules: 132.83; Watts: 133.10; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2332410; Consumed DRAM Joules: 35.69; DRAM Watts: 35.76
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2107127; Consumed Joules: 128.61; Watts: 128.87; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2685845; Consumed DRAM Joules: 41.09; DRAM Watts: 41.18
+S1; Consumed energy units: 2178830; Consumed Joules: 132.99; Watts: 133.25; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2429213; Consumed DRAM Joules: 37.17; DRAM Watts: 37.24
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2065830; Consumed Joules: 126.09; Watts: 126.21; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2350774; Consumed DRAM Joules: 35.97; DRAM Watts: 36.00
+S1; Consumed energy units: 2154808; Consumed Joules: 131.52; Watts: 131.65; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 2140099; Consumed DRAM Joules: 32.74; DRAM Watts: 32.78
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2109468; Consumed Joules: 128.75; Watts: 129.01; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2693774; Consumed DRAM Joules: 41.21; DRAM Watts: 41.30
+S1; Consumed energy units: 2185396; Consumed Joules: 133.39; Watts: 133.65; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2435395; Consumed DRAM Joules: 37.26; DRAM Watts: 37.34
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 2096534; Consumed Joules: 127.96; Watts: 128.22; Thermal headroom below TjMax: 37
+S0; Consumed DRAM energy units: 2545434; Consumed DRAM Joules: 38.95; DRAM Watts: 39.02
+S1; Consumed energy units: 2174244; Consumed Joules: 132.71; Watts: 132.97; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 2304597; Consumed DRAM Joules: 35.26; DRAM Watts: 35.33
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1888480; Consumed Joules: 115.26; Watts: 115.49; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 1623329; Consumed DRAM Joules: 24.84; DRAM Watts: 24.89
+S1; Consumed energy units: 1978526; Consumed Joules: 120.76; Watts: 121.00; Thermal headroom below TjMax: 34
+S1; Consumed DRAM energy units: 1510380; Consumed DRAM Joules: 23.11; DRAM Watts: 23.16
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1718239; Consumed Joules: 104.87; Watts: 104.98; Thermal headroom below TjMax: 35
+S0; Consumed DRAM energy units: 724156; Consumed DRAM Joules: 11.08; DRAM Watts: 11.09
+S1; Consumed energy units: 1814867; Consumed Joules: 110.77; Watts: 110.88; Thermal headroom below TjMax: 33
+S1; Consumed DRAM energy units: 727307; Consumed DRAM Joules: 11.13; DRAM Watts: 11.14
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1740669; Consumed Joules: 106.24; Watts: 106.45; Thermal headroom below TjMax: 34
+S0; Consumed DRAM energy units: 723409; Consumed DRAM Joules: 11.07; DRAM Watts: 11.09
+S1; Consumed energy units: 1827366; Consumed Joules: 111.53; Watts: 111.76; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 723661; Consumed DRAM Joules: 11.07; DRAM Watts: 11.09
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1701294; Consumed Joules: 103.84; Watts: 103.84; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 719863; Consumed DRAM Joules: 11.01; DRAM Watts: 11.01
+S1; Consumed energy units: 1798028; Consumed Joules: 109.74; Watts: 109.74; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 724702; Consumed DRAM Joules: 11.09; DRAM Watts: 11.09
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1691150; Consumed Joules: 103.22; Watts: 103.43; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 717415; Consumed DRAM Joules: 10.98; DRAM Watts: 11.00
+S1; Consumed energy units: 1792006; Consumed Joules: 109.38; Watts: 109.59; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 723647; Consumed DRAM Joules: 11.07; DRAM Watts: 11.09
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1699834; Consumed Joules: 103.75; Watts: 103.75; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 717563; Consumed DRAM Joules: 10.98; DRAM Watts: 10.98
+S1; Consumed energy units: 1796020; Consumed Joules: 109.62; Watts: 109.62; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 724162; Consumed DRAM Joules: 11.08; DRAM Watts: 11.08
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1693838; Consumed Joules: 103.38; Watts: 103.49; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 716974; Consumed DRAM Joules: 10.97; DRAM Watts: 10.98
+S1; Consumed energy units: 1794980; Consumed Joules: 109.56; Watts: 109.67; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 722090; Consumed DRAM Joules: 11.05; DRAM Watts: 11.06
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1691621; Consumed Joules: 103.25; Watts: 103.35; Thermal headroom below TjMax: 38
+S0; Consumed DRAM energy units: 717192; Consumed DRAM Joules: 10.97; DRAM Watts: 10.98
+S1; Consumed energy units: 1800737; Consumed Joules: 109.91; Watts: 110.02; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 721188; Consumed DRAM Joules: 11.03; DRAM Watts: 11.05
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1696534; Consumed Joules: 103.55; Watts: 103.65; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 719572; Consumed DRAM Joules: 11.01; DRAM Watts: 11.02
+S1; Consumed energy units: 1795569; Consumed Joules: 109.59; Watts: 109.70; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 719682; Consumed DRAM Joules: 11.01; DRAM Watts: 11.02
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1697960; Consumed Joules: 103.64; Watts: 103.74; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 720688; Consumed DRAM Joules: 11.03; DRAM Watts: 11.04
+S1; Consumed energy units: 1799459; Consumed Joules: 109.83; Watts: 109.94; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 723784; Consumed DRAM Joules: 11.07; DRAM Watts: 11.08
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1694755; Consumed Joules: 103.44; Watts: 103.44; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 721792; Consumed DRAM Joules: 11.04; DRAM Watts: 11.04
+S1; Consumed energy units: 1794842; Consumed Joules: 109.55; Watts: 109.55; Thermal headroom below TjMax: 35
+S1; Consumed DRAM energy units: 726321; Consumed DRAM Joules: 11.11; DRAM Watts: 11.11
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1694898; Consumed Joules: 103.45; Watts: 103.45; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 725131; Consumed DRAM Joules: 11.09; DRAM Watts: 11.09
+S1; Consumed energy units: 1799479; Consumed Joules: 109.83; Watts: 109.83; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 724793; Consumed DRAM Joules: 11.09; DRAM Watts: 11.09
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1691169; Consumed Joules: 103.22; Watts: 103.43; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 724653; Consumed DRAM Joules: 11.09; DRAM Watts: 11.11
+S1; Consumed energy units: 1789986; Consumed Joules: 109.25; Watts: 109.47; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 721361; Consumed DRAM Joules: 11.04; DRAM Watts: 11.06
+----------------------------------------------------------------------------------------------
+Time elapsed: 1001 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1695811; Consumed Joules: 103.50; Watts: 103.40; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 724112; Consumed DRAM Joules: 11.08; DRAM Watts: 11.07
+S1; Consumed energy units: 1793164; Consumed Joules: 109.45; Watts: 109.34; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 726846; Consumed DRAM Joules: 11.12; DRAM Watts: 11.11
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1694065; Consumed Joules: 103.40; Watts: 103.40; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 724006; Consumed DRAM Joules: 11.08; DRAM Watts: 11.08
+S1; Consumed energy units: 1794791; Consumed Joules: 109.55; Watts: 109.55; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 727638; Consumed DRAM Joules: 11.13; DRAM Watts: 11.13
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1692489; Consumed Joules: 103.30; Watts: 103.51; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 719929; Consumed DRAM Joules: 11.01; DRAM Watts: 11.04
+S1; Consumed energy units: 1793429; Consumed Joules: 109.46; Watts: 109.68; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 726210; Consumed DRAM Joules: 11.11; DRAM Watts: 11.13
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1690764; Consumed Joules: 103.20; Watts: 103.40; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 718559; Consumed DRAM Joules: 10.99; DRAM Watts: 11.02
+S1; Consumed energy units: 1788732; Consumed Joules: 109.18; Watts: 109.39; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 723539; Consumed DRAM Joules: 11.07; DRAM Watts: 11.09
+----------------------------------------------------------------------------------------------
+Time elapsed: 1001 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1695932; Consumed Joules: 103.51; Watts: 103.41; Thermal headroom below TjMax: 39
+S0; Consumed DRAM energy units: 720212; Consumed DRAM Joules: 11.02; DRAM Watts: 11.01
+S1; Consumed energy units: 1798792; Consumed Joules: 109.79; Watts: 109.68; Thermal headroom below TjMax: 32
+S1; Consumed DRAM energy units: 726038; Consumed DRAM Joules: 11.11; DRAM Watts: 11.10
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1693879; Consumed Joules: 103.39; Watts: 103.39; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 720889; Consumed DRAM Joules: 11.03; DRAM Watts: 11.03
+S1; Consumed energy units: 1790751; Consumed Joules: 109.30; Watts: 109.30; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 726589; Consumed DRAM Joules: 11.12; DRAM Watts: 11.12
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1693504; Consumed Joules: 103.36; Watts: 103.36; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 720703; Consumed DRAM Joules: 11.03; DRAM Watts: 11.03
+S1; Consumed energy units: 1793335; Consumed Joules: 109.46; Watts: 109.46; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 724712; Consumed DRAM Joules: 11.09; DRAM Watts: 11.09
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1690667; Consumed Joules: 103.19; Watts: 103.40; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 719131; Consumed DRAM Joules: 11.00; DRAM Watts: 11.02
+S1; Consumed energy units: 1789771; Consumed Joules: 109.24; Watts: 109.46; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 721413; Consumed DRAM Joules: 11.04; DRAM Watts: 11.06
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1693616; Consumed Joules: 103.37; Watts: 103.37; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 722167; Consumed DRAM Joules: 11.05; DRAM Watts: 11.05
+S1; Consumed energy units: 1789276; Consumed Joules: 109.21; Watts: 109.21; Thermal headroom below TjMax: 36
+S1; Consumed DRAM energy units: 724649; Consumed DRAM Joules: 11.09; DRAM Watts: 11.09
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1693927; Consumed Joules: 103.39; Watts: 103.39; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 721278; Consumed DRAM Joules: 11.04; DRAM Watts: 11.04
+S1; Consumed energy units: 1786897; Consumed Joules: 109.06; Watts: 109.06; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 726117; Consumed DRAM Joules: 11.11; DRAM Watts: 11.11
+----------------------------------------------------------------------------------------------
+Time elapsed: 1001 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1695057; Consumed Joules: 103.46; Watts: 103.35; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 721871; Consumed DRAM Joules: 11.04; DRAM Watts: 11.03
+S1; Consumed energy units: 1783006; Consumed Joules: 108.83; Watts: 108.72; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 722748; Consumed DRAM Joules: 11.06; DRAM Watts: 11.05
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1689916; Consumed Joules: 103.14; Watts: 103.35; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 720406; Consumed DRAM Joules: 11.02; DRAM Watts: 11.04
+S1; Consumed energy units: 1776069; Consumed Joules: 108.40; Watts: 108.62; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 720124; Consumed DRAM Joules: 11.02; DRAM Watts: 11.04
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1695825; Consumed Joules: 103.50; Watts: 103.61; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 720924; Consumed DRAM Joules: 11.03; DRAM Watts: 11.04
+S1; Consumed energy units: 1777953; Consumed Joules: 108.52; Watts: 108.63; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 719617; Consumed DRAM Joules: 11.01; DRAM Watts: 11.02
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1691679; Consumed Joules: 103.25; Watts: 103.36; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 720968; Consumed DRAM Joules: 11.03; DRAM Watts: 11.04
+S1; Consumed energy units: 1781410; Consumed Joules: 108.73; Watts: 108.84; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 719642; Consumed DRAM Joules: 11.01; DRAM Watts: 11.02
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1690596; Consumed Joules: 103.19; Watts: 103.29; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 719121; Consumed DRAM Joules: 11.00; DRAM Watts: 11.01
+S1; Consumed energy units: 1794121; Consumed Joules: 109.50; Watts: 109.61; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 721579; Consumed DRAM Joules: 11.04; DRAM Watts: 11.05
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1689582; Consumed Joules: 103.12; Watts: 103.33; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 717502; Consumed DRAM Joules: 10.98; DRAM Watts: 11.00
+S1; Consumed energy units: 1782057; Consumed Joules: 108.77; Watts: 108.99; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 720235; Consumed DRAM Joules: 11.02; DRAM Watts: 11.04
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1689012; Consumed Joules: 103.09; Watts: 103.19; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 717294; Consumed DRAM Joules: 10.97; DRAM Watts: 10.99
+S1; Consumed energy units: 1791006; Consumed Joules: 109.31; Watts: 109.42; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 721599; Consumed DRAM Joules: 11.04; DRAM Watts: 11.05
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1688548; Consumed Joules: 103.06; Watts: 103.27; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 716226; Consumed DRAM Joules: 10.96; DRAM Watts: 10.98
+S1; Consumed energy units: 1781499; Consumed Joules: 108.73; Watts: 108.95; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 719805; Consumed DRAM Joules: 11.01; DRAM Watts: 11.04
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1688829; Consumed Joules: 103.08; Watts: 103.28; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 715837; Consumed DRAM Joules: 10.95; DRAM Watts: 10.97
+S1; Consumed energy units: 1789952; Consumed Joules: 109.25; Watts: 109.47; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 717540; Consumed DRAM Joules: 10.98; DRAM Watts: 11.00
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1686507; Consumed Joules: 102.94; Watts: 103.04; Thermal headroom below TjMax: 41
+S0; Consumed DRAM energy units: 720213; Consumed DRAM Joules: 11.02; DRAM Watts: 11.03
+S1; Consumed energy units: 1775032; Consumed Joules: 108.34; Watts: 108.45; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 718193; Consumed DRAM Joules: 10.99; DRAM Watts: 11.00
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1689768; Consumed Joules: 103.14; Watts: 103.14; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 720347; Consumed DRAM Joules: 11.02; DRAM Watts: 11.02
+S1; Consumed energy units: 1779263; Consumed Joules: 108.60; Watts: 108.60; Thermal headroom below TjMax: 38
+S1; Consumed DRAM energy units: 720762; Consumed DRAM Joules: 11.03; DRAM Watts: 11.03
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1689380; Consumed Joules: 103.11; Watts: 103.11; Thermal headroom below TjMax: 40
+S0; Consumed DRAM energy units: 719933; Consumed DRAM Joules: 11.01; DRAM Watts: 11.01
+S1; Consumed energy units: 1780721; Consumed Joules: 108.69; Watts: 108.69; Thermal headroom below TjMax: 38
+S1; Consumed DRAM energy units: 718889; Consumed DRAM Joules: 11.00; DRAM Watts: 11.00
+----------------------------------------------------------------------------------------------
+Time elapsed: 999 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1688599; Consumed Joules: 103.06; Watts: 103.17; Thermal headroom below TjMax: 41
+S0; Consumed DRAM energy units: 716922; Consumed DRAM Joules: 10.97; DRAM Watts: 10.98
+S1; Consumed energy units: 1780252; Consumed Joules: 108.66; Watts: 108.77; Thermal headroom below TjMax: 37
+S1; Consumed DRAM energy units: 719786; Consumed DRAM Joules: 11.01; DRAM Watts: 11.02
+----------------------------------------------------------------------------------------------
+Time elapsed: 998 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1689358; Consumed Joules: 103.11; Watts: 103.32; Thermal headroom below TjMax: 41
+S0; Consumed DRAM energy units: 717270; Consumed DRAM Joules: 10.97; DRAM Watts: 11.00
+S1; Consumed energy units: 1784470; Consumed Joules: 108.92; Watts: 109.13; Thermal headroom below TjMax: 38
+S1; Consumed DRAM energy units: 721000; Consumed DRAM Joules: 11.03; DRAM Watts: 11.05
+----------------------------------------------------------------------------------------------
+Time elapsed: 1000 ms
+Called sleep function for 1000 ms
+S0; Consumed energy units: 1686670; Consumed Joules: 102.95; Watts: 102.95; Thermal headroom below TjMax: 41
+S0; Consumed DRAM energy units: 716916; Consumed DRAM Joules: 10.97; DRAM Watts: 10.97
+S1; Consumed energy units: 1787148; Consumed Joules: 109.08; Watts: 109.08; Thermal headroom below TjMax: 38
+S1; Consumed DRAM energy units: 724549; Consumed DRAM Joules: 11.09; DRAM Watts: 11.09
+----------------------

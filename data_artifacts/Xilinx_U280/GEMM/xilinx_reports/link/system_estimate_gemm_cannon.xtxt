@@ -1,0 +1,39 @@
+===============================================================================
+Version:    v++ v2019.2 (64-bit)
+Build:      SW Build 2700185 on Thu Oct 24 18:45:48 MDT 2019
+Copyright:  Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+Created:    Tue Jun  2 22:19:34 2020
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             gemm_cannon
+Target Device:           xilinx:u280:xdma:201920.3
+Target Clock:            250MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+gemm         clc   fpga0:OCL_REGION_0  gemm_cannon     1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     gemm_cannon
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+gemm_1        gemm         gemm         250               342.465759
+
+Latency Information
+Compute Unit  Kernel Name  Module Name  Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -----------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+gemm_1        gemm         gemm         undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF      LUT     DSP   BRAM  URAM
+------------  -----------  -----------  ------  ------  ----  ----  ----
+gemm_1        gemm         gemm         291461  205256  2569  504   0
+-------------------------------------------------------------------------------
